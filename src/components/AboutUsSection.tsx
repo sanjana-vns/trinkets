@@ -151,17 +151,17 @@ const AboutUsSection = () => {
             </div>
 
             {/* Floating Stats Cards */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 lg:p-6 border border-gray-100 z-20">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600">10+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-2xl lg:text-3xl font-bold text-blue-600">10+</div>
+                <div className="text-xs lg:text-sm text-gray-700 font-medium">Years Experience</div>
               </div>
             </div>
 
-            <div className="absolute -top-6 -right-6 bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+            <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 lg:p-6 border border-gray-100 z-20">
               <div className="text-center">
-                <div className="text-3xl font-bold text-secondary-500">5000+</div>
-                <div className="text-sm text-gray-600">Students Trained</div>
+                <div className="text-2xl lg:text-3xl font-bold text-orange-500">5000+</div>
+                <div className="text-xs lg:text-sm text-gray-700 font-medium">Students Trained</div>
               </div>
             </div>
 
