@@ -10,25 +10,25 @@ const Hero = () => {
     {
       title: "Turning Students into Professionals",
       subtitle: "Practical, job-ready training programs tailored for colleges and universities.",
-      image: "/images/hero-1.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-primary-600 to-primary-800"
     },
     {
       title: "Empower Your Engineering Future",
       subtitle: "Kickstart your career with expert-led training, real-world projects, and industry-recognized certifications in engineering design.",
-      image: "/images/hero-2.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-secondary-500 to-secondary-700"
     },
     {
       title: "Master Design with Experts",
       subtitle: "Learn advanced design tools, software, and industry practices from experienced professionals at Trinkets Institute of Technology.",
-      image: "/images/hero-3.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-primary-500 to-secondary-600"
     },
     {
       title: "Boost Your Career Potential",
       subtitle: "Join industry-ready courses in piping, HVAC, process, and structural engineering with hands-on learning opportunities.",
-      image: "/images/hero-4.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-secondary-600 to-primary-700"
     }
   ]
@@ -63,7 +63,7 @@ const Hero = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23f3f4f6"/><circle cx="200" cy="200" r="100" fill="%23e5e7eb" opacity="0.5"/><circle cx="800" cy="600" r="150" fill="%23d1d5db" opacity="0.3"/><circle cx="1000" cy="300" r="80" fill="%23e5e7eb" opacity="0.4"/></svg>')`
+              backgroundImage: `url('${slide.image}')`
             }}
           />
         </div>
