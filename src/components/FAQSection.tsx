@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 
+// Force deployment trigger - Creative Orange FAQ Section
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
