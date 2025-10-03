@@ -55,16 +55,44 @@ module.exports = {
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 8s ease-in-out infinite 2s',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         'bounce-slow': 'bounce 3s ease-in-out infinite',
+        'bounce-gentle': 'bounce-gentle 3s ease-in-out infinite',
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'shadow-glow': 'shadow-glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'bounce-gentle': {
+          '0%, 100%': { 
+            transform: 'translateY(0px) scale(1)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': { 
+            transform: 'translateY(-10px) scale(1.05)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+          },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        'shadow-glow': {
+          '0%': { 
+            boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)',
+            transform: 'scale(1)'
+          },
+          '100%': { 
+            boxShadow: '0 0 40px rgba(251, 146, 60, 0.6)',
+            transform: 'scale(1.02)'
+          },
         },
         'gradient-y': {
           '0%, 100%': {
@@ -96,6 +124,9 @@ module.exports = {
             'background-position': 'right center'
           }
         }
+      },
+      boxShadow: {
+        '4xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 20px -6px rgba(0, 0, 0, 0.1)',
       }
     },
   },
