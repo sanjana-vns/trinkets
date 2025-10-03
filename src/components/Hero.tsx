@@ -10,25 +10,25 @@ const Hero = () => {
     {
       title: "Turning Students into Professionals",
       subtitle: "Practical, job-ready training programs tailored for colleges and universities.",
-      image: "/images/background-mechanic.jpg",
+      image: "/images/bg1.jpg",
       gradient: "from-primary-600 to-primary-800"
     },
     {
       title: "Empower Your Engineering Future",
       subtitle: "Kickstart your career with expert-led training, real-world projects, and industry-recognized certifications in engineering design.",
-      image: "/images/mechanic-working.jpg",
+      image: "/images/bg2.jpg",
       gradient: "from-secondary-500 to-secondary-700"
     },
     {
       title: "Master Design with Experts",
       subtitle: "Learn advanced design tools, software, and industry practices from experienced professionals at Trinkets Institute of Technology.",
-      image: "/images/background-mechanic.jpg",
+      image: "/images/bg3.jpg",
       gradient: "from-primary-500 to-secondary-600"
     },
     {
       title: "Boost Your Career Potential",
       subtitle: "Join industry-ready courses in piping, HVAC, process, and structural engineering with hands-on learning opportunities.",
-      image: "/images/background-mechanic.jpg",
+      image: "/images/bg1.jpg",
       gradient: "from-secondary-600 to-primary-700"
     }
   ]
