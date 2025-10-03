@@ -115,24 +115,6 @@ const Navigation = () => {
 
           {/* Enhanced CTA Button with professional format */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Contact Button */}
-            <Link
-              href="/contact"
-              className="relative group px-6 py-2.5 rounded-lg font-medium text-gray-700 
-                       hover:text-primary-600 hover:bg-gray-50 
-                       transition-all duration-300 ease-out border border-transparent
-                       hover:border-gray-200 hover:shadow-sm"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Contact Us
-                <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" 
-                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </span>
-            </Link>
-
             {/* Primary CTA Button */}
             <Link
               href="/courses"
@@ -211,23 +193,6 @@ const Navigation = () => {
             </Link>
           ))}
           <div className="pt-4 space-y-3">
-            {/* Mobile Contact Button */}
-            <Link
-              href="/contact"
-              className="block px-4 py-3 rounded-lg border-2 border-primary-600 text-primary-600 
-                       font-semibold text-center hover:bg-primary-50 
-                       transition-all duration-300 ease-out"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <div className="flex items-center justify-center gap-2">
-                Contact Us
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-            </Link>
-            
             {/* Mobile Primary CTA */}
             <Link
               href="/courses"
