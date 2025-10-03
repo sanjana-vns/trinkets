@@ -107,13 +107,6 @@ const AboutUsSection = () => {
               >
                 Learn More About Us
               </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-3 border-2 border-primary-600 text-primary-600 font-semibold 
-                         rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 text-center"
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
 
