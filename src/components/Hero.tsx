@@ -10,7 +10,7 @@ const Hero = () => {
     {
       title: "Turning Students into Professionals",
       subtitle: "Practical, job-ready training programs tailored for colleges and universities.",
-      image: "/images/construction-workers.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-primary-600 to-primary-800"
     },
     {
@@ -28,7 +28,7 @@ const Hero = () => {
     {
       title: "Boost Your Career Potential",
       subtitle: "Join industry-ready courses in piping, HVAC, process, and structural engineering with hands-on learning opportunities.",
-      image: "/images/construction-workers.jpg",
+      image: "/images/background-mechanic.jpg",
       gradient: "from-secondary-600 to-primary-700"
     }
   ]
