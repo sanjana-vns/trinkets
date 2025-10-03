@@ -3,6 +3,7 @@ import CoursesSection from '@/components/CoursesSection'
 import AboutUsSection from '@/components/AboutUsSection'
 import StatsSection from '@/components/StatsSection'
 import PlacementSection from '@/components/PlacementSection'
+import FAQSection from '@/components/FAQSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutUsSection />
       <StatsSection />
       <PlacementSection />
+      <FAQSection />
     </div>
   )
 }
