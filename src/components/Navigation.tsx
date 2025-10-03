@@ -113,10 +113,29 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Enhanced CTA Button with creative animations */}
-          <div className="hidden lg:block">
+          {/* Enhanced CTA Button with professional format */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Contact Button */}
             <Link
               href="/contact"
+              className="relative group px-6 py-2.5 rounded-lg font-medium text-gray-700 
+                       hover:text-primary-600 hover:bg-gray-50 
+                       transition-all duration-300 ease-out border border-transparent
+                       hover:border-gray-200 hover:shadow-sm"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Contact Us
+                <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </span>
+            </Link>
+
+            {/* Primary CTA Button */}
+            <Link
+              href="/courses"
               className="relative group overflow-hidden px-8 py-3 rounded-xl font-semibold text-white
                        bg-gradient-to-r from-primary-600 to-secondary-500 
                        hover:from-primary-700 hover:to-secondary-600 
@@ -124,15 +143,21 @@ const Navigation = () => {
                        transition-all duration-300 ease-out
                        before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent
                        before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700
-                       after:absolute after:inset-0 after:rounded-xl after:shadow-inner"
+                       after:absolute after:inset-0 after:rounded-xl after:shadow-inner
+                       focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Apply Now
+                Explore Courses
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" 
                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
+              
+              {/* Pulse effect */}
+              <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 
+                             group-hover:opacity-100 group-hover:animate-ping 
+                             transition-opacity duration-300"></div>
             </Link>
           </div>
 
@@ -185,16 +210,39 @@ const Navigation = () => {
               </div>
             </Link>
           ))}
-          <div className="pt-4">
+          <div className="pt-4 space-y-3">
+            {/* Mobile Contact Button */}
             <Link
               href="/contact"
+              className="block px-4 py-3 rounded-lg border-2 border-primary-600 text-primary-600 
+                       font-semibold text-center hover:bg-primary-50 
+                       transition-all duration-300 ease-out"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div className="flex items-center justify-center gap-2">
+                Contact Us
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+            </Link>
+            
+            {/* Mobile Primary CTA */}
+            <Link
+              href="/courses"
               className="block px-4 py-3 rounded-lg bg-gradient-to-r from-primary-600 to-secondary-500 
                        text-white font-semibold text-center
                        hover:from-primary-700 hover:to-secondary-600 hover:scale-105 hover:shadow-xl
                        transition-all duration-300 ease-out"
               onClick={() => setIsMenuOpen(false)}
             >
-              Apply Now
+              <div className="flex items-center justify-center gap-2">
+                Explore Courses
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
             </Link>
           </div>
         </div>
