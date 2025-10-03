@@ -64,6 +64,9 @@ module.exports = {
         'gradient-xy': 'gradient-xy 15s ease infinite',
         'shimmer': 'shimmer 2s linear infinite',
         'shadow-glow': 'shadow-glow 2s ease-in-out infinite alternate',
+        'morph': 'morph 20s ease-in-out infinite',
+        'morph-reverse': 'morph-reverse 25s ease-in-out infinite',
+        'rotate': 'rotate 60s linear infinite',
       },
       keyframes: {
         float: {
@@ -93,6 +96,42 @@ module.exports = {
             boxShadow: '0 0 40px rgba(251, 146, 60, 0.6)',
             transform: 'scale(1.02)'
           },
+        },
+        morph: {
+          '0%, 100%': {
+            borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+            transform: 'rotate(0deg) scale(1)'
+          },
+          '25%': {
+            borderRadius: '58% 42% 75% 25% / 76% 46% 54% 24%',
+            transform: 'rotate(90deg) scale(1.1)'
+          },
+          '50%': {
+            borderRadius: '50% 50% 33% 67% / 55% 27% 73% 45%',
+            transform: 'rotate(180deg) scale(0.9)'
+          },
+          '75%': {
+            borderRadius: '33% 67% 58% 42% / 63% 68% 32% 37%',
+            transform: 'rotate(270deg) scale(1.05)'
+          }
+        },
+        'morph-reverse': {
+          '0%, 100%': {
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+            transform: 'rotate(0deg) scale(1)'
+          },
+          '33%': {
+            borderRadius: '70% 30% 46% 54% / 30% 29% 71% 70%',
+            transform: 'rotate(-120deg) scale(1.2)'
+          },
+          '66%': {
+            borderRadius: '100% 60% 60% 100% / 100% 100% 60% 60%',
+            transform: 'rotate(-240deg) scale(0.8)'
+          }
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
         'gradient-y': {
           '0%, 100%': {
