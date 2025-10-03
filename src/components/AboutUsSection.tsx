@@ -131,19 +131,19 @@ const AboutUsSection = () => {
                   priority
                 />
                 {/* Enhanced overlay for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 
                 {/* Improved text overlay on image */}
-                <div className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8">
-                  <div className="max-w-sm">
-                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-2 leading-tight">
+                <div className="absolute bottom-4 left-4 right-4 lg:bottom-6 lg:left-6 lg:right-6 z-10">
+                  <div className="bg-black/20 backdrop-blur-sm rounded-lg p-4 max-w-xs lg:max-w-sm">
+                    <h3 className="text-lg lg:text-xl font-bold text-white mb-2 leading-tight">
                       Excellence in 
                       <span className="block text-orange-400 font-extrabold">
                         Education
                       </span>
                     </h3>
-                    <p className="text-white text-sm lg:text-base leading-relaxed font-medium">
-                      Building tomorrow&apos;s engineers today with industry-leading expertise and hands-on training
+                    <p className="text-white/95 text-xs lg:text-sm leading-relaxed font-medium">
+                      Building tomorrow&apos;s engineers today with industry-leading expertise
                     </p>
                   </div>
                 </div>
