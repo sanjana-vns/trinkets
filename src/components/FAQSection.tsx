@@ -50,15 +50,15 @@ const FAQSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-500"></div>
-            <span className="text-primary-600 font-semibold uppercase tracking-wide text-sm">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-orange-500"></div>
+            <span className="text-blue-600 font-semibold uppercase tracking-wide text-sm">
               FAQ
             </span>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-secondary-500 to-primary-600"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-orange-500 to-blue-600"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked 
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
               Questions
             </span>
           </h2>
@@ -81,7 +81,7 @@ const FAQSection = () => {
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </h3>
-                <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary-600 to-secondary-500 
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-orange-500 
                                flex items-center justify-center transform transition-transform duration-300 
                                ${openIndex === index ? 'rotate-180' : ''}`}>
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,16 +116,16 @@ const FAQSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-500 text-white 
-                         font-semibold rounded-lg hover:from-primary-700 hover:to-secondary-600 
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-orange-500 text-white 
+                         font-semibold rounded-lg hover:from-blue-700 hover:to-orange-600 
                          transition-all duration-300 hover:shadow-lg hover:scale-105 text-center"
               >
                 Contact Our Team
               </a>
               <a
                 href="tel:+1234567890"
-                className="px-8 py-3 border-2 border-primary-600 text-primary-600 font-semibold 
-                         rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 text-center
+                className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold 
+                         rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 text-center
                          flex items-center justify-center gap-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
