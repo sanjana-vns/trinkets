@@ -262,7 +262,7 @@ const FAQSection = () => {
                           </p>
                           
                           {/* Decorative Quote Mark */}
-                          <div className="absolute -top-2 -left-2 text-6xl text-orange-300 opacity-30 font-serif">"</div>
+                          <div className="absolute -top-2 -left-2 text-6xl text-orange-300 opacity-30 font-serif">&ldquo;</div>
                         </div>
                       </div>
                     </div>
