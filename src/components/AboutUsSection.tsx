@@ -121,32 +121,30 @@ const AboutUsSection = () => {
           <div className="relative">
             {/* Main Image Container */}
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-              <div className="aspect-w-4 aspect-h-5 bg-gradient-to-br from-primary-100 to-secondary-100">
-                {/* Engineer Image */}
-                <div className="relative h-96 lg:h-[500px]">
-                  <Image
-                    src="/images/engineer.jpg"
-                    alt="Trinkets Institute - Professional Engineering Training"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  {/* Enhanced overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                  
-                  {/* Improved text overlay on image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                    <div className="max-w-md">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
-                        Excellence in 
-                        <span className="block text-orange-400 font-extrabold">
-                          Education
-                        </span>
-                      </h3>
-                      <p className="text-white text-sm lg:text-base leading-relaxed font-medium">
-                        Building tomorrow&apos;s engineers today with industry-leading expertise and hands-on training
-                      </p>
-                    </div>
+              {/* Engineer Image */}
+              <div className="relative h-96 lg:h-[500px]">
+                <Image
+                  src="/images/engineer.jpg"
+                  alt="Trinkets Institute - Professional Engineering Training"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                {/* Enhanced overlay for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                
+                {/* Improved text overlay on image */}
+                <div className="absolute bottom-6 left-6 right-6 lg:bottom-8 lg:left-8 lg:right-8">
+                  <div className="max-w-sm">
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-2 leading-tight">
+                      Excellence in 
+                      <span className="block text-orange-400 font-extrabold">
+                        Education
+                      </span>
+                    </h3>
+                    <p className="text-white text-sm lg:text-base leading-relaxed font-medium">
+                      Building tomorrow&apos;s engineers today with industry-leading expertise and hands-on training
+                    </p>
                   </div>
                 </div>
               </div>
