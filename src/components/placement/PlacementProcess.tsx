@@ -186,7 +186,7 @@ const PlacementProcess = () => {
   }, [isVisible, placementSteps.length])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section ref={sectionRef} className="pt-20 pb-10 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
