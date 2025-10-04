@@ -78,7 +78,7 @@ const AboutValues = () => {
               onMouseEnter={() => setHoveredValue(index)}
               onMouseLeave={() => setHoveredValue(null)}
             >
-              <div className={`relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-orange-200/50 hover:border-orange-300 transform ${hoveredValue === index ? 'scale-105 z-10' : ''}`}>
+              <div className={`relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredValue === index ? 'scale-105 z-10' : ''}`}>
                 
                 {/* Card Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${value.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}></div>
@@ -94,7 +94,7 @@ const AboutValues = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {value.title}
                   </h3>
                   
