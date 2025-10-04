@@ -180,7 +180,7 @@ const PlacementSupport = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section ref={sectionRef} className="pt-20 pb-0 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
