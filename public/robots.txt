@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Optimize crawling for important pages
+Allow: /about
+Allow: /courses
+Allow: /placements
+Allow: /gallery
+Allow: /testimonials
+Allow: /contact
+
+# Block unnecessary crawling
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow search engines to access images
+Allow: /images/
+Allow: /icons/
+
+# Sitemap location
+Sitemap: https://trinketsinstitute.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

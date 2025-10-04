@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { memo } from 'react'
 
-const Footer = () => {
+const Footer = memo(() => {
   return (
     <footer className="bg-gray-900 text-white mt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -98,6 +99,8 @@ const Footer = () => {
       </div>
     </footer>
   )
-}
+})
+
+Footer.displayName = 'Footer'
 
 export default Footer

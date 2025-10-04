@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Navigation = () => {
+const Navigation = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const menuItems = [
@@ -226,6 +226,8 @@ const Navigation = () => {
       `}</style>
     </nav>
   )
-}
+})
+
+Navigation.displayName = 'Navigation'
 
 export default Navigation
