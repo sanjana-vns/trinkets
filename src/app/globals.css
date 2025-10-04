@@ -24,6 +24,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margins from main elements */
+main {
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom styles for Trinkets Institute */

@@ -180,7 +180,7 @@ const PlacementSupport = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="pt-10 pb-0 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section ref={sectionRef} className="pt-10 pb-0 bg-gradient-to-br from-slate-50 to-blue-50" style={{marginBottom: 0}}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -376,6 +376,7 @@ const PlacementSupport = () => {
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center"
+          style={{marginBottom: 0}}
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 lg:p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">Start Your Placement Journey Today</h3>
