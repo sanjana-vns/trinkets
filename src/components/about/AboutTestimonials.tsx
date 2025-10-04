@@ -8,25 +8,6 @@ const AboutTestimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.1 }
-    )
-    
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    
-    // Auto-rotate testimonials
-    const interval = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    
-    return () => {
-      observer.disconnect()
-      clearInterval(interval)
-    }
-  }, [])
-
   const testimonials = [
     {
       name: "Rahul Sharma",
@@ -69,6 +50,25 @@ const AboutTestimonials = () => {
       gradient: "from-orange-500 to-amber-500"
     }
   ]
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    )
+    
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    
+    // Auto-rotate testimonials
+    const interval = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 5000)
+    
+    return () => {
+      observer.disconnect()
+      clearInterval(interval)
+    }
+  }, [testimonials.length])
 
   return (
     <section 

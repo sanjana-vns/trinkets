@@ -222,9 +222,9 @@ const AboutMission = () => {
           <div className="relative max-w-4xl mx-auto">
             <div className="text-6xl text-orange-200 opacity-50 mb-4">&ldquo;</div>
             <blockquote className="text-3xl font-medium text-gray-700 leading-relaxed mb-8">
-              "Education is the most powerful weapon which you can use to change the world. 
-              At Trinkets Institute, we're not just teaching; we're 
-              <span className="text-orange-600 font-bold"> transforming futures</span>."
+              &ldquo;Education is the most powerful weapon which you can use to change the world. 
+              At Trinkets Institute, we&apos;re not just teaching; we&apos;re 
+              <span className="text-orange-600 font-bold"> transforming futures</span>.&rdquo;
             </blockquote>
             <div className="text-xl text-gray-600">
               — Trinkets Institute Foundation

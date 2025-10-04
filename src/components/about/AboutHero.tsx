@@ -111,7 +111,7 @@ const AboutHero = () => {
 
             {/* Enhanced Description */}
             <p className="text-2xl text-gray-700 leading-relaxed mb-12 font-medium">
-              For over <span className="text-orange-600 font-bold">15 years</span>, we've been at the forefront of 
+              For over <span className="text-orange-600 font-bold">15 years</span>, we&apos;ve been at the forefront of 
               <span className="text-amber-600 font-bold"> engineering education</span>, transforming ambitious students 
               into skilled professionals ready to tackle real-world challenges.
             </p>
