@@ -73,24 +73,25 @@ const AboutAchievements = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-32 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 overflow-hidden"
+      className="relative py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
     >
-      {/* Background Elements */}
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-sky-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-bounce"></div>
       </div>
 
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
         
-        {/* Section Header */}
+        {/* Enhanced Section Header */}
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
-            <div className="relative bg-white/90 backdrop-blur-md border-4 border-orange-300/50 rounded-full px-12 py-6 shadow-2xl">
-              <span className="text-orange-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
+            <div className="relative bg-white/90 backdrop-blur-md border-4 border-blue-300/50 rounded-full px-12 py-6 shadow-2xl">
+              <span className="text-blue-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
                 <span className="text-2xl">🎯</span>
                 Our Achievements
                 <span className="text-2xl">🏆</span>
@@ -98,12 +99,13 @@ const AboutAchievements = () => {
             </div>
           </div>
 
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight mb-8">
+          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Milestones & Recognition
           </h2>
           
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A testament to our commitment to excellence and the success of our students
+            A testament to our commitment to <span className="text-blue-600 font-bold">excellence</span> and the 
+            <span className="text-indigo-600 font-bold"> success of our students</span>
           </p>
         </div>
 
@@ -116,26 +118,26 @@ const AboutAchievements = () => {
               onMouseEnter={() => setHoveredAchievement(index)}
               onMouseLeave={() => setHoveredAchievement(null)}
             >
-              <div className={`relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-orange-200/50 hover:border-orange-300 transform ${hoveredAchievement === index ? 'scale-105 z-10' : ''}`}>
+              <div className={`relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredAchievement === index ? 'scale-105 z-10' : ''}`}>
                 
-                {/* Card Glow */}
+                {/* Enhanced Card Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${achievement.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}></div>
                 
-                {/* Top Accent */}
+                {/* Top Accent with Enhanced Animation */}
                 <div className={`h-3 bg-gradient-to-r ${achievement.gradient} relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 animate-shimmer"></div>
                 </div>
                 
-                {/* Card Content */}
+                {/* Enhanced Card Content */}
                 <div className="relative p-8 text-center">
-                  {/* Icon */}
-                  <div className={`w-20 h-20 bg-gradient-to-r ${achievement.gradient} rounded-3xl flex items-center justify-center shadow-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                  {/* Enhanced Icon */}
+                  <div className={`w-20 h-20 bg-gradient-to-r ${achievement.gradient} rounded-3xl flex items-center justify-center shadow-xl mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                     <span className="text-4xl">{achievement.icon}</span>
                   </div>
                   
-                  {/* Number Display */}
+                  {/* Enhanced Number Display */}
                   <div className="mb-4">
-                    <div className={`text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${achievement.gradient} mb-2`}>
+                    <div className={`text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r ${achievement.gradient} mb-2 group-hover:scale-110 transition-transform duration-300`}>
                       {achievement.number}
                     </div>
                     <div className="text-lg font-semibold text-gray-600 uppercase tracking-wide">
@@ -144,7 +146,7 @@ const AboutAchievements = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {achievement.title}
                   </h3>
                   
@@ -153,12 +155,15 @@ const AboutAchievements = () => {
                     {achievement.description}
                   </p>
 
-                  {/* Sparkle Effects */}
+                  {/* Enhanced Sparkle Effects */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                    <div className="w-3 h-3 bg-sky-400 rounded-full animate-ping"></div>
                   </div>
                   <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
+                  </div>
+                  <div className="absolute top-1/2 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-1 h-1 bg-indigo-400 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
                   </div>
                 </div>
               </div>
@@ -166,29 +171,30 @@ const AboutAchievements = () => {
           ))}
         </div>
 
-        {/* Awards Showcase */}
+        {/* Enhanced Awards Showcase */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">
               Awards & Recognition 🏆
             </h3>
             <p className="text-xl text-gray-600">
-              Honored by industry leaders and educational bodies
+              Honored by industry leaders and educational bodies for our 
+              <span className="text-blue-600 font-bold"> commitment to excellence</span>
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: "Best Technical Institute 2023", org: "Engineering Council" },
-              { name: "Excellence in Education", org: "Industry Association" },
-              { name: "Innovation Award 2022", org: "Tech Leaders Forum" },
-              { name: "Student Success Recognition", org: "Education Board" }
+              { name: "Best Technical Institute 2023", org: "Engineering Council", gradient: "from-blue-400 to-indigo-400" },
+              { name: "Excellence in Education", org: "Industry Association", gradient: "from-indigo-400 to-blue-400" },
+              { name: "Innovation Award 2022", org: "Tech Leaders Forum", gradient: "from-sky-400 to-indigo-400" },
+              { name: "Student Success Recognition", org: "Education Board", gradient: "from-blue-400 to-sky-400" }
             ].map((award, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl flex items-center justify-center shadow-xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
+                <div className={`w-16 h-16 bg-gradient-to-r ${award.gradient} rounded-2xl flex items-center justify-center shadow-xl mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
                   <span className="text-3xl">🏆</span>
                 </div>
-                <h4 className="font-bold text-gray-800 mb-2">{award.name}</h4>
+                <h4 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">{award.name}</h4>
                 <p className="text-sm text-gray-600">{award.org}</p>
               </div>
             ))}
