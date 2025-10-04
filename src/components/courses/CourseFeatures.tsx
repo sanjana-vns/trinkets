@@ -57,7 +57,7 @@ const CourseFeatures = () => {
       title: "Industry Mentorship",
       description: "Learn from industry experts with years of practical experience",
       icon: "👨‍🏫",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-blue-500 to-indigo-500",
       benefits: ["1-on-1 mentoring", "Industry insights", "Career guidance", "Network building"]
     },
     {
@@ -112,7 +112,7 @@ const CourseFeatures = () => {
       duration: "Week 21-24",
       description: "Capstone projects and portfolio",
       icon: "🎨",
-      color: "orange"
+      color: "blue"
     }
   ]
 
@@ -121,7 +121,7 @@ const CourseFeatures = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-morph"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-full blur-3xl animate-morph-reverse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full blur-3xl animate-morph-reverse"></div>
         
         {/* Animated Grid */}
         <div className="absolute inset-0 opacity-10">
@@ -205,7 +205,7 @@ const CourseFeatures = () => {
 
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-orange-500 transform -translate-y-1/2 opacity-30"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-indigo-500 transform -translate-y-1/2 opacity-30"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {learningPath.map((phase, index) => (
@@ -257,7 +257,7 @@ const CourseFeatures = () => {
                 <div className="text-gray-300 font-semibold">{stat.label}</div>
 
                 {/* Animated Background */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
               </div>
             </div>
           ))}
@@ -266,7 +266,7 @@ const CourseFeatures = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-4">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
               <span className="relative z-10 flex items-center gap-2">
                 Start Your Journey
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

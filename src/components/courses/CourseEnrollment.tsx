@@ -103,7 +103,7 @@ const CourseEnrollment = () => {
       <div className="absolute inset-0">
         {/* Animated Gradient Orbs */}
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full blur-3xl animate-morph"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-full blur-3xl animate-morph-reverse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-full blur-3xl animate-morph-reverse"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-600/20 to-teal-600/20 rounded-full blur-3xl animate-pulse"></div>
 
         {/* Floating Elements */}
@@ -127,7 +127,7 @@ const CourseEnrollment = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Limited Time Offer Banner */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold text-lg shadow-2xl animate-pulse">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-bold text-lg shadow-2xl animate-pulse">
             <span className="text-2xl">🔥</span>
             <span>Limited Time Offer - Save up to 25%</span>
             <span className="text-2xl">🔥</span>
@@ -158,7 +158,7 @@ const CourseEnrollment = () => {
                 Ready to Transform
               </span>
               <br />
-              <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
                 Your Career?
               </span>
             </h2>
@@ -183,7 +183,7 @@ const CourseEnrollment = () => {
                     }`}
                   >
                     {course.popular && (
-                      <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                      <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">
                         Most Popular
                       </div>
                     )}
@@ -304,7 +304,7 @@ const CourseEnrollment = () => {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-500 rounded-full animate-ping"></div>
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-ping"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500 rounded-full animate-bounce"></div>
           </div>
         </div>

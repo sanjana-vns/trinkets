@@ -69,7 +69,7 @@ const CourseCategories = () => {
       students: 2100,
       features: ["Core Python", "OOP Concepts", "Web Frameworks", "API Development"],
       image: "🐍",
-      gradient: "from-yellow-600 to-orange-600",
+      gradient: "from-blue-600 to-indigo-600",
       badge: "Best Seller"
     },
     {
@@ -129,7 +129,7 @@ const CourseCategories = () => {
       students: 950,
       features: ["Core Java", "Spring Framework", "Microservices", "Enterprise Patterns"],
       image: "☕",
-      gradient: "from-orange-600 to-red-600",
+      gradient: "from-blue-600 to-indigo-600",
       badge: "Industry Standard"
     },
     {
@@ -159,56 +159,59 @@ const CourseCategories = () => {
   const displayedCourses = filteredCourses.slice(0, visibleCourses)
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" aria-label="Course categories and selection">
       {/* Background Decorations */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-orange-200/30 to-red-200/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-20 left-10 w-32 md:w-64 h-32 md:h-64 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 md:w-80 h-40 md:h-80 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-black mb-6">
+        <header className="text-center mb-12 md:mb-16">
+          <h1 className="text-3xl md:text-5xl font-black mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Choose Your Path
+              Choose Your Path to Success
             </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Discover the perfect course to accelerate your career in technology. 
             Each program is designed with industry expertise and real-world applications.
           </p>
-        </div>
+        </header>
 
         {/* Search and Filter Controls */}
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           {/* Search Bar */}
-          <div className="relative max-w-md mx-auto mb-8">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="relative max-w-md mx-auto mb-6 md:mb-8 px-4 md:px-0">
+            <label htmlFor="course-search" className="sr-only">Search for courses</label>
+            <div className="absolute inset-y-0 left-4 md:left-3 pl-3 flex items-center pointer-events-none">
+              <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
             <input
-              type="text"
+              id="course-search"
+              type="search"
               placeholder="Search courses..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-xl leading-5 bg-white/80 backdrop-blur-sm placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+              className="block w-full pl-12 md:pl-10 pr-3 py-3 md:py-4 border border-gray-300 rounded-xl leading-5 bg-white/80 backdrop-blur-sm placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-base"
             />
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4 md:px-0">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`px-4 md:px-6 py-2 md:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm md:text-base ${
                   activeFilter === category
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-white/80 text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
+                aria-pressed={activeFilter === category}
               >
                 {category}
               </button>
@@ -217,9 +220,9 @@ const CourseCategories = () => {
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12 px-4 md:px-0">
           {displayedCourses.map((course, index) => (
-            <div
+            <article
               key={course.id}
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden border border-gray-100"
               onMouseEnter={() => setHoveredCourse(course.id)}
@@ -312,7 +315,7 @@ const CourseCategories = () => {
               {hoveredCourse === course.id && (
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${course.gradient} opacity-10 blur-xl -z-10 scale-110`}></div>
               )}
-            </div>
+            </article>
           ))}
         </div>
 
