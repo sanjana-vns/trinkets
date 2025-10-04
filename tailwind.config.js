@@ -66,7 +66,12 @@ module.exports = {
         'shadow-glow': 'shadow-glow 2s ease-in-out infinite alternate',
         'morph': 'morph 20s ease-in-out infinite',
         'morph-reverse': 'morph-reverse 25s ease-in-out infinite',
+        'morph-courses': 'morph-courses 25s ease-in-out infinite',
+        'morph-hero': 'morph-hero 20s ease-in-out infinite',
         'rotate': 'rotate 60s linear infinite',
+        'spin-slow': 'spin-slow 8s linear infinite',
+        'spin-reverse': 'spin-reverse 6s linear infinite reverse',
+        'grid-move': 'grid-move 20s linear infinite',
       },
       keyframes: {
         float: {
@@ -96,6 +101,18 @@ module.exports = {
             boxShadow: '0 0 40px rgba(251, 146, 60, 0.6)',
             transform: 'scale(1.02)'
           },
+        },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'spin-reverse': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+        'grid-move': {
+          '0%': { transform: 'translate(0, 0)' },
+          '100%': { transform: 'translate(60px, 60px)' },
         },
         morph: {
           '0%, 100%': {
@@ -127,6 +144,46 @@ module.exports = {
           '66%': {
             borderRadius: '100% 60% 60% 100% / 100% 100% 60% 60%',
             transform: 'rotate(-240deg) scale(0.8)'
+          }
+        },
+        'morph-courses': {
+          '0%, 100%': {
+            borderRadius: '40% 60% 60% 40% / 40% 40% 60% 60%',
+            transform: 'rotate(0deg) scale(1)'
+          },
+          '20%': {
+            borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%',
+            transform: 'rotate(72deg) scale(1.1)'
+          },
+          '40%': {
+            borderRadius: '50% 50% 40% 60% / 60% 50% 50% 40%',
+            transform: 'rotate(144deg) scale(0.9)'
+          },
+          '60%': {
+            borderRadius: '40% 60% 50% 50% / 50% 40% 60% 50%',
+            transform: 'rotate(216deg) scale(1.05)'
+          },
+          '80%': {
+            borderRadius: '50% 50% 60% 40% / 40% 50% 50% 60%',
+            transform: 'rotate(288deg) scale(0.95)'
+          }
+        },
+        'morph-hero': {
+          '0%, 100%': {
+            borderRadius: '40% 60% 50% 50% / 60% 40% 50% 60%',
+            transform: 'rotate(0deg) scale(1)'
+          },
+          '25%': {
+            borderRadius: '60% 40% 60% 40% / 40% 60% 40% 60%',
+            transform: 'rotate(90deg) scale(1.1)'
+          },
+          '50%': {
+            borderRadius: '50% 50% 50% 50% / 50% 50% 50% 50%',
+            transform: 'rotate(180deg) scale(0.9)'
+          },
+          '75%': {
+            borderRadius: '40% 60% 40% 60% / 60% 40% 60% 40%',
+            transform: 'rotate(270deg) scale(1.05)'
           }
         },
         rotate: {
