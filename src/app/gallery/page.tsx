@@ -1,10 +1,7 @@
 import { Metadata } from 'next'
 import GalleryHero from '@/components/gallery/GalleryHero'
 import AwardsSection from '@/components/gallery/AwardsSection'
-import CertificationsGallery from '@/components/gallery/CertificationsGallery'
-import ProjectGallery from '@/components/gallery/ProjectGallery'
-import TestimonialsGallery from '@/components/gallery/TestimonialsGallery'
-import AchievementsTimeline from '@/components/gallery/AchievementsTimeline'
+import CertificationsSection from '@/components/gallery/CertificationsSection'
 
 export const metadata: Metadata = {
   title: 'Gallery & Awards - Engineering Excellence Recognition | Trinkets Institute',
@@ -190,10 +187,7 @@ export default function GalleryPage() {
       
       <GalleryHero />
       <AwardsSection />
-      <CertificationsGallery />
-      <ProjectGallery />
-      <TestimonialsGallery />
-      <AchievementsTimeline />
+      <CertificationsSection />
     </div>
   )
 }
