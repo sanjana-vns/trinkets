@@ -10,31 +10,31 @@ const CoursesHero = () => {
 
   const courseCategories = [
     {
-      title: "Programming & Development",
-      subtitle: "Master the Art of Code",
-      courses: 15,
-      icon: "💻",
+      title: "Piping Engineering",
+      subtitle: "Master Industrial Piping Design",
+      courses: 8,
+      icon: "�",
       gradient: "from-blue-600 via-purple-600 to-blue-800"
     },
     {
-      title: "Data Science & Analytics", 
-      subtitle: "Unlock Data Insights",
-      courses: 12,
-      icon: "📊",
+      title: "MEP Engineering", 
+      subtitle: "Mechanical, Electrical & Plumbing",
+      courses: 6,
+      icon: "⚡",
       gradient: "from-green-600 via-teal-600 to-green-800"
     },
     {
-      title: "Web Development",
-      subtitle: "Build the Digital Future",
-      courses: 18,
-      icon: "🌐",
+      title: "Structural Engineering",
+      subtitle: "Build Strong Foundations",
+      courses: 5,
+      icon: "�️",
       gradient: "from-orange-600 via-red-600 to-orange-800"
     },
     {
-      title: "Cybersecurity",
-      subtitle: "Defend the Digital World",
-      courses: 10,
-      icon: "🔒",
+      title: "HVAC Design",
+      subtitle: "Climate Control Solutions",
+      courses: 4,
+      icon: "❄️",
       gradient: "from-red-600 via-pink-600 to-red-800"
     }
   ]
@@ -94,7 +94,7 @@ const CoursesHero = () => {
                 transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`
               }}
             >
-              {['console.log()', 'function()', '&lt;div&gt;', 'SELECT *', 'import React', 'class MyClass', '&lt;html&gt;', 'def main():'][i % 8]}
+              {['SP3D()', 'E3D Design', 'CAESAR II', 'STAAD Pro', 'HVAC Load', 'MEP Design', 'AutoCAD', 'Piping ISO'][i % 8]}
             </div>
           ))}
         </div>
@@ -118,8 +118,8 @@ const CoursesHero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover comprehensive IT training programs designed to elevate your career. 
-              From beginner-friendly courses to advanced specializations.
+              Discover comprehensive engineering training programs designed to elevate your career. 
+              From piping design to structural analysis, master industry-standard tools and techniques.
             </p>
           </div>
 
@@ -166,7 +166,7 @@ const CoursesHero = () => {
           {/* Dynamic Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {[
-              { number: "55+", label: "Courses Available", icon: "📚" },
+              { number: "23+", label: "Engineering Courses", icon: "�" },
               { number: "2000+", label: "Students Trained", icon: "👨‍🎓" },
               { number: "95%", label: "Placement Rate", icon: "🎯" },
               { number: "50+", label: "Industry Partners", icon: "🤝" }

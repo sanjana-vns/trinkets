@@ -7,23 +7,23 @@ import CourseTestimonials from '@/components/courses/CourseTestimonials'
 import CourseEnrollment from '@/components/courses/CourseEnrollment'
 
 export const metadata: Metadata = {
-  title: 'Professional IT Courses & Training Programs | Trinkets Institute Mumbai',
-  description: 'Discover industry-leading IT courses at Trinkets Institute Mumbai. Expert training in software development, data science, cybersecurity, web development with 100% placement assistance. Start your tech career today!',
+  title: 'Engineering Courses & Professional Training | Trinkets Institute Mumbai',
+  description: 'Master engineering design with industry-leading courses in Piping, MEP, HVAC, Structural, and Software training. Expert-led programs with 100% placement assistance at Trinkets Institute Mumbai.',
   keywords: [
-    'IT training courses Mumbai',
-    'software development training',
-    'data science courses',
-    'cybersecurity training',
-    'web development bootcamp',
-    'programming courses',
-    'placement guarantee training',
-    'professional IT certification',
-    'tech career courses',
-    'computer science training',
-    'coding bootcamp Mumbai',
-    'best IT institute Mumbai',
-    'job oriented courses',
-    'industry ready training'
+    'engineering courses Mumbai',
+    'piping engineering training',
+    'MEP engineering course',
+    'HVAC design training',
+    'structural engineering course',
+    'SP3D training Mumbai',
+    'E3D piping course',
+    'STAAD Pro training',
+    'AutoCAD course Mumbai',
+    'CAESAR II training',
+    'engineering design course',
+    'industrial training Mumbai',
+    'placement guarantee engineering',
+    'professional engineering certification'
   ].join(', '),
   authors: [{ name: 'Trinkets Institute of Technology' }],
   creator: 'Trinkets Institute of Technology',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     canonical: '/courses',
   },
   openGraph: {
-    title: 'Professional IT Courses & Training Programs | Trinkets Institute',
-    description: 'Transform your career with industry-leading IT courses. Expert training in software development, data science, cybersecurity with 100% placement assistance.',
+    title: 'Engineering Courses & Professional Training | Trinkets Institute',
+    description: 'Master engineering design with industry-leading courses in Piping, MEP, HVAC, Structural training with 100% placement assistance.',
     url: '/courses',
     siteName: 'Trinkets Institute of Technology',
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: '/images/courses-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Trinkets Institute IT Courses and Training Programs',
+        alt: 'Trinkets Institute Engineering Courses and Professional Training Programs',
       },
     ],
     locale: 'en_IN',
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional IT Courses & Training Programs | Trinkets Institute',
-    description: 'Transform your career with industry-leading IT courses. Expert training with 100% placement assistance.',
+    title: 'Engineering Courses & Professional Training | Trinkets Institute',
+    description: 'Master engineering design with industry-leading courses in Piping, MEP, HVAC, Structural training with 100% placement assistance.',
     images: ['/images/courses-twitter.jpg'],
     creator: '@TrinketsInstitute',
   },
@@ -85,7 +85,7 @@ export default function CoursesPage() {
     "alternateName": "Trinkets Institute",
     "url": "https://trinketsinstitute.com",
     "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg",
-    "description": "Professional IT training institute offering comprehensive courses in software development, data science, cybersecurity, and web development with placement assistance.",
+    "description": "Professional engineering training institute offering comprehensive courses in Piping Engineering, MEP Design, HVAC, Structural Analysis, SP3D, E3D modeling with placement assistance.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "823, Ecstasy Business Park, City of Joy, JSD Road",
@@ -114,24 +114,30 @@ export default function CoursesPage() {
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "IT Training Courses",
+      "name": "Engineering Training Courses",
       "itemListElement": [
         {
           "@type": "Course",
-          "name": "Software Development Bootcamp",
-          "description": "Comprehensive full-stack development training with placement assistance",
+          "name": "Piping Engineering & Design",
+          "description": "Comprehensive piping design training with SP3D, AutoCAD, and CAESAR II",
           "provider": "Trinkets Institute of Technology"
         },
         {
           "@type": "Course", 
-          "name": "Data Science & Analytics",
-          "description": "Complete data science training with real-world projects",
+          "name": "MEP Engineering",
+          "description": "Complete MEP design training with industry software and placement assistance",
           "provider": "Trinkets Institute of Technology"
         },
         {
           "@type": "Course",
-          "name": "Cybersecurity Specialist",
-          "description": "Advanced cybersecurity training for enterprise security",
+          "name": "HVAC Design & Analysis",
+          "description": "Advanced HVAC system design and energy analysis training",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "Structural Engineering",
+          "description": "Structural analysis and design using STAAD Pro, ETABS, and SAP2000",
           "provider": "Trinkets Institute of Technology"
         }
       ]

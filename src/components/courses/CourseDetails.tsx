@@ -11,83 +11,83 @@ const CourseDetails = () => {
   const featuredCourses = [
     {
       id: 1,
-      title: "Full Stack Web Development Bootcamp",
-      subtitle: "Master Modern Web Technologies",
+      title: "Piping Engineering Professional Program",
+      subtitle: "Master Industrial Piping Design & Analysis",
       duration: "24 Weeks",
-      format: "Live + Recorded",
+      format: "Live + Hands-on Projects",
       certificate: "Industry Recognized",
       placement: "100% Assistance",
       curriculum: [
         {
-          module: "Frontend Fundamentals",
+          module: "Piping Fundamentals",
           duration: "6 weeks",
-          topics: ["HTML5 & CSS3", "JavaScript ES6+", "Responsive Design", "Bootstrap & Tailwind"]
+          topics: ["Piping Codes & Standards", "Material Selection", "Pipe Sizing", "Flow Analysis"]
         },
         {
-          module: "React Ecosystem",
+          module: "Design & Layout",
           duration: "6 weeks", 
-          topics: ["React Components", "State Management", "React Router", "Redux/Context API"]
+          topics: ["Plant Layout", "Equipment Integration", "Support Design", "Thermal Expansion"]
         },
         {
-          module: "Backend Development",
+          module: "3D Modeling Tools",
           duration: "6 weeks",
-          topics: ["Node.js & Express", "RESTful APIs", "Authentication", "Database Integration"]
+          topics: ["SP3D/E3D Piping", "Clash Detection", "Isometric Generation", "MTO Creation"]
         },
         {
-          module: "Full Stack Projects",
+          module: "Advanced Analysis",
           duration: "6 weeks",
-          topics: ["Real-world Projects", "Deployment", "Testing", "Performance Optimization"]
+          topics: ["Stress Analysis", "CAESAR II", "Safety Assessment", "Industry Projects"]
         }
       ],
-      tools: ["VS Code", "Git/GitHub", "MongoDB", "AWS", "Docker", "Figma"],
+      tools: ["SP3D", "E3D", "CAESAR II", "AutoCAD", "PDMS", "PDS"],
       outcomes: [
-        "Build responsive web applications",
-        "Create RESTful APIs and microservices", 
-        "Deploy applications to cloud platforms",
-        "Implement modern development workflows"
+        "Design complex piping systems for industrial plants",
+        "Perform pipe stress analysis and safety assessments", 
+        "Create detailed engineering drawings and documentation",
+        "Implement industry codes and standards (ASME, API, etc.)"
       ],
-      prerequisites: "Basic computer knowledge",
+      prerequisites: "Engineering degree or diploma (Mechanical/Chemical preferred)",
       price: "₹45,000",
       emi: "₹3,750/month"
     },
     {
       id: 2,
-      title: "Data Science & Machine Learning",
-      subtitle: "Transform Data into Insights",
-      duration: "32 Weeks",
-      format: "Live + Hands-on Labs",
-      certificate: "IBM Certified",
+      title: "MEP Engineering Comprehensive Course",
+      subtitle: "Mechanical, Electrical & Plumbing Systems",
+      duration: "28 Weeks",
+      format: "Live + Industry Projects",
+      certificate: "Professional Certification",
       placement: "95% Success Rate",
       curriculum: [
         {
-          module: "Python for Data Science",
-          duration: "8 weeks",
-          topics: ["Python Fundamentals", "NumPy & Pandas", "Data Manipulation", "Statistical Computing"]
+          module: "Mechanical Systems Design",
+          duration: "7 weeks",
+          topics: ["HVAC Design", "Ventilation Systems", "Energy Analysis", "Load Calculations"]
         },
         {
-          module: "Data Analysis & Visualization",
-          duration: "8 weeks",
-          topics: ["Exploratory Data Analysis", "Matplotlib & Seaborn", "Plotly & Dash", "Statistical Analysis"]
+          module: "Electrical Systems Design",
+          duration: "7 weeks",
+          topics: ["Power Distribution", "Lighting Design", "Fire Alarm Systems", "Load Analysis"]
         },
         {
-          module: "Machine Learning",
-          duration: "8 weeks",
-          topics: ["Supervised Learning", "Unsupervised Learning", "Deep Learning", "Model Evaluation"]
+          module: "Plumbing & Fire Protection",
+          duration: "7 weeks",
+          topics: ["Water Supply Systems", "Drainage Design", "Fire Sprinkler Systems", "Code Compliance"]
         },
         {
-          module: "Advanced Projects",
-          duration: "8 weeks",
-          topics: ["Real-world Datasets", "End-to-end Projects", "Model Deployment", "MLOps"]
+          module: "Integrated Building Systems",
+          duration: "7 weeks",
+          topics: ["BIM Coordination", "Clash Resolution", "Energy Optimization", "Real Projects"]
         }
       ],
-      tools: ["Python", "Jupyter", "TensorFlow", "Scikit-learn", "Tableau", "SQL"],
+      tools: ["Revit MEP", "AutoCAD", "HAP", "ETAP", "Dialux", "Trane TRACE"],
       outcomes: [
-        "Analyze complex datasets",
-        "Build machine learning models",
-        "Create data visualizations",
-        "Deploy ML models in production"
+        "Design integrated MEP systems for buildings",
+        "Optimize energy efficiency and sustainability",
+        "Coordinate multi-discipline engineering projects",
+        "Ensure compliance with building codes and standards"
       ],
-      prerequisites: "Basic mathematics and statistics",
+      prerequisites: "Engineering background in Mechanical/Electrical/Civil",
       price: "₹55,000",
       emi: "₹4,583/month"
     }

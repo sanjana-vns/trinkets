@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react'
 
 // Ultra-Creative Course Enrollment CTA Component
 const CourseEnrollment = () => {
-  const [selectedCourse, setSelectedCourse] = useState('full-stack')
+  const [selectedCourse, setSelectedCourse] = useState('piping-engineering')
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    course: 'full-stack'
+    course: 'piping-engineering'
   })
   const [countdown, setCountdown] = useState({ hours: 12, minutes: 30, seconds: 45 })
 
@@ -40,32 +40,32 @@ const CourseEnrollment = () => {
 
   const courses = [
     {
-      id: 'full-stack',
-      name: 'Full Stack Development',
+      id: 'piping-engineering',
+      name: 'Piping Engineering & SP3D',
       price: '₹45,000',
       originalPrice: '₹60,000',
       duration: '6 months',
-      icon: '🌐',
+      icon: '🔧',
       gradient: 'from-blue-600 to-purple-600',
       popular: true
     },
     {
-      id: 'data-science',
-      name: 'Data Science & ML',
+      id: 'mep-engineering',
+      name: 'MEP Engineering',
       price: '₹55,000',
       originalPrice: '₹75,000',
       duration: '8 months',
-      icon: '📊',
+      icon: '⚡',
       gradient: 'from-green-600 to-teal-600',
       popular: false
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
+      id: 'hvac-design',
+      name: 'HVAC Design & Analysis',
       price: '₹50,000',
       originalPrice: '₹65,000',
       duration: '5 months',
-      icon: '🔒',
+      icon: '❄️',
       gradient: 'from-red-600 to-pink-600',
       popular: false
     }
