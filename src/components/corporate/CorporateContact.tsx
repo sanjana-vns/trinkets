@@ -35,7 +35,7 @@ const CorporateContact = () => {
     demo: {
       title: "Request Demo",
       icon: "🎯",
-      gradient: "from-orange-600 to-red-600",
+      gradient: "from-blue-600 to-indigo-600",
       description: "See our training methodology and platform in action"
     }
   }

@@ -57,7 +57,7 @@ const TrainingMethodology = () => {
       duration: "Week 13",
       description: "Skills validation, certification, and ongoing support planning",
       icon: "🏆",
-      color: "orange",
+      color: "blue",
       activities: [
         "Skills assessment",
         "Project presentations",
@@ -110,7 +110,7 @@ const TrainingMethodology = () => {
     measurement: {
       title: "Impact Measurement",
       icon: "📈",
-      gradient: "from-orange-600 to-red-600",
+      gradient: "from-blue-600 to-indigo-600",
       description: "Comprehensive tracking of learning outcomes and business impact",
       features: [
         "Skills improvement tracking",
@@ -142,7 +142,7 @@ const TrainingMethodology = () => {
       icon: "🔄",
       description: "Combination of on-site and virtual training sessions",
       benefits: ["Best of both worlds", "Flexible approach", "Optimal engagement", "Tailored delivery"],
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-blue-500 to-indigo-500"
     },
     {
       method: "Self-paced Learning",
@@ -166,7 +166,7 @@ const TrainingMethodology = () => {
       {/* Background Decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-orange-200/30 to-red-200/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +192,7 @@ const TrainingMethodology = () => {
             {/* Progress Line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 transform -translate-y-1/2"></div>
             <div 
-              className={`absolute top-1/2 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-orange-500 transform -translate-y-1/2 transition-all duration-1000 ${
+              className={`absolute top-1/2 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-indigo-500 transform -translate-y-1/2 transition-all duration-1000 ${
                 progressAnimation ? 'animate-pulse' : ''
               }`}
               style={{ width: `${((activePhase + 1) / phases.length) * 100}%` }}

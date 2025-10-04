@@ -13,7 +13,7 @@ const TrainingPrograms = () => {
     { id: 'data', name: 'Data & Analytics', icon: '📊', gradient: 'from-green-600 to-teal-600' },
     { id: 'cloud', name: 'Cloud & DevOps', icon: '☁️', gradient: 'from-cyan-600 to-blue-600' },
     { id: 'security', name: 'Cybersecurity', icon: '🔒', gradient: 'from-red-600 to-pink-600' },
-    { id: 'management', name: 'Project Management', icon: '📋', gradient: 'from-orange-600 to-red-600' },
+    { id: 'management', name: 'Project Management', icon: '📋', gradient: 'from-blue-600 to-indigo-600' },
     { id: 'emerging', name: 'Emerging Technologies', icon: '🚀', gradient: 'from-purple-600 to-indigo-600' }
   ]
 
@@ -179,7 +179,7 @@ const TrainingPrograms = () => {
       {/* Background Decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-orange-200/30 to-red-200/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

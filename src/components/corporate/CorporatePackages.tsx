@@ -70,7 +70,7 @@ const CorporatePackages = () => {
       price: "₹10,00,000+",
       duration: "3-6 months",
       participants: "50-200+",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-blue-500 to-indigo-500",
       icon: "🏆",
       popular: false,
       features: [
@@ -157,7 +157,7 @@ const CorporatePackages = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-morph"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-full blur-3xl animate-morph-reverse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full blur-3xl animate-morph-reverse"></div>
         
         {/* Floating Price Icons */}
         <div className="absolute inset-0">
@@ -208,7 +208,7 @@ const CorporatePackages = () => {
                   <span className="text-xl">{pkg.icon}</span>
                   <span>{pkg.name}</span>
                   {pkg.popular && (
-                    <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                    <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                       Popular
                     </span>
                   )}

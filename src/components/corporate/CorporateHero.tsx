@@ -47,7 +47,7 @@ const CorporateHero = () => {
       title: "Measurable ROI",
       description: "Track progress with detailed analytics and performance metrics",
       icon: "📊",
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-blue-500 to-indigo-500"
     }
   ]
 
@@ -113,7 +113,7 @@ const CorporateHero = () => {
 
         {/* Morphing Background Shapes */}
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full animate-morph blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-full animate-morph-reverse blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full animate-morph-reverse blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-600/20 to-teal-600/20 rounded-full animate-morph-hero blur-3xl"></div>
       </div>
 
@@ -125,7 +125,7 @@ const CorporateHero = () => {
               <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent animate-gradient-x">
                 Corporate Training
               </span>
-              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent animate-gradient-x mt-2">
+              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x mt-2">
                 Empower Your Workforce
               </span>
             </h1>
@@ -190,7 +190,7 @@ const CorporateHero = () => {
                     key={index}
                     className={`group relative p-4 rounded-xl transition-all duration-500 transform ${
                       currentClient === index 
-                        ? 'scale-110 bg-white/20 border-2 border-orange-400' 
+                        ? 'scale-110 bg-white/20 border-2 border-blue-400' 
                         : 'scale-100 bg-white/10 border border-white/20 hover:scale-105'
                     }`}
                   >
@@ -207,7 +207,7 @@ const CorporateHero = () => {
 
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
               <span className="relative z-10 flex items-center gap-2">
                 Schedule Consultation
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -248,11 +248,11 @@ const CorporateHero = () => {
       {/* Floating Action Elements */}
       <div className="absolute top-20 right-20 hidden lg:block">
         <div className="relative group">
-          <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center cursor-pointer transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-2xl">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center cursor-pointer transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-2xl">
             <span className="text-2xl">💼</span>
           </div>
           <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full animate-ping"></div>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400/50 to-red-500/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/50 to-indigo-500/50 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
         </div>
       </div>
     </section>
