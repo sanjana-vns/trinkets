@@ -4,160 +4,199 @@ import { useState, useEffect } from 'react'
 
 // Ultra-Creative Training Programs Component
 const TrainingPrograms = () => {
-  const [activeCategory, setActiveCategory] = useState('technology')
+  const [activeCategory, setActiveCategory] = useState('piping')
   const [hoveredProgram, setHoveredProgram] = useState<number | null>(null)
   const [selectedDuration, setSelectedDuration] = useState('all')
 
   const categories = [
-    { id: 'technology', name: 'Technology & Development', icon: '💻', gradient: 'from-blue-600 to-purple-600' },
-    { id: 'data', name: 'Data & Analytics', icon: '📊', gradient: 'from-green-600 to-teal-600' },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: '☁️', gradient: 'from-cyan-600 to-blue-600' },
-    { id: 'security', name: 'Cybersecurity', icon: '🔒', gradient: 'from-red-600 to-pink-600' },
-    { id: 'management', name: 'Project Management', icon: '📋', gradient: 'from-blue-600 to-indigo-600' },
-    { id: 'emerging', name: 'Emerging Technologies', icon: '🚀', gradient: 'from-purple-600 to-indigo-600' }
+    { id: 'piping', name: 'Piping Engineering', icon: '�', gradient: 'from-blue-600 to-purple-600' },
+    { id: 'mep', name: 'MEP Engineering', icon: '⚡', gradient: 'from-green-600 to-teal-600' },
+    { id: 'hvac', name: 'HVAC Systems', icon: '❄️', gradient: 'from-cyan-600 to-blue-600' },
+    { id: 'structural', name: 'Structural Engineering', icon: '🏗️', gradient: 'from-red-600 to-pink-600' },
+    { id: 'cad', name: 'CAD & Design Software', icon: '�', gradient: 'from-blue-600 to-indigo-600' },
+    { id: 'process', name: 'Process Engineering', icon: '⚙️', gradient: 'from-purple-600 to-indigo-600' }
   ]
 
   const trainingPrograms = {
-    technology: [
+    piping: [
       {
         id: 1,
-        title: "Full Stack Development Bootcamp",
-        description: "Comprehensive training in modern web technologies for enterprise applications",
-        duration: "40 hours",
-        format: "On-site/Virtual",
-        level: "Intermediate",
-        technologies: ["React", "Node.js", "TypeScript", "MongoDB"],
-        participants: "15-25",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Hands-on Projects", "Code Reviews", "Best Practices", "Enterprise Architecture"]
-      },
-      {
-        id: 2,
-        title: "Enterprise Java Development",
-        description: "Advanced Java programming with Spring framework for enterprise solutions",
-        duration: "60 hours",
-        format: "On-site",
-        level: "Advanced",
-        technologies: ["Java 17", "Spring Boot", "Microservices", "Docker"],
-        participants: "10-20",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Microservices Architecture", "Testing Strategies", "Performance Optimization", "Security Implementation"]
-      },
-      {
-        id: 3,
-        title: "Mobile App Development",
-        description: "Cross-platform mobile development for iOS and Android applications",
-        duration: "50 hours",
-        format: "Virtual/Hybrid",
-        level: "Intermediate",
-        technologies: ["React Native", "Flutter", "Firebase", "API Integration"],
-        participants: "12-18",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Cross-platform Development", "App Store Deployment", "Performance Optimization", "User Experience Design"]
-      }
-    ],
-    data: [
-      {
-        id: 4,
-        title: "Data Science for Business",
-        description: "Transform business data into actionable insights using modern analytics tools",
+        title: "SP3D Piping Design Training",
+        description: "Comprehensive training in Smart Plant 3D for industrial piping design and modeling",
         duration: "80 hours",
         format: "On-site/Virtual",
         level: "Intermediate",
-        technologies: ["Python", "R", "Tableau", "Power BI", "SQL"],
-        participants: "15-25",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Statistical Analysis", "Data Visualization", "Predictive Modeling", "Business Intelligence"]
-      },
-      {
-        id: 5,
-        title: "Machine Learning Implementation",
-        description: "Practical machine learning for enterprise decision making and automation",
-        duration: "70 hours",
-        format: "On-site",
-        level: "Advanced",
-        technologies: ["Python", "TensorFlow", "Scikit-learn", "MLflow"],
+        technologies: ["SP3D", "AutoCAD", "Piping Specifications", "Isometric Generation"],
         participants: "10-15",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Model Development", "Deployment Strategies", "MLOps", "Model Monitoring"]
-      }
-    ],
-    cloud: [
-      {
-        id: 6,
-        title: "AWS Cloud Architecture",
-        description: "Design and implement scalable cloud solutions using AWS services",
-        duration: "45 hours",
-        format: "Virtual/On-site",
-        level: "Intermediate",
-        technologies: ["AWS", "Terraform", "Docker", "Kubernetes"],
-        participants: "12-20",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Cloud Migration", "Cost Optimization", "Security Best Practices", "Disaster Recovery"]
+        features: ["3D Modeling", "Clash Detection", "Isometric Drawings", "Equipment Placement"]
       },
       {
-        id: 7,
-        title: "DevOps Implementation",
-        description: "Streamline development and operations with modern DevOps practices",
-        duration: "55 hours",
+        id: 2,
+        title: "CAESAR II Stress Analysis",
+        description: "Advanced piping stress analysis using CAESAR II for industrial applications",
+        duration: "60 hours",
         format: "On-site",
         level: "Advanced",
-        technologies: ["Jenkins", "GitLab CI", "Docker", "Kubernetes", "Terraform"],
-        participants: "10-18",
+        technologies: ["CAESAR II", "ASME B31.3", "Stress Analysis", "Support Design"],
+        participants: "8-12",
         customizable: true,
         price: "Contact for Quote",
-        features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Automated Testing"]
-      }
-    ],
-    security: [
+        features: ["Thermal Stress Analysis", "Seismic Analysis", "Support Optimization", "Code Compliance"]
+      },
       {
-        id: 8,
-        title: "Enterprise Cybersecurity",
-        description: "Comprehensive security training for enterprise environments",
-        duration: "60 hours",
-        format: "On-site/Virtual",
-        level: "Intermediate",
-        technologies: ["Security Frameworks", "Penetration Testing", "Incident Response"],
-        participants: "15-25",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Threat Assessment", "Security Policies", "Compliance", "Risk Management"]
-      }
-    ],
-    management: [
-      {
-        id: 9,
-        title: "Agile Project Management",
-        description: "Master agile methodologies for efficient project delivery",
-        duration: "30 hours",
-        format: "Virtual/Hybrid",
+        id: 3,
+        title: "Piping Engineering Fundamentals",
+        description: "Complete piping engineering training from basics to advanced concepts",
+        duration: "100 hours",
+        format: "On-site/Hybrid",
         level: "Beginner",
-        technologies: ["Scrum", "Kanban", "Jira", "Confluence"],
-        participants: "20-30",
-        customizable: true,
-        price: "Contact for Quote",
-        features: ["Scrum Master Certification", "Team Leadership", "Sprint Planning", "Stakeholder Management"]
-      }
-    ],
-    emerging: [
-      {
-        id: 10,
-        title: "AI & Automation Workshop",
-        description: "Explore artificial intelligence and automation for business transformation",
-        duration: "40 hours",
-        format: "On-site/Virtual",
-        level: "Intermediate",
-        technologies: ["AI/ML", "RPA", "ChatGPT", "Automation Tools"],
+        technologies: ["AutoCAD", "P&ID", "Piping Design", "Material Selection"],
         participants: "15-20",
         customizable: true,
         price: "Contact for Quote",
-        features: ["AI Implementation", "Process Automation", "ROI Analysis", "Change Management"]
+        features: ["Piping Fundamentals", "Design Standards", "Material Engineering", "Project Management"]
+      }
+    ],
+    mep: [
+      {
+        id: 4,
+        title: "MEP Design & Coordination",
+        description: "Comprehensive MEP engineering training for building services design",
+        duration: "120 hours",
+        format: "On-site/Virtual",
+        level: "Intermediate",
+        technologies: ["Revit MEP", "AutoCAD MEP", "HAP", "Elite Software"],
+        participants: "12-18",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Electrical Design", "Plumbing Systems", "Fire Protection", "BIM Coordination"]
+      },
+      {
+        id: 5,
+        title: "Building Information Modeling (BIM)",
+        description: "Advanced BIM implementation for MEP engineering and coordination",
+        duration: "80 hours",
+        format: "On-site",
+        level: "Advanced",
+        technologies: ["Revit MEP", "Navisworks", "BIM 360", "Dynamo"],
+        participants: "10-15",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["3D Modeling", "Clash Detection", "4D Scheduling", "5D Cost Analysis"]
+      }
+    ],
+    hvac: [
+      {
+        id: 6,
+        title: "HVAC System Design & Analysis",
+        description: "Complete HVAC system design using industry-standard software and methods",
+        duration: "90 hours",
+        format: "On-site/Virtual",
+        level: "Intermediate",
+        technologies: ["HAP", "Trace 700", "Elite CHVAC", "Duct Design"],
+        participants: "12-16",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Load Calculations", "System Design", "Energy Analysis", "Duct Sizing"]
+      },
+      {
+        id: 7,
+        title: "Energy Modeling & Green Building",
+        description: "Advanced energy modeling and sustainable HVAC design practices",
+        duration: "70 hours",
+        format: "On-site",
+        level: "Advanced",
+        technologies: ["eQUEST", "EnergyPlus", "Green Building", "LEED"],
+        participants: "8-12",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Energy Simulation", "LEED Compliance", "Sustainable Design", "Cost-Benefit Analysis"]
+      }
+    ],
+    structural: [
+      {
+        id: 8,
+        title: "STAAD Pro Structural Analysis",
+        description: "Comprehensive structural analysis and design using STAAD Pro software",
+        duration: "80 hours",
+        format: "On-site/Virtual",
+        level: "Intermediate",
+        technologies: ["STAAD Pro", "ETABS", "Structural Design", "IS Codes"],
+        participants: "12-16",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Structural Modeling", "Load Analysis", "Design Optimization", "Code Compliance"]
+      },
+      {
+        id: 9,
+        title: "Advanced Steel Structure Design",
+        description: "Specialized training in steel structure design for industrial applications",
+        duration: "70 hours",
+        format: "On-site",
+        level: "Advanced",
+        technologies: ["STAAD Pro", "SAP2000", "Connection Design", "Fabrication"],
+        participants: "8-12",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Connection Design", "Fabrication Details", "Erection Planning", "Cost Optimization"]
+      }
+    ],
+    cad: [
+      {
+        id: 10,
+        title: "AutoCAD for Engineering Design",
+        description: "Master AutoCAD for engineering drawings and technical documentation",
+        duration: "60 hours",
+        format: "On-site/Virtual",
+        level: "Beginner",
+        technologies: ["AutoCAD", "Technical Drawing", "Dimensioning", "3D Modeling"],
+        participants: "15-20",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["2D Drafting", "3D Modeling", "Technical Standards", "Plot Management"]
+      },
+      {
+        id: 11,
+        title: "Advanced CAD & 3D Modeling",
+        description: "Advanced CAD techniques and 3D modeling for engineering applications",
+        duration: "80 hours",
+        format: "On-site",
+        level: "Advanced",
+        technologies: ["AutoCAD 3D", "Inventor", "SolidWorks", "3D Printing"],
+        participants: "10-15",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Parametric Modeling", "Assembly Design", "Simulation", "Manufacturing Integration"]
+      }
+    ],
+    process: [
+      {
+        id: 12,
+        title: "Process Engineering Fundamentals",
+        description: "Complete process engineering training for chemical and petrochemical industries",
+        duration: "100 hours",
+        format: "On-site/Virtual",
+        level: "Intermediate",
+        technologies: ["HYSYS", "Aspen Plus", "P&ID", "Process Simulation"],
+        participants: "12-18",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Process Design", "Heat Integration", "Safety Analysis", "Economic Evaluation"]
+      },
+      {
+        id: 13,
+        title: "Plant Design & Layout",
+        description: "Industrial plant design and layout optimization for process industries",
+        duration: "90 hours",
+        format: "On-site",
+        level: "Advanced",
+        technologies: ["PDMS", "E3D", "Plant Layout", "Safety Considerations"],
+        participants: "8-12",
+        customizable: true,
+        price: "Contact for Quote",
+        features: ["Equipment Layout", "Pipe Routing", "Safety Compliance", "Maintenance Access"]
       }
     ]
   }
