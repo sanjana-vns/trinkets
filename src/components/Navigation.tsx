@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,29 +23,22 @@ const Navigation = () => {
     <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Creative Logo with enhanced effects */}
+          {/* Logo with Trinkets Institute image */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
               <div className="relative flex items-center space-x-3">
-                {/* Logo Icon */}
+                {/* Logo Image */}
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 via-blue-500 to-blue-800 
-                                 flex items-center justify-center shadow-lg group-hover:shadow-xl 
+                  <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl 
                                  group-hover:scale-110 transition-all duration-300 ease-out
-                                 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-br 
-                                 before:from-white/20 before:to-transparent before:opacity-0 
-                                 group-hover:before:opacity-100 before:transition-opacity before:duration-300">
-                    <div className="relative z-10">
-                      {/* Creative T icon with gear elements */}
-                      <svg className="w-7 h-7 text-white group-hover:rotate-12 transition-transform duration-300" 
-                           viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L13.5 8.5H20L15 12L16.5 18.5L12 15L7.5 18.5L9 12L4 8.5H10.5L12 2Z"/>
-                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
-                      </svg>
-                    </div>
-                    {/* Rotating ring */}
-                    <div className="absolute inset-1 rounded-lg border-2 border-white/30 
-                                   group-hover:rotate-180 transition-transform duration-700 ease-out"></div>
+                                 ring-2 ring-blue-200 group-hover:ring-blue-300">
+                    <Image
+                      src="/images/trinketlogo.jpg"
+                      alt="Trinkets Institute Logo"
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Pulsing dot indicator */}
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full 
