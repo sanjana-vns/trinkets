@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { TrendingUp, Users, Award, Building, Target, Clock, Star, CheckCircle, BookOpen, Briefcase } from 'lucide-react'
 
@@ -101,7 +101,7 @@ const PlacementStats = () => {
     }
   ]
 
-  const startCounters = () => {
+  const startCounters = useCallback(() => {
     const duration = 2000
     const steps = 60
     const interval = duration / steps
@@ -123,6 +123,11 @@ const PlacementStats = () => {
         }))
       }, interval)
     })
+  }, [stats])
+
+  const getCounterKey = (index: number) => {
+    const keys = ['placementRate', 'studentsPlaced', 'companies', 'averagePackage', 'experience', 'satisfaction']
+    return keys[index]
   }
 
   useEffect(() => {
@@ -142,11 +147,6 @@ const PlacementStats = () => {
 
     return () => observer.disconnect()
   }, [startCounters])
-
-  const getCounterKey = (index: number) => {
-    const keys = ['placementRate', 'studentsPlaced', 'companies', 'averagePackage', 'experience', 'satisfaction']
-    return keys[index]
-  }
 
   const getCounterValue = (index: number) => {
     const values = [

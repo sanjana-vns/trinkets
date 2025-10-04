@@ -111,12 +111,12 @@ export const throttle = <T extends (...args: any[]) => any>(
 // Web Vitals measurement
 export const measureWebVitals = () => {
   if (typeof window !== 'undefined') {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(console.log)
-      getFID(console.log)
-      getFCP(console.log)
-      getLCP(console.log)
-      getTTFB(console.log)
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+      onCLS(console.log)
+      onFCP(console.log)
+      onLCP(console.log)
+      onTTFB(console.log)
+      onINP(console.log) // INP replaced FID in Core Web Vitals
     })
   }
 }
