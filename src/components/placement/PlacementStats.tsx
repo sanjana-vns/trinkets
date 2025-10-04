@@ -141,7 +141,7 @@ const PlacementStats = () => {
     }
 
     return () => observer.disconnect()
-  }, [])
+  }, [startCounters])
 
   const getCounterKey = (index: number) => {
     const keys = ['placementRate', 'studentsPlaced', 'companies', 'averagePackage', 'experience', 'satisfaction']

@@ -208,7 +208,7 @@ const FeaturedTestimonials = () => {
                 <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                   <Quote className="w-8 h-8 text-blue-500 mb-4" />
                   <p className="text-gray-700 leading-relaxed italic text-lg">
-                    "{filteredStories[selectedStory]?.testimonialFull}"
+                    &ldquo;{filteredStories[selectedStory]?.testimonialFull}&rdquo;
                   </p>
                 </div>
 

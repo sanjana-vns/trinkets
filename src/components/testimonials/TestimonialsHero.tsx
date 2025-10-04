@@ -241,7 +241,7 @@ const TestimonialsHero = () => {
                   <div className="bg-white/5 rounded-2xl p-4 border border-white/10">
                     <Quote className="w-6 h-6 text-blue-400 mb-2" />
                     <p className="text-gray-200 text-sm leading-relaxed italic">
-                      "{heroStories[currentSlide].testimonial}"
+                      &ldquo;{heroStories[currentSlide].testimonial}&rdquo;
                     </p>
                   </div>
 
