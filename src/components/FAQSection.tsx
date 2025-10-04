@@ -124,7 +124,7 @@ const FAQSection = () => {
     <section 
       ref={sectionRef}
       id="faq-section"
-      className="relative py-32 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden"
+      className="relative py-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden"
       style={{
         backgroundImage: `
           radial-gradient(circle at ${mousePosition.x * 0.1}px ${mousePosition.y * 0.1}px, rgba(251, 146, 60, 0.15) 0%, transparent 50%),
@@ -197,106 +197,41 @@ const FAQSection = () => {
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
-        {/* Revolutionary Section Header */}
-        <div className="text-center mb-32">
-          {/* Floating Badge with Holographic Effect */}
-          <div className="relative inline-block mb-12">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full blur-2xl opacity-50 animate-pulse-slow scale-110"></div>
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative bg-white/90 backdrop-blur-md border-4 border-orange-300/50 rounded-full px-12 py-6 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-                <div className="flex items-center gap-4">
-                  <div className="flex space-x-2">
-                    <div className="w-4 h-4 bg-orange-500 rounded-full animate-ping"></div>
-                    <div className="w-4 h-4 bg-amber-500 rounded-full animate-ping" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-4 h-4 bg-yellow-500 rounded-full animate-ping" style={{animationDelay: '0.4s'}}></div>
-                  </div>
-                  <span className="text-orange-600 font-black uppercase tracking-widest text-lg">
-                    🧠 Frequently Asked Questions
-                  </span>
-                  <div className="flex space-x-2">
-                    <div className="w-4 h-4 bg-yellow-500 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
-                    <div className="w-4 h-4 bg-amber-500 rounded-full animate-ping" style={{animationDelay: '0.8s'}}></div>
-                    <div className="w-4 h-4 bg-orange-500 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
-                  </div>
-                </div>
+        {/* Simplified Section Header */}
+        <div className="text-center mb-16">
+          {/* Badge */}
+          <div className="relative inline-block mb-8">
+            <div className="bg-white/90 backdrop-blur-md border-2 border-orange-300/50 rounded-full px-8 py-3 shadow-xl">
+              <div className="flex items-center gap-3">
+                <span className="text-orange-600 font-bold uppercase tracking-wider text-sm">
+                  🧠 Frequently Asked Questions
+                </span>
               </div>
             </div>
           </div>
           
-          {/* Mind-Blowing Title with Text Effects */}
-          <div className="relative mb-12">
-            <div className="absolute inset-0 text-8xl lg:text-9xl font-black text-orange-200/20 blur-sm">
-              QUESTIONS?
-            </div>
-            <h2 className="relative text-7xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight">
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '0ms'}}>G</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '100ms'}}>o</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '200ms'}}>t</span>
-              <span className="inline-block mx-4"></span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '300ms'}}>Q</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '400ms'}}>u</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '500ms'}}>e</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '600ms'}}>s</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '700ms'}}>t</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '800ms'}}>i</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '900ms'}}>o</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '1000ms'}}>n</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '1100ms'}}>s</span>
-              <span className="inline-block animate-bounce-gentle" style={{animationDelay: '1200ms'}}>?</span>
+          {/* Title */}
+          <div className="relative mb-8">
+            <h2 className="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight">
+              Got Questions?
             </h2>
             
-            <div className="mt-8 relative">
-              <div className="absolute inset-0 text-5xl lg:text-6xl font-bold text-amber-200/20 blur-sm">
-                We&apos;ve Got Epic Answers! 🎯
-              </div>
-              <span className="relative text-4xl lg:text-6xl font-bold text-gray-700 block">
-                We&apos;ve Got <span className="text-orange-600 animate-pulse">Epic</span> Answers! 
-                <span className="inline-block animate-spin text-6xl ml-4">🎯</span>
+            <div className="mt-4">
+              <span className="text-3xl lg:text-4xl font-bold text-gray-700">
+                We&apos;ve Got <span className="text-orange-600">Answers!</span> 🎯
               </span>
             </div>
 
-            {/* Dynamic Underline */}
-            <div className="mt-8 flex justify-center">
-              <div className="w-48 h-2 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-full relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -skew-x-12 animate-shimmer"></div>
-              </div>
+            {/* Underline */}
+            <div className="mt-6 flex justify-center">
+              <div className="w-32 h-1 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 rounded-full"></div>
             </div>
           </div>
           
-          <p className="text-2xl lg:text-3xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Everything you need to know about starting your 
-            <span className="relative inline-block mx-2">
-              <span className="text-orange-600 font-bold">engineering career journey</span>
-              <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full animate-pulse"></div>
-            </span> 
-            with us
+            <span className="text-orange-600 font-semibold">engineering career journey</span> with us
           </p>
-
-          {/* Interactive Elements Constellation */}
-          <div className="flex justify-center mt-16 space-x-12">
-            {[
-              { emoji: '🎯', delay: '0ms', color: 'text-orange-500' },
-              { emoji: '⚡', delay: '200ms', color: 'text-amber-500' },
-              { emoji: '🚀', delay: '400ms', color: 'text-yellow-500' },
-              { emoji: '💫', delay: '600ms', color: 'text-orange-400' },
-              { emoji: '🌟', delay: '800ms', color: 'text-amber-400' },
-              { emoji: '🎓', delay: '1000ms', color: 'text-yellow-400' },
-              { emoji: '🏆', delay: '1200ms', color: 'text-orange-500' }
-            ].map((item, i) => (
-              <div 
-                key={i}
-                className={`text-5xl lg:text-6xl animate-bounce hover:scale-125 transition-all duration-500 cursor-pointer ${item.color} hover:rotate-12`}
-                style={{animationDelay: item.delay}}
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <div className={`transform transition-all duration-300 ${hoveredIndex === i ? 'scale-150 rotate-12' : ''}`}>
-                  {item.emoji}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Revolutionary FAQ Cards with Next-Level Creativity */}
@@ -488,107 +423,39 @@ const FAQSection = () => {
           ))}
         </div>
 
-        {/* Ultra Creative Contact CTA with 3D Effects */}
-        <div className="text-center mt-20">
-          <div className="relative group">
-            {/* Holographic Background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-90 transition-opacity duration-500 animate-pulse-slow"></div>
+        {/* Simplified Contact CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 rounded-2xl shadow-xl p-8 border border-orange-300/50 overflow-hidden max-w-4xl mx-auto">
             
-            <div className="relative bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 rounded-3xl shadow-2xl p-16 border-2 border-orange-300/50 overflow-hidden transform group-hover:scale-[1.02] transition-all duration-500">
-              
-              {/* Dynamic Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                {[...Array(20)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute bg-white rounded-full animate-float"
-                    style={{
-                      width: `${Math.random() * 20 + 10}px`,
-                      height: `${Math.random() * 20 + 10}px`,
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 10}s`,
-                      animationDuration: `${5 + Math.random() * 10}s`
-                    }}
-                  />
-                ))}
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="mb-6">
+                <div className="text-4xl mb-3">🤔</div>
+                <h3 className="text-3xl font-bold text-white mb-2">
+                  Still Have Questions?
+                </h3>
+                <div className="w-16 h-1 bg-white rounded-full mx-auto opacity-75"></div>
               </div>
               
-              {/* Content */}
-              <div className="relative z-10">
-                <div className="mb-8">
-                  <div className="text-7xl mb-4 animate-bounce-gentle">🤔</div>
-                  <h3 className="text-5xl font-black text-white mb-4 drop-shadow-lg">
-                    Still Curious?
-                  </h3>
-                  <div className="w-24 h-1 bg-white rounded-full mx-auto opacity-75"></div>
-                </div>
+              <p className="text-lg text-orange-100 mb-6 max-w-2xl mx-auto leading-relaxed">
+                Our friendly team is here to help you find the perfect course for your career goals.
+              </p>
+              
+              {/* Interactive Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-3 bg-white text-orange-600 font-semibold rounded-xl hover:bg-orange-50 transition-all duration-300 hover:shadow-lg text-center"
+                >
+                  Get In Touch 💬
+                </a>
                 
-                <p className="text-2xl text-orange-100 mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-md">
-                  Our <span className="font-bold text-white">friendly admissions team</span> is excited to help you discover the perfect course for your 
-                  <span className="font-bold text-white"> engineering dreams!</span> ✨
-                </p>
-                
-                {/* Interactive Buttons */}
-                <div className="flex flex-col sm:flex-row gap-8 justify-center">
-                  <a
-                    href="/contact"
-                    className="group/btn relative px-12 py-6 bg-white text-orange-600 font-bold rounded-2xl 
-                             hover:bg-orange-50 transition-all duration-500 hover:shadow-2xl hover:scale-110 text-center
-                             border-4 border-orange-200 hover:border-orange-300 transform-gpu overflow-hidden"
-                  >
-                    {/* Button Shine Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover/btn:translate-x-full transition-transform duration-1000"></div>
-                    
-                    <span className="relative flex items-center justify-center gap-4 text-xl">
-                      <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center group-hover/btn:rotate-12 transition-transform duration-300">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                      </div>
-                      Let&apos;s Chat & Explore! 💬
-                    </span>
-                  </a>
-                  
-                  <a
-                    href="tel:+919820924788"
-                    className="group/btn relative px-12 py-6 bg-orange-600 text-white font-bold rounded-2xl 
-                             hover:bg-orange-700 transition-all duration-500 hover:shadow-2xl hover:scale-110 text-center
-                             border-4 border-orange-500 hover:border-orange-400 transform-gpu overflow-hidden"
-                  >
-                    {/* Button Pulse Effect */}
-                    <div className="absolute inset-0 bg-orange-400 rounded-2xl opacity-0 group-hover/btn:opacity-30 group-hover/btn:animate-ping"></div>
-                    
-                    <span className="relative flex items-center justify-center gap-4 text-xl">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover/btn:animate-pulse">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </div>
-                      Call Now & Start Today! 📞
-                    </span>
-                  </a>
-                </div>
-
-                {/* Social Proof Badge */}
-                <div className="mt-12 flex justify-center">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-4 border border-white/30">
-                    <div className="flex items-center gap-4 text-white">
-                      <div className="flex -space-x-2">
-                        {[...Array(5)].map((_, i) => (
-                          <div key={i} className="w-8 h-8 bg-orange-300 rounded-full border-2 border-white flex items-center justify-center text-sm font-bold">
-                            👨‍🎓
-                          </div>
-                        ))}
-                      </div>
-                      <div className="text-left">
-                        <div className="font-bold">5000+ Happy Students</div>
-                        <div className="text-sm opacity-90">Join our success story!</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <a
+                  href="tel:+919820924788"
+                  className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-xl hover:bg-orange-700 transition-all duration-300 hover:shadow-lg text-center border-2 border-orange-500"
+                >
+                  Call Now 📞
+                </a>
               </div>
             </div>
           </div>
