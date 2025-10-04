@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const CoursesSection = () => {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -162,9 +163,9 @@ const CoursesSection = () => {
                     <span className="text-2xl font-bold text-gray-900">{course.price}</span>
                     <span className="text-gray-500 text-sm ml-1">/course</span>
                   </div>
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
+                  <Link href="/courses/piping-design-engineering" className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -181,12 +182,12 @@ const CoursesSection = () => {
               We offer customized training programs for organizations and individuals. Contact us to discuss your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200">
+              <Link href="/contact" className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200">
                 Contact Us
-              </button>
-              <button className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+              </Link>
+              <Link href="/courses" className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
                 View All Courses
-              </button>
+              </Link>
             </div>
           </div>
         </div>

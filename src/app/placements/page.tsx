@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Engineering Placement Services - 100% Placement Assistance | Trinkets Institute",
@@ -14,8 +15,11 @@ export default function PlacementPage() {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Engineering Placement Services
           </h1>
-          <p className="text-gray-600 text-lg mb-8">
+          <p className="text-gray-600 text-lg mb-4">
             100% Placement Assistance for Engineering Professionals
+          </p>
+          <p className="text-gray-600 mb-8">
+            Enroll in our <Link href="/courses" className="text-blue-600 hover:text-blue-800 underline">industry-focused courses</Link> and get guaranteed placement support. Learn from <Link href="/testimonials" className="text-blue-600 hover:text-blue-800 underline">success stories</Link> of our alumni.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-blue-500 text-white p-6 rounded-lg">
@@ -213,12 +217,12 @@ export default function PlacementPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Career Journey?</h2>
           <p className="text-xl mb-6">Join thousands of successful engineers who found their dream jobs through our placement program.</p>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Apply for Placement
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Download Brochure
-            </button>
+            </Link>
           </div>
         </div>
       </div>

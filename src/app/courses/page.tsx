@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import CoursesHero from '@/components/courses/CoursesHero'
 import CourseCategories from '@/components/courses/CourseCategories'
 import CourseDetails from '@/components/courses/CourseDetails'
@@ -181,6 +182,48 @@ export default function CoursesPage() {
         {/* Enrollment Call-to-Action */}
         <section aria-label="Course enrollment and contact information">
           <CourseEnrollment />
+        </section>
+        
+        {/* Internal Links Section */}
+        <section className="bg-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Explore More</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Discover all that Trinkets Institute has to offer for your engineering career
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-blue-600">Featured Course</h3>
+                <p className="text-gray-600 mb-4">Deep dive into our most popular piping design course</p>
+                <Link href="/courses/piping-design-engineering" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                  Piping Design Course
+                </Link>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-green-600">Career Support</h3>
+                <p className="text-gray-600 mb-4">100% placement assistance and career guidance</p>
+                <Link href="/placements" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                  Placement Services
+                </Link>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-purple-600">Success Stories</h3>
+                <p className="text-gray-600 mb-4">Read testimonials from our successful graduates</p>
+                <Link href="/testimonials" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                  Student Stories
+                </Link>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-orange-600">Contact Us</h3>
+                <p className="text-gray-600 mb-4">Get in touch for personalized course consultation</p>
+                <Link href="/contact" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                  Get In Touch
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </>

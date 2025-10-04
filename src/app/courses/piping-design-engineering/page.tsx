@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Piping Design & Engineering Course - Master PDMS, AutoCAD Plant 3D, Caesar II | Trinkets Institute',
@@ -164,12 +165,12 @@ export default function PipingDesignCoursePage() {
                 <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Live Projects</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Enroll Now
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                </Link>
+                <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Download Brochure
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -364,6 +365,9 @@ export default function PipingDesignCoursePage() {
           
           <div className="mt-8">
             <h3 className="text-xl font-semibold mb-4 text-center">Job Roles After Completion</h3>
+            <p className="text-center text-gray-600 mb-6">
+              Explore our <Link href="/placements" className="text-blue-600 hover:text-blue-800 underline">placement assistance program</Link> and see how we help students secure these roles.
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-gray-50 p-3 rounded-lg text-center">
                 <p className="font-medium text-gray-700">Piping Design Engineer</p>
@@ -398,6 +402,9 @@ export default function PipingDesignCoursePage() {
       <section className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">100% Placement Assistance</h2>
+          <p className="text-center text-gray-600 mb-8">
+            Learn more about our comprehensive <Link href="/placements" className="text-blue-600 hover:text-blue-800 underline">placement services</Link> and success stories from our <Link href="/testimonials" className="text-blue-600 hover:text-blue-800 underline">alumni</Link>.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -431,6 +438,36 @@ export default function PipingDesignCoursePage() {
         </div>
       </section>
 
+      {/* Related Courses & Services Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Explore More Opportunities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 p-6 rounded-lg text-center">
+              <h3 className="text-lg font-semibold mb-3 text-blue-600">All Engineering Courses</h3>
+              <p className="text-gray-600 mb-4">Explore our complete range of engineering courses and specializations.</p>
+              <Link href="/courses" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                View All Courses
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg text-center">
+              <h3 className="text-lg font-semibold mb-3 text-green-600">Corporate Training</h3>
+              <p className="text-gray-600 mb-4">Customized training solutions for your organization's engineering teams.</p>
+              <Link href="/corporate-training" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Learn More
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg text-center">
+              <h3 className="text-lg font-semibold mb-3 text-purple-600">Student Success Stories</h3>
+              <p className="text-gray-600 mb-4">Read testimonials from our successful piping design graduates.</p>
+              <Link href="/testimonials" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                Read Stories
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Enrollment CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-white text-center">
@@ -445,15 +482,15 @@ export default function PipingDesignCoursePage() {
             </div>
           </div>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Enroll Now - Book Your Seat
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Call for Consultation
-            </button>
+            </Link>
           </div>
           <p className="text-blue-100 text-sm mt-4">
-            💡 Special Offer: Early Bird Discount Available - Contact Us Today!
+            💡 Special Offer: Early Bird Discount Available - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
           </p>
         </div>
       </section>
