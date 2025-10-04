@@ -102,15 +102,15 @@ const AboutHero = () => {
             </div>
 
             {/* Revolutionary Title */}
-            <h1 className="text-6xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
               Turning Students into
-              <span className="block text-5xl lg:text-7xl mt-4 animate-bounce-gentle">
+              <span className="block text-3xl md:text-4xl mt-4 animate-bounce-gentle">
                 Industry Professionals
               </span>
             </h1>
 
             {/* Enhanced Description */}
-            <p className="text-2xl text-gray-700 leading-relaxed mb-12 font-medium">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12 font-medium">
               For over <span className="text-blue-600 font-bold">15 years</span>, we&apos;ve been at the forefront of 
               <span className="text-indigo-600 font-bold"> engineering education</span>, transforming ambitious students 
               into skilled professionals ready to tackle real-world challenges.

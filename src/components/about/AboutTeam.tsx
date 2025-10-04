@@ -91,11 +91,11 @@ const AboutTeam = () => {
             </div>
           </div>
 
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Expert Faculty & Leadership
           </h2>
           
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Meet the passionate educators and industry experts who make our institution a 
             <span className="text-blue-600 font-bold"> center of excellence</span>
           </p>
@@ -181,10 +181,10 @@ const AboutTeam = () => {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl blur-xl opacity-50 animate-pulse-slow"></div>
             <div className="relative bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl shadow-2xl p-12 text-white">
-              <h3 className="text-3xl font-bold mb-4">
+              <h3 className="text-2xl font-bold mb-4">
                 Want to Learn from Industry Experts? 🎓
               </h3>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-lg mb-8 opacity-90">
                 Our experienced faculty is ready to guide you to success with 
                 <span className="font-bold"> personalized mentorship</span>
               </p>

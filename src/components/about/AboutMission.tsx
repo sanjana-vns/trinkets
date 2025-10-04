@@ -100,7 +100,7 @@ const AboutMission = () => {
             </div>
           </div>
 
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Mission, Vision & Values
           </h2>
         </div>
@@ -146,13 +146,13 @@ const AboutMission = () => {
                   <div className={`w-16 h-16 bg-gradient-to-r ${activeContent.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
                     <span className="text-3xl">{activeContent.icon}</span>
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800">
+                  <h3 className="text-2xl font-bold text-gray-800">
                     {activeContent.content.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   {activeContent.content.description}
                 </p>
 
@@ -205,7 +205,7 @@ const AboutMission = () => {
                       <div className="text-8xl mb-4 animate-bounce-gentle">
                         {activeContent.icon}
                       </div>
-                      <h4 className="text-3xl font-bold mb-2">
+                      <h4 className="text-2xl font-bold mb-2">
                         {activeContent.content.title}
                       </h4>
                       <div className="w-24 h-1 bg-white rounded-full mx-auto opacity-75"></div>
@@ -221,7 +221,7 @@ const AboutMission = () => {
         <div className="text-center mt-20">
           <div className="relative max-w-4xl mx-auto">
             <div className="text-6xl text-blue-200 opacity-50 mb-4">&ldquo;</div>
-            <blockquote className="text-3xl font-medium text-gray-700 leading-relaxed mb-8">
+            <blockquote className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-8">
               &ldquo;Education is the most powerful weapon which you can use to change the world. 
               At Trinkets Institute, we&apos;re not just teaching; we&apos;re 
               <span className="text-blue-600 font-bold"> transforming futures</span>.&rdquo;
