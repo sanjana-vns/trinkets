@@ -174,7 +174,7 @@ export default function PlacementPage() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-blue-50">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -190,6 +190,6 @@ export default function PlacementPage() {
       <PlacementSuccess />
       <PlacementProcess />
       <PlacementSupport />
-    </div>
+    </main>
   )
 }
