@@ -134,8 +134,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Course Enquiry Form Preview */}
-      <div className="absolute bottom-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl max-w-sm">
+      {/* Course Enquiry Form Preview - Hidden on mobile, visible on desktop */}
+      <div className="hidden lg:block absolute bottom-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl max-w-sm">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Course Enquiry</h3>
         <p className="text-sm text-gray-600 mb-4">Get Information and Guidance</p>
         <div className="space-y-3">
