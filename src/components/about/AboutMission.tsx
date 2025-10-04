@@ -24,7 +24,7 @@ const AboutMission = () => {
       id: 'mission',
       label: 'Our Mission',
       icon: '🎯',
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-blue-500 to-indigo-500',
       content: {
         title: 'Empowering Future Engineers',
         description: 'To bridge the gap between academic learning and industry requirements by providing practical, hands-on training that transforms students into skilled professionals ready to excel in their engineering careers.',
@@ -40,7 +40,7 @@ const AboutMission = () => {
       id: 'vision',
       label: 'Our Vision',
       icon: '🔮',
-      gradient: 'from-amber-500 to-orange-500',
+      gradient: 'from-indigo-500 to-blue-500',
       content: {
         title: 'Leading Engineering Education',
         description: 'To be the premier institution for engineering education globally, recognized for producing industry-ready professionals who drive innovation and contribute meaningfully to technological advancement.',
@@ -56,7 +56,7 @@ const AboutMission = () => {
       id: 'values',
       label: 'Our Values',
       icon: '💎',
-      gradient: 'from-yellow-500 to-amber-500',
+      gradient: 'from-sky-500 to-indigo-500',
       content: {
         title: 'Core Principles We Live By',
         description: 'Our values form the foundation of everything we do, guiding our interactions with students, industry partners, and the broader community.',
@@ -75,12 +75,12 @@ const AboutMission = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-32 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden"
+      className="relative py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-sky-50 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
       </div>
 
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
@@ -90,9 +90,9 @@ const AboutMission = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
-            <div className="relative bg-white/90 backdrop-blur-md border-4 border-orange-300/50 rounded-full px-12 py-6 shadow-2xl">
-              <span className="text-orange-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
+            <div className="relative bg-white/90 backdrop-blur-md border-4 border-blue-300/50 rounded-full px-12 py-6 shadow-2xl">
+              <span className="text-blue-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
                 <span className="text-2xl">🌟</span>
                 What Drives Us
                 <span className="text-2xl">💫</span>
@@ -100,14 +100,14 @@ const AboutMission = () => {
             </div>
           </div>
 
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight mb-8">
+          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Mission, Vision & Values
           </h2>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex justify-center mb-16">
-          <div className="bg-white/90 backdrop-blur-md rounded-3xl p-4 shadow-2xl border-2 border-orange-200/50">
+          <div className="bg-white/90 backdrop-blur-md rounded-3xl p-4 shadow-2xl border-2 border-blue-200/50">
             <div className="flex gap-4">
               {tabs.map((tab) => (
                 <button
@@ -116,7 +116,7 @@ const AboutMission = () => {
                   className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
                     activeTab === tab.id
                       ? `bg-gradient-to-r ${tab.gradient} text-white shadow-2xl scale-105`
-                      : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                   }`}
                 >
                   {activeTab === tab.id && (
@@ -127,7 +127,7 @@ const AboutMission = () => {
                     {tab.label}
                   </span>
                   {activeTab === tab.id && (
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-sky-400 rounded-full animate-ping"></div>
                   )}
                 </button>
               ))}
@@ -140,7 +140,7 @@ const AboutMission = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="relative">
-              <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-12 border-2 border-orange-200/50">
+              <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-12 border-2 border-blue-200/50">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${activeContent.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
@@ -179,7 +179,7 @@ const AboutMission = () => {
                 <div className={`absolute inset-0 bg-gradient-to-r ${activeContent.gradient} rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse-slow`}></div>
                 
                 {/* Visual Container */}
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-orange-200/50 transform group-hover:scale-105 transition-all duration-700">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-200/50 transform group-hover:scale-105 transition-all duration-700">
                   <div className={`h-96 bg-gradient-to-br ${activeContent.gradient} p-12 flex items-center justify-center relative overflow-hidden`}>
                     
                     {/* Background Pattern */}
@@ -220,11 +220,11 @@ const AboutMission = () => {
         {/* Bottom Quote */}
         <div className="text-center mt-20">
           <div className="relative max-w-4xl mx-auto">
-            <div className="text-6xl text-orange-200 opacity-50 mb-4">&ldquo;</div>
+            <div className="text-6xl text-blue-200 opacity-50 mb-4">&ldquo;</div>
             <blockquote className="text-3xl font-medium text-gray-700 leading-relaxed mb-8">
               &ldquo;Education is the most powerful weapon which you can use to change the world. 
               At Trinkets Institute, we&apos;re not just teaching; we&apos;re 
-              <span className="text-orange-600 font-bold"> transforming futures</span>.&rdquo;
+              <span className="text-blue-600 font-bold"> transforming futures</span>.&rdquo;
             </blockquote>
             <div className="text-xl text-gray-600">
               — Trinkets Institute Foundation

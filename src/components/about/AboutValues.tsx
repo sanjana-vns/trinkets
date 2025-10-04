@@ -24,28 +24,28 @@ const AboutValues = () => {
       title: "Excellence",
       description: "We strive for the highest standards in everything we do, continuously improving our methods and outcomes.",
       icon: "⭐",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-blue-500 to-indigo-500",
       bgPattern: "dots"
     },
     {
       title: "Innovation", 
       description: "We embrace new technologies and methodologies to stay ahead in the rapidly evolving engineering landscape.",
       icon: "💡",
-      gradient: "from-amber-500 to-orange-500",
+      gradient: "from-indigo-500 to-blue-500",
       bgPattern: "waves"
     },
     {
       title: "Integrity",
       description: "We maintain honesty and transparency in all our interactions, building trust with students and industry partners.",
       icon: "🤝",
-      gradient: "from-yellow-500 to-amber-500",
+      gradient: "from-sky-500 to-indigo-500",
       bgPattern: "grid"
     },
     {
       title: "Student-Centric",
       description: "Every decision we make is guided by what's best for our students' learning and career development.",
       icon: "🎓",
-      gradient: "from-orange-500 to-amber-500",
+      gradient: "from-blue-500 to-sky-500",
       bgPattern: "circuit"
     }
   ]
@@ -53,7 +53,7 @@ const AboutValues = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-32 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 overflow-hidden"
+      className="relative py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
     >
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -61,7 +61,7 @@ const AboutValues = () => {
         
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight mb-8">
+          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Our Core Values
           </h2>
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">

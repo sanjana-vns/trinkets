@@ -25,35 +25,35 @@ const AboutStory = () => {
       title: "Foundation",
       description: "Started with a vision to bridge the gap between academic learning and industry requirements",
       icon: "🌱",
-      color: "from-orange-400 to-red-400"
+      color: "from-blue-400 to-indigo-400"
     },
     {
       year: "2012",
       title: "First 1000 Students",
       description: "Achieved our first major milestone with 1000+ successful graduates",
       icon: "🎓",
-      color: "from-amber-400 to-orange-400"
+      color: "from-indigo-400 to-blue-400"
     },
     {
       year: "2016",
       title: "Industry Recognition",
       description: "Received multiple awards for excellence in engineering education",
       icon: "🏆",
-      color: "from-yellow-400 to-amber-400"
+      color: "from-sky-400 to-indigo-400"
     },
     {
       year: "2020",
       title: "Digital Transformation",
       description: "Embraced cutting-edge technology and online learning platforms",
       icon: "💻",
-      color: "from-orange-400 to-amber-400"
+      color: "from-blue-400 to-indigo-400"
     },
     {
       year: "2024",
       title: "Global Expansion",
       description: "Extended our reach to serve students worldwide with quality education",
       icon: "🌍",
-      color: "from-amber-400 to-yellow-400"
+      color: "from-indigo-400 to-sky-400"
     }
   ]
 
@@ -61,12 +61,12 @@ const AboutStory = () => {
     <section 
       ref={sectionRef}
       id="story"
-      className="relative py-32 bg-gradient-to-br from-gray-50 via-orange-50 to-amber-50 overflow-hidden"
+      className="relative py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-delayed"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-delayed"></div>
       </div>
 
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
@@ -76,9 +76,9 @@ const AboutStory = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
-            <div className="relative bg-white/90 backdrop-blur-md border-4 border-orange-300/50 rounded-full px-12 py-6 shadow-2xl">
-              <span className="text-orange-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
+            <div className="relative bg-white/90 backdrop-blur-md border-4 border-blue-300/50 rounded-full px-12 py-6 shadow-2xl">
+              <span className="text-blue-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
                 <span className="text-2xl">📖</span>
                 Our Journey
                 <span className="text-2xl">✨</span>
@@ -86,21 +86,21 @@ const AboutStory = () => {
             </div>
           </div>
 
-          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 leading-tight mb-8">
+          <h2 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
             Our Story of Excellence
           </h2>
           
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
             From humble beginnings to becoming a leading institution in engineering education, 
-            our journey has been driven by <span className="text-orange-600 font-bold">passion</span>, 
-            <span className="text-amber-600 font-bold"> dedication</span>, and an unwavering commitment to student success.
+            our journey has been driven by <span className="text-blue-600 font-bold">passion</span>, 
+            <span className="text-indigo-600 font-bold"> dedication</span>, and an unwavering commitment to student success.
           </p>
         </div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-400 via-amber-400 to-yellow-400 rounded-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-indigo-400 to-sky-400 rounded-full"></div>
           
           {/* Timeline Items */}
           <div className="space-y-24">
@@ -120,7 +120,7 @@ const AboutStory = () => {
 
                 {/* Content Card */}
                 <div className={`w-5/12 ${index % 2 === 0 ? 'pr-16' : 'pl-16'}`}>
-                  <div className={`group relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-orange-200/50 hover:border-orange-300 transform ${hoveredMilestone === index ? 'scale-105' : ''}`}>
+                  <div className={`group relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredMilestone === index ? 'scale-105' : ''}`}>
                     
                     {/* Card Glow */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${milestone.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}></div>
@@ -133,7 +133,7 @@ const AboutStory = () => {
                       </div>
                       
                       {/* Title */}
-                      <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                         {milestone.title}
                       </h3>
                       
@@ -157,8 +157,8 @@ const AboutStory = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <div className="relative inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl blur-xl opacity-50 animate-pulse-slow"></div>
-            <div className="relative bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl shadow-2xl p-12 text-white">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl blur-xl opacity-50 animate-pulse-slow"></div>
+            <div className="relative bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl shadow-2xl p-12 text-white">
               <h3 className="text-3xl font-bold mb-4">
                 Ready to Be Part of Our Story? 🚀
               </h3>
@@ -167,7 +167,7 @@ const AboutStory = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-block px-10 py-4 bg-white text-orange-600 font-bold rounded-2xl hover:bg-orange-50 transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="inline-block px-10 py-4 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all duration-300 hover:shadow-xl hover:scale-105"
               >
                 Start Your Journey Today →
               </a>

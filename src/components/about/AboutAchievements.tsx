@@ -26,7 +26,7 @@ const AboutAchievements = () => {
       icon: "🏆",
       number: "15+",
       label: "Years",
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-blue-500 to-indigo-500"
     },
     {
       title: "5000+ Successful Graduates",
@@ -34,7 +34,7 @@ const AboutAchievements = () => {
       icon: "🎓",
       number: "5000+",
       label: "Graduates",
-      gradient: "from-amber-500 to-orange-500"
+      gradient: "from-indigo-500 to-blue-500"
     },
     {
       title: "95% Placement Rate",
@@ -42,7 +42,7 @@ const AboutAchievements = () => {
       icon: "📈",
       number: "95%",
       label: "Placement",
-      gradient: "from-yellow-500 to-amber-500"
+      gradient: "from-sky-500 to-indigo-500"
     },
     {
       title: "50+ Industry Partners",
@@ -50,7 +50,7 @@ const AboutAchievements = () => {
       icon: "🤝",
       number: "50+",
       label: "Partners",
-      gradient: "from-orange-500 to-amber-500"
+      gradient: "from-blue-500 to-sky-500"
     },
     {
       title: "25+ Awards Won",
@@ -58,7 +58,7 @@ const AboutAchievements = () => {
       icon: "🏅",
       number: "25+",
       label: "Awards",
-      gradient: "from-amber-500 to-yellow-500"
+      gradient: "from-indigo-500 to-sky-500"
     },
     {
       title: "100+ Expert Faculty",
@@ -66,7 +66,7 @@ const AboutAchievements = () => {
       icon: "👨‍🏫",
       number: "100+",
       label: "Faculty",
-      gradient: "from-yellow-500 to-orange-500"
+      gradient: "from-sky-500 to-blue-500"
     }
   ]
 
