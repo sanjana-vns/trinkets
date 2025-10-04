@@ -52,12 +52,12 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://trinketsinstitute.com'),
   alternates: {
-    canonical: '/placement',
+    canonical: '/placements',
   },
   openGraph: {
     title: 'Engineering Placement Services - 100% Placement Assistance | Trinkets Institute',
     description: 'Get guaranteed placement assistance in top engineering companies. Expert career guidance, industry partnerships, and 100% placement support for engineering professionals.',
-    url: 'https://trinketsinstitute.com/placement',
+    url: 'https://trinketsinstitute.com/placements',
     siteName: 'Trinkets Institute',
     images: [
       {
