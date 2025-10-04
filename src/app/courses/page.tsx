@@ -1,6 +1,4 @@
 import { Metadata } from 'next'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
 import CoursesHero from '@/components/courses/CoursesHero'
 import CourseCategories from '@/components/courses/CourseCategories'
 import CourseDetails from '@/components/courses/CourseDetails'
@@ -148,9 +146,7 @@ export default function CoursesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" role="main">
-        <Navigation />
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section with enhanced semantics */}
         <section aria-label="Course offerings overview">
           <CoursesHero />
@@ -180,9 +176,7 @@ export default function CoursesPage() {
         <section aria-label="Course enrollment and contact information">
           <CourseEnrollment />
         </section>
-        
-        <Footer />
-      </main>
+      </div>
     </>
   )
 }
