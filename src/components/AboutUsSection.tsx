@@ -13,14 +13,14 @@ const AboutUsSection = () => {
             {/* Section Header */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-12 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-500"></div>
-                <span className="text-primary-600 font-semibold uppercase tracking-wide text-sm">
+                <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-500"></div>
+                <span className="text-blue-600 font-semibold uppercase tracking-wide text-sm">
                   About Trinkets Institute
                 </span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Empowering Future 
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
                   Engineers & Innovators
                 </span>
               </h2>
@@ -45,7 +45,7 @@ const AboutUsSection = () => {
             {/* Key Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-500 
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-500 
                                rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -58,7 +58,7 @@ const AboutUsSection = () => {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-500 
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-500 
                                rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -71,7 +71,7 @@ const AboutUsSection = () => {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-500 
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-500 
                                rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -84,7 +84,7 @@ const AboutUsSection = () => {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-500 
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-500 
                                rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -101,16 +101,16 @@ const AboutUsSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 href="/about"
-                className="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-500 text-white 
-                         font-semibold rounded-lg hover:from-primary-700 hover:to-secondary-600 
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white 
+                         font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-600 
                          transition-all duration-300 hover:shadow-lg hover:scale-105 text-center"
               >
                 Learn More About Us
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 border-2 border-primary-600 text-primary-600 font-semibold 
-                         rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300 text-center"
+                className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold 
+                         rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 text-center"
               >
                 Contact Us
               </Link>

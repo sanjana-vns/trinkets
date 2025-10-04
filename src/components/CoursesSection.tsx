@@ -81,12 +81,12 @@ const CoursesSection = () => {
     : courses.filter(course => course.category === activeFilter)
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-orange-50">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-orange-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-orange-600 font-semibold text-sm">🎓 Our Courses</span>
+          <div className="inline-flex items-center bg-blue-100 rounded-full px-4 py-2 mb-4">
+            <span className="text-blue-600 font-semibold text-sm">🎓 Our Courses</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Professional Training Programs
@@ -104,8 +104,8 @@ const CoursesSection = () => {
               onClick={() => setActiveFilter(category.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
                 activeFilter === category.id
-                  ? 'bg-orange-500 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600 border border-gray-200'
+                  ? 'bg-blue-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
               }`}
             >
               <span>{category.icon}</span>
@@ -122,7 +122,7 @@ const CoursesSection = () => {
               className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               {/* Card Header */}
-              <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-4">
+              <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-4">
                 <div className="flex justify-between items-start mb-2">
                   <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                     <span className="text-white text-sm font-medium">{course.duration}</span>
@@ -133,7 +133,7 @@ const CoursesSection = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-1">{course.title}</h3>
-                <p className="text-orange-100 text-sm">{course.students} students enrolled</p>
+                <p className="text-blue-100 text-sm">{course.students} students enrolled</p>
               </div>
 
               {/* Card Content */}
@@ -162,7 +162,7 @@ const CoursesSection = () => {
                     <span className="text-2xl font-bold text-gray-900">{course.price}</span>
                     <span className="text-gray-500 text-sm ml-1">/course</span>
                   </div>
-                  <button className="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200">
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
                     Learn More
                   </button>
                 </div>
@@ -181,10 +181,10 @@ const CoursesSection = () => {
               We offer customized training programs for organizations and individuals. Contact us to discuss your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-200">
+              <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200">
                 Contact Us
               </button>
-              <button className="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200">
+              <button className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
                 View All Courses
               </button>
             </div>

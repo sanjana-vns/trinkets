@@ -28,7 +28,7 @@ const Navigation = () => {
               <div className="relative flex items-center space-x-3">
                 {/* Logo Icon */}
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 via-secondary-500 to-primary-800 
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 via-blue-500 to-blue-800 
                                  flex items-center justify-center shadow-lg group-hover:shadow-xl 
                                  group-hover:scale-110 transition-all duration-300 ease-out
                                  before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-br 
@@ -47,7 +47,7 @@ const Navigation = () => {
                                    group-hover:rotate-180 transition-transform duration-700 ease-out"></div>
                   </div>
                   {/* Pulsing dot indicator */}
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-secondary-400 rounded-full 
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full 
                                  animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
                 </div>
 
@@ -55,38 +55,38 @@ const Navigation = () => {
                 <div className="relative">
                   <div className="flex flex-col">
                     <div className="text-2xl font-black tracking-tight leading-none">
-                      <span className="bg-gradient-to-r from-primary-700 via-primary-600 to-secondary-600 
-                                     bg-clip-text text-transparent group-hover:from-primary-800 
-                                     group-hover:via-secondary-500 group-hover:to-primary-700
+                      <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 
+                                     bg-clip-text text-transparent group-hover:from-blue-800 
+                                     group-hover:via-indigo-500 group-hover:to-blue-700
                                      transition-all duration-500 ease-out">
                         Trinkets
                       </span>
                     </div>
                     <div className="text-sm font-semibold tracking-widest text-gray-600 
-                                   group-hover:text-secondary-600 transition-colors duration-300 
+                                   group-hover:text-indigo-600 transition-colors duration-300 
                                    transform group-hover:translate-x-1 transition-transform duration-300">
                       INSTITUTE
                     </div>
                   </div>
                   
                   {/* Animated underline */}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-500 
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-500 
                                  group-hover:w-full transition-all duration-500 ease-out"></div>
                   
                   {/* Floating particles effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute top-0 left-4 w-1 h-1 bg-secondary-400 rounded-full 
                                    animate-bounce" style={{animationDelay: '0ms'}}></div>
-                    <div className="absolute top-2 right-8 w-1 h-1 bg-primary-400 rounded-full 
+                    <div className="absolute top-2 right-8 w-1 h-1 bg-blue-400 rounded-full 
                                    animate-bounce" style={{animationDelay: '200ms'}}></div>
-                    <div className="absolute bottom-1 left-12 w-1 h-1 bg-secondary-300 rounded-full 
+                    <div className="absolute bottom-1 left-12 w-1 h-1 bg-indigo-300 rounded-full 
                                    animate-bounce" style={{animationDelay: '400ms'}}></div>
                   </div>
                 </div>
 
                 {/* Glowing effect */}
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 
-                               bg-gradient-to-r from-primary-400 to-secondary-400 blur-xl 
+                               bg-gradient-to-r from-blue-400 to-indigo-400 blur-xl 
                                transition-opacity duration-500 -z-10"></div>
               </div>
             </Link>
@@ -100,13 +100,13 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   className="relative group px-4 py-3 rounded-xl text-gray-700 font-medium transition-all duration-300 ease-out
-                           hover:text-primary-600 hover:bg-gray-50 hover:shadow-md hover:-translate-y-1
+                           hover:text-blue-600 hover:bg-gray-50 hover:shadow-md hover:-translate-y-1
                            before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r 
-                           before:from-primary-600 before:to-secondary-500 before:opacity-0 before:scale-95
+                           before:from-blue-600 before:to-indigo-500 before:opacity-0 before:scale-95
                            hover:before:opacity-10 hover:before:scale-100 before:transition-all before:duration-300"
                 >
                   <span className="relative z-10 text-sm">{item.name}</span>
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-500 
+                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-500 
                                  group-hover:w-3/4 group-hover:left-1/8 transition-all duration-300 ease-out"></div>
                 </Link>
               ))}
@@ -119,14 +119,14 @@ const Navigation = () => {
             <Link
               href="/courses"
               className="relative group overflow-hidden px-8 py-3 rounded-xl font-semibold text-white
-                       bg-gradient-to-r from-primary-600 to-secondary-500 
-                       hover:from-primary-700 hover:to-secondary-600 
-                       hover:scale-105 hover:shadow-xl hover:shadow-primary-500/25
+                       bg-gradient-to-r from-blue-600 to-indigo-500 
+                       hover:from-blue-700 hover:to-indigo-600 
+                       hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25
                        transition-all duration-300 ease-out
                        before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/20 before:to-transparent
                        before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700
                        after:absolute after:inset-0 after:rounded-xl after:shadow-inner
-                       focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Explore Courses
@@ -147,8 +147,8 @@ const Navigation = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative group p-2 rounded-lg text-gray-700 hover:text-primary-600 
-                       hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+              className="relative group p-2 rounded-lg text-gray-700 hover:text-blue-600 
+                       hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
                        transition-all duration-300 ease-out"
             >
               <div className="relative w-6 h-6">
@@ -173,8 +173,8 @@ const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary-600 
-                        hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50
+              className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 
+                        hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50
                         font-medium transition-all duration-300 ease-out
                         hover:translate-x-2 hover:shadow-md
                         ${isMenuOpen ? 'animate-slideInFromLeft' : ''}
@@ -196,9 +196,9 @@ const Navigation = () => {
             {/* Mobile Primary CTA */}
             <Link
               href="/courses"
-              className="block px-4 py-3 rounded-lg bg-gradient-to-r from-primary-600 to-secondary-500 
+              className="block px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-500 
                        text-white font-semibold text-center
-                       hover:from-primary-700 hover:to-secondary-600 hover:scale-105 hover:shadow-xl
+                       hover:from-blue-700 hover:to-indigo-600 hover:scale-105 hover:shadow-xl
                        transition-all duration-300 ease-out"
               onClick={() => setIsMenuOpen(false)}
             >

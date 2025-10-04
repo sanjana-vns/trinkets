@@ -75,7 +75,7 @@ const Hero = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               {slides[currentSlide].title.split(' ').map((word, index) => (
-                <span key={index} className={index % 2 === 0 ? 'text-white' : 'text-secondary-200'}>
+                <span key={index} className={index % 2 === 0 ? 'text-white' : 'text-blue-200'}>
                   {word}{' '}
                 </span>
               ))}
@@ -86,13 +86,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
               >
                 Apply Now
               </Link>
               <Link
                 href="/courses"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-600 transition-all duration-200"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
               >
                 Our Courses
               </Link>
@@ -142,19 +142,19 @@ const Hero = () => {
           <input
             type="text"
             placeholder="Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="tel"
             placeholder="Phone"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <button className="w-full bg-gradient-to-r from-primary-600 to-secondary-500 text-white py-2 rounded-md font-medium hover:from-primary-700 hover:to-secondary-600 transition-all duration-200">
+          <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 rounded-md font-medium hover:from-blue-700 hover:to-indigo-600 transition-all duration-200">
             Submit
           </button>
         </div>

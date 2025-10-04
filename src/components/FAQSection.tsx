@@ -37,12 +37,12 @@ const FAQSection = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 to-amber-50">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-orange-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-orange-600 font-semibold text-sm">💡 FAQ</span>
+          <div className="inline-flex items-center bg-blue-100 rounded-full px-4 py-2 mb-4">
+            <span className="text-blue-600 font-semibold text-sm">💡 FAQ</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
@@ -57,18 +57,18 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-orange-100 overflow-hidden"
+              className="bg-white rounded-xl shadow-sm border border-blue-100 overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-orange-50 transition-colors duration-200"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-blue-50 transition-colors duration-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-5 h-5 text-orange-600 transform transition-transform duration-200 ${
+                    className={`w-5 h-5 text-blue-600 transform transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -84,7 +84,7 @@ const FAQSection = () => {
                 openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}>
                 <div className="px-6 pb-4">
-                  <div className="border-t border-orange-100 pt-4">
+                  <div className="border-t border-blue-100 pt-4">
                     <p className="text-gray-700 leading-relaxed">
                       {faq.answer}
                     </p>
@@ -97,10 +97,10 @@ const FAQSection = () => {
 
         {/* Contact CTA */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl p-6 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl p-6 text-white">
             <div className="mb-4">
               <h3 className="text-2xl font-bold mb-2">Still Have Questions?</h3>
-              <p className="text-orange-100">
+              <p className="text-blue-100">
                 Our team is here to help you find the perfect course for your career goals.
               </p>
             </div>
@@ -108,13 +108,13 @@ const FAQSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="/contact"
-                className="px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-colors duration-200"
+                className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200"
               >
                 Contact Us
               </a>
               <a
                 href="tel:+919820924788"
-                className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200 border border-orange-500"
+                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 border border-blue-500"
               >
                 Call Now
               </a>

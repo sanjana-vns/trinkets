@@ -9,49 +9,49 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316', // Main orange
-          600: '#ea580c',
-          700: '#c2410c',
-          800: '#9a3412',
-          900: '#7c2d12',
-          950: '#431407',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6', // Main blue
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
         secondary: {
-          50: '#fefaf0',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b', // Golden orange
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-          950: '#451a03',
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1', // Indigo
+          600: '#5856eb',
+          700: '#4f46e5',
+          800: '#4338ca',
+          900: '#3730a3',
+          950: '#312e81',
         },
         accent: {
-          50: '#fff8f1',
-          100: '#feecdc',
-          200: '#fcd9bd',
-          300: '#fdba74',
-          400: '#ff8a4c',
-          500: '#ff5722', // Vibrant orange
-          600: '#f4511e',
-          700: '#e64100',
-          800: '#d84315',
-          900: '#bf360c',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9', // Sky blue
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
         }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'orange-gradient': 'linear-gradient(135deg, #ff8a4c 0%, #ff5722 50%, #f97316 100%)',
-        'morning-gradient': 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #f97316 50%, #ea580c 75%, #c2410c 100%)',
+        'blue-gradient': 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%)',
+        'sky-gradient': 'linear-gradient(135deg, #38bdf8 0%, #0ea5e9 25%, #3b82f6 50%, #2563eb 75%, #1d4ed8 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -94,11 +94,11 @@ module.exports = {
         },
         'shadow-glow': {
           '0%': { 
-            boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)',
+            boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)',
             transform: 'scale(1)'
           },
           '100%': { 
-            boxShadow: '0 0 40px rgba(251, 146, 60, 0.6)',
+            boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)',
             transform: 'scale(1.02)'
           },
         },
