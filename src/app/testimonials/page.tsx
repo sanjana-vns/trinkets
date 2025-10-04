@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import TestimonialsHero from '@/components/testimonials/TestimonialsHero'
 import FeaturedTestimonials from '@/components/testimonials/FeaturedTestimonials'
+import SuccessStats from '@/components/testimonials/SuccessStats'
+import ReviewsSection from '@/components/testimonials/ReviewsSection'
 
 export const metadata: Metadata = {
   title: 'Student Testimonials & Success Stories - Engineering Career Transformations | Trinkets Institute',
@@ -266,6 +268,8 @@ export default function TestimonialsPage() {
       
       <TestimonialsHero />
       <FeaturedTestimonials />
+      <SuccessStats />
+      <ReviewsSection />
     </div>
   )
 }
