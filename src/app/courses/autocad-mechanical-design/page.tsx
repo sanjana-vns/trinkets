@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
+import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
   title: 'AutoCAD Mechanical Design Course - Master 2D/3D Design, Drafting, Inventor | Trinkets Institute',
@@ -538,30 +540,9 @@ export default function AutoCADMechanicalDesignCoursePage() {
       {/* Related Courses Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Related Engineering Courses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-purple-600 mb-3">Structural Design & Analysis</h3>
-              <p className="text-gray-600 mb-4 text-sm">Master STAAD Pro, ETABS, SAFE for construction & infrastructure design.</p>
-              <Link href="/courses/structural-design-analysis" className="text-purple-600 hover:text-purple-800 font-medium">
-                Learn More →
-              </Link>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-blue-600 mb-3">Piping Design & Engineering</h3>
-              <p className="text-gray-600 mb-4 text-sm">Master PDMS, AutoCAD Plant 3D, Caesar II for oil & gas industry.</p>
-              <Link href="/courses/piping-design-engineering" className="text-blue-600 hover:text-blue-800 font-medium">
-                Learn More →
-              </Link>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-green-600 mb-3">HVAC System Design</h3>
-              <p className="text-gray-600 mb-4 text-sm">Complete HVAC design training with AutoCAD MEP, Revit MEP, HAP & TRACE 700.</p>
-              <Link href="/courses/hvac-system-design" className="text-green-600 hover:text-green-800 font-medium">
-                Learn More →
-              </Link>
-            </div>
-          </div>
+          <RelatedCourses 
+            currentCourse="/courses/autocad-mechanical-design"
+          />
         </div>
       </section>
 

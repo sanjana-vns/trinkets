@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
   title: 'Piping Design & Engineering Course - Master PDMS, AutoCAD Plant 3D, Caesar II | Trinkets Institute',
@@ -449,42 +450,16 @@ export default function PipingDesignCoursePage() {
         </div>
       </section>
 
-      {/* Related Courses & Services Section */}
+      {/* Related Courses Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Related Courses & Opportunities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div className="bg-blue-50 p-6 rounded-lg text-center border-2 border-blue-200">
-              <h3 className="text-lg font-semibold mb-3 text-blue-600">Process Engineering</h3>
-              <p className="text-gray-600 mb-4 text-sm">Complement your piping skills with process design expertise.</p>
-              <Link href="/courses/process-engineering" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                Learn More
-              </Link>
-            </div>
-            <div className="bg-indigo-50 p-6 rounded-lg text-center border-2 border-indigo-200">
-              <h3 className="text-lg font-semibold mb-3 text-indigo-600">Structural Design</h3>
-              <p className="text-gray-600 mb-4 text-sm">Expand into structural analysis and design fundamentals.</p>
-              <Link href="/courses/structural-design-analysis" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
-                Explore Course
-              </Link>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center border-2 border-purple-200">
-              <h3 className="text-lg font-semibold mb-3 text-purple-600">AutoCAD Mechanical</h3>
-              <p className="text-gray-600 mb-4 text-sm">Master mechanical design and drafting fundamentals.</p>
-              <Link href="/courses/autocad-mechanical-design" className="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors text-sm">
-                View Details
-              </Link>
-            </div>
-            <div className="bg-green-50 p-6 rounded-lg text-center border-2 border-green-200">
-              <h3 className="text-lg font-semibold mb-3 text-green-600">HVAC Systems</h3>
-              <p className="text-gray-600 mb-4 text-sm">Learn HVAC design to complement your piping expertise.</p>
-              <Link href="/courses/hvac-system-design" className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
-                Start Learning
-              </Link>
-            </div>
-          </div>
+          <RelatedCourses 
+            currentCourse="/courses/piping-design-engineering"
+            className="mb-8"
+          />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Additional Services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-gray-50 p-6 rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-3 text-blue-600">All Engineering Courses</h3>
               <p className="text-gray-600 mb-4">Explore our complete range of engineering courses and specializations.</p>
