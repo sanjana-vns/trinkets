@@ -150,6 +150,17 @@ export default function StructuralDesignAnalysisCoursePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
+      {/* Breadcrumb Navigation */}
+      <div className="bg-white border-b">
+        <Breadcrumb 
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Courses', href: '/courses' },
+            { label: 'Structural Design & Analysis', href: '/courses/structural-design-analysis' }
+          ]}
+        />
+      </div>
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -571,6 +582,17 @@ export default function StructuralDesignAnalysisCoursePage() {
           <p className="text-purple-100 text-sm mt-4">
             💡 Special Offer: Early Bird Discount Available - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
           </p>
+        </div>
+      </section>
+
+      {/* Browse All Courses Section */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
+          <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
+          <Link href="/courses" className="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+            View All Courses
+          </Link>
         </div>
       </section>
     </div>

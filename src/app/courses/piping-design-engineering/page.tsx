@@ -511,6 +511,17 @@ export default function PipingDesignCoursePage() {
           </p>
         </div>
       </section>
+
+      {/* Browse All Courses Section */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
+          <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
+          <Link href="/courses" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            View All Courses
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }
