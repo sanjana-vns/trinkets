@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Breadcrumb from '@/components/Breadcrumb'
 import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
@@ -147,16 +146,6 @@ export default function HVACSystemDesignCoursePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      {/* Breadcrumb Navigation */}
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumb 
-          items={[
-            { label: 'Courses', href: '/courses' },
-            { label: 'HVAC System Design' }
-          ]} 
-        />
-      </div>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-20">

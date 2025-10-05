@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Breadcrumb from '@/components/Breadcrumb'
 import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
@@ -149,17 +148,6 @@ export default function StructuralDesignAnalysisCoursePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      {/* Breadcrumb Navigation */}
-      <div className="bg-white border-b">
-        <Breadcrumb 
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Courses', href: '/courses' },
-            { label: 'Structural Design & Analysis', href: '/courses/structural-design-analysis' }
-          ]}
-        />
-      </div>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">

@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Breadcrumb from '@/components/Breadcrumb'
 import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
@@ -148,16 +147,6 @@ export default function PipingDesignCoursePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      {/* Breadcrumb Navigation */}
-      <div className="container mx-auto px-4 py-6">
-        <Breadcrumb 
-          items={[
-            { label: 'Courses', href: '/courses' },
-            { label: 'Piping Design & Engineering' }
-          ]} 
-        />
-      </div>
       
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16">

@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Breadcrumb from '@/components/Breadcrumb'
 import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
@@ -148,17 +147,6 @@ export default function AutoCADMechanicalDesignCoursePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
-      {/* Breadcrumb Navigation */}
-      <div className="bg-white border-b">
-        <Breadcrumb 
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Courses', href: '/courses' },
-            { label: 'AutoCAD Mechanical Design', href: '/courses/autocad-mechanical-design' }
-          ]}
-        />
-      </div>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-20">
