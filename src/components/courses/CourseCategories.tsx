@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Course Categories with Advanced Filtering
 const CourseCategories = () => {
@@ -25,7 +26,8 @@ const CourseCategories = () => {
       features: ["Piping System Design", "Industrial Applications", "Safety Standards", "Real Projects"],
       image: "🔧",
       gradient: "from-blue-600 to-indigo-600",
-      badge: "Most Popular"
+      badge: "Most Popular",
+      link: "/courses/piping-design-engineering"
     },
     {
       id: 2,
@@ -40,7 +42,8 @@ const CourseCategories = () => {
       features: ["3D Plant Modeling", "Equipment Design", "Collision Detection", "Industry Standards"],
       image: "🏭",
       gradient: "from-green-600 to-teal-600",
-      badge: "High Demand"
+      badge: "High Demand",
+      link: "/courses/piping-design-engineering"
     },
     {
       id: 3,
@@ -55,7 +58,8 @@ const CourseCategories = () => {
       features: ["Building Design", "Bridge Engineering", "Load Analysis", "Safety Standards"],
       image: "🏗️",
       gradient: "from-purple-600 to-blue-600",
-      badge: "Industry Certified"
+      badge: "Industry Certified",
+      link: "/courses/structural-design-analysis"
     },
     {
       id: 4,
@@ -70,7 +74,8 @@ const CourseCategories = () => {
       features: ["AVEVA E3D", "Complex Piping", "3D Modeling", "Clash Detection"],
       image: "⚙️",
       gradient: "from-blue-600 to-indigo-600",
-      badge: "Best Seller"
+      badge: "Best Seller",
+      link: "/courses/piping-design-engineering"
     },
     {
       id: 5,
@@ -85,7 +90,8 @@ const CourseCategories = () => {
       features: ["Mechanical Systems", "Electrical Design", "Plumbing Systems", "Building Integration"],
       image: "⚡",
       gradient: "from-indigo-600 to-purple-600",
-      badge: "New"
+      badge: "New",
+      link: "/courses/mep-engineering"
     },
     {
       id: 6,
@@ -100,7 +106,8 @@ const CourseCategories = () => {
       features: ["System Design", "Energy Efficiency", "Air Quality", "Comfort Analysis"],
       image: "❄️",
       gradient: "from-sky-600 to-blue-600",
-      badge: "Premium"
+      badge: "Premium",
+      link: "/courses/hvac-system-design"
     },
     {
       id: 7,
@@ -115,7 +122,8 @@ const CourseCategories = () => {
       features: ["Structural Analysis", "Design Codes", "Building Modeling", "Load Calculations"],
       image: "🏢",
       gradient: "from-emerald-600 to-teal-600",
-      badge: "Expert Level"
+      badge: "Expert Level",
+      link: "/courses/structural-design-analysis"
     },
     {
       id: 8,
@@ -130,7 +138,8 @@ const CourseCategories = () => {
       features: ["2D Drafting", "Technical Drawing", "Design Documentation", "Industry Standards"],
       image: "📐",
       gradient: "from-blue-600 to-indigo-600",
-      badge: "Foundation"
+      badge: "Foundation",
+      link: "/courses/autocad-mechanical-design"
     },
     {
       id: 9,
@@ -145,7 +154,8 @@ const CourseCategories = () => {
       features: ["Building Analysis", "Seismic Design", "Wind Analysis", "Multi-story Structures"],
       image: "🌆",
       gradient: "from-violet-600 to-purple-600",
-      badge: "Certified"
+      badge: "Certified",
+      link: "/courses/structural-design-analysis"
     },
     {
       id: 10,
@@ -160,7 +170,8 @@ const CourseCategories = () => {
       features: ["Pipe Stress Analysis", "Code Compliance", "Thermal Analysis", "Safety Design"],
       image: "🔩",
       gradient: "from-orange-600 to-red-600",
-      badge: "Specialized"
+      badge: "Specialized",
+      link: "/courses/piping-design-engineering"
     },
     {
       id: 11,
@@ -175,7 +186,8 @@ const CourseCategories = () => {
       features: ["Power Systems", "Distribution Design", "Safety Standards", "Load Calculations"],
       image: "⚡",
       gradient: "from-yellow-600 to-orange-600",
-      badge: "High Growth"
+      badge: "High Growth",
+      link: "/courses/mep-engineering"
     },
     {
       id: 12,
@@ -190,7 +202,8 @@ const CourseCategories = () => {
       features: ["Process Control", "Automation Systems", "Sensor Technology", "SCADA Systems"],
       image: "📊",
       gradient: "from-cyan-600 to-blue-600",
-      badge: "Automation"
+      badge: "Automation",
+      link: "/courses/process-engineering"
     }
   ]
 
@@ -350,9 +363,11 @@ const CourseCategories = () => {
                   <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${course.gradient} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
                     Enroll Now
                   </button>
-                  <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
-                    View Details
-                  </button>
+                  <Link href={course.link}>
+                    <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
+                      View Details
+                    </button>
+                  </Link>
                 </div>
               </div>
 
