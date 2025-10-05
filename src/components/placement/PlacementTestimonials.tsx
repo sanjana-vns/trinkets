@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { StarIcon } from "@heroicons/react/24/solid"
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
+import Link from "next/link"
 
 const testimonials = [
   {
@@ -248,6 +249,40 @@ export default function PlacementTestimonials() {
               <h4 className="font-semibold mb-2">Civil Engineers</h4>
               <p className="text-sm opacity-90">Leading Construction Projects</p>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Call-to-Action Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <h3 className="text-3xl font-bold text-gray-800 mb-4">Ready to Start Your Success Story?</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of engineers who have transformed their careers with our comprehensive placement assistance program.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get Placement Assistance
+            </Link>
+            <Link
+              href="/courses"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+            >
+              Explore Courses
+            </Link>
+            <Link
+              href="/about"
+              className="bg-gray-100 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
+            >
+              Learn More About Us
+            </Link>
           </div>
         </motion.div>
       </div>

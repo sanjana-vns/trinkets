@@ -134,7 +134,7 @@ const AboutHero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-6 lg:mb-8">
               <a
                 href="#story"
                 className="group px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-xl lg:rounded-2xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-500 hover:shadow-2xl hover:scale-105 text-center overflow-hidden transform-gpu"
@@ -154,6 +154,22 @@ const AboutHero = () => {
                   <span className="text-lg sm:text-xl lg:text-2xl">💬</span>
                   Get in Touch
                 </span>
+              </a>
+            </div>
+
+            {/* Additional Navigation Links */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-6 text-sm sm:text-base">
+              <a href="/courses" className="text-blue-600 hover:text-blue-800 transition-colors underline-offset-4 hover:underline font-medium">
+                🎓 Explore Courses
+              </a>
+              <a href="/placements" className="text-indigo-600 hover:text-indigo-800 transition-colors underline-offset-4 hover:underline font-medium">
+                🚀 Placement Success
+              </a>
+              <a href="/services" className="text-sky-600 hover:text-sky-800 transition-colors underline-offset-4 hover:underline font-medium">
+                ⚙️ Our Services
+              </a>
+              <a href="/testimonials" className="text-purple-600 hover:text-purple-800 transition-colors underline-offset-4 hover:underline font-medium">
+                ⭐ Student Reviews
               </a>
             </div>
           </div>

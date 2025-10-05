@@ -52,18 +52,21 @@ const Footer = memo(() => {
 
           {/* Courses */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Courses</h3>
+            <h3 className="text-lg font-semibold mb-4">Popular Courses</h3>
             <ul className="space-y-2">
-              <li><Link href="/courses/software" className="text-gray-300 hover:text-white transition-colors">Software Courses</Link></li>
-              <li><Link href="/courses/pg-diploma" className="text-gray-300 hover:text-white transition-colors">PG Diploma Courses</Link></li>
-              <li><Link href="/courses/design-drafting" className="text-gray-300 hover:text-white transition-colors">Design and Drafting</Link></li>
+              <li><Link href="/courses/piping-design-engineering" className="text-gray-300 hover:text-white transition-colors">Piping Design & Engineering</Link></li>
+              <li><Link href="/courses/hvac-system-design" className="text-gray-300 hover:text-white transition-colors">HVAC System Design</Link></li>
+              <li><Link href="/courses/process-engineering" className="text-gray-300 hover:text-white transition-colors">Process Engineering</Link></li>
+              <li><Link href="/courses/structural-design-analysis" className="text-gray-300 hover:text-white transition-colors">Structural Design</Link></li>
+              <li><Link href="/courses/autocad-mechanical-design" className="text-gray-300 hover:text-white transition-colors">AutoCAD Mechanical</Link></li>
+              <li><Link href="/courses/solidworks-professional" className="text-gray-300 hover:text-white transition-colors">SolidWorks Professional</Link></li>
             </ul>
             
-            <h3 className="text-lg font-semibold mb-4 mt-6">Legal Pages</h3>
+            <h3 className="text-lg font-semibold mb-4 mt-6">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/disclaimer" className="text-gray-300 hover:text-white transition-colors">Disclaimer</Link></li>
-              <li><Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms-conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</Link></li>
+              <li><Link href="/gallery" className="text-gray-300 hover:text-white transition-colors">Gallery & Awards</Link></li>
+              <li><Link href="/corporate-training" className="text-gray-300 hover:text-white transition-colors">Corporate Training</Link></li>
+              <li><Link href="/testimonials" className="text-gray-300 hover:text-white transition-colors">Success Stories</Link></li>
             </ul>
           </div>
         </div>

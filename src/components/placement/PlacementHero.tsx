@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TrendingUp, Users, Award, Building, ArrowRight, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
 
 const PlacementHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -124,15 +125,42 @@ const PlacementHero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-wrap gap-4"
             >
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
+              <Link 
+                href="/contact"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+              >
                 <span className="flex items-center">
                   Get Placement Assistance
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
-              <button className="px-8 py-4 border-2 border-blue-400/50 rounded-xl font-semibold text-blue-100 hover:bg-blue-500/10 transition-all duration-300">
+              </Link>
+              <Link 
+                href="/testimonials"
+                className="px-8 py-4 border-2 border-blue-400/50 rounded-xl font-semibold text-blue-100 hover:bg-blue-500/10 transition-all duration-300"
+              >
                 View Success Stories
-              </button>
+              </Link>
+            </motion.div>
+
+            {/* Additional Quick Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="flex flex-wrap gap-6 text-sm"
+            >
+              <Link href="/courses" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
+                📚 View All Courses
+              </Link>
+              <Link href="/about" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
+                🏢 About Institute
+              </Link>
+              <Link href="/services" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
+                ⚙️ Our Services
+              </Link>
+              <Link href="/corporate-training" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
+                🎯 Corporate Training
+              </Link>
             </motion.div>
           </motion.div>
 

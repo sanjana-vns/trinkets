@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 import CoursesHero from '@/components/courses/CoursesHero'
 import CourseCategories from '@/components/courses/CourseCategories'
 import CourseDetails from '@/components/courses/CourseDetails'
@@ -154,6 +155,15 @@ export default function CoursesPage() {
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Breadcrumb Navigation */}
+        <div className="container mx-auto px-4 py-6">
+          <Breadcrumb 
+            items={[
+              { label: 'Courses' }
+            ]} 
+          />
+        </div>
+        
         {/* Hero Section with enhanced semantics */}
         <section aria-label="Course offerings overview">
           <CoursesHero />

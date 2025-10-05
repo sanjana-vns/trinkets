@@ -84,18 +84,58 @@ const Hero = () => {
             <p className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-6 sm:mb-8 leading-relaxed px-4">
               {slides[currentSlide].subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 mb-8">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg"
+                className="bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
               >
                 Apply Now
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
               <Link
                 href="/courses"
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 Our Courses
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </Link>
+            </div>
+            
+            {/* Quick Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-4">
+              <Link
+                href="/about"
+                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/placements"
+                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              >
+                Placements
+              </Link>
+              <Link
+                href="/services"
+                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              >
+                Services
+              </Link>
+              <Link
+                href="/corporate-training"
+                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              >
+                Corporate Training
+              </Link>
+              <Link
+                href="/testimonials"
+                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
+              >
+                Success Stories
               </Link>
             </div>
           </div>
@@ -137,27 +177,50 @@ const Hero = () => {
 
       {/* Course Enquiry Form Preview - Hidden on mobile, visible on desktop */}
       <div className="hidden lg:block absolute bottom-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl max-w-sm">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Course Enquiry</h3>
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Course Enquiry</h3>
         <p className="text-sm text-gray-600 mb-4">Get Information and Guidance</p>
+        
+        {/* Quick Course Links */}
+        <div className="grid grid-cols-2 gap-2 mb-4">
+          <Link href="/courses/piping-design-engineering" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
+            Piping Design
+          </Link>
+          <Link href="/courses/hvac-system-design" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
+            HVAC Systems
+          </Link>
+          <Link href="/courses/process-engineering" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
+            Process Engg.
+          </Link>
+          <Link href="/courses/structural-design-analysis" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
+            Structural
+          </Link>
+        </div>
+        
         <div className="space-y-3">
           <input
             type="text"
             placeholder="Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
           />
           <input
             type="tel"
             placeholder="Phone"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
           />
-          <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 rounded-md font-medium hover:from-blue-700 hover:to-indigo-600 transition-all duration-200">
-            Submit
+          <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 rounded-md font-medium hover:from-blue-700 hover:to-indigo-600 transition-all duration-200 text-sm">
+            Get Course Info
           </button>
+        </div>
+        
+        <div className="mt-4 text-center">
+          <Link href="/courses" className="text-xs text-blue-600 hover:text-blue-800 underline">
+            View All Courses →
+          </Link>
         </div>
       </div>
     </section>
