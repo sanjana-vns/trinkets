@@ -232,6 +232,13 @@ export default function CoursesPage() {
                   Learn More
                 </Link>
               </div>
+              <div className="bg-indigo-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-indigo-600">MEP Engineering Course</h3>
+                <p className="text-gray-600 mb-4">Complete MEP training with AutoCAD MEP, Revit MEP, HAP, TRACE 700</p>
+                <Link href="/courses/mep-engineering" className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
               <div className="bg-teal-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-teal-600">AutoCAD Mechanical Design</h3>
                 <p className="text-gray-600 mb-4">Master 2D/3D design, Inventor, SolidWorks for manufacturing industry</p>

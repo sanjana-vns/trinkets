@@ -23,6 +23,12 @@ const RelatedCourses = ({ currentCourse, className = '' }: RelatedCoursesProps) 
       color: 'blue'
     },
     {
+      title: 'MEP Engineering Course',
+      href: '/courses/mep-engineering',
+      description: 'Complete MEP training with AutoCAD MEP, Revit MEP, HAP',
+      color: 'indigo'
+    },
+    {
       title: 'HVAC System Design',
       href: '/courses/hvac-system-design',
       description: 'Comprehensive HVAC training and load calculations',
