@@ -331,18 +331,19 @@ const CourseDetails = () => {
 
         {/* Course Selector */}
         <div className="flex justify-center mb-12">
-          <div className="flex bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+          <div className="flex flex-wrap justify-center bg-white rounded-2xl p-2 shadow-lg border border-gray-200 max-w-6xl">
             {featuredCourses.map((course, index) => (
               <button
                 key={course.id}
                 onClick={() => setSelectedCourse(index)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                className={`px-3 py-2 sm:px-4 md:px-6 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base m-1 ${
                   selectedCourse === index
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
                 }`}
               >
-                {course.title.split(' ').slice(0, 2).join(' ')}
+                <span className="hidden sm:inline">{course.title.split(' ').slice(0, 2).join(' ')}</span>
+                <span className="sm:hidden">{course.title.split(' ')[0]}</span>
               </button>
             ))}
           </div>
