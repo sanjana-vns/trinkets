@@ -183,7 +183,7 @@ export default function PipingDesignCoursePage() {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Course Overview</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">What You'll Learn</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-600">What You&apos;ll Learn</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
@@ -452,7 +452,7 @@ export default function PipingDesignCoursePage() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg text-center">
               <h3 className="text-lg font-semibold mb-3 text-green-600">Corporate Training</h3>
-              <p className="text-gray-600 mb-4">Customized training solutions for your organization's engineering teams.</p>
+              <p className="text-gray-600 mb-4">Customized training solutions for your organization&apos;s engineering teams.</p>
               <Link href="/corporate-training" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
                 Learn More
               </Link>

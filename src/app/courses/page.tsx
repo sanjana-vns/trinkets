@@ -195,31 +195,45 @@ export default function CoursesPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-blue-50 p-6 rounded-lg text-center">
-                <h3 className="text-lg font-semibold mb-3 text-blue-600">Featured Course</h3>
-                <p className="text-gray-600 mb-4">Deep dive into our most popular piping design course</p>
+                <h3 className="text-lg font-semibold mb-3 text-blue-600">Piping Design Course</h3>
+                <p className="text-gray-600 mb-4">Master PDMS, AutoCAD Plant 3D, Caesar II for oil & gas industry</p>
                 <Link href="/courses/piping-design-engineering" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                  Piping Design Course
-                </Link>
-              </div>
-              <div className="bg-green-50 p-6 rounded-lg text-center">
-                <h3 className="text-lg font-semibold mb-3 text-green-600">Career Support</h3>
-                <p className="text-gray-600 mb-4">100% placement assistance and career guidance</p>
-                <Link href="/placements" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                  Placement Services
+                  Learn More
                 </Link>
               </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
-                <h3 className="text-lg font-semibold mb-3 text-purple-600">Success Stories</h3>
-                <p className="text-gray-600 mb-4">Read testimonials from our successful graduates</p>
-                <Link href="/testimonials" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
-                  Student Stories
+                <h3 className="text-lg font-semibold mb-3 text-purple-600">Structural Design</h3>
+                <p className="text-gray-600 mb-4">Master STAAD Pro, ETABS, SAFE for construction & infrastructure</p>
+                <Link href="/courses/structural-design-analysis" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                  Explore Course
                 </Link>
               </div>
               <div className="bg-orange-50 p-6 rounded-lg text-center">
-                <h3 className="text-lg font-semibold mb-3 text-orange-600">Contact Us</h3>
-                <p className="text-gray-600 mb-4">Get in touch for personalized course consultation</p>
-                <Link href="/contact" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                  Get In Touch
+                <h3 className="text-lg font-semibold mb-3 text-orange-600">Process Engineering</h3>
+                <p className="text-gray-600 mb-4">Master HYSYS, Aspen Plus, HTRI for chemical & petrochemical industry</p>
+                <Link href="/courses/process-engineering" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                  View Details
+                </Link>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-green-600">HVAC System Design</h3>
+                <p className="text-gray-600 mb-4">Complete HVAC design with AutoCAD MEP, Revit MEP, HAP & TRACE 700</p>
+                <Link href="/courses/hvac-system-design" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                  Learn More
+                </Link>
+              </div>
+              <div className="bg-teal-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-teal-600">AutoCAD Mechanical Design</h3>
+                <p className="text-gray-600 mb-4">Master 2D/3D design, Inventor, SolidWorks for manufacturing industry</p>
+                <Link href="/courses/autocad-mechanical-design" className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                  Explore Course
+                </Link>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-slate-600">SolidWorks Professional</h3>
+                <p className="text-gray-600 mb-4">Advanced 3D CAD design, simulation, PDM with CSWA/CSWP certification</p>
+                <Link href="/courses/solidworks-professional" className="inline-block bg-slate-600 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition-colors">
+                  Master SolidWorks
                 </Link>
               </div>
             </div>

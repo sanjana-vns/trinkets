@@ -52,6 +52,129 @@ const CourseDetails = () => {
     },
     {
       id: 2,
+      title: "Process Engineering Course",
+      subtitle: "Master Chemical Process Design & Simulation",
+      duration: "24 Weeks",
+      format: "Live + Industry Projects",
+      certificate: "Industry Recognized",
+      placement: "100% Assistance",
+      curriculum: [
+        {
+          module: "Process Fundamentals",
+          duration: "6 weeks",
+          topics: ["Mass Balance", "Energy Balance", "Thermodynamics", "Fluid Mechanics"]
+        },
+        {
+          module: "Equipment Design",
+          duration: "6 weeks", 
+          topics: ["Heat Exchangers", "Distillation Columns", "Reactors", "Separation Units"]
+        },
+        {
+          module: "Process Simulation",
+          duration: "6 weeks",
+          topics: ["HYSYS Modeling", "Aspen Plus", "HTRI Design", "Pro/II Simulation"]
+        },
+        {
+          module: "Safety & Economics",
+          duration: "6 weeks",
+          topics: ["Process Safety", "HAZOP Studies", "Economic Evaluation", "Project Work"]
+        }
+      ],
+      tools: ["HYSYS", "Aspen Plus", "HTRI", "Pro/II", "ChemCAD", "SuperPro"],
+      outcomes: [
+        "Design complete chemical processes from concept to operation",
+        "Perform process simulation and optimization studies", 
+        "Conduct safety analysis and economic evaluation",
+        "Implement process control and automation strategies"
+      ],
+      prerequisites: "Engineering degree or diploma (Chemical/Mechanical preferred)",
+      price: "₹48,000",
+      emi: "₹4,000/month"
+    },
+    {
+      id: 3,
+      title: "Structural Design & Analysis Course",
+      subtitle: "Master Building & Infrastructure Design",
+      duration: "24 Weeks",
+      format: "Live + Real Projects",
+      certificate: "Industry Recognized",
+      placement: "100% Assistance",
+      curriculum: [
+        {
+          module: "Structural Fundamentals",
+          duration: "6 weeks",
+          topics: ["Structural Mechanics", "Material Properties", "Design Codes", "Load Analysis"]
+        },
+        {
+          module: "Steel & Concrete Design",
+          duration: "6 weeks", 
+          topics: ["Steel Structures", "RCC Design", "Prestressed Concrete", "Connections"]
+        },
+        {
+          module: "Software & Analysis",
+          duration: "6 weeks",
+          topics: ["STAAD Pro", "ETABS", "SAFE", "SAP2000"]
+        },
+        {
+          module: "Advanced Topics",
+          duration: "6 weeks",
+          topics: ["Seismic Design", "Wind Analysis", "Foundation Design", "Project Work"]
+        }
+      ],
+      tools: ["STAAD Pro", "ETABS", "SAFE", "SAP2000", "AutoCAD", "Revit Structure"],
+      outcomes: [
+        "Design complete structural systems for buildings and infrastructure",
+        "Perform advanced structural analysis using industry software", 
+        "Conduct seismic and wind load analysis for safe design",
+        "Create detailed structural drawings and documentation"
+      ],
+      prerequisites: "Engineering degree or diploma (Civil/Structural preferred)",
+      price: "₹46,000",
+      emi: "₹3,833/month"
+    },
+    {
+      id: 4,
+      title: "HVAC System Design Course",
+      subtitle: "Master Building HVAC Design & Energy Analysis",
+      duration: "24 Weeks",
+      format: "Live + Real Projects",
+      certificate: "Industry Recognized",
+      placement: "100% Assistance",
+      curriculum: [
+        {
+          module: "HVAC Fundamentals",
+          duration: "6 weeks",
+          topics: ["Thermodynamics", "Psychrometrics", "Load Calculations", "Comfort Conditions"]
+        },
+        {
+          module: "System Design & Layout",
+          duration: "6 weeks", 
+          topics: ["Duct Design", "Equipment Selection", "Air Distribution", "Central Plants"]
+        },
+        {
+          module: "Design Software Tools",
+          duration: "6 weeks",
+          topics: ["AutoCAD MEP", "Revit MEP", "HAP Analysis", "TRACE 700"]
+        },
+        {
+          module: "Energy & Controls",
+          duration: "6 weeks",
+          topics: ["Energy Optimization", "Building Automation", "Green Standards", "Project Work"]
+        }
+      ],
+      tools: ["AutoCAD MEP", "Revit MEP", "HAP", "TRACE 700", "Carrier HAP", "Elite CHVAC"],
+      outcomes: [
+        "Design complete HVAC systems for commercial buildings",
+        "Perform energy analysis and optimization strategies", 
+        "Create detailed MEP drawings and documentation",
+        "Implement green building standards and LEED compliance"
+      ],
+      prerequisites: "Engineering degree or diploma (Mechanical/Civil preferred)",
+      price: "₹42,000",
+      emi: "₹3,500/month"
+    },
+    {
+      id: 5,
       title: "MEP Engineering Comprehensive Course",
       subtitle: "Mechanical, Electrical & Plumbing Systems",
       duration: "28 Weeks",
@@ -90,6 +213,88 @@ const CourseDetails = () => {
       prerequisites: "Engineering background in Mechanical/Electrical/Civil",
       price: "₹55,000",
       emi: "₹4,583/month"
+    },
+    {
+      id: 6,
+      title: "AutoCAD Mechanical Design Course",
+      subtitle: "Master 2D/3D Design, Drafting & Manufacturing",
+      duration: "16 Weeks",
+      format: "Live + Real Projects",
+      certificate: "Industry Recognized",
+      placement: "100% Assistance",
+      curriculum: [
+        {
+          module: "CAD Fundamentals & 2D Design",
+          duration: "4 weeks",
+          topics: ["AutoCAD Interface", "2D Drafting Commands", "Technical Drawing", "Mechanical Components"]
+        },
+        {
+          module: "3D Modeling & Parametric Design",
+          duration: "4 weeks",
+          topics: ["3D Solid Modeling", "Parametric Features", "Assembly Design", "Design Modifications"]
+        },
+        {
+          module: "Advanced Software Training",
+          duration: "4 weeks",
+          topics: ["AutoCAD Inventor", "SolidWorks Design", "Sheet Metal Design", "Simulation Basics"]
+        },
+        {
+          module: "Industry Applications",
+          duration: "4 weeks",
+          topics: ["Manufacturing Design", "Product Development", "Design Documentation", "Capstone Project"]
+        }
+      ],
+      tools: ["AutoCAD 2D", "AutoCAD 3D", "AutoCAD Inventor", "SolidWorks", "KeyShot", "Fusion 360"],
+      outcomes: [
+        "Create professional 2D technical drawings and documentation",
+        "Develop complex 3D models and assemblies for manufacturing", 
+        "Master parametric design techniques for efficient modeling",
+        "Design complete products from concept to manufacturing drawings"
+      ],
+      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)",
+      price: "₹38,000",
+      emi: "₹3,167/month"
+    },
+    {
+      id: 7,
+      title: "SolidWorks Professional Course",
+      subtitle: "Advanced 3D CAD Design, Simulation & PDM",
+      duration: "20 Weeks",
+      format: "Live + Certification Prep",
+      certificate: "CSWA/CSWP Preparation",
+      placement: "100% Assistance",
+      curriculum: [
+        {
+          module: "Advanced 3D Modeling",
+          duration: "5 weeks",
+          topics: ["Complex Features", "Configurations", "Design Tables", "Advanced Assemblies"]
+        },
+        {
+          module: "Specialized Design Applications",
+          duration: "5 weeks",
+          topics: ["Sheet Metal Design", "Surface Modeling", "Weldments", "Plastic Features"]
+        },
+        {
+          module: "Simulation & Analysis",
+          duration: "5 weeks",
+          topics: ["Static Analysis", "Thermal Analysis", "Motion Simulation", "Optimization"]
+        },
+        {
+          module: "PDM & Certification Prep",
+          duration: "5 weeks",
+          topics: ["PDM Implementation", "Workflow Management", "CSWA Preparation", "CSWP Preparation"]
+        }
+      ],
+      tools: ["SolidWorks Premium", "SolidWorks Simulation", "SolidWorks PDM", "SolidWorks Flow", "PhotoView 360", "Composer"],
+      outcomes: [
+        "Master advanced 3D parametric modeling and complex assemblies",
+        "Perform professional simulation and finite element analysis", 
+        "Implement PDM systems for team collaboration and data management",
+        "Achieve CSWA and CSWP certifications for career advancement"
+      ],
+      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)",
+      price: "₹52,000",
+      emi: "₹4,333/month"
     }
   ]
 
