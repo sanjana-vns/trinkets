@@ -85,61 +85,62 @@ const AboutHero = () => {
         ))}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="text-left">
+          <div className="text-left order-2 lg:order-1">
             {/* Floating Badge */}
-            <div className="relative inline-block mb-8">
+            <div className="relative inline-block mb-6 lg:mb-8">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
-              <div className="relative bg-white/90 backdrop-blur-md border-4 border-blue-300/50 rounded-full px-8 py-4 shadow-2xl">
-                <span className="text-blue-600 font-black uppercase tracking-widest text-lg flex items-center gap-3">
-                  <span className="text-2xl">🏢</span>
-                  About Trinkets Institute
-                  <span className="text-2xl">✨</span>
+              <div className="relative bg-white/90 backdrop-blur-md border-2 lg:border-4 border-blue-300/50 rounded-full px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 shadow-2xl">
+                <span className="text-blue-600 font-black uppercase tracking-wide sm:tracking-widest text-sm sm:text-base lg:text-lg flex items-center gap-2 lg:gap-3">
+                  <span className="text-lg sm:text-xl lg:text-2xl">🏢</span>
+                  <span className="hidden sm:inline">About Trinkets Institute</span>
+                  <span className="sm:hidden">About Us</span>
+                  <span className="text-lg sm:text-xl lg:text-2xl">✨</span>
                 </span>
               </div>
             </div>
 
             {/* Revolutionary Title */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-6 lg:mb-8">
               Turning Students into
-              <span className="block text-3xl md:text-4xl mt-4 animate-bounce-gentle">
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 lg:mt-4 animate-bounce-gentle">
                 Industry Professionals
               </span>
             </h1>
 
             {/* Enhanced Description */}
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12 font-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-8 lg:mb-12 font-medium">
               For over <span className="text-blue-600 font-bold">15 years</span>, we&apos;ve been at the forefront of 
               <span className="text-indigo-600 font-bold"> engineering education</span>, transforming ambitious students 
               into skilled professionals ready to tackle real-world challenges.
             </p>
 
             {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 lg:mb-12">
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-black text-blue-600 mb-2">15+</div>
-                <div className="text-gray-600 font-semibold">Years Experience</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-blue-600 mb-1 lg:mb-2">15+</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-600 font-semibold">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-black text-indigo-600 mb-2">5000+</div>
-                <div className="text-gray-600 font-semibold">Students Trained</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-indigo-600 mb-1 lg:mb-2">5000+</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-600 font-semibold">Students Trained</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-black text-sky-600 mb-2">95%</div>
-                <div className="text-gray-600 font-semibold">Placement Rate</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-sky-600 mb-1 lg:mb-2">95%</div>
+                <div className="text-xs sm:text-sm lg:text-base text-gray-600 font-semibold">Placement Rate</div>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <a
                 href="#story"
-                className="group px-10 py-5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-2xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-500 hover:shadow-2xl hover:scale-105 text-center overflow-hidden transform-gpu"
+                className="group px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold rounded-xl lg:rounded-2xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-500 hover:shadow-2xl hover:scale-105 text-center overflow-hidden transform-gpu"
               >
-                <span className="relative flex items-center justify-center gap-3 text-xl">
-                  <span className="text-2xl">📖</span>
+                <span className="relative flex items-center justify-center gap-2 lg:gap-3 text-base sm:text-lg lg:text-xl">
+                  <span className="text-lg sm:text-xl lg:text-2xl">📖</span>
                   Our Story
                   <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
                 </span>
@@ -147,10 +148,10 @@ const AboutHero = () => {
               
               <a
                 href="/contact"
-                className="group px-10 py-5 bg-white border-4 border-blue-300 text-blue-600 font-bold rounded-2xl hover:bg-blue-50 hover:border-blue-400 transition-all duration-500 hover:shadow-2xl hover:scale-105 text-center"
+                className="group px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-white border-2 lg:border-4 border-blue-300 text-blue-600 font-bold rounded-xl lg:rounded-2xl hover:bg-blue-50 hover:border-blue-400 transition-all duration-500 hover:shadow-2xl hover:scale-105 text-center"
               >
-                <span className="flex items-center justify-center gap-3 text-xl">
-                  <span className="text-2xl">💬</span>
+                <span className="flex items-center justify-center gap-2 lg:gap-3 text-base sm:text-lg lg:text-xl">
+                  <span className="text-lg sm:text-xl lg:text-2xl">💬</span>
                   Get in Touch
                 </span>
               </a>
@@ -158,38 +159,38 @@ const AboutHero = () => {
           </div>
 
           {/* Right Visual Content */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             {/* Main Image Container */}
             <div className="relative group">
               {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-pulse-slow"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-pulse-slow"></div>
               
               {/* Image Frame */}
-              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-200/50 transform group-hover:scale-105 transition-all duration-700">
-                <div className="aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-indigo-100 p-12">
+              <div className="relative bg-white rounded-2xl lg:rounded-3xl shadow-2xl overflow-hidden border-2 lg:border-4 border-blue-200/50 transform group-hover:scale-105 transition-all duration-700">
+                <div className="aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-indigo-100 p-6 sm:p-8 lg:p-12">
                   {/* Placeholder for Institute Image */}
-                  <div className="w-full h-96 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-2xl flex items-center justify-center">
+                  <div className="w-full h-48 sm:h-64 lg:h-96 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-xl lg:rounded-2xl flex items-center justify-center">
                     <div className="text-center">
-                      <div className="text-8xl mb-4">🏫</div>
-                      <div className="text-2xl font-bold text-blue-700">Trinkets Institute</div>
-                      <div className="text-lg text-indigo-700">Excellence in Engineering Education</div>
+                      <div className="text-4xl sm:text-6xl lg:text-8xl mb-2 lg:mb-4">🏫</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700">Trinkets Institute</div>
+                      <div className="text-sm sm:text-base lg:text-lg text-indigo-700">Excellence in Engineering Education</div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Achievement Badges */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-2xl px-6 py-4 shadow-2xl animate-bounce-gentle">
+              <div className="absolute -top-3 sm:-top-4 lg:-top-6 -right-3 sm:-right-4 lg:-right-6 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 shadow-2xl animate-bounce-gentle">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">🏆</div>
-                  <div className="text-sm font-semibold">Award Winning</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold">🏆</div>
+                  <div className="text-xs sm:text-sm font-semibold">Award Winning</div>
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-indigo-500 to-sky-500 text-white rounded-2xl px-6 py-4 shadow-2xl animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
+              <div className="absolute -bottom-3 sm:-bottom-4 lg:-bottom-6 -left-3 sm:-left-4 lg:-left-6 bg-gradient-to-r from-indigo-500 to-sky-500 text-white rounded-xl lg:rounded-2xl px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 shadow-2xl animate-bounce-gentle" style={{animationDelay: '0.5s'}}>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">⭐</div>
-                  <div className="text-sm font-semibold">Industry Certified</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold">⭐</div>
+                  <div className="text-xs sm:text-sm font-semibold">Industry Certified</div>
                 </div>
               </div>
             </div>

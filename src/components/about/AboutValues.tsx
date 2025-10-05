@@ -53,24 +53,24 @@ const AboutValues = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
+      className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
     >
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
         
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-4 sm:mb-6 lg:mb-8">
             Our Core Values
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             The principles that guide our every action and decision
           </p>
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {values.map((value, index) => (
             <div
               key={index}
@@ -78,28 +78,28 @@ const AboutValues = () => {
               onMouseEnter={() => setHoveredValue(index)}
               onMouseLeave={() => setHoveredValue(null)}
             >
-              <div className={`relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredValue === index ? 'scale-105 z-10' : ''}`}>
+              <div className={`relative bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl sm:hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredValue === index ? 'scale-105 z-10' : ''}`}>
                 
                 {/* Card Glow */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${value.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${value.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl sm:rounded-3xl`}></div>
                 
                 {/* Top Accent */}
                 <div className={`h-2 bg-gradient-to-r ${value.gradient}`}></div>
                 
                 {/* Card Content */}
-                <div className="relative p-8 text-center">
+                <div className="relative p-4 sm:p-6 lg:p-8 text-center">
                   {/* Icon */}
-                  <div className={`w-20 h-20 bg-gradient-to-r ${value.gradient} rounded-2xl flex items-center justify-center shadow-xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                    <span className="text-4xl">{value.icon}</span>
+                  <div className={`w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-gradient-to-r ${value.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg sm:shadow-xl mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                    <span className="text-2xl sm:text-3xl lg:text-4xl">{value.icon}</span>
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {value.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {value.description}
                   </p>
                 </div>

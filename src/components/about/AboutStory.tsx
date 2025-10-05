@@ -61,12 +61,12 @@ const AboutStory = () => {
     <section 
       ref={sectionRef}
       id="story"
-      className="relative py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
+      className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-delayed"></div>
+        <div className="absolute top-20 left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float-delayed"></div>
       </div>
 
       <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
@@ -74,23 +74,23 @@ const AboutStory = () => {
       }`}>
         
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="relative inline-block mb-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="relative inline-block mb-6 lg:mb-8">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-xl opacity-75 animate-pulse-slow"></div>
-            <div className="relative bg-white/90 backdrop-blur-md border-4 border-blue-300/50 rounded-full px-12 py-6 shadow-2xl">
-              <span className="text-blue-600 font-black uppercase tracking-widest text-xl flex items-center gap-3">
-                <span className="text-2xl">📖</span>
+            <div className="relative bg-white/90 backdrop-blur-md border-2 lg:border-4 border-blue-300/50 rounded-full px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 shadow-2xl">
+              <span className="text-blue-600 font-black uppercase tracking-wide sm:tracking-widest text-sm sm:text-base lg:text-xl flex items-center gap-2 lg:gap-3">
+                <span className="text-lg sm:text-xl lg:text-2xl">📖</span>
                 Our Journey
-                <span className="text-2xl">✨</span>
+                <span className="text-lg sm:text-xl lg:text-2xl">✨</span>
               </span>
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-sky-500 leading-tight mb-6 lg:mb-8">
             Our Story of Excellence
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
             From humble beginnings to becoming a leading institution in engineering education, 
             our journey has been driven by <span className="text-blue-600 font-bold">passion</span>, 
             <span className="text-indigo-600 font-bold"> dedication</span>, and an unwavering commitment to student success.
@@ -99,52 +99,52 @@ const AboutStory = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-indigo-400 to-sky-400 rounded-full"></div>
+          {/* Timeline Line - Hidden on mobile, visible on larger screens */}
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-indigo-400 to-sky-400 rounded-full"></div>
           
           {/* Timeline Items */}
-          <div className="space-y-24">
+          <div className="space-y-8 sm:space-y-12 lg:space-y-24">
             {milestones.map((milestone, index) => (
               <div 
                 key={index}
-                className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                className={`relative flex flex-col lg:flex-row lg:items-center ${index % 2 === 0 ? 'lg:justify-start' : 'lg:justify-end'}`}
                 onMouseEnter={() => setHoveredMilestone(index)}
                 onMouseLeave={() => setHoveredMilestone(null)}
               >
-                {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${milestone.color} rounded-full border-4 border-white shadow-2xl flex items-center justify-center transform transition-all duration-500 ${hoveredMilestone === index ? 'scale-125 rotate-12' : ''}`}>
-                    <span className="text-2xl">{milestone.icon}</span>
+                {/* Timeline Node - Adjusted for mobile */}
+                <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-10 mb-4 lg:mb-0 flex justify-center lg:block">
+                  <div className={`w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 bg-gradient-to-r ${milestone.color} rounded-full border-2 lg:border-4 border-white shadow-2xl flex items-center justify-center transform transition-all duration-500 ${hoveredMilestone === index ? 'scale-125 rotate-12' : ''}`}>
+                    <span className="text-lg sm:text-xl lg:text-2xl">{milestone.icon}</span>
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-16' : 'pl-16'}`}>
-                  <div className={`group relative bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredMilestone === index ? 'scale-105' : ''}`}>
+                <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
+                  <div className={`group relative bg-white/90 backdrop-blur-md rounded-2xl lg:rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 overflow-hidden border-2 border-blue-200/50 hover:border-blue-300 transform ${hoveredMilestone === index ? 'scale-105' : ''}`}>
                     
                     {/* Card Glow */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${milestone.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${milestone.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl lg:rounded-3xl`}></div>
                     
                     {/* Card Content */}
-                    <div className="relative p-8">
+                    <div className="relative p-6 sm:p-7 lg:p-8">
                       {/* Year Badge */}
-                      <div className={`inline-block bg-gradient-to-r ${milestone.color} text-white px-6 py-2 rounded-full font-bold text-lg mb-4 shadow-lg`}>
+                      <div className={`inline-block bg-gradient-to-r ${milestone.color} text-white px-4 sm:px-5 lg:px-6 py-1 sm:py-1.5 lg:py-2 rounded-full font-bold text-base sm:text-lg mb-3 lg:mb-4 shadow-lg`}>
                         {milestone.year}
                       </div>
                       
                       {/* Title */}
-                      <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 lg:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                         {milestone.title}
                       </h3>
                       
                       {/* Description */}
-                      <p className="text-gray-600 leading-relaxed text-lg">
+                      <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                         {milestone.description}
                       </p>
 
-                      {/* Decorative Elements */}
-                      <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
-                        <span className="text-6xl">{milestone.icon}</span>
+                      {/* Decorative Elements - Hidden on small screens */}
+                      <div className="hidden sm:block absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
+                        <span className="text-4xl lg:text-6xl">{milestone.icon}</span>
                       </div>
                     </div>
                   </div>
@@ -155,19 +155,19 @@ const AboutStory = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
           <div className="relative inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl blur-xl opacity-50 animate-pulse-slow"></div>
-            <div className="relative bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl shadow-2xl p-12 text-white">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl lg:rounded-3xl blur-xl opacity-50 animate-pulse-slow"></div>
+            <div className="relative bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl lg:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 lg:mb-4">
                 Ready to Be Part of Our Story? 🚀
               </h3>
-              <p className="text-lg mb-8 opacity-90">
+              <p className="text-base sm:text-lg mb-6 lg:mb-8 opacity-90">
                 Join thousands of successful professionals who started their journey with us
               </p>
               <a
                 href="/contact"
-                className="inline-block px-10 py-4 bg-white text-blue-600 font-bold rounded-2xl hover:bg-blue-50 transition-all duration-300 hover:shadow-xl hover:scale-105"
+                className="inline-block px-6 sm:px-8 lg:px-10 py-3 sm:py-4 bg-white text-blue-600 font-bold rounded-xl lg:rounded-2xl hover:bg-blue-50 transition-all duration-300 hover:shadow-xl hover:scale-105"
               >
                 Start Your Journey Today →
               </a>
