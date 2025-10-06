@@ -46,9 +46,7 @@ const CourseDetails = () => {
         "Create detailed engineering drawings and documentation",
         "Implement industry codes and standards (ASME, API, etc.)"
       ],
-      prerequisites: "Engineering degree or diploma (Mechanical/Chemical preferred)",
-      price: "₹45,000",
-      emi: "₹3,750/month"
+      prerequisites: "Engineering degree or diploma (Mechanical/Chemical preferred)"
     },
     {
       id: 2,
@@ -87,9 +85,7 @@ const CourseDetails = () => {
         "Conduct safety analysis and economic evaluation",
         "Implement process control and automation strategies"
       ],
-      prerequisites: "Engineering degree or diploma (Chemical/Mechanical preferred)",
-      price: "₹48,000",
-      emi: "₹4,000/month"
+      prerequisites: "Engineering degree or diploma (Chemical/Mechanical preferred)"
     },
     {
       id: 3,
@@ -128,9 +124,7 @@ const CourseDetails = () => {
         "Conduct seismic and wind load analysis for safe design",
         "Create detailed structural drawings and documentation"
       ],
-      prerequisites: "Engineering degree or diploma (Civil/Structural preferred)",
-      price: "₹46,000",
-      emi: "₹3,833/month"
+      prerequisites: "Engineering degree or diploma (Civil/Structural preferred)"
     },
     {
       id: 4,
@@ -169,9 +163,7 @@ const CourseDetails = () => {
         "Create detailed MEP drawings and documentation",
         "Implement green building standards and LEED compliance"
       ],
-      prerequisites: "Engineering degree or diploma (Mechanical/Civil preferred)",
-      price: "₹42,000",
-      emi: "₹3,500/month"
+      prerequisites: "Engineering degree or diploma (Mechanical/Civil preferred)"
     },
     {
       id: 5,
@@ -210,9 +202,7 @@ const CourseDetails = () => {
         "Coordinate multi-discipline engineering projects",
         "Ensure compliance with building codes and standards"
       ],
-      prerequisites: "Engineering background in Mechanical/Electrical/Civil",
-      price: "₹55,000",
-      emi: "₹4,583/month"
+      prerequisites: "Engineering background in Mechanical/Electrical/Civil"
     },
     {
       id: 6,
@@ -251,9 +241,7 @@ const CourseDetails = () => {
         "Master parametric design techniques for efficient modeling",
         "Design complete products from concept to manufacturing drawings"
       ],
-      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)",
-      price: "₹38,000",
-      emi: "₹3,167/month"
+      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)"
     },
     {
       id: 7,
@@ -292,9 +280,7 @@ const CourseDetails = () => {
         "Implement PDM systems for team collaboration and data management",
         "Achieve CSWA and CSWP certifications for career advancement"
       ],
-      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)",
-      price: "₹52,000",
-      emi: "₹4,333/month"
+      prerequisites: "Engineering degree or diploma (Mechanical/Design preferred)"
     }
   ]
 
@@ -379,11 +365,6 @@ const CourseDetails = () => {
                 </div>
 
                 <div className="p-6">
-                  <div className="text-center mb-6">
-                    <div className="text-3xl font-black text-gray-800 mb-1">{course.price}</div>
-                    <div className="text-gray-600">or {course.emi} EMI</div>
-                  </div>
-
                   <div className="space-y-3">
                     <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                       Enroll Now

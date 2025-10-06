@@ -42,8 +42,6 @@ const CourseEnrollment = () => {
     {
       id: 'piping-engineering',
       name: 'Piping Engineering & SP3D',
-      price: '₹45,000',
-      originalPrice: '₹60,000',
       duration: '6 months',
       icon: '🔧',
       gradient: 'from-blue-600 to-purple-600',
@@ -52,8 +50,6 @@ const CourseEnrollment = () => {
     {
       id: 'mep-engineering',
       name: 'MEP Engineering',
-      price: '₹55,000',
-      originalPrice: '₹75,000',
       duration: '8 months',
       icon: '⚡',
       gradient: 'from-green-600 to-teal-600',
@@ -62,8 +58,6 @@ const CourseEnrollment = () => {
     {
       id: 'hvac-design',
       name: 'HVAC Design & Analysis',
-      price: '₹50,000',
-      originalPrice: '₹65,000',
       duration: '5 months',
       icon: '❄️',
       gradient: 'from-red-600 to-pink-600',
@@ -76,8 +70,8 @@ const CourseEnrollment = () => {
     { icon: '👨‍🏫', title: 'Expert Mentorship', desc: '1-on-1 guidance from industry veterans' },
     { icon: '💼', title: 'Real Projects', desc: 'Build portfolio with industry projects' },
     { icon: '🔄', title: 'Lifetime Access', desc: 'Course materials & updates forever' },
-    { icon: '💳', title: 'EMI Options', desc: 'Affordable monthly payment plans' },
-    { icon: '🏆', title: 'Certification', desc: 'Industry-recognized certificates' }
+    { icon: '🏆', title: 'Certification', desc: 'Industry-recognized certificates' },
+    { icon: '🚀', title: 'Career Support', desc: 'Ongoing career guidance and support' }
   ]
 
   const selectedCourseData = courses.find(course => course.id === selectedCourse)
@@ -204,14 +198,6 @@ const CourseEnrollment = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold">{course.price}</div>
-                        <div className={`text-sm line-through ${
-                          selectedCourse === course.id ? 'text-white/60' : 'text-gray-500'
-                        }`}>
-                          {course.originalPrice}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -244,14 +230,7 @@ const CourseEnrollment = () => {
                 <div className={`w-20 h-20 bg-gradient-to-br ${selectedCourseData?.gradient} rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 transform rotate-3 hover:rotate-0 transition-transform duration-300 shadow-2xl`}>
                   {selectedCourseData?.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{selectedCourseData?.name}</h3>
-                <div className="flex items-center justify-center gap-4">
-                  <span className="text-3xl font-black text-white">{selectedCourseData?.price}</span>
-                  <span className="text-lg text-gray-400 line-through">{selectedCourseData?.originalPrice}</span>
-                  <span className="bg-green-500 text-white text-sm px-2 py-1 rounded-full font-bold">
-                    Save 25%
-                  </span>
-                </div>
+                <h3 className="text-2xl font-bold text-white mb-6">{selectedCourseData?.name}</h3>
               </div>
 
               {/* Action Buttons */}
@@ -276,14 +255,6 @@ const CourseEnrollment = () => {
                 <button className="w-full py-4 bg-white/20 text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300">
                   Schedule Free Demo Class
                 </button>
-              </div>
-
-              {/* EMI Options */}
-              <div className="mt-6 p-4 bg-white/10 rounded-xl border border-white/20">
-                <h4 className="font-semibold text-white mb-2">💳 EMI Options Available</h4>
-                <div className="text-sm text-gray-300">
-                  Pay as low as <span className="font-bold text-white">₹3,750/month</span> for 12 months
-                </div>
               </div>
 
               {/* Trust Indicators */}
