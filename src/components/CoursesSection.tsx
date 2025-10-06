@@ -11,13 +11,16 @@ const CoursesSection = () => {
     { id: 'piping', label: 'Piping Design', icon: '🔧' },
     { id: 'hvac', label: 'HVAC Systems', icon: '❄️' },
     { id: 'process', label: 'Process Engineering', icon: '⚙️' },
-    { id: 'structural', label: 'Structural Design', icon: '🏗️' }
+    { id: 'structural', label: 'Structural Design', icon: '🏗️' },
+    { id: 'mep', label: 'MEP Engineering', icon: '🔌' },
+    { id: 'software', label: 'Software Training', icon: '💻' },
+    { id: 'mechanical', label: 'Mechanical Design', icon: '⚡' }
   ]
 
   const courses = [
     {
-      title: "Piping Design & Engineering",
-      description: "Master piping design fundamentals with AutoCAD Plant 3D, PDMS, and industry standards.",
+      title: "Piping Engineering",
+      description: "Piping Engineering is a specialized field of Mechanical Engineering focused on designing safe, efficient piping systems for industrial facilities.",
       duration: "6 Months",
       rating: "4.8",
       students: "850+",
@@ -27,7 +30,7 @@ const CoursesSection = () => {
     },
     {
       title: "E3D Piping Course",
-      description: "Master AVEVA E3D Design with 3D piping layout, clash detection, and plant modeling.",
+      description: "E3D Piping is a powerful 3D design tool for modeling complex piping systems, enhancing accuracy, collaboration, efficiency and clash detection.",
       duration: "4 Months",
       rating: "4.9",
       students: "480+",
@@ -36,8 +39,18 @@ const CoursesSection = () => {
       features: ["AVEVA E3D", "3D Piping Layout", "Clash Detection", "Plant Modeling"]
     },
     {
-      title: "HVAC System Design",
-      description: "Comprehensive HVAC training covering system design, load calculations, and energy efficiency.",
+      title: "SMART PLANT 3D (SP3D)",
+      description: "SP3D is a 3D modeling software used for designing piping, equipment, and structures in industrial plants with precision and efficiency.",
+      duration: "5 Months",
+      rating: "4.8",
+      students: "520+",
+      category: "piping",
+      link: "/courses/smart-plant-3d",
+      features: ["SP3D Modeling", "Equipment Design", "Piping Layout", "Industrial Plants"]
+    },
+    {
+      title: "HVAC Engineering",
+      description: "HVAC Engineering designs and optimizes heating, ventilation and air conditioning systems to ensure comfort, air quality and energy efficiency.",
       duration: "4 Months", 
       rating: "4.7",
       students: "650+",
@@ -56,8 +69,18 @@ const CoursesSection = () => {
       features: ["HYSYS Training", "P&ID Design", "Process Safety", "Real Projects"]
     },
     {
-      title: "Structural Design & Analysis",
-      description: "Advanced structural engineering with STAAD Pro, ETABS, and building design codes.",
+      title: "MEP Engineering",
+      description: "MEP Engineering involves designing and maintaining mechanical, electrical, and plumbing systems to ensure efficiency and safety in buildings.",
+      duration: "5 Months",
+      rating: "4.7",
+      students: "600+",
+      category: "mep",
+      link: "/courses/mep-engineering",
+      features: ["Mechanical Systems", "Electrical Design", "Plumbing Systems", "Building Codes"]
+    },
+    {
+      title: "Structural Engineering",
+      description: "Structural Engineering involves designing safe, stable structures like buildings and bridges. It ensures they withstand loads and environmental forces.",
       duration: "6 Months",
       rating: "4.6",
       students: "580+",
@@ -84,6 +107,36 @@ const CoursesSection = () => {
       category: "mechanical",
       link: "/courses/solidworks-professional",
       features: ["3D Modeling", "Simulation", "Assembly Design", "Certification"]
+    },
+    {
+      title: "STAAD Pro",
+      description: "STAAD Pro is structural analysis and design software for modeling buildings, bridges and other structures. It supports multiple materials and design codes.",
+      duration: "3 Months",
+      rating: "4.7",
+      students: "450+",
+      category: "software",
+      link: "/courses/staad-pro",
+      features: ["Structural Analysis", "Design Codes", "Building Modeling", "Bridge Design"]
+    },
+    {
+      title: "ETABS",
+      description: "ETABS is advanced structural engineering software used for analyzing and designing multi-story buildings efficiently, accurately and reliably.",
+      duration: "3 Months",
+      rating: "4.6",
+      students: "420+",
+      category: "software",
+      link: "/courses/etabs",
+      features: ["Building Analysis", "Multi-story Design", "Seismic Analysis", "Professional Certification"]
+    },
+    {
+      title: "CAESAR II",
+      description: "CAESAR II is a software for pipe stress analysis, ensuring safe and efficient piping system design. It supports compliance with industry standards.",
+      duration: "2 Months",
+      rating: "4.8",
+      students: "380+",
+      category: "software",
+      link: "/courses/caesar-ii",
+      features: ["Pipe Stress Analysis", "Industry Standards", "Safety Design", "Professional Training"]
     }
   ]
 
