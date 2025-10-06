@@ -121,7 +121,7 @@ const CorporateHero = () => {
         <div className="text-center mb-16">
           {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-none text-white">
               Corporate Training
               <span className="block text-3xl md:text-4xl font-bold text-gray-300 mt-2">
                 Empower Your Workforce

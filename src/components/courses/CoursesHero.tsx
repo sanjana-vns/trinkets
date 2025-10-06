@@ -112,9 +112,9 @@ const CoursesHero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Main Heading with Advanced Animation */}
+          {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-none text-white">
               Our Courses
               <span className="block text-3xl md:text-4xl font-bold text-gray-300 mt-2">
                 Transform Your Future

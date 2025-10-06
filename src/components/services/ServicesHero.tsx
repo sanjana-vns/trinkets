@@ -124,7 +124,7 @@ const ServicesHero = () => {
         <div className="text-center">
           {/* Main Heading with Gradient Effects */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-none">
               <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
                 Our Services
               </span>
