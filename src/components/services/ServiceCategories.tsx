@@ -160,7 +160,7 @@ const ServiceCategories = () => {
       gradient: "from-amber-600 to-orange-600",
       timeline: "2-5 weeks",
       complexity: "Advanced",
-      link: "/services/structural-analysis-design-services-mumbai"
+      link: "/services/foundation-engineering-services-mumbai"
     }
   ]
 
