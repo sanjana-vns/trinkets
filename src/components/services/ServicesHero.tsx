@@ -97,16 +97,15 @@ const ServicesHero = () => {
           <div className="absolute inset-0 bg-grid-pattern animate-pulse"></div>
         </div>
 
-        {/* Floating Engineering Elements */}
+        {/* Engineering Elements */}
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <div
               key={i}
-              className="absolute text-blue-400/20 font-mono text-sm animate-float-delayed"
+              className="absolute text-blue-400/20 font-mono text-sm"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.5}s`,
                 transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`
               }}
             >
@@ -115,21 +114,21 @@ const ServicesHero = () => {
           ))}
         </div>
 
-        {/* Morphing Background Shapes */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full animate-morph blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full animate-morph-reverse blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full animate-morph blur-3xl"></div>
+        {/* Background Shapes */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Main Heading with Advanced Animation */}
+          {/* Main Heading with Gradient Effects */}
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none">
-              <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent animate-gradient-x">
+              <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
                 Our Services
               </span>
-              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x mt-2">
+              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent mt-2">
                 Engineering Excellence Delivered
               </span>
             </h1>
