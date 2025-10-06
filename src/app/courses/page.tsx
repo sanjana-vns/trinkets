@@ -244,6 +244,13 @@ export default function CoursesPage() {
                   Master SolidWorks
                 </Link>
               </div>
+              <div className="bg-yellow-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-yellow-600">Electrical Design Engineering</h3>
+                <p className="text-gray-600 mb-4">Master AutoCAD Electrical, ETAP, EPLAN for power distribution & automation</p>
+                <Link href="/courses/electrical-design-engineering" className="inline-block bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
             </div>
           </div>
         </section>
