@@ -1,6 +1,23 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+
+// Type definition for training program
+interface TrainingProgram {
+  id: number;
+  title: string;
+  description: string;
+  duration: string;
+  format: string;
+  level: string;
+  technologies: string[];
+  participants: string;
+  customizable: boolean;
+  price: string;
+  features: string[];
+  courseLink?: string;
+}
 
 // Ultra-Creative Training Programs Component
 const TrainingPrograms = () => {
@@ -30,7 +47,8 @@ const TrainingPrograms = () => {
         participants: "10-15",
         customizable: true,
         price: "Contact for Quote",
-        features: ["3D Modeling", "Clash Detection", "Isometric Drawings", "Equipment Placement"]
+        features: ["3D Modeling", "Clash Detection", "Isometric Drawings", "Equipment Placement"],
+        courseLink: "/courses/sp3d-piping-design-training"
       },
       {
         id: 2,
@@ -43,7 +61,8 @@ const TrainingPrograms = () => {
         participants: "8-12",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Thermal Stress Analysis", "Seismic Analysis", "Support Optimization", "Code Compliance"]
+        features: ["Thermal Stress Analysis", "Seismic Analysis", "Support Optimization", "Code Compliance"],
+        courseLink: "/courses/caesar-ii-stress-analysis"
       },
       {
         id: 3,
@@ -56,7 +75,8 @@ const TrainingPrograms = () => {
         participants: "15-20",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Piping Fundamentals", "Design Standards", "Material Engineering", "Project Management"]
+        features: ["Piping Fundamentals", "Design Standards", "Material Engineering", "Project Management"],
+        courseLink: "/courses/piping-engineering-fundamentals-training"
       }
     ],
     mep: [
@@ -71,7 +91,8 @@ const TrainingPrograms = () => {
         participants: "12-18",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Electrical Design", "Plumbing Systems", "Fire Protection", "BIM Coordination"]
+        features: ["Electrical Design", "Plumbing Systems", "Fire Protection", "BIM Coordination"],
+        courseLink: "/courses/mep-engineering"
       },
       {
         id: 5,
@@ -84,7 +105,8 @@ const TrainingPrograms = () => {
         participants: "10-15",
         customizable: true,
         price: "Contact for Quote",
-        features: ["3D Modeling", "Clash Detection", "4D Scheduling", "5D Cost Analysis"]
+        features: ["3D Modeling", "Clash Detection", "4D Scheduling", "5D Cost Analysis"],
+        courseLink: undefined
       }
     ],
     hvac: [
@@ -99,7 +121,8 @@ const TrainingPrograms = () => {
         participants: "12-16",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Load Calculations", "System Design", "Energy Analysis", "Duct Sizing"]
+        features: ["Load Calculations", "System Design", "Energy Analysis", "Duct Sizing"],
+        courseLink: "/courses/hvac-system-design"
       },
       {
         id: 7,
@@ -112,7 +135,8 @@ const TrainingPrograms = () => {
         participants: "8-12",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Energy Simulation", "LEED Compliance", "Sustainable Design", "Cost-Benefit Analysis"]
+        features: ["Energy Simulation", "LEED Compliance", "Sustainable Design", "Cost-Benefit Analysis"],
+        courseLink: undefined
       }
     ],
     structural: [
@@ -127,7 +151,8 @@ const TrainingPrograms = () => {
         participants: "12-16",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Structural Modeling", "Load Analysis", "Design Optimization", "Code Compliance"]
+        features: ["Structural Modeling", "Load Analysis", "Design Optimization", "Code Compliance"],
+        courseLink: "/courses/staad-pro"
       },
       {
         id: 9,
@@ -140,7 +165,8 @@ const TrainingPrograms = () => {
         participants: "8-12",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Connection Design", "Fabrication Details", "Erection Planning", "Cost Optimization"]
+        features: ["Connection Design", "Fabrication Details", "Erection Planning", "Cost Optimization"],
+        courseLink: undefined
       }
     ],
     cad: [
@@ -155,7 +181,8 @@ const TrainingPrograms = () => {
         participants: "15-20",
         customizable: true,
         price: "Contact for Quote",
-        features: ["2D Drafting", "3D Modeling", "Technical Standards", "Plot Management"]
+        features: ["2D Drafting", "3D Modeling", "Technical Standards", "Plot Management"],
+        courseLink: "/courses/autocad-mechanical-design"
       },
       {
         id: 11,
@@ -168,7 +195,8 @@ const TrainingPrograms = () => {
         participants: "10-15",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Parametric Modeling", "Assembly Design", "Simulation", "Manufacturing Integration"]
+        features: ["Parametric Modeling", "Assembly Design", "Simulation", "Manufacturing Integration"],
+        courseLink: undefined
       }
     ],
     process: [
@@ -183,7 +211,8 @@ const TrainingPrograms = () => {
         participants: "12-18",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Process Design", "Heat Integration", "Safety Analysis", "Economic Evaluation"]
+        features: ["Process Design", "Heat Integration", "Safety Analysis", "Economic Evaluation"],
+        courseLink: undefined
       },
       {
         id: 13,
@@ -196,7 +225,8 @@ const TrainingPrograms = () => {
         participants: "8-12",
         customizable: true,
         price: "Contact for Quote",
-        features: ["Equipment Layout", "Pipe Routing", "Safety Compliance", "Maintenance Access"]
+        features: ["Equipment Layout", "Pipe Routing", "Safety Compliance", "Maintenance Access"],
+        courseLink: undefined
       }
     ]
   }
@@ -369,9 +399,17 @@ const TrainingPrograms = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
-                    Request Information
-                  </button>
+                  {program.courseLink ? (
+                    <Link href={program.courseLink}>
+                      <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+                        View Details
+                      </button>
+                    </Link>
+                  ) : (
+                    <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+                      Request Information
+                    </button>
+                  )}
                   <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
                     Schedule Demo
                   </button>
