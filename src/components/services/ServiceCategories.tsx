@@ -40,7 +40,7 @@ const ServiceCategories = () => {
       gradient: "from-indigo-600 to-purple-600",
       timeline: "3-6 weeks",
       complexity: "Expert",
-      link: ""
+      link: "/services/process-piping-design-services"
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const ServiceCategories = () => {
       gradient: "from-purple-600 to-pink-600",
       timeline: "1-3 weeks",
       complexity: "Advanced",
-      link: ""
+      link: "/services/piping-stress-analysis-services-mumbai"
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const ServiceCategories = () => {
       gradient: "from-blue-600 to-cyan-600",
       timeline: "1-2 weeks",
       complexity: "Intermediate",
-      link: ""
+      link: "/services/piping-material-engineering-services-mumbai"
     },
     {
       id: 5,
