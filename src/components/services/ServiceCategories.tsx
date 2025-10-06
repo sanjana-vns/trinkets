@@ -153,7 +153,7 @@ const ServiceCategories = () => {
     {
       id: 12,
       title: "Foundation Engineering",
-      category: "structural",
+      category: "structural", 
       description: "Foundation design and geotechnical engineering services",
       features: ["Soil Analysis", "Foundation Design", "Pile Design", "Retaining Walls"],
       icon: "🪨",
