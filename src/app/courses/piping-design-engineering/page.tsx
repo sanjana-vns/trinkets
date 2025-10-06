@@ -125,8 +125,6 @@ export default function PipingDesignCoursePage() {
     },
     "offers": {
       "@type": "Offer",
-      "price": "Contact for pricing",
-      "priceCurrency": "INR",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01"
     },
@@ -337,15 +335,7 @@ export default function PipingDesignCoursePage() {
       <section className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Career Prospects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 text-3xl font-bold">₹</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Salary Range</h3>
-              <p className="text-gray-600 mb-2">₹4-15 LPA</p>
-              <p className="text-sm text-gray-500">Based on experience and skills</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="text-center">
               <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-green-600 text-3xl font-bold">🏢</span>
@@ -471,6 +461,11 @@ export default function PipingDesignCoursePage() {
               </Link>
             </div>
           </div>
+          <div className="mt-8 text-center">
+            <Link href="/courses" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              🎯 Discover All Our Engineering Programs
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -506,9 +501,14 @@ export default function PipingDesignCoursePage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
           <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
-          <Link href="/courses" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            View All Courses
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/courses" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              View All Courses
+            </Link>
+            <Link href="/courses#courses-hero" className="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              Courses Overview
+            </Link>
+          </div>
         </div>
       </section>
     </div>

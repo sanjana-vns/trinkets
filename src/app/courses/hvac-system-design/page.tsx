@@ -541,6 +541,11 @@ export default function HVACSystemDesignCoursePage() {
           <RelatedCourses 
             currentCourse="/courses/hvac-system-design"
           />
+          <div className="mt-8 text-center">
+            <Link href="/courses" className="inline-block bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105">
+              🎯 Discover All Our Engineering Programs
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -576,9 +581,14 @@ export default function HVACSystemDesignCoursePage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
           <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
-          <Link href="/courses" className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-            View All Courses
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/courses" className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+              View All Courses
+            </Link>
+            <Link href="/courses#courses-hero" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Courses Overview
+            </Link>
+          </div>
         </div>
       </section>
     </div>

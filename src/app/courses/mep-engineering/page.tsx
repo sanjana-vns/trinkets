@@ -187,10 +187,6 @@ export default function MEPEngineeringCoursePage() {
               <div className="text-3xl font-bold text-indigo-600 mb-2">500+</div>
               <div className="text-gray-600">Students Placed</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">₹8L+</div>
-              <div className="text-gray-600">Average Package</div>
-            </div>
           </div>
         </div>
       </section>
@@ -673,6 +669,11 @@ export default function MEPEngineeringCoursePage() {
           <RelatedCourses 
             currentCourse="/courses/mep-engineering"
           />
+          <div className="mt-8 text-center">
+            <Link href="/courses" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              🎯 Discover All Our Engineering Programs
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -711,9 +712,14 @@ export default function MEPEngineeringCoursePage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
           <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
-          <Link href="/courses" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-            View All Courses
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/courses" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+              View All Courses
+            </Link>
+            <Link href="/courses#courses-hero" className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+              Courses Overview
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -116,7 +116,6 @@ export default function SolidWorksProCoursePage() {
     "offers": {
       "@type": "Offer",
       "category": "Professional Training",
-      "priceCurrency": "INR",
       "availability": "https://schema.org/InStock"
     },
     "courseMode": ["classroom", "online"],
@@ -462,32 +461,26 @@ export default function SolidWorksProCoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-slate-50 rounded-lg">
               <h3 className="text-lg font-semibold text-slate-800 mb-3">Senior Design Engineer</h3>
-              <p className="text-gray-600 mb-3">₹6-15 LPA</p>
               <p className="text-sm text-gray-500">Lead product development and design optimization projects</p>
             </div>
             <div className="text-center p-6 bg-emerald-50 rounded-lg">
               <h3 className="text-lg font-semibold text-emerald-800 mb-3">Product Development Engineer</h3>
-              <p className="text-gray-600 mb-3">₹5-12 LPA</p>
               <p className="text-sm text-gray-500">Develop innovative products from concept to market</p>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-lg">
               <h3 className="text-lg font-semibold text-blue-800 mb-3">CAD/CAE Specialist</h3>
-              <p className="text-gray-600 mb-3">₹4-10 LPA</p>
               <p className="text-sm text-gray-500">Specialize in advanced modeling and simulation analysis</p>
             </div>
             <div className="text-center p-6 bg-green-50 rounded-lg">
               <h3 className="text-lg font-semibold text-green-800 mb-3">Mechanical Design Consultant</h3>
-              <p className="text-gray-600 mb-3">₹8-20 LPA</p>
               <p className="text-sm text-gray-500">Provide expert design solutions and technical consulting</p>
             </div>
             <div className="text-center p-6 bg-purple-50 rounded-lg">
               <h3 className="text-lg font-semibold text-purple-800 mb-3">R&D Engineer</h3>
-              <p className="text-gray-600 mb-3">₹7-18 LPA</p>
               <p className="text-sm text-gray-500">Research and develop cutting-edge products and technologies</p>
             </div>
             <div className="text-center p-6 bg-orange-50 rounded-lg">
               <h3 className="text-lg font-semibold text-orange-800 mb-3">Design Manager</h3>
-              <p className="text-gray-600 mb-3">₹10-25 LPA</p>
               <p className="text-sm text-gray-500">Lead design teams and manage product development cycles</p>
             </div>
           </div>
@@ -516,7 +509,7 @@ export default function SolidWorksProCoursePage() {
       <section className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-slate-500 to-emerald-500 rounded-lg shadow-lg p-8 text-white">
           <h2 className="text-3xl font-bold text-center mb-8">100% Placement Support</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold mb-2">1200+</div>
               <div className="text-slate-100">Students Placed</div>
@@ -524,10 +517,6 @@ export default function SolidWorksProCoursePage() {
             <div className="text-center">
               <div className="text-4xl font-bold mb-2">350+</div>
               <div className="text-slate-100">Hiring Partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">₹25L</div>
-              <div className="text-slate-100">Highest Package</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold mb-2">98%</div>
@@ -586,6 +575,11 @@ export default function SolidWorksProCoursePage() {
               </Link>
             </div>
           </div>
+          <div className="mt-8 text-center">
+            <Link href="/courses" className="inline-block bg-gradient-to-r from-slate-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-slate-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              🎯 Discover All Our Engineering Programs
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -630,9 +624,14 @@ export default function SolidWorksProCoursePage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
           <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
-          <Link href="/courses" className="inline-block bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-colors">
-            View All Courses
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/courses" className="inline-block bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-colors">
+              View All Courses
+            </Link>
+            <Link href="/courses#courses-hero" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Courses Overview
+            </Link>
+          </div>
         </div>
       </section>
     </div>
