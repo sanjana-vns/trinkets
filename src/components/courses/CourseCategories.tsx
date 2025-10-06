@@ -19,8 +19,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "6 months",
       level: "Intermediate to Advanced",
-      price: "₹45,000",
-      originalPrice: "₹60,000",
       rating: 4.8,
       students: 1250,
       features: ["Piping System Design", "Industrial Applications", "Safety Standards", "Real Projects"],
@@ -35,8 +33,6 @@ const CourseCategories = () => {
       category: "Software Courses",
       duration: "4 months",
       level: "Advanced",
-      price: "₹55,000",
-      originalPrice: "₹75,000",
       rating: 4.9,
       students: 890,
       features: ["3D Plant Modeling", "Equipment Design", "Collision Detection", "Industry Standards"],
@@ -51,8 +47,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "8 months",
       level: "Intermediate to Advanced",
-      price: "₹50,000",
-      originalPrice: "₹65,000",
       rating: 4.7,
       students: 650,
       features: ["Building Design", "Bridge Engineering", "Load Analysis", "Safety Standards"],
@@ -67,8 +61,6 @@ const CourseCategories = () => {
       category: "Software Courses",
       duration: "3 months",
       level: "Advanced",
-      price: "₹42,000",
-      originalPrice: "₹55,000",
       rating: 4.6,
       students: 2100,
       features: ["AVEVA E3D", "Complex Piping", "3D Modeling", "Clash Detection"],
@@ -83,8 +75,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "6 months",
       level: "Intermediate",
-      price: "₹48,000",
-      originalPrice: "₹62,000",
       rating: 4.5,
       students: 780,
       features: ["Mechanical Systems", "Electrical Design", "Plumbing Systems", "Building Integration"],
@@ -99,8 +89,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "5 months",
       level: "Intermediate",
-      price: "₹40,000",
-      originalPrice: "₹52,000",
       rating: 4.8,
       students: 520,
       features: ["System Design", "Energy Efficiency", "Air Quality", "Comfort Analysis"],
@@ -115,8 +103,6 @@ const CourseCategories = () => {
       category: "Software Courses",
       duration: "3 months",
       level: "Advanced",
-      price: "₹35,000",
-      originalPrice: "₹45,000",
       rating: 4.9,
       students: 430,
       features: ["Structural Analysis", "Design Codes", "Building Modeling", "Load Calculations"],
@@ -131,8 +117,6 @@ const CourseCategories = () => {
       category: "Design & Drafting",
       duration: "2 months",
       level: "Beginner to Intermediate",
-      price: "₹25,000",
-      originalPrice: "₹35,000",
       rating: 4.6,
       students: 950,
       features: ["2D Drafting", "Technical Drawing", "Design Documentation", "Industry Standards"],
@@ -147,8 +131,6 @@ const CourseCategories = () => {
       category: "Software Courses",
       duration: "3 months",
       level: "Advanced",
-      price: "₹38,000",
-      originalPrice: "₹50,000",
       rating: 4.7,
       students: 680,
       features: ["Building Analysis", "Seismic Design", "Wind Analysis", "Multi-story Structures"],
@@ -163,8 +145,6 @@ const CourseCategories = () => {
       category: "Software Courses",
       duration: "2 months",
       level: "Advanced",
-      price: "₹32,000",
-      originalPrice: "₹42,000",
       rating: 4.8,
       students: 420,
       features: ["Pipe Stress Analysis", "Code Compliance", "Thermal Analysis", "Safety Design"],
@@ -179,8 +159,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "6 months",
       level: "Intermediate to Advanced",
-      price: "₹46,000",
-      originalPrice: "₹60,000",
       rating: 4.7,
       students: 580,
       features: ["Power Systems", "Distribution Design", "Safety Standards", "Load Calculations"],
@@ -195,8 +173,6 @@ const CourseCategories = () => {
       category: "PG Diploma Courses",
       duration: "5 months",
       level: "Advanced",
-      price: "₹44,000",
-      originalPrice: "₹58,000",
       rating: 4.6,
       students: 380,
       features: ["Process Control", "Automation Systems", "Sensor Technology", "SCADA Systems"],
@@ -344,17 +320,6 @@ const CourseCategories = () => {
                         <span className="text-gray-600">{feature}</span>
                       </div>
                     ))}
-                  </div>
-                </div>
-
-                {/* Pricing */}
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <span className="text-2xl font-bold text-gray-800">{course.price}</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">{course.originalPrice}</span>
-                  </div>
-                  <div className="text-sm text-green-600 font-semibold">
-                    Save {Math.round((1 - parseInt(course.price.replace(/[^\d]/g, '')) / parseInt(course.originalPrice.replace(/[^\d]/g, ''))) * 100)}%
                   </div>
                 </div>
 
