@@ -586,45 +586,190 @@ export default function PipingMaterialEngineeringServices() {
         </section>
 
         {/* FAQ Section */}
-        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-3 mb-6 shadow-lg backdrop-blur-sm border border-white/20">
+                <span className="text-blue-600 font-semibold text-sm mr-2">❓</span>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Expert Answers</span>
+              </div>
+              
               <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 leading-tight">
                 Frequently Asked
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                   Questions
                 </span>
               </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Get expert answers to common questions about piping material engineering services in Mumbai
+              </p>
             </div>
 
-            <div className="space-y-6">
-              {[
-                {
-                  question: "What piping material engineering services do you offer in Mumbai?",
-                  answer: "We offer comprehensive piping material engineering services in Mumbai including material selection & specification, corrosion engineering, material testing & validation, procurement support, material database development, and expert training & consultancy for various industrial applications."
-                },
-                {
-                  question: "Which material standards and codes do you follow?",
-                  answer: "We ensure compliance with international standards including ASME B31.3, ASTM material specifications, API standards for petroleum industry, and NACE standards for corrosion control. Our material selection follows industry best practices and project-specific requirements."
-                },
-                {
-                  question: "What industries do you serve for material engineering in Mumbai?",
-                  answer: "We serve oil & gas refineries, petrochemical plants, power generation facilities, chemical processing units, pharmaceutical companies, and water treatment facilities in Mumbai with specialized material engineering solutions tailored to each industry&apos;s requirements."
-                },
-                {
-                  question: "Do you provide material selection training programs?",
-                  answer: "Yes, we offer comprehensive training programs on piping material engineering, including material selection methodology, corrosion engineering, and industry standards. Our courses include hands-on material analysis and real-world case studies."
-                },
-                {
-                  question: "How do you ensure optimal material selection for projects?",
-                  answer: "Our material selection process involves detailed service condition analysis, corrosion assessment, cost optimization, performance evaluation, and compliance verification. We use advanced material databases and engineering analysis to ensure optimal material selection for each specific application."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Left Column - Primary FAQs */}
+              <div className="space-y-6">
+                {[
+                  {
+                    question: "What piping material engineering services do you offer in Mumbai?",
+                    answer: "We offer comprehensive piping material engineering services in Mumbai including material selection & specification, corrosion engineering, material testing & validation, procurement support, material database development, and expert training & consultancy for various industrial applications.",
+                    icon: "🔧",
+                    category: "Services",
+                    gradient: "from-blue-600 to-indigo-600"
+                  },
+                  {
+                    question: "Which material standards and codes do you follow?",
+                    answer: "We ensure compliance with international standards including ASME B31.3, ASTM material specifications, API standards for petroleum industry, and NACE standards for corrosion control. Our material selection follows industry best practices and project-specific requirements.",
+                    icon: "📋",
+                    category: "Standards",
+                    gradient: "from-green-600 to-teal-600"
+                  },
+                  {
+                    question: "What industries do you serve for material engineering in Mumbai?",
+                    answer: "We serve oil & gas refineries, petrochemical plants, power generation facilities, chemical processing units, pharmaceutical companies, and water treatment facilities in Mumbai with specialized material engineering solutions tailored to each industry's requirements.",
+                    icon: "🏭",
+                    category: "Industries",
+                    gradient: "from-purple-600 to-pink-600"
+                  }
+                ].map((faq, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/30 hover:border-blue-200/50 transform hover:-translate-y-1 overflow-hidden relative">
+                      {/* Background Decoration */}
+                      <div className="absolute top-4 right-4 text-4xl opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                        {faq.icon}
+                      </div>
+                      
+                      <div className="relative z-10">
+                        <div className="flex items-start mb-4">
+                          <div className={`bg-gradient-to-br ${faq.gradient} p-3 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                            <span className="text-white text-xl">{faq.icon}</span>
+                          </div>
+                          <div className="flex-1">
+                            <span className="text-xs font-bold text-blue-600 bg-blue-100 px-3 py-1 rounded-full mb-3 inline-block">
+                              {faq.category}
+                            </span>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                              {faq.question}
+                            </h3>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed text-sm">
+                          {faq.answer}
+                        </p>
+                      </div>
+                      
+                      {/* Shimmer Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-3xl"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right Column - Secondary FAQs */}
+              <div className="space-y-6">
+                {[
+                  {
+                    question: "Do you provide material selection training programs?",
+                    answer: "Yes, we offer comprehensive training programs on piping material engineering, including material selection methodology, corrosion engineering, and industry standards. Our courses include hands-on material analysis and real-world case studies.",
+                    icon: "🎓",
+                    category: "Training",
+                    gradient: "from-orange-600 to-red-600"
+                  },
+                  {
+                    question: "How do you ensure optimal material selection for projects?",
+                    answer: "Our material selection process involves detailed service condition analysis, corrosion assessment, cost optimization, performance evaluation, and compliance verification. We use advanced material databases and engineering analysis to ensure optimal material selection for each specific application.",
+                    icon: "⚗️",
+                    category: "Process",
+                    gradient: "from-indigo-600 to-purple-600"
+                  },
+                  {
+                    question: "What is the typical timeline for material engineering projects?",
+                    answer: "Project timelines vary based on complexity: Material selection studies (1-2 weeks), Corrosion assessments (2-3 weeks), Material database development (3-4 weeks), and comprehensive material engineering projects (4-8 weeks). We provide detailed project schedules during consultation.",
+                    icon: "⏱️",
+                    category: "Timeline",
+                    gradient: "from-teal-600 to-cyan-600"
+                  }
+                ].map((faq, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/30 hover:border-purple-200/50 transform hover:-translate-y-1 overflow-hidden relative">
+                      {/* Background Decoration */}
+                      <div className="absolute top-4 right-4 text-4xl opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                        {faq.icon}
+                      </div>
+                      
+                      <div className="relative z-10">
+                        <div className="flex items-start mb-4">
+                          <div className={`bg-gradient-to-br ${faq.gradient} p-3 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                            <span className="text-white text-xl">{faq.icon}</span>
+                          </div>
+                          <div className="flex-1">
+                            <span className="text-xs font-bold text-purple-600 bg-purple-100 px-3 py-1 rounded-full mb-3 inline-block">
+                              {faq.category}
+                            </span>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300 leading-tight">
+                              {faq.question}
+                            </h3>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed text-sm">
+                          {faq.answer}
+                        </p>
+                      </div>
+                      
+                      {/* Shimmer Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-3xl"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* FAQ Stats Section */}
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-3">🎯</div>
+                <div className="text-2xl font-black text-gray-900 mb-2">100%</div>
+                <div className="text-gray-600 font-semibold">Accuracy</div>
+                <div className="text-xs text-gray-500 mt-1">Material Selection</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-3">⚡</div>
+                <div className="text-2xl font-black text-gray-900 mb-2">24/7</div>
+                <div className="text-gray-600 font-semibold">Support</div>
+                <div className="text-xs text-gray-500 mt-1">Expert Consultation</div>
+              </div>
+              <div className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="text-3xl mb-3">🏆</div>
+                <div className="text-2xl font-black text-gray-900 mb-2">25+</div>
+                <div className="text-gray-600 font-semibold">Years</div>
+                <div className="text-xs text-gray-500 mt-1">Industry Experience</div>
+              </div>
+            </div>
+
+            {/* Contact FAQ Section */}
+            <div className="mt-16 text-center">
+              <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                <div className="absolute top-4 right-4 text-4xl opacity-20">💬</div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
+                  <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                    Our material engineering experts are ready to provide personalized answers for your specific project requirements.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link 
+                      href="/contact" 
+                      className="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2"
+                    >
+                      📞 Schedule Consultation
+                    </Link>
+                    <Link 
+                      href="tel:+919820064471" 
+                      className="border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center gap-2"
+                    >
+                      📱 Call +91-9820064471
+                    </Link>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
