@@ -26,7 +26,6 @@ const ServiceCategories = () => {
       features: ["Piping Design", "Stress Analysis", "3D Modeling", "Project Consultancy"],
       icon: "🔧",
       gradient: "from-blue-600 to-indigo-600",
-      price: "Starting from ₹50,000",
       timeline: "2-4 weeks",
       complexity: "Advanced",
       link: "/services/piping-engineering-services"
@@ -39,7 +38,6 @@ const ServiceCategories = () => {
       features: ["Process Flow Diagrams", "P&ID Development", "Line Sizing", "Material Selection"],
       icon: "⚗️",
       gradient: "from-indigo-600 to-purple-600",
-      price: "Starting from ₹75,000",
       timeline: "3-6 weeks",
       complexity: "Expert",
       link: ""
@@ -52,7 +50,6 @@ const ServiceCategories = () => {
       features: ["CAESAR II Analysis", "Thermal Stress", "Seismic Analysis", "Support Design"],
       icon: "📊",
       gradient: "from-purple-600 to-pink-600",
-      price: "Starting from ₹40,000",
       timeline: "1-3 weeks",
       complexity: "Advanced",
       link: ""
@@ -65,7 +62,6 @@ const ServiceCategories = () => {
       features: ["Material Selection", "Corrosion Analysis", "Cost Optimization", "Procurement Support"],
       icon: "🧪",
       gradient: "from-blue-600 to-cyan-600",
-      price: "Starting from ₹30,000",
       timeline: "1-2 weeks",
       complexity: "Intermediate",
       link: ""
@@ -78,7 +74,6 @@ const ServiceCategories = () => {
       features: ["Load Calculations", "System Layout", "Equipment Selection", "Energy Analysis"],
       icon: "⚡",
       gradient: "from-green-600 to-teal-600",
-      price: "Starting from ₹60,000",
       timeline: "3-5 weeks",
       complexity: "Advanced",
       link: ""
@@ -91,7 +86,6 @@ const ServiceCategories = () => {
       features: ["Electrical Design", "Plumbing Design", "Fire Safety", "BMS Integration"],
       icon: "🏢",
       gradient: "from-teal-600 to-blue-600",
-      price: "Starting from ₹80,000",
       timeline: "4-8 weeks",
       complexity: "Expert",
       link: ""
@@ -104,7 +98,6 @@ const ServiceCategories = () => {
       features: ["3D Modeling", "Clash Detection", "Coordination Drawings", "Installation Support"],
       icon: "🎯",
       gradient: "from-blue-600 to-indigo-600",
-      price: "Starting from ₹45,000",
       timeline: "2-4 weeks",
       complexity: "Advanced",
       link: ""
@@ -117,7 +110,6 @@ const ServiceCategories = () => {
       features: ["Load Calculations", "Duct Design", "Equipment Selection", "Energy Modeling"],
       icon: "❄️",
       gradient: "from-cyan-600 to-blue-600",
-      price: "Starting from ₹55,000",
       timeline: "3-6 weeks",
       complexity: "Advanced",
       link: ""
@@ -130,7 +122,6 @@ const ServiceCategories = () => {
       features: ["Energy Modeling", "Cost Analysis", "Green Building", "LEED Compliance"],
       icon: "🌱",
       gradient: "from-green-600 to-emerald-600",
-      price: "Starting from ₹35,000",
       timeline: "2-4 weeks",
       complexity: "Intermediate",
       link: ""
@@ -143,7 +134,6 @@ const ServiceCategories = () => {
       features: ["STAAD Pro Analysis", "ETABS Modeling", "Foundation Design", "Seismic Analysis"],
       icon: "🏗️",
       gradient: "from-indigo-600 to-purple-600",
-      price: "Starting from ₹70,000",
       timeline: "4-8 weeks",
       complexity: "Expert",
       link: ""
@@ -156,7 +146,6 @@ const ServiceCategories = () => {
       features: ["Connection Design", "Fabrication Drawings", "Erection Sequence", "Cost Optimization"],
       icon: "🔩",
       gradient: "from-gray-600 to-slate-600",
-      price: "Starting from ₹60,000",
       timeline: "3-6 weeks",
       complexity: "Advanced",
       link: ""
@@ -169,7 +158,6 @@ const ServiceCategories = () => {
       features: ["Soil Analysis", "Foundation Design", "Pile Design", "Retaining Walls"],
       icon: "🪨",
       gradient: "from-amber-600 to-orange-600",
-      price: "Starting from ₹40,000",
       timeline: "2-5 weeks",
       complexity: "Advanced",
       link: ""
@@ -302,10 +290,6 @@ const ServiceCategories = () => {
                   {/* Service Details */}
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-400">Investment:</span>
-                      <span className="text-white font-semibold">{service.price}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Timeline:</span>
                       <span className="text-white font-semibold">{service.timeline}</span>
                     </div>
@@ -322,7 +306,7 @@ const ServiceCategories = () => {
                     </Link>
                   ) : (
                     <button className={`flex-1 px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                      Get Quote
+                      Get Consultation
                     </button>
                   )}
                   <Link href="/contact">

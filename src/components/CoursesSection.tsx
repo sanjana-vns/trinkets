@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 const CoursesSection = () => {
   const [activeFilter, setActiveFilter] = useState('all')
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   const categories = [
     { id: 'all', label: 'All Courses', icon: '🎯' },
@@ -145,108 +146,188 @@ const CoursesSection = () => {
     : courses.filter(course => course.category === activeFilter)
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-purple-200/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-blue-600 font-semibold text-sm">🎓 Our Courses</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-3 mb-6 shadow-lg backdrop-blur-sm border border-white/20">
+            <span className="text-blue-600 font-semibold text-sm mr-2">🎓</span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Our Courses</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Professional Training Programs
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            Professional Training
+            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              Programs
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Industry-focused courses designed to advance your engineering career with hands-on training and expert guidance.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 justify-center mb-12">
-          {categories.map((category) => (
+        <div className="flex flex-wrap gap-4 justify-center mb-12">
+          {categories.map((category, index) => (
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
+              className={`group relative flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold text-sm transition-all duration-300 transform hover:scale-105 ${
                 activeFilter === category.id
-                  ? 'bg-blue-500 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-xl shadow-blue-500/25'
+                  : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white hover:text-blue-600 border border-gray-200 hover:border-blue-300 hover:shadow-lg'
               }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <span>{category.icon}</span>
+              <span className="text-lg group-hover:scale-110 transition-transform duration-300">{category.icon}</span>
               <span className="hidden sm:inline">{category.label}</span>
+              {activeFilter === category.id && (
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-transparent opacity-100 transition-opacity duration-300"></div>
+              )}
             </button>
           ))}
         </div>
 
         {/* Course Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCourses.map((course, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 transform"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Card Header */}
-              <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-4">
-                <div className="flex justify-between items-start mb-2">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
-                    <span className="text-white text-sm font-medium">{course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-1 text-white">
-                    <span>⭐</span>
-                    <span className="text-sm font-medium">{course.rating}</span>
-                  </div>
+              <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-500 p-6 relative overflow-hidden">
+                {/* Floating Particles Effect */}
+                <div className="absolute inset-0">
+                  <div className="absolute top-2 right-2 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-3 left-3 w-1 h-1 bg-white/40 rounded-full animate-pulse"></div>
+                  <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-white/20 rounded-full animate-bounce"></div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">{course.title}</h3>
-                <p className="text-blue-100 text-sm">{course.students} students enrolled</p>
+                
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-4 py-2 border border-white/30">
+                      <span className="text-white text-sm font-semibold">{course.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-2xl px-3 py-2 border border-white/30">
+                      <span className="text-yellow-300 text-lg">⭐</span>
+                      <span className="text-white text-sm font-semibold">{course.rating}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-black text-white mb-2 group-hover:text-yellow-100 transition-colors duration-300">{course.title}</h3>
+                  <p className="text-blue-100 text-sm flex items-center">
+                    <span className="mr-2">👥</span>
+                    {course.students} students enrolled
+                  </p>
+                </div>
+                
+                {/* Hover Effect Overlay */}
+                {hoveredCard === index && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-100 transition-opacity duration-300"></div>
+                )}
               </div>
 
               {/* Card Content */}
-              <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">
+              <div className="p-6 relative">
+                <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                   {course.description}
                 </p>
 
                 {/* Features */}
-                <div className="mb-4">
+                <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
                     {course.features.slice(0, 3).map((feature, i) => (
-                      <span key={i} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">
+                      <span 
+                        key={i} 
+                        className="bg-gradient-to-r from-gray-100 to-blue-50 text-gray-700 px-3 py-2 rounded-xl text-xs font-medium border border-gray-200 hover:border-blue-300 transition-colors duration-300"
+                      >
                         {feature}
                       </span>
                     ))}
                     {course.features.length > 3 && (
-                      <span className="text-gray-500 text-xs">+{course.features.length - 3} more</span>
+                      <span className="text-gray-500 text-xs bg-gray-50 px-2 py-1 rounded-lg">+{course.features.length - 3} more</span>
                     )}
                   </div>
                 </div>
 
                 {/* CTA */}
                 <div className="flex justify-end">
-                  <Link href={course.link} className="bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
-                    Learn More
+                  <Link 
+                    href={course.link} 
+                    className="group/btn relative bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      Learn More
+                      <span className="group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                   </Link>
                 </div>
+                
+                {/* Corner Decoration */}
+                <div className="absolute top-4 right-4 w-8 h-8 border-2 border-blue-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
+
+              {/* Card Border Glow Effect */}
+              {hoveredCard === index && (
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-indigo-500/20 blur-xl -z-10 scale-110"></div>
+              )}
+              
+              {/* Shimmer Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-3xl"></div>
             </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Can&apos;t Find What You&apos;re Looking For?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              We offer customized training programs for organizations and individuals. Contact us to discuss your specific requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact" className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200">
-                Contact Us
-              </Link>
-              <Link href="/courses" className="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
-                View All Courses
-              </Link>
+        <div className="text-center mt-16">
+          <div className="relative bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/30 overflow-hidden">
+            {/* Background Decoration */}
+            <div className="absolute inset-0">
+              <div className="absolute top-4 left-4 w-16 h-16 border-2 border-blue-200/50 rounded-full"></div>
+              <div className="absolute bottom-4 right-4 w-12 h-12 bg-purple-200/30 rounded-full"></div>
+              <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-blue-200/20 rounded-full"></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 className="text-3xl font-black text-gray-900 mb-4">
+                Can&apos;t Find What You&apos;re 
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Looking For?
+                </span>
+              </h3>
+              <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
+                We offer customized training programs for organizations and individuals. Contact us to discuss your specific requirements.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact" 
+                  className="group relative bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-bold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    🚀 Contact Us
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </Link>
+                <Link 
+                  href="/courses" 
+                  className="group relative border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    📚 View All Courses
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
