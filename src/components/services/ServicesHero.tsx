@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Services Hero Section
 const ServicesHero = () => {
@@ -15,7 +16,8 @@ const ServicesHero = () => {
       description: "SP3D, AutoCAD, CAESAR II",
       icon: "🔧",
       gradient: "from-blue-600 via-indigo-600 to-blue-800",
-      projects: "200+"
+      projects: "200+",
+      link: "/services/piping-engineering-services"
     },
     {
       title: "MEP Engineering", 
@@ -23,7 +25,8 @@ const ServicesHero = () => {
       description: "Mechanical, Electrical & Plumbing",
       icon: "⚡",
       gradient: "from-indigo-600 via-purple-600 to-indigo-800",
-      projects: "150+"
+      projects: "150+",
+      link: "/services/mep-system-design-services-mumbai"
     },
     {
       title: "HVAC Design",
@@ -31,7 +34,8 @@ const ServicesHero = () => {
       description: "Energy Efficient Systems",
       icon: "❄️",
       gradient: "from-purple-600 via-blue-600 to-purple-800",
-      projects: "120+"
+      projects: "120+",
+      link: "/services/hvac-system-design-services-mumbai"
     },
     {
       title: "Structural Engineering",
@@ -39,7 +43,8 @@ const ServicesHero = () => {
       description: "STAAD Pro, ETABS, SAP2000",
       icon: "🏗️",
       gradient: "from-blue-600 via-cyan-600 to-blue-800",
-      projects: "180+"
+      projects: "180+",
+      link: "/services/structural-analysis-design-services-mumbai"
     }
   ]
 
@@ -137,8 +142,9 @@ const ServicesHero = () => {
           {/* Interactive Service Categories Preview */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {featuredServices.map((service, index) => (
-              <div
+              <Link
                 key={index}
+                href={service.link}
                 className={`relative group cursor-pointer transform transition-all duration-500 ${
                   activeService === index ? 'scale-110 z-20' : 'scale-100 hover:scale-105'
                 }`}
@@ -171,7 +177,7 @@ const ServicesHero = () => {
                     <div className="absolute inset-0 border-2 border-white/40 rounded-2xl animate-pulse"></div>
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

@@ -77,6 +77,15 @@ main {
     }
   }
 
+  @keyframes gradient-x {
+    0%, 100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+  }
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -121,6 +130,10 @@ main {
     animation: gradient 3s ease infinite;
   }
 
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+  }
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
@@ -154,11 +167,8 @@ html {
 
 /* Enhanced focus states for accessibility */
 .focus\:ring-enhanced:focus {
-  outline: none;
-  ring-width: 4px;
-  ring-color: rgba(59, 130, 246, 0.6);
-  ring-offset-width: 2px;
-  ring-offset-color: white;
+  outline: 2px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
 }
 
 /* Hover effects for cards */

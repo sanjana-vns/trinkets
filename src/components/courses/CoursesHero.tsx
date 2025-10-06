@@ -14,29 +14,33 @@ const CoursesHero = () => {
       title: "Piping Engineering",
       subtitle: "Master Industrial Piping Design",
       courses: 8,
-      icon: "�",
-      gradient: "from-blue-600 via-purple-600 to-blue-800"
+      icon: "🔧",
+      gradient: "from-blue-600 via-purple-600 to-blue-800",
+      link: "/courses/piping-design-engineering"
     },
     {
       title: "MEP Engineering", 
       subtitle: "Mechanical, Electrical & Plumbing",
       courses: 6,
       icon: "⚡",
-      gradient: "from-green-600 via-teal-600 to-green-800"
+      gradient: "from-green-600 via-teal-600 to-green-800",
+      link: "/courses/mep-engineering"
     },
     {
       title: "Structural Engineering",
       subtitle: "Build Strong Foundations",
       courses: 5,
-      icon: "�️",
-      gradient: "from-orange-600 via-red-600 to-orange-800"
+      icon: "🏗️",
+      gradient: "from-orange-600 via-red-600 to-orange-800",
+      link: "/courses/structural-design-analysis"
     },
     {
       title: "HVAC Design",
       subtitle: "Climate Control Solutions",
       courses: 4,
       icon: "❄️",
-      gradient: "from-red-600 via-pink-600 to-red-800"
+      gradient: "from-red-600 via-pink-600 to-red-800",
+      link: "/courses/hvac-system-design"
     }
   ]
 
@@ -127,8 +131,9 @@ const CoursesHero = () => {
           {/* Interactive Course Categories Preview */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {courseCategories.map((category, index) => (
-              <div
+              <Link 
                 key={index}
+                href={category.link}
                 className={`relative group cursor-pointer transform transition-all duration-500 ${
                   activeCategory === index ? 'scale-110 z-20' : 'scale-100 hover:scale-105'
                 }`}
@@ -160,7 +165,7 @@ const CoursesHero = () => {
                     <div className="absolute inset-0 border-2 border-white/40 rounded-2xl animate-pulse"></div>
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
