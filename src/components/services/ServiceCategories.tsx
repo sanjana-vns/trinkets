@@ -305,9 +305,11 @@ const ServiceCategories = () => {
                       </button>
                     </Link>
                   ) : (
-                    <button className={`flex-1 px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                      Get Consultation
-                    </button>
+                    <Link href="/contact" className="flex-1">
+                      <button className={`w-full px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                        View Details
+                      </button>
+                    </Link>
                   )}
                   <Link href="/contact">
                     <button className="px-4 py-3 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
