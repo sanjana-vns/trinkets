@@ -336,14 +336,14 @@ export default function FoundationEngineering() {
         <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full px-6 py-3 mb-6 shadow-lg backdrop-blur-sm border border-white/20">
+              <div className="inline-flex items-center bg-blue-50 rounded-full px-6 py-3 mb-6">
                 <span className="text-blue-600 font-semibold text-sm mr-2">🌍</span>
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">Expert Foundation Engineering</span>
+                <span className="text-blue-600 font-bold">Expert Foundation Engineering</span>
               </div>
               
-              <h1 className="text-4xl sm:text-6xl font-black text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 leading-tight">
                 Foundation Engineering
-                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="block text-gray-900">
                   Services in Mumbai
                 </span>
               </h1>
