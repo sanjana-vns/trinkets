@@ -26,6 +26,16 @@ const CoursesSection = () => {
       features: ["AutoCAD Plant 3D", "PDMS Training", "Industry Projects", "Job Placement"]
     },
     {
+      title: "E3D Piping Course",
+      description: "Master AVEVA E3D Design with 3D piping layout, clash detection, and plant modeling.",
+      duration: "4 Months",
+      rating: "4.9",
+      students: "480+",
+      category: "piping",
+      link: "/courses/e3d-piping",
+      features: ["AVEVA E3D", "3D Piping Layout", "Clash Detection", "Plant Modeling"]
+    },
+    {
       title: "HVAC System Design",
       description: "Comprehensive HVAC training covering system design, load calculations, and energy efficiency.",
       duration: "4 Months", 

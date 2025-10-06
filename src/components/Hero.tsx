@@ -10,29 +10,33 @@ const Hero = () => {
     {
       title: "Transform Your Engineering Career",
       subtitle: "Join India's leading engineering training institute with 98% placement success rate",
-      bgColor: "from-slate-900 via-blue-900 to-indigo-900",
+      bgColor: "from-slate-900/80 via-blue-900/80 to-indigo-900/80",
       accentColor: "from-cyan-400 to-blue-500",
+      image: "/bg1.jpg",
       icon: "🚀"
     },
     {
       title: "Master Industry-Leading Technologies",
       subtitle: "Learn AutoCAD, SolidWorks, PDMS, STAAD Pro with real-world projects and expert mentorship",
-      bgColor: "from-gray-900 via-purple-900 to-violet-900",
+      bgColor: "from-gray-900/80 via-purple-900/80 to-violet-900/80",
       accentColor: "from-purple-400 to-pink-500",
+      image: "/bg2.jpg",
       icon: "⚙️"
     },
     {
       title: "Build Your Professional Portfolio",
       subtitle: "Work on live industry projects and build an impressive portfolio that gets you hired",
-      bgColor: "from-slate-900 via-green-900 to-emerald-900",
+      bgColor: "from-slate-900/80 via-green-900/80 to-emerald-900/80",
       accentColor: "from-emerald-400 to-teal-500",
+      image: "/bg3.jpg",
       icon: "💼"
     },
     {
       title: "Guaranteed Career Success",
       subtitle: "100% placement assistance with top companies. Start your dream career today",
-      bgColor: "from-gray-900 via-orange-900 to-red-900",
+      bgColor: "from-gray-900/80 via-orange-900/80 to-red-900/80",
       accentColor: "from-orange-400 to-red-500",
+      image: "/bg4.jpg",
       icon: "🎯"
     }
   ]
@@ -55,8 +59,28 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Animated Background */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColor} transition-all duration-1000`}>
+      {/* Background Images with Overlay */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${slide.image}')`
+            }}
+          />
+          {/* Gradient Overlay */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} transition-all duration-1000`} />
+        </div>
+      ))}
+
+      {/* Animated Elements Overlay */}
+      <div className="absolute inset-0">
         {/* Animated Particles */}
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
