@@ -114,11 +114,9 @@ const CoursesHero = () => {
         <div className="text-center">
           {/* Main Heading with Advanced Animation */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none">
-              <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent animate-gradient-x">
-                Our Courses
-              </span>
-              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent animate-gradient-x mt-2">
+            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none text-white">
+              Our Courses
+              <span className="block text-3xl md:text-4xl font-bold text-gray-300 mt-2">
                 Transform Your Future
               </span>
             </h1>

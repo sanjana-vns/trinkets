@@ -121,11 +121,9 @@ const CorporateHero = () => {
         <div className="text-center mb-16">
           {/* Main Heading */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none">
-              <span className="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent animate-gradient-x">
-                Corporate Training
-              </span>
-              <span className="block text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x mt-2">
+            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none text-white">
+              Corporate Training
+              <span className="block text-3xl md:text-4xl font-bold text-gray-300 mt-2">
                 Empower Your Workforce
               </span>
             </h1>
