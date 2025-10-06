@@ -2,42 +2,45 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
     {
-      title: "Turning Students into Professionals",
-      subtitle: "Practical, job-ready training programs tailored for colleges and universities.",
-      image: "/images/bg1.jpg",
-      gradient: "from-primary-600 to-primary-800"
+      title: "Transform Your Engineering Career",
+      subtitle: "Join India's leading engineering training institute with 98% placement success rate",
+      bgColor: "from-slate-900 via-blue-900 to-indigo-900",
+      accentColor: "from-cyan-400 to-blue-500",
+      icon: "🚀"
     },
     {
-      title: "Empower Your Engineering Future",
-      subtitle: "Kickstart your career with expert-led training, real-world projects, and industry-recognized certifications in engineering design.",
-      image: "/images/bg2.jpg",
-      gradient: "from-secondary-500 to-secondary-700"
+      title: "Master Industry-Leading Technologies",
+      subtitle: "Learn AutoCAD, SolidWorks, PDMS, STAAD Pro with real-world projects and expert mentorship",
+      bgColor: "from-gray-900 via-purple-900 to-violet-900",
+      accentColor: "from-purple-400 to-pink-500",
+      icon: "⚙️"
     },
     {
-      title: "Master Design with Experts",
-      subtitle: "Learn advanced design tools, software, and industry practices from experienced professionals at Trinkets Institute of Technology.",
-      image: "/images/bg3.jpg",
-      gradient: "from-primary-500 to-secondary-600"
+      title: "Build Your Professional Portfolio",
+      subtitle: "Work on live industry projects and build an impressive portfolio that gets you hired",
+      bgColor: "from-slate-900 via-green-900 to-emerald-900",
+      accentColor: "from-emerald-400 to-teal-500",
+      icon: "💼"
     },
     {
-      title: "Boost Your Career Potential",
-      subtitle: "Join industry-ready courses in piping, HVAC, process, and structural engineering with hands-on learning opportunities.",
-      image: "/images/bg1.jpg",
-      gradient: "from-secondary-600 to-primary-700"
+      title: "Guaranteed Career Success",
+      subtitle: "100% placement assistance with top companies. Start your dream career today",
+      bgColor: "from-gray-900 via-orange-900 to-red-900",
+      accentColor: "from-orange-400 to-red-500",
+      icon: "🎯"
     }
   ]
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [slides.length])
@@ -51,177 +54,233 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background Slides */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <div className={`absolute inset-0 bg-gradient-to-br ${slide.gradient} opacity-90`} />
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('${slide.image}')`
-            }}
-          />
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Animated Background */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColor} transition-all duration-1000`}>
+        {/* Animated Particles */}
+        <div className="absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 2}s`
+              }}
+            />
+          ))}
         </div>
-      ))}
+        
+        {/* Geometric Shapes */}
+        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
+        <div className="absolute top-40 right-20 w-16 h-16 border-2 border-white/10 rotate-45 animate-pulse" />
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-white/5 rounded-full animate-bounce" style={{ animationDuration: '3s' }} />
+        <div className="absolute bottom-20 right-40 w-24 h-24 border border-white/10 rotate-12 animate-spin" style={{ animationDuration: '15s' }} />
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              {slides[currentSlide].title.split(' ').map((word, index) => (
-                <span key={index} className={index % 2 === 0 ? 'text-white' : 'text-blue-200'}>
-                  {word}{' '}
+      {/* Main Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Column - Text Content */}
+            <div className="text-left">
+              {/* Badge */}
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-6">
+                <span className="text-2xl mr-2">{slides[currentSlide].icon}</span>
+                <span className="text-white font-semibold">India&apos;s #1 Engineering Institute</span>
+              </div>
+              
+              {/* Main Heading */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-white block">
+                  {slides[currentSlide].title.split(' ').slice(0, 2).join(' ')}
                 </span>
-              ))}
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-6 sm:mb-8 leading-relaxed px-4">
-              {slides[currentSlide].subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 mb-8">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
-              >
-                Apply Now
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                href="/courses"
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-200 flex items-center justify-center gap-2"
-              >
-                Our Courses
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </Link>
+                <span className={`bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent block`}>
+                  {slides[currentSlide].title.split(' ').slice(2).join(' ')}
+                </span>
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-xl sm:text-2xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
+                {slides[currentSlide].subtitle}
+              </p>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    5000+
+                  </div>
+                  <div className="text-gray-300 text-sm">Students Trained</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    98%
+                  </div>
+                  <div className="text-gray-300 text-sm">Placement Rate</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    500+
+                  </div>
+                  <div className="text-gray-300 text-sm">Company Partners</div>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link
+                  href="/contact"
+                  className={`group bg-gradient-to-r ${slides[currentSlide].accentColor} text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3`}
+                >
+                  Start Your Journey
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/courses"
+                  className="group bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  Explore Courses
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </Link>
+              </div>
+              
+              {/* Quick Links */}
+              <div className="flex flex-wrap gap-6">
+                <Link href="/placements" className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="w-2 h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full group-hover:scale-125 transition-transform"></span>
+                  Placement Success
+                </Link>
+                <Link href="/testimonials" className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full group-hover:scale-125 transition-transform"></span>
+                  Student Stories
+                </Link>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="w-2 h-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full group-hover:scale-125 transition-transform"></span>
+                  About Institute
+                </Link>
+              </div>
             </div>
             
-            {/* Quick Navigation Links */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-4">
-              <Link
-                href="/about"
-                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/placements"
-                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
-              >
-                Placements
-              </Link>
-              <Link
-                href="/services"
-                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
-              >
-                Services
-              </Link>
-              <Link
-                href="/corporate-training"
-                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
-              >
-                Corporate Training
-              </Link>
-              <Link
-                href="/testimonials"
-                className="text-white hover:text-blue-200 transition-colors duration-200 text-sm sm:text-base font-medium underline-offset-4 hover:underline"
-              >
-                Success Stories
-              </Link>
+            {/* Right Column - Interactive Elements */}
+            <div className="relative">
+              {/* Course Selection Card */}
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${slides[currentSlide].accentColor} rounded-xl flex items-center justify-center`}>
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Choose Your Path</h3>
+                    <p className="text-gray-300 text-sm">Start your engineering journey today</p>
+                  </div>
+                </div>
+                
+                {/* Popular Courses */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <Link href="/courses/piping-design-engineering" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
+                    <div className="text-2xl mb-1">🔧</div>
+                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">Piping Design</div>
+                    <div className="text-gray-400 text-xs">6 Months</div>
+                  </Link>
+                  <Link href="/courses/hvac-system-design" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
+                    <div className="text-2xl mb-1">❄️</div>
+                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">HVAC Systems</div>
+                    <div className="text-gray-400 text-xs">4 Months</div>
+                  </Link>
+                  <Link href="/courses/solidworks-professional" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
+                    <div className="text-2xl mb-1">🎨</div>
+                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">SolidWorks</div>
+                    <div className="text-gray-400 text-xs">4 Months</div>
+                  </Link>
+                  <Link href="/courses/structural-design-analysis" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
+                    <div className="text-2xl mb-1">🏗️</div>
+                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">Structural</div>
+                    <div className="text-gray-400 text-xs">6 Months</div>
+                  </Link>
+                </div>
+                
+                {/* Quick Contact Form */}
+                <div className="space-y-3">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  />
+                  <button className={`w-full bg-gradient-to-r ${slides[currentSlide].accentColor} text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105`}>
+                    Get Free Counseling
+                  </button>
+                </div>
+                
+                <div className="mt-4 text-center">
+                  <Link href="/courses" className="text-gray-300 hover:text-white text-sm underline-offset-4 hover:underline transition-colors">
+                    View All Courses →
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce" style={{ animationDuration: '2s' }} />
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Enhanced Navigation */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full hover:bg-white/30 transition-all duration-200"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border border-white/20 text-white p-3 rounded-full hover:bg-white/20 transition-all duration-200 group"
       >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full hover:bg-white/30 transition-all duration-200"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/10 backdrop-blur-sm border border-white/20 text-white p-3 rounded-full hover:bg-white/20 transition-all duration-200 group"
       >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex space-x-2">
+        <div className="flex space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white/50 hover:bg-white/70'
               }`}
             />
           ))}
         </div>
       </div>
-
-      {/* Course Enquiry Form Preview - Hidden on mobile, visible on desktop */}
-      <div className="hidden lg:block absolute bottom-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-xl max-w-sm">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">Course Enquiry</h3>
-        <p className="text-sm text-gray-600 mb-4">Get Information and Guidance</p>
-        
-        {/* Quick Course Links */}
-        <div className="grid grid-cols-2 gap-2 mb-4">
-          <Link href="/courses/piping-design-engineering" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
-            Piping Design
-          </Link>
-          <Link href="/courses/hvac-system-design" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
-            HVAC Systems
-          </Link>
-          <Link href="/courses/process-engineering" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
-            Process Engg.
-          </Link>
-          <Link href="/courses/structural-design-analysis" className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 transition-colors text-center">
-            Structural
-          </Link>
-        </div>
-        
-        <div className="space-y-3">
-          <input
-            type="text"
-            placeholder="Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-          />
-          <input
-            type="tel"
-            placeholder="Phone"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-          />
-          <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 rounded-md font-medium hover:from-blue-700 hover:to-indigo-600 transition-all duration-200 text-sm">
-            Get Course Info
-          </button>
-        </div>
-        
-        <div className="mt-4 text-center">
-          <Link href="/courses" className="text-xs text-blue-600 hover:text-blue-800 underline">
-            View All Courses →
-          </Link>
-        </div>
+      
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   )

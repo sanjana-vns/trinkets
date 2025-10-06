@@ -607,12 +607,18 @@ export default function SmartPlant3DCoursePage() {
             <Link href="/contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Enroll Now - Secure Your Spot
             </Link>
+            <Link href="/courses" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              Compare All Courses
+            </Link>
             <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
               Schedule Free Demo
             </Link>
           </div>
           <p className="text-green-100 text-sm mt-4">
             🎯 Special Offer: Get Free SP3D Software License for Practice - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
+          </p>
+          <p className="text-green-100 text-sm mt-2">
+            💡 Want to explore more courses? <Link href="/courses" className="underline hover:text-white font-semibold">View All Engineering Courses</Link> or check our <Link href="/courses#courses-hero" className="underline hover:text-white">Course Categories</Link>
           </p>
         </div>
       </section>

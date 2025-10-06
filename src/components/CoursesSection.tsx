@@ -22,7 +22,6 @@ const CoursesSection = () => {
       rating: "4.8",
       students: "850+",
       category: "piping",
-      price: "₹45,000",
       link: "/courses/piping-design-engineering",
       features: ["AutoCAD Plant 3D", "PDMS Training", "Industry Projects", "Job Placement"]
     },
@@ -33,7 +32,6 @@ const CoursesSection = () => {
       rating: "4.7",
       students: "650+",
       category: "hvac",
-      price: "₹35,000",
       link: "/courses/hvac-system-design",
       features: ["HAP Software", "Load Calculations", "Duct Design", "Certification"]
     },
@@ -44,7 +42,6 @@ const CoursesSection = () => {
       rating: "4.9",
       students: "720+", 
       category: "process",
-      price: "₹50,000",
       link: "/courses/process-engineering",
       features: ["HYSYS Training", "P&ID Design", "Process Safety", "Real Projects"]
     },
@@ -55,7 +52,6 @@ const CoursesSection = () => {
       rating: "4.6",
       students: "580+",
       category: "structural", 
-      price: "₹42,000",
       link: "/courses/structural-design-analysis",
       features: ["STAAD Pro", "ETABS", "Design Codes", "Live Projects"]
     },
@@ -66,7 +62,6 @@ const CoursesSection = () => {
       rating: "4.5",
       students: "920+",
       category: "mechanical",
-      price: "₹25,000",
       link: "/courses/autocad-mechanical-design",
       features: ["2D Drafting", "3D Modeling", "GD&T", "Industry Practice"]
     },
@@ -77,7 +72,6 @@ const CoursesSection = () => {
       rating: "4.8",
       students: "780+",
       category: "mechanical",
-      price: "₹38,000", 
       link: "/courses/solidworks-professional",
       features: ["3D Modeling", "Simulation", "Assembly Design", "Certification"]
     }
@@ -163,13 +157,9 @@ const CoursesSection = () => {
                   </div>
                 </div>
 
-                {/* Price and CTA */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-gray-900">{course.price}</span>
-                    <span className="text-gray-500 text-sm ml-1">/course</span>
-                  </div>
-                  <Link href={course.link} className="bg-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
+                {/* CTA */}
+                <div className="flex justify-end">
+                  <Link href={course.link} className="bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200">
                     Learn More
                   </Link>
                 </div>
