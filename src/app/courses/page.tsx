@@ -13,18 +13,28 @@ export const metadata: Metadata = {
   keywords: [
     'engineering courses Mumbai',
     'piping engineering training',
+    'piping engineering fundamentals training in Mumbai',
+    'piping design course Mumbai',
     'MEP engineering course',
     'HVAC design training',
     'structural engineering course',
     'SP3D training Mumbai',
+    'SP3D piping design training',
+    'Smart Plant 3D course Mumbai',
     'E3D piping course',
     'STAAD Pro training',
     'AutoCAD course Mumbai',
     'CAESAR II training',
+    'CAESAR II stress analysis in Mumbai',
+    'pipe stress analysis course',
+    'thermal stress analysis training',
+    'pipe routing training Mumbai',
     'engineering design course',
     'industrial training Mumbai',
     'placement guarantee engineering',
-    'professional engineering certification'
+    'professional engineering certification',
+    'electrical design engineering',
+    'instrumentation control course'
   ].join(', '),
   authors: [{ name: 'Trinkets Institute of Technology' }],
   creator: 'Trinkets Institute of Technology',
@@ -139,6 +149,24 @@ export default function CoursesPage() {
           "@type": "Course",
           "name": "Structural Engineering",
           "description": "Structural analysis and design using STAAD Pro, ETABS, and SAP2000",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "SP3D Piping Design Training",
+          "description": "Complete Smart Plant 3D training with AutoCAD Plant 3D, PDMS for industrial plant design",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "CAESAR II Stress Analysis",
+          "description": "Comprehensive pipe stress analysis training with CAESAR II software for thermal and dynamic analysis",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "Piping Engineering Fundamentals Training",
+          "description": "Comprehensive piping engineering fundamentals training covering design, materials, routing, and industry standards",
           "provider": "Trinkets Institute of Technology"
         }
       ]
@@ -255,6 +283,27 @@ export default function CoursesPage() {
                 <h3 className="text-lg font-semibold mb-3 text-cyan-600">Instrumentation & Control</h3>
                 <p className="text-gray-600 mb-4">Master PLC programming, SCADA, DCS for process automation & control</p>
                 <Link href="/courses/instrumentation-control" className="inline-block bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
+              <div className="bg-red-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-red-600">SP3D Piping Design Training</h3>
+                <p className="text-gray-600 mb-4">Master Smart Plant 3D, AutoCAD Plant 3D, PDMS for industrial plant design</p>
+                <Link href="/courses/sp3d-piping-design-training" className="inline-block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-orange-600">CAESAR II Stress Analysis</h3>
+                <p className="text-gray-600 mb-4">Master pipe stress analysis, thermal analysis, and ASME code compliance</p>
+                <Link href="/courses/caesar-ii-stress-analysis" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
+              <div className="bg-sky-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-sky-600">Piping Engineering Fundamentals</h3>
+                <p className="text-gray-600 mb-4">Master piping design basics, materials, routing, and industry standards</p>
+                <Link href="/courses/piping-engineering-fundamentals-training" className="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors">
                   Enroll Now
                 </Link>
               </div>

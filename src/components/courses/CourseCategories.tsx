@@ -180,6 +180,48 @@ const CourseCategories = () => {
       gradient: "from-cyan-600 to-blue-600",
       badge: "Automation",
       link: "/courses/instrumentation-control"
+    },
+    {
+      id: 13,
+      title: "SP3D Piping Design Training",
+      category: "Software Courses",
+      duration: "4 months",
+      level: "Advanced",
+      rating: 4.9,
+      students: 295,
+      features: ["SP3D Software", "3D Piping Design", "Plant Layout", "Project Implementation"],
+      image: "🔧",
+      gradient: "from-orange-600 to-red-600",
+      badge: "Industry Ready",
+      link: "/courses/sp3d-piping-design-training"
+    },
+    {
+      id: 14,
+      title: "CAESAR II Stress Analysis",
+      category: "Software Courses",
+      duration: "3 months",
+      level: "Advanced",
+      rating: 4.8,
+      students: 420,
+      features: ["Pipe Stress Analysis", "Thermal Analysis", "Code Compliance", "ASME Standards"],
+      image: "🔩",
+      gradient: "from-red-600 to-orange-600",
+      badge: "Industry Standard",
+      link: "/courses/caesar-ii-stress-analysis"
+    },
+    {
+      id: 15,
+      title: "Piping Engineering Fundamentals",
+      category: "PG Diploma Courses",
+      duration: "4 months",
+      level: "Beginner to Intermediate",
+      rating: 4.7,
+      students: 850,
+      features: ["Piping Design Basics", "Material Selection", "Pipe Routing", "Industry Standards"],
+      image: "⚙️",
+      gradient: "from-blue-600 to-indigo-600",
+      badge: "Foundation Course",
+      link: "/courses/piping-engineering-fundamentals-training"
     }
   ]
 
