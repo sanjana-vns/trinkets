@@ -12,7 +12,7 @@ const Hero = () => {
       subtitle: "Join India's leading engineering training institute with 98% placement success rate",
       bgColor: "from-slate-900/80 via-blue-900/80 to-indigo-900/80",
       accentColor: "from-cyan-400 to-blue-500",
-      image: "/bg1.jpg",
+      image: "/images/bg1.jpg",
       icon: "🚀"
     },
     {
@@ -20,7 +20,7 @@ const Hero = () => {
       subtitle: "Learn AutoCAD, SolidWorks, PDMS, STAAD Pro with real-world projects and expert mentorship",
       bgColor: "from-gray-900/80 via-purple-900/80 to-violet-900/80",
       accentColor: "from-purple-400 to-pink-500",
-      image: "/bg2.jpg",
+      image: "/images/bg2.jpg",
       icon: "⚙️"
     },
     {
@@ -28,7 +28,7 @@ const Hero = () => {
       subtitle: "Work on live industry projects and build an impressive portfolio that gets you hired",
       bgColor: "from-slate-900/80 via-green-900/80 to-emerald-900/80",
       accentColor: "from-emerald-400 to-teal-500",
-      image: "/bg3.jpg",
+      image: "/images/bg3.jpg",
       icon: "💼"
     },
     {
@@ -36,7 +36,7 @@ const Hero = () => {
       subtitle: "100% placement assistance with top companies. Start your dream career today",
       bgColor: "from-gray-900/80 via-orange-900/80 to-red-900/80",
       accentColor: "from-orange-400 to-red-500",
-      image: "/bg4.jpg",
+      image: "/images/bg4.jpg",
       icon: "🎯"
     }
   ]
