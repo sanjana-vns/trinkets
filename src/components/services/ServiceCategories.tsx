@@ -136,7 +136,7 @@ const ServiceCategories = () => {
       gradient: "from-indigo-600 to-purple-600",
       timeline: "4-8 weeks",
       complexity: "Expert",
-      link: ""
+      link: "/services/structural-analysis-design-services-mumbai"
     },
     {
       id: 11,
