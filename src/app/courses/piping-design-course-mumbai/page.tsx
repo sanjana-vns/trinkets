@@ -226,7 +226,7 @@ export default function PipingDesignCourseMumbai() {
       <main className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl animate-float-animated"></div>
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-float-reverse"></div>
           <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-indigo-200/15 rounded-full blur-2xl animate-pulse"></div>
         </div>
@@ -249,7 +249,7 @@ export default function PipingDesignCourseMumbai() {
               
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
                 Master the art of <strong>Piping Design Course in Mumbai</strong> with hands-on training on PDMS, E3D, AutoCAD Plant 3D, 
-                and stress analysis. Join Mumbai's leading piping design training institute with 100% placement support and industry-expert faculty.
+                and stress analysis. Join Mumbai&apos;s leading piping design training institute with 100% placement support and industry-expert faculty.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -364,7 +364,7 @@ export default function PipingDesignCourseMumbai() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                Software Tools You'll
+                Software Tools You&apos;ll
                 <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                   Master
                 </span>
@@ -413,7 +413,7 @@ export default function PipingDesignCourseMumbai() {
                 </span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Explore lucrative career opportunities in Mumbai's booming engineering industry
+                Explore lucrative career opportunities in Mumbai&apos;s booming engineering industry
               </p>
             </div>
 
@@ -460,7 +460,7 @@ export default function PipingDesignCourseMumbai() {
                     <span className="block">Piping Design Course in Mumbai?</span>
                   </h2>
                   <p className="text-xl mb-8 text-white/90">
-                    Join Mumbai's premier piping design training institute with industry-expert faculty, 
+                    Join Mumbai&apos;s premier piping design training institute with industry-expert faculty, 
                     comprehensive curriculum, and guaranteed placement support.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -562,7 +562,7 @@ export default function PipingDesignCourseMumbai() {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Join Mumbai's best piping design course with industry-expert faculty, comprehensive curriculum, and guaranteed placement support. Start your engineering career today!
+                  Join Mumbai&apos;s best piping design course with industry-expert faculty, comprehensive curriculum, and guaranteed placement support. Start your engineering career today!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -589,34 +589,6 @@ export default function PipingDesignCourseMumbai() {
           </div>
         </section>
       </main>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(180deg);
-          }
-        }
-        
-        @keyframes float-reverse {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-15px) rotate(-180deg);
-          }
-        }
-        
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-float-reverse {
-          animation: float-reverse 8s ease-in-out infinite;
-        }
-      `}</style>
     </>
   )
 }
