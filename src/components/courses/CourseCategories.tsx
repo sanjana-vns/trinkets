@@ -179,7 +179,7 @@ const CourseCategories = () => {
       image: "📊",
       gradient: "from-cyan-600 to-blue-600",
       badge: "Automation",
-      link: "/courses/process-engineering"
+      link: "/courses/instrumentation-control"
     }
   ]
 

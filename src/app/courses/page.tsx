@@ -251,6 +251,13 @@ export default function CoursesPage() {
                   Enroll Now
                 </Link>
               </div>
+              <div className="bg-cyan-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-cyan-600">Instrumentation & Control</h3>
+                <p className="text-gray-600 mb-4">Master PLC programming, SCADA, DCS for process automation & control</p>
+                <Link href="/courses/instrumentation-control" className="inline-block bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors">
+                  Enroll Now
+                </Link>
+              </div>
             </div>
           </div>
         </section>
