@@ -67,7 +67,7 @@ const CourseCategories = () => {
       image: "⚙️",
       gradient: "from-blue-600 to-indigo-600",
       badge: "Best Seller",
-      link: "/courses/piping-design-engineering"
+      link: "/courses/e3d-piping"
     },
     {
       id: 5,
@@ -165,7 +165,7 @@ const CourseCategories = () => {
       image: "⚡",
       gradient: "from-yellow-600 to-orange-600",
       badge: "High Growth",
-      link: "/courses/mep-engineering"
+      link: "/courses/electrical-design-engineering"
     },
     {
       id: 12,
@@ -325,9 +325,11 @@ const CourseCategories = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${course.gradient} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
-                    Enroll Now
-                  </button>
+                  <Link href={course.link}>
+                    <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${course.gradient} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+                      Enroll Now
+                    </button>
+                  </Link>
                   <Link href={course.link}>
                     <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
                       View Details
