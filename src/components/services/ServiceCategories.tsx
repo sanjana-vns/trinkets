@@ -100,7 +100,7 @@ const ServiceCategories = () => {
       gradient: "from-blue-600 to-indigo-600",
       timeline: "2-4 weeks",
       complexity: "Advanced",
-      link: ""
+      link: "/services/mep-coordination-clash-detection-mumbai"
     },
     {
       id: 8,
