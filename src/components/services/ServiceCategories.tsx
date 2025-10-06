@@ -124,7 +124,7 @@ const ServiceCategories = () => {
       gradient: "from-green-600 to-emerald-600",
       timeline: "2-4 weeks",
       complexity: "Intermediate",
-      link: ""
+      link: "/services/hvac-system-design-analysis-services-mumbai"
     },
     {
       id: 10,
