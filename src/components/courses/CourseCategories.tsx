@@ -39,7 +39,7 @@ const CourseCategories = () => {
       image: "🏭",
       gradient: "from-green-600 to-teal-600",
       badge: "High Demand",
-      link: "/courses/piping-design-engineering"
+      link: "/courses/smart-plant-3d"
     },
     {
       id: 3,
