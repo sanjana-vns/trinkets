@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Service Categories Component
 const ServiceCategories = () => {
@@ -19,15 +20,16 @@ const ServiceCategories = () => {
   const services = [
     {
       id: 1,
-      title: "Piping Design & Engineering",
+      title: "Piping Engineering Services",
       category: "piping",
-      description: "Complete piping system design using industry-standard software and methodologies",
-      features: ["SP3D Modeling", "AutoCAD Design", "CAESAR II Analysis", "Piping Isometrics"],
+      description: "Professional piping engineering services in Mumbai with 15+ years experience",
+      features: ["Piping Design", "Stress Analysis", "3D Modeling", "Project Consultancy"],
       icon: "🔧",
       gradient: "from-blue-600 to-indigo-600",
       price: "Starting from ₹50,000",
       timeline: "2-4 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: "/services/piping-engineering-services"
     },
     {
       id: 2,
@@ -39,7 +41,8 @@ const ServiceCategories = () => {
       gradient: "from-indigo-600 to-purple-600",
       price: "Starting from ₹75,000",
       timeline: "3-6 weeks",
-      complexity: "Expert"
+      complexity: "Expert",
+      link: ""
     },
     {
       id: 3,
@@ -51,7 +54,8 @@ const ServiceCategories = () => {
       gradient: "from-purple-600 to-pink-600",
       price: "Starting from ₹40,000",
       timeline: "1-3 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     },
     {
       id: 4,
@@ -63,7 +67,8 @@ const ServiceCategories = () => {
       gradient: "from-blue-600 to-cyan-600",
       price: "Starting from ₹30,000",
       timeline: "1-2 weeks",
-      complexity: "Intermediate"
+      complexity: "Intermediate",
+      link: ""
     },
     {
       id: 5,
@@ -75,7 +80,8 @@ const ServiceCategories = () => {
       gradient: "from-green-600 to-teal-600",
       price: "Starting from ₹60,000",
       timeline: "3-5 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     },
     {
       id: 6,
@@ -87,7 +93,8 @@ const ServiceCategories = () => {
       gradient: "from-teal-600 to-blue-600",
       price: "Starting from ₹80,000",
       timeline: "4-8 weeks",
-      complexity: "Expert"
+      complexity: "Expert",
+      link: ""
     },
     {
       id: 7,
@@ -99,7 +106,8 @@ const ServiceCategories = () => {
       gradient: "from-blue-600 to-indigo-600",
       price: "Starting from ₹45,000",
       timeline: "2-4 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     },
     {
       id: 8,
@@ -111,7 +119,8 @@ const ServiceCategories = () => {
       gradient: "from-cyan-600 to-blue-600",
       price: "Starting from ₹55,000",
       timeline: "3-6 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     },
     {
       id: 9,
@@ -123,7 +132,8 @@ const ServiceCategories = () => {
       gradient: "from-green-600 to-emerald-600",
       price: "Starting from ₹35,000",
       timeline: "2-4 weeks",
-      complexity: "Intermediate"
+      complexity: "Intermediate",
+      link: ""
     },
     {
       id: 10,
@@ -135,7 +145,8 @@ const ServiceCategories = () => {
       gradient: "from-indigo-600 to-purple-600",
       price: "Starting from ₹70,000",
       timeline: "4-8 weeks",
-      complexity: "Expert"
+      complexity: "Expert",
+      link: ""
     },
     {
       id: 11,
@@ -147,7 +158,8 @@ const ServiceCategories = () => {
       gradient: "from-gray-600 to-slate-600",
       price: "Starting from ₹60,000",
       timeline: "3-6 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     },
     {
       id: 12,
@@ -159,7 +171,8 @@ const ServiceCategories = () => {
       gradient: "from-amber-600 to-orange-600",
       price: "Starting from ₹40,000",
       timeline: "2-5 weeks",
-      complexity: "Advanced"
+      complexity: "Advanced",
+      link: ""
     }
   ]
 
@@ -301,12 +314,22 @@ const ServiceCategories = () => {
 
                 {/* CTA Button */}
                 <div className="flex gap-3">
-                  <button className={`flex-1 px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                    Get Quote
-                  </button>
-                  <button className="px-4 py-3 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
-                    Details
-                  </button>
+                  {service.link ? (
+                    <Link href={service.link} className="flex-1">
+                      <button className={`w-full px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                        View Details
+                      </button>
+                    </Link>
+                  ) : (
+                    <button className={`flex-1 px-4 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                      Get Quote
+                    </button>
+                  )}
+                  <Link href="/contact">
+                    <button className="px-4 py-3 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
+                      Contact
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Hover Glow Effect */}
