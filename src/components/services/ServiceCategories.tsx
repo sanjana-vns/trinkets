@@ -148,7 +148,7 @@ const ServiceCategories = () => {
       gradient: "from-gray-600 to-slate-600",
       timeline: "3-6 weeks",
       complexity: "Advanced",
-      link: "/services/structural-analysis-design-services-mumbai"
+      link: "/services/steel-structure-design-services-mumbai"
     },
     {
       id: 12,
