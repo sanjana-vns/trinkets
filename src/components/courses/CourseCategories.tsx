@@ -109,7 +109,7 @@ const CourseCategories = () => {
       image: "🏢",
       gradient: "from-emerald-600 to-teal-600",
       badge: "Expert Level",
-      link: "/courses/structural-design-analysis"
+      link: "/courses/staad-pro"
     },
     {
       id: 8,
@@ -137,7 +137,7 @@ const CourseCategories = () => {
       image: "🌆",
       gradient: "from-violet-600 to-purple-600",
       badge: "Certified",
-      link: "/courses/structural-design-analysis"
+      link: "/courses/etabs"
     },
     {
       id: 10,
@@ -151,7 +151,7 @@ const CourseCategories = () => {
       image: "🔩",
       gradient: "from-orange-600 to-red-600",
       badge: "Specialized",
-      link: "/courses/piping-design-engineering"
+      link: "/courses/caesar-ii"
     },
     {
       id: 11,
