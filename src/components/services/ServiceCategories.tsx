@@ -88,7 +88,7 @@ const ServiceCategories = () => {
       gradient: "from-teal-600 to-blue-600",
       timeline: "4-8 weeks",
       complexity: "Expert",
-      link: ""
+      link: "/services/building-services-engineering-mumbai"
     },
     {
       id: 7,
