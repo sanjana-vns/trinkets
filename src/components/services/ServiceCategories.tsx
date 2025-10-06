@@ -76,7 +76,7 @@ const ServiceCategories = () => {
       gradient: "from-green-600 to-teal-600",
       timeline: "3-5 weeks",
       complexity: "Advanced",
-      link: ""
+      link: "/services/mep-system-design-services-mumbai"
     },
     {
       id: 6,
