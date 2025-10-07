@@ -51,31 +51,35 @@ const CorporateContact = () => {
 
   const quickActions = [
     {
-      title: "Download Corporate Brochure",
-      description: "Comprehensive guide to our corporate training services",
-      icon: "📄",
-      action: "Download PDF",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
       title: "Training ROI Calculator",
       description: "Calculate potential return on investment for your team",
-      icon: "📊",
+      icon: "�",
       action: "Use Calculator",
+      link: "/services",
       gradient: "from-green-500 to-teal-500"
     },
     {
       title: "Success Stories",
       description: "Read detailed case studies from our corporate clients",
-      icon: "📖",
+      icon: "�",
       action: "View Stories",
+      link: "/testimonials",
       gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Course Gallery",
+      description: "Explore our training facilities and learning environment",
+      icon: "🏫",
+      action: "View Gallery",
+      link: "/gallery",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Emergency Consultation",
       description: "Need urgent training solutions? Get priority support",
       icon: "🚨",
       action: "Get Help Now",
+      link: "/contact",
       gradient: "from-red-500 to-orange-500"
     }
   ]
@@ -164,9 +168,10 @@ const CorporateContact = () => {
         {/* Quick Actions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quickActions.map((action, index) => (
-            <div
+            <a
               key={index}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden border border-gray-100 cursor-pointer"
+              href={action.link}
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden border border-gray-100 cursor-pointer block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`relative p-6 bg-gradient-to-br ${action.gradient} text-white`}>
@@ -175,14 +180,14 @@ const CorporateContact = () => {
                 </div>
                 <h3 className="text-lg font-bold mb-2 leading-tight">{action.title}</h3>
                 <p className="text-white/90 text-sm mb-4">{action.description}</p>
-                <button className="bg-white/20 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/30 transition-colors duration-300">
+                <span className="bg-white/20 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/30 transition-colors duration-300 inline-block">
                   {action.action}
-                </button>
+                </span>
 
                 {/* Shimmer Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -432,9 +437,12 @@ const CorporateContact = () => {
               <p className="text-white/90 text-sm mb-4">
                 Need immediate assistance for critical training requirements?
               </p>
-              <button className="w-full py-3 bg-white text-red-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-300">
+              <a 
+                href="/contact"
+                className="block w-full py-3 bg-white text-red-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-300 text-center"
+              >
                 Emergency Hotline
-              </button>
+              </a>
             </div>
           </div>
         </div>

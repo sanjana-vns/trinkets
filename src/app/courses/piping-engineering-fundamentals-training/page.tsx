@@ -149,9 +149,9 @@ export default function PipingEngineeringFundamentalsPage() {
             <div className="absolute bottom-20 right-20 w-36 h-36 border-2 border-blue-400 animate-pulse"></div>
           </div>
 
-          {/* Floating Engineering Elements */}
+          {/* Static Engineering Elements */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-1/4 animate-float">
+            <div className="absolute top-1/4 left-1/4">
               <svg width="110" height="110" viewBox="0 0 110 110" fill="none" className="text-blue-400">
                 <rect x="10" y="30" width="90" height="50" stroke="currentColor" strokeWidth="3" fill="none"/>
                 <line x1="10" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="2"/>
@@ -162,7 +162,7 @@ export default function PipingEngineeringFundamentalsPage() {
                 <text x="55" y="25" fill="currentColor" fontSize="8" textAnchor="middle">PIPING</text>
               </svg>
             </div>
-            <div className="absolute top-1/3 right-1/4 animate-float-delayed">
+            <div className="absolute top-1/3 right-1/4">
               <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="text-indigo-400">
                 <path d="M20 60 L100 60" stroke="currentColor" strokeWidth="4" fill="none"/>
                 <path d="M30 40 L30 80 M50 40 L50 80 M70 40 L70 80 M90 40 L90 80" stroke="currentColor" strokeWidth="2"/>
@@ -173,7 +173,7 @@ export default function PipingEngineeringFundamentalsPage() {
                 <text x="60" y="100" fill="currentColor" fontSize="10" textAnchor="middle">DESIGN</text>
               </svg>
             </div>
-            <div className="absolute bottom-1/3 left-1/3 animate-float">
+            <div className="absolute bottom-1/3 left-1/3">
               <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className="text-purple-400">
                 <polygon points="50,10 80,35 80,65 50,90 20,65 20,35" stroke="currentColor" strokeWidth="2" fill="none"/>
                 <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -188,10 +188,10 @@ export default function PipingEngineeringFundamentalsPage() {
             <div className="mb-8">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-                  Piping
+                  Piping Design Fundamentals
                 </span>
                 <br />
-                <span className="text-white">Engineering</span>
+                <span className="text-white">Course in Mumbai</span>
               </h1>
               <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto mb-6 animate-pulse"></div>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
@@ -210,19 +210,19 @@ export default function PipingEngineeringFundamentalsPage() {
             </div>
 
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="animate-float">
+              <div>
                 <div className="text-3xl font-bold text-blue-400">100%</div>
                 <div className="text-sm text-gray-300">Job Placement</div>
               </div>
-              <div className="animate-float-delayed">
+              <div>
                 <div className="text-3xl font-bold text-indigo-400">40+</div>
                 <div className="text-sm text-gray-300">Live Projects</div>
               </div>
-              <div className="animate-float">
+              <div>
                 <div className="text-3xl font-bold text-purple-400">15+</div>
                 <div className="text-sm text-gray-300">Years Experience</div>
               </div>
-              <div className="animate-float-delayed">
+              <div>
                 <div className="text-3xl font-bold text-blue-400">24/7</div>
                 <div className="text-sm text-gray-300">Lab Access</div>
               </div>
