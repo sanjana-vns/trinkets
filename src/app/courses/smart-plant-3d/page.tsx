@@ -276,7 +276,7 @@ export default function SmartPlant3DCoursePage() {
               <div className="space-y-6">
                 <p className="text-gray-700 text-lg leading-relaxed">
                   Master the industry-leading <span className="font-bold text-blue-600">Smart Plant 3D (SP3D)</span> software with our comprehensive course in Mumbai. 
-                  AVEVA Smart Plant 3D is the world's most advanced 3D plant design solution used extensively in 
+                  AVEVA Smart Plant 3D is the world&apos;s most advanced 3D plant design solution used extensively in 
                   oil & gas, petrochemical, power, and process industries.
                 </p>
                 
@@ -296,7 +296,7 @@ export default function SmartPlant3DCoursePage() {
                       <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">
                         <span className="text-white font-bold text-sm">✓</span>
                       </div>
-                      <span className="text-gray-700">High demand in Mumbai's oil & gas sector</span>
+                      <span className="text-gray-700">High demand in Mumbai&apos;s oil & gas sector</span>
                     </div>
                     <div className="flex items-start space-x-3 group hover:scale-105 transition-transform">
                       <div className="w-8 h-8 bg-gradient-to-r from-teal-400 to-green-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">
@@ -1005,7 +1005,7 @@ export default function SmartPlant3DCoursePage() {
               
               <div className="bg-white/70 p-6 rounded-2xl border border-green-200 mb-6">
                 <p className="text-gray-700 italic text-lg leading-relaxed mb-4">
-                  "The Smart Plant 3D course at Trinkets was exceptional. The hands-on training with real projects prepared me perfectly for my role at L&T. The instructors are industry experts who provide practical insights that you won't find anywhere else."
+                  &quot;The Smart Plant 3D course at Trinkets was exceptional. The hands-on training with real projects prepared me perfectly for my role at L&T. The instructors are industry experts who provide practical insights that you won&apos;t find anywhere else.&quot;
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-1">
@@ -1051,7 +1051,7 @@ export default function SmartPlant3DCoursePage() {
               
               <div className="bg-white/70 p-6 rounded-2xl border border-blue-200 mb-6">
                 <p className="text-gray-700 italic text-lg leading-relaxed mb-4">
-                  "Excellent SP3D training institute in Mumbai! The course covered everything from basics to advanced features. Got placed at Reliance Industries with confident knowledge of 3D plant design and clash detection techniques."
+                  &quot;Excellent SP3D training institute in Mumbai! The course covered everything from basics to advanced features. Got placed at Reliance Industries with confident knowledge of 3D plant design and clash detection techniques.&quot;
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-1">
@@ -1237,7 +1237,7 @@ export default function SmartPlant3DCoursePage() {
               </h2>
               
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                Join Mumbai's premier Smart Plant 3D course and advance your career in 3D plant design with industry-leading training
+                Join Mumbai&apos;s premier Smart Plant 3D course and advance your career in 3D plant design with industry-leading training
               </p>
             </div>
 
@@ -1308,7 +1308,7 @@ export default function SmartPlant3DCoursePage() {
 
             {/* Contact Information */}
             <div className="mt-12 bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-              <p className="text-blue-100 text-lg mb-4">Still have questions? We're here to help!</p>
+              <p className="text-blue-100 text-lg mb-4">Still have questions? We&apos;re here to help!</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center">
                   <span className="text-yellow-300 text-xl mr-2">📞</span>

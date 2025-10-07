@@ -358,7 +358,7 @@ export default function MEPEngineeringCoursePage() {
                 <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-200">
                   <h4 className="font-bold text-orange-800 mb-6 text-xl flex items-center">
                     <span className="text-2xl mr-3">📚</span>
-                    What You'll Master
+                    What You&apos;ll Master
                   </h4>
                   <div className="grid grid-cols-1 gap-4">
                     {[
@@ -389,7 +389,7 @@ export default function MEPEngineeringCoursePage() {
               <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-2xl border border-indigo-200">
                 <h4 className="text-2xl font-bold text-indigo-800 mb-4">Ready to Transform Your Career?</h4>
                 <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
-                  Join Mumbai's most comprehensive MEP Engineering course and become an expert in building services design. 
+                  Join Mumbai&apos;s most comprehensive MEP Engineering course and become an expert in building services design. 
                   Our industry-aligned curriculum and 100% placement assistance will launch your successful MEP career.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -430,7 +430,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-gray-800">MEP Engineering Course?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience Mumbai's most comprehensive MEP training with industry experts and cutting-edge technology
+              Experience Mumbai&apos;s most comprehensive MEP training with industry experts and cutting-edge technology
             </p>
           </div>
 
@@ -967,7 +967,7 @@ export default function MEPEngineeringCoursePage() {
               
               <div className="bg-white/70 p-6 rounded-2xl border border-indigo-200 mb-4">
                 <p className="text-gray-700 italic leading-relaxed">
-                  "The MEP course at Trinkets transformed my career. I got placed at L&T Mumbai with a 10 LPA package. The practical training and real project exposure made all the difference."
+                  &quot;The MEP course at Trinkets transformed my career. I got placed at L&T Mumbai with a 10 LPA package. The practical training and real project exposure made all the difference.&quot;
                 </p>
               </div>
               
@@ -1002,7 +1002,7 @@ export default function MEPEngineeringCoursePage() {
               
               <div className="bg-white/70 p-6 rounded-2xl border border-blue-200 mb-4">
                 <p className="text-gray-700 italic leading-relaxed">
-                  "Best MEP engineering institute in Mumbai! The AutoCAD MEP and Revit training was comprehensive. Now working as HVAC consultant earning 12 LPA."
+                  &quot;Best MEP engineering institute in Mumbai! The AutoCAD MEP and Revit training was comprehensive. Now working as HVAC consultant earning 12 LPA.&quot;
                 </p>
               </div>
               
@@ -1037,7 +1037,7 @@ export default function MEPEngineeringCoursePage() {
               
               <div className="bg-white/70 p-6 rounded-2xl border border-teal-200 mb-4">
                 <p className="text-gray-700 italic leading-relaxed">
-                  "Mumbai's top MEP training center! The faculty's industry experience and placement support helped me secure a project coordinator role with 14 LPA package."
+                  &quot;Mumbai&apos;s top MEP training center! The faculty&apos;s industry experience and placement support helped me secure a project coordinator role with 14 LPA package.&quot;
                 </p>
               </div>
               
@@ -1280,7 +1280,7 @@ export default function MEPEngineeringCoursePage() {
               </h2>
               
               <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto leading-relaxed">
-                Join Mumbai's best MEP engineering course and transform your career with 100% placement assistance.
+                Join Mumbai&apos;s best MEP engineering course and transform your career with 100% placement assistance.
               </p>
             </div>
 
@@ -1335,7 +1335,7 @@ export default function MEPEngineeringCoursePage() {
 
             {/* Contact Information */}
             <div className="mt-12 bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-              <p className="text-indigo-100 text-lg mb-4">Still have questions? We're here to help!</p>
+              <p className="text-indigo-100 text-lg mb-4">Still have questions? We&apos;re here to help!</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center">
                   <span className="text-yellow-300 text-xl mr-2">📞</span>
