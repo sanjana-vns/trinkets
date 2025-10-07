@@ -26,7 +26,7 @@ const AwardsSection = () => {
       category: "academic",
       level: "National",
       description: "Recognized for outstanding contribution to engineering education and industry partnerships.",
-      image: "/api/placeholder/300/200",
+      image: "/images/gallery1.webp",
       color: "from-yellow-500 to-orange-500",
       impact: "15,000+ students benefited"
     },
@@ -38,7 +38,7 @@ const AwardsSection = () => {
       category: "industry",
       level: "Industry",
       description: "Achieving 98% placement rate with top engineering companies and multinational corporations.",
-      image: "/api/placeholder/300/200",
+      image: "/images/gallery2.webp",
       color: "from-blue-500 to-purple-500",
       impact: "2,500+ placements facilitated"
     },
@@ -50,7 +50,7 @@ const AwardsSection = () => {
       category: "innovation",
       level: "Government",
       description: "Pioneering approach to hands-on technical training and industry-ready curriculum development.",
-      image: "/api/placeholder/300/200",
+      image: "/images/gallery1.webp",
       color: "from-green-500 to-teal-500",
       impact: "Revolutionary curriculum adopted"
     }
@@ -188,8 +188,13 @@ const AwardsSection = () => {
                 className="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 <div className="relative">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300">
-                    <div className={`w-full h-full bg-gradient-to-br ${award.color} opacity-80 flex items-center justify-center`}>
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                    <img
+                      src={award.image}
+                      alt={award.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-80 flex items-center justify-center`}>
                       <Trophy className="w-16 h-16 text-white" />
                     </div>
                   </div>

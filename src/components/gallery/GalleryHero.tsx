@@ -38,28 +38,28 @@ const GalleryHero = () => {
     {
       title: "Awards & Recognition",
       description: "Celebrating excellence in engineering education and industry partnerships",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery1.webp",
       count: "50+ Awards",
       icon: <Award className="w-8 h-8 text-yellow-500" />
     },
     {
       title: "Student Projects",
       description: "Showcase of innovative engineering solutions and design projects",
-      image: "/api/placeholder/400/250", 
+      image: "/images/gallery2.webp", 
       count: "500+ Projects",
       icon: <Target className="w-8 h-8 text-blue-500" />
     },
     {
       title: "Certifications",
       description: "Professional certifications and industry-recognized credentials",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery1.webp",
       count: "25+ Certifications",
       icon: <Medal className="w-8 h-8 text-purple-500" />
     },
     {
       title: "Success Stories",
       description: "Visual testimonials and career transformation journeys",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery2.webp",
       count: "1000+ Stories", 
       icon: <Users className="w-8 h-8 text-green-500" />
     }
@@ -169,7 +169,12 @@ const GalleryHero = () => {
                 >
                   <div className="relative">
                     <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl overflow-hidden">
-                      <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                      <img
+                        src={galleryCategories[currentSlide].image}
+                        alt={galleryCategories[currentSlide].title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center">
                         {galleryCategories[currentSlide].icon}
                       </div>
                     </div>

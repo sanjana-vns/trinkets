@@ -37,7 +37,7 @@ const CertificationsSection = () => {
       participants: "500+ engineers",
       completionRate: "92%",
       description: "Comprehensive professional engineering certification covering design, analysis, and project management.",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery1.webp",
       color: "from-blue-600 to-indigo-600",
       features: ["Industry Recognition", "Career Advancement", "Legal Authority"],
       nextBatch: "March 2024"
@@ -52,7 +52,7 @@ const CertificationsSection = () => {
       participants: "300+ professionals",
       completionRate: "89%",
       description: "Expert-level project management certification for engineering professionals and team leaders.",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery2.webp",
       color: "from-purple-600 to-pink-600",
       features: ["Global Recognition", "Leadership Skills", "Risk Management"],
       nextBatch: "April 2024"
@@ -67,7 +67,7 @@ const CertificationsSection = () => {
       participants: "450+ designers",
       completionRate: "95%",
       description: "Comprehensive CAD and manufacturing design certification with hands-on industry projects.",
-      image: "/api/placeholder/400/250",
+      image: "/images/gallery1.webp",
       color: "from-green-600 to-teal-600",
       features: ["Industry Tools", "Portfolio Projects", "Job Placement"],
       nextBatch: "May 2024"
@@ -247,8 +247,13 @@ const CertificationsSection = () => {
                 className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
                 <div className="relative">
-                  <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300">
-                    <div className={`w-full h-full bg-gradient-to-br ${cert.color} opacity-90 flex items-center justify-center`}>
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-90 flex items-center justify-center`}>
                       <FileText className="w-20 h-20 text-white" />
                     </div>
                   </div>
