@@ -136,119 +136,43 @@ export default function MEPEngineeringCoursePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 overflow-hidden">
+    <div className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute top-32 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float-reverse"></div>
-          <div className="absolute bottom-20 left-32 w-72 h-72 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-float-animated"></div>
-        </div>
-
-        {/* Main Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            {/* Floating Badge */}
-            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-8 animate-bounce">
-              <span className="text-2xl mr-3">🏗️</span>
-              <span className="font-semibold">MEP Engineering Mastery</span>
-            </div>
-
-            {/* Main Title with Gradient */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                MEP Engineering
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Course in Mumbai
-              </span>
+      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              MEP Engineering Course
             </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl md:text-3xl mb-12 text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Master <span className="text-indigo-600 font-bold">Mechanical</span>, 
-              <span className="text-purple-600 font-bold"> Electrical</span> & 
-              <span className="text-blue-600 font-bold"> Plumbing Design</span> with Industry-Leading Software
+            <p className="text-xl md:text-2xl mb-8 text-indigo-100">
+              Master Mechanical, Electrical & Plumbing Design with AutoCAD MEP, Revit MEP & HAP
             </p>
-
-            {/* Software Tags */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {['AutoCAD MEP', 'Revit MEP', 'HAP Software', 'TRACE 700', '100% Placement'].map((item, index) => {
-                const gradients = [
-                  'from-indigo-500 to-purple-600',
-                  'from-purple-500 to-pink-600',
-                  'from-blue-500 to-cyan-600',
-                  'from-teal-500 to-green-600',
-                  'from-orange-500 to-red-600'
-                ];
-                return (
-                  <span key={index} className={`bg-gradient-to-r ${gradients[index]} text-white px-6 py-3 rounded-full font-semibold text-lg hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg`}>
-                    {item}
-                  </span>
-                );
-              })}
-            </div>
-
-            {/* Interactive Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-indigo-200">
-                <div className="text-3xl mb-2">⏱️</div>
-                <div className="text-2xl font-bold text-indigo-600">6 Months</div>
-                <div className="text-gray-600">Duration</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="bg-white/20 px-6 py-3 rounded-lg">
+                <span className="font-semibold">Duration: </span>6 Months
               </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-purple-200">
-                <div className="text-3xl mb-2">🎯</div>
-                <div className="text-2xl font-bold text-purple-600">100%</div>
-                <div className="text-gray-600">Placement Rate</div>
+              <div className="bg-white/20 px-6 py-3 rounded-lg">
+                <span className="font-semibold">Mode: </span>Classroom/Online
               </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-blue-200">
-                <div className="text-3xl mb-2">👥</div>
-                <div className="text-2xl font-bold text-blue-600">500+</div>
-                <div className="text-gray-600">Students Placed</div>
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-teal-200">
-                <div className="text-3xl mb-2">💰</div>
-                <div className="text-2xl font-bold text-teal-600">₹15L</div>
-                <div className="text-gray-600">Highest Package</div>
+              <div className="bg-white/20 px-6 py-3 rounded-lg">
+                <span className="font-semibold">Placement: </span>100% Assistance
               </div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
-                <span className="relative z-10 flex items-center">
-                  🚀 Enroll Now - Limited Seats
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+              <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Enroll Now
               </Link>
-              <Link href="#curriculum" className="group px-8 py-4 border-2 border-indigo-600 text-indigo-600 rounded-full font-bold text-lg hover:bg-indigo-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <span className="flex items-center">
-                  📚 View Curriculum
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">↓</span>
-                </span>
+              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                Download Syllabus
               </Link>
-            </div>
-
-            {/* Next Batch Info */}
-            <div className="mt-8 inline-flex items-center bg-gradient-to-r from-green-100 to-blue-100 px-6 py-3 rounded-full border border-green-200">
-              <span className="text-green-600 font-semibold">🎯 Next Batch Starts: 15th November 2025</span>
             </div>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-20 text-6xl animate-float opacity-20">⚡</div>
-        <div className="absolute top-40 right-32 text-5xl animate-float-reverse opacity-20">🔧</div>
-        <div className="absolute bottom-32 left-40 text-4xl animate-float-animated opacity-20">🏗️</div>
-        <div className="absolute bottom-20 right-20 text-5xl animate-float opacity-20">💡</div>
       </section>
 
       {/* Course Overview */}
