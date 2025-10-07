@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 // Ultra-Creative About Hero Section
 const AboutHero = () => {
@@ -184,13 +185,17 @@ const AboutHero = () => {
               {/* Image Frame */}
               <div className="relative bg-white rounded-2xl lg:rounded-3xl shadow-2xl overflow-hidden border-2 lg:border-4 border-blue-200/50 transform group-hover:scale-105 transition-all duration-700">
                 <div className="aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-indigo-100 p-6 sm:p-8 lg:p-12">
-                  {/* Placeholder for Institute Image */}
-                  <div className="w-full h-48 sm:h-64 lg:h-96 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-xl lg:rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl sm:text-6xl lg:text-8xl mb-2 lg:mb-4">🏫</div>
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700">Trinkets Institute</div>
-                      <div className="text-sm sm:text-base lg:text-lg text-indigo-700">Excellence in Engineering Education</div>
-                    </div>
+                  {/* About Institute Image */}
+                  <div className="w-full h-48 sm:h-64 lg:h-96 rounded-xl lg:rounded-2xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/about.jpg"
+                      alt="Trinkets Institute - Excellence in Engineering Education"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                      priority
+                      quality={95}
+                    />
                   </div>
                 </div>
               </div>
