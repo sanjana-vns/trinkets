@@ -380,63 +380,63 @@ export default function CoursesPage() {
               <div className="bg-teal-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-teal-600">MicroStation</h3>
                 <p className="text-gray-600 mb-4">CAD software for 2D and 3D design in infrastructure projects with precise modeling</p>
-                <Link href="/courses/microstation" className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                <Link href="/courses/microstation-software-course" className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
                   Learn CAD
                 </Link>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-gray-600">Tekla</h3>
                 <p className="text-gray-600 mb-4">BIM software for accurate 3D modeling and detailing of structural elements</p>
-                <Link href="/courses/tekla" className="inline-block bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                <Link href="/courses/tekla-software-course" className="inline-block bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
                   Master BIM
                 </Link>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-blue-600">AutoCAD Piping</h3>
                 <p className="text-gray-600 mb-4">Design precise and detailed piping systems for mechanical and industrial projects</p>
-                <Link href="/courses/autocad-piping" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                <Link href="/courses/autocad-piping-software-course" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                   Learn Piping
                 </Link>
               </div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-green-600">AutoCAD Civil</h3>
                 <p className="text-gray-600 mb-4">Design civil infrastructure projects with terrain modeling and road planning</p>
-                <Link href="/courses/autocad-civil" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                <Link href="/courses/autocad-civil-software-course" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
                   Civil Design
                 </Link>
               </div>
               <div className="bg-yellow-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-yellow-600">AutoCAD Electrical</h3>
                 <p className="text-gray-600 mb-4">Create electrical control systems with automated wiring and report generation</p>
-                <Link href="/courses/autocad-electrical" className="inline-block bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
+                <Link href="/courses/autocad-electrical-software-course" className="inline-block bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
                   Electrical CAD
                 </Link>
               </div>
               <div className="bg-sky-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-sky-600">HVAC Drafting</h3>
                 <p className="text-gray-600 mb-4">Create detailed HVAC system drawings for residential and commercial buildings</p>
-                <Link href="/courses/hvac-drafting" className="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors">
+                <Link href="/courses/hvac-drafting-course" className="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors">
                   HVAC Design
                 </Link>
               </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-purple-600">Autodesk 3ds Max</h3>
                 <p className="text-gray-600 mb-4">3D modeling and animation software for realistic visuals and architectural rendering</p>
-                <Link href="/courses/autodesk-3ds-max" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                <Link href="/courses/autodesk-3ds-max-software-course" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
                   3D Animation
                 </Link>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-indigo-600">Cadworx</h3>
                 <p className="text-gray-600 mb-4">Plant design software with real-time collaboration and enhanced productivity</p>
-                <Link href="/courses/cadworx" className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                <Link href="/courses/cadworx-software-course" className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                   Plant Design
                 </Link>
               </div>
               <div className="bg-orange-50 p-6 rounded-lg text-center">
                 <h3 className="text-lg font-semibold mb-3 text-orange-600">MATLAB</h3>
                 <p className="text-gray-600 mb-4">Programming, data analysis and simulation using advanced MATLAB tools</p>
-                <Link href="/courses/matlab" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                <Link href="/courses/matlab-software-course" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
                   Data Science
                 </Link>
               </div>

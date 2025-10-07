@@ -235,7 +235,7 @@ const CourseCategories = () => {
       image: "📐",
       gradient: "from-teal-600 to-cyan-600",
       badge: "CAD Professional",
-      link: "/courses/microstation"
+      link: "/courses/microstation-software-course"
     },
     {
       id: 17,
@@ -249,7 +249,7 @@ const CourseCategories = () => {
       image: "🏗️",
       gradient: "from-slate-600 to-gray-600",
       badge: "BIM Expert",
-      link: "/courses/tekla"
+      link: "/courses/tekla-software-course"
     },
     {
       id: 18,
@@ -263,7 +263,7 @@ const CourseCategories = () => {
       image: "🔧",
       gradient: "from-blue-600 to-indigo-600",
       badge: "Industry Standard",
-      link: "/courses/autocad-piping"
+      link: "/courses/autocad-piping-software-course"
     },
     {
       id: 19,
@@ -277,7 +277,7 @@ const CourseCategories = () => {
       image: "🛣️",
       gradient: "from-green-600 to-emerald-600",
       badge: "Civil Engineering",
-      link: "/courses/autocad-civil"
+      link: "/courses/autocad-civil-software-course"
     },
     {
       id: 20,
@@ -291,7 +291,7 @@ const CourseCategories = () => {
       image: "⚡",
       gradient: "from-yellow-600 to-orange-600",
       badge: "Electrical Design",
-      link: "/courses/autocad-electrical"
+      link: "/courses/autocad-electrical-software-course"
     },
     {
       id: 21,
@@ -305,7 +305,7 @@ const CourseCategories = () => {
       image: "❄️",
       gradient: "from-sky-600 to-blue-600",
       badge: "HVAC Specialist",
-      link: "/courses/hvac-drafting"
+      link: "/courses/hvac-drafting-course"
     },
     {
       id: 22,
@@ -319,7 +319,7 @@ const CourseCategories = () => {
       image: "🎨",
       gradient: "from-purple-600 to-pink-600",
       badge: "3D Visualization",
-      link: "/courses/autodesk-3ds-max"
+      link: "/courses/autodesk-3ds-max-software-course"
     },
     {
       id: 23,
@@ -333,7 +333,7 @@ const CourseCategories = () => {
       image: "🏭",
       gradient: "from-indigo-600 to-purple-600",
       badge: "Plant Design",
-      link: "/courses/cadworx"
+      link: "/courses/cadworx-software-course"
     },
     {
       id: 24,
@@ -347,7 +347,7 @@ const CourseCategories = () => {
       image: "📊",
       gradient: "from-orange-600 to-red-600",
       badge: "Data Science",
-      link: "/courses/matlab"
+      link: "/courses/matlab-software-course"
     }
   ]
 
