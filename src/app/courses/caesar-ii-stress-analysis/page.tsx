@@ -139,31 +139,96 @@ export default function CaesarIIStressAnalysisPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         
-        {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-32 md:w-64 h-32 md:h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-40 md:w-80 h-40 md:h-80 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* Creative Hero Section */}
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-20 w-32 h-32 border-2 border-red-400 animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 border-2 border-orange-400 rotate-45 animate-bounce"></div>
+            <div className="absolute bottom-32 left-32 w-28 h-28 border-2 border-yellow-400 rounded-full animate-spin"></div>
+            <div className="absolute bottom-20 right-20 w-36 h-36 border-2 border-red-400 animate-pulse"></div>
           </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                CAESAR II Stress Analysis
-                <span className="block text-yellow-300">in Mumbai</span>
+
+          {/* Floating Pipe Stress Elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 animate-float">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className="text-red-400">
+                <rect x="10" y="40" width="80" height="20" stroke="currentColor" strokeWidth="3" fill="none"/>
+                <circle cx="20" cy="50" r="8" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
+                <circle cx="80" cy="50" r="8" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
+                <path d="M30 35 L30 65 M50 35 L50 65 M70 35 L70 65" stroke="currentColor" strokeWidth="2"/>
+                <text x="50" y="30" fill="currentColor" fontSize="8" textAnchor="middle">STRESS</text>
+              </svg>
+            </div>
+            <div className="absolute top-1/3 right-1/4 animate-float-delayed">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="text-orange-400">
+                <path d="M20 60 L100 60" stroke="currentColor" strokeWidth="4" fill="none"/>
+                <path d="M20 60 Q40 30 60 60 Q80 90 100 60" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="60" cy="60" r="15" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M45 45 L75 75 M75 45 L45 75" stroke="currentColor" strokeWidth="2"/>
+                <text x="60" y="100" fill="currentColor" fontSize="10" textAnchor="middle">CAESAR II</text>
+              </svg>
+            </div>
+            <div className="absolute bottom-1/3 left-1/3 animate-float">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none" className="text-yellow-400">
+                <rect x="20" y="30" width="70" height="50" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M30 40 L80 40 M30 50 L80 50 M30 60 L80 60 M30 70 L80 70" stroke="currentColor" strokeWidth="1"/>
+                <circle cx="95" cy="55" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M87 55 L103 55 M95 47 L95 63" stroke="currentColor" strokeWidth="2"/>
+                <text x="55" y="25" fill="currentColor" fontSize="8" textAnchor="middle">ANALYSIS</text>
+              </svg>
+            </div>
+          </div>
+
+          <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+                  CAESAR II
+                </span>
+                <br />
+                <span className="text-white">Stress Analysis</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Master professional pipe stress analysis with CAESAR II software. Comprehensive training in thermal analysis, code compliance, and industry standards for oil & gas, petrochemical, and power plant industries.
+              <div className="w-32 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6 animate-pulse"></div>
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+                Master professional pipe stress analysis with Mumbai&apos;s leading institute. 
+                From thermal analysis to code compliance, become a certified stress analysis expert.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="#enrollment" className="bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl">
-                  Enroll Now
-                </Link>
-                <Link href="#curriculum" className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-red-600 transform hover:scale-105 transition-all duration-300">
-                  View Curriculum
-                </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                Start Stress Analysis Journey
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                Download Curriculum
+              </button>
+            </div>
+
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="animate-float">
+                <div className="text-3xl font-bold text-red-400">100%</div>
+                <div className="text-sm text-gray-300">Job Placement</div>
               </div>
+              <div className="animate-float-delayed">
+                <div className="text-3xl font-bold text-orange-400">50+</div>
+                <div className="text-sm text-gray-300">Live Projects</div>
+              </div>
+              <div className="animate-float">
+                <div className="text-3xl font-bold text-yellow-400">15+</div>
+                <div className="text-sm text-gray-300">Years Experience</div>
+              </div>
+              <div className="animate-float-delayed">
+                <div className="text-3xl font-bold text-red-400">24/7</div>
+                <div className="text-sm text-gray-300">Lab Access</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </section>
@@ -486,6 +551,136 @@ export default function CaesarIIStressAnalysisPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Stress Analysis Industry Opportunities */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-red-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Mumbai&apos;s <span className="text-red-600">Stress Analysis Industry</span>
+              </h2>
+              <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Mumbai leads India&apos;s petrochemical and refinery sector. Master CAESAR II and join the city&apos;s thriving oil & gas, power, and process industries.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Refineries & Petrochemicals</h3>
+                <p className="text-gray-600 mb-4">BPCL, HPCL, and RIL Mumbai refineries require skilled CAESAR II professionals for critical piping stress analysis and safety compliance.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Process Plant Design</li>
+                  <li>• Equipment Piping Analysis</li>
+                  <li>• Thermal Stress Assessment</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-orange-500">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Power Generation</h3>
+                <p className="text-gray-600 mb-4">Tata Power, Adani Power and thermal power plants in Mumbai region need CAESAR II experts for steam piping and pressure vessel analysis.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Steam Line Analysis</li>
+                  <li>• Boiler Piping Design</li>
+                  <li>• High-Pressure Systems</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-yellow-500">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Chemical Processing</h3>
+                <p className="text-gray-600 mb-4">Chemical companies in Mumbai and Thane industrial belt require CAESAR II professionals for process piping and reactor design analysis.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Chemical Plant Piping</li>
+                  <li>• Reactor Support Analysis</li>
+                  <li>• Corrosive Media Handling</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-lg text-gray-700 mb-6">
+                Average CAESAR II Professional Salary in Mumbai: <span className="font-bold text-red-600">₹6-12 LPA</span>
+              </p>
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+                Explore Career Opportunities
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for Voice Search Optimization */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our CAESAR II course
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What is CAESAR II stress analysis and why is it important in Mumbai&apos;s industry?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  CAESAR II is the industry-standard software for pipe stress analysis used in refineries, petrochemical plants, and power stations. In Mumbai&apos;s industrial landscape with major refineries like BPCL and RIL, CAESAR II expertise is crucial for ensuring piping system safety, thermal expansion analysis, and code compliance. Our comprehensive course prepares you for Mumbai&apos;s high-paying stress analysis roles.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">How long does it take to master CAESAR II stress analysis?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Our comprehensive CAESAR II course spans 3-4 months with intensive hands-on training. You&apos;ll master stress analysis fundamentals in the first month, advanced modeling techniques in the second month, and real-world applications including thermal analysis and code compliance in the final months. With daily practice and expert guidance, you&apos;ll be industry-ready within 4 months.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What job opportunities are available for CAESAR II professionals in Mumbai?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Mumbai offers excellent opportunities for CAESAR II professionals in refineries, petrochemical plants, power stations, and EPC companies like L&T, Technimont, and Petrofac. Roles include Stress Engineer, Piping Design Engineer, Senior Analyst, and Technical Consultant. With Mumbai&apos;s expanding industrial sector and new refinery projects, demand for skilled professionals continues to grow significantly.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Do you provide placement assistance after completing the CAESAR II course?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Yes, we provide 100% placement assistance with our extensive network of refineries, petrochemical companies, and EPC contractors in Mumbai. Our placement cell conducts specialized technical interviews, portfolio development workshops, and connects you directly with hiring managers. We maintain partnerships with 150+ companies and achieve excellent placement rates with average starting salaries of ₹6-8 LPA.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Is prior piping engineering experience required for CAESAR II training?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Basic understanding of piping engineering is helpful but not mandatory. Our course starts with piping fundamentals and gradually progresses to advanced CAESAR II modeling techniques. We provide comprehensive training covering pipe stress theory, thermal analysis principles, and industry codes. Our expert instructors ensure every student, regardless of background, achieves proficiency in CAESAR II stress analysis.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What makes Trinkets Institute the best choice for CAESAR II training in Mumbai?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Trinkets Institute offers industry-leading CAESAR II training with certified stress engineers, state-of-the-art software labs, and real refinery project experience. Our curriculum is developed with input from Mumbai&apos;s top petrochemical companies, ensuring immediate job readiness. We provide flexible timings, weekend batches, and personalized mentoring with small batch sizes. Our 15+ years of experience and 100% placement record make us Mumbai&apos;s preferred choice for CAESAR II training.
+                </p>
+              </div>
             </div>
           </div>
         </section>

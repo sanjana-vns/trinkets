@@ -2,14 +2,22 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Electrical Design Engineering Course in Mumbai | Professional Training Institute',
-  description: 'Master Electrical Design Engineering Course in Mumbai with AutoCAD Electrical, ETAP, EPLAN training. Professional electrical system design certification for power distribution, lighting design and industrial automation.',
-  keywords: 'Electrical Design Engineering Course in Mumbai, electrical design training Mumbai, AutoCAD Electrical course, ETAP training, EPLAN course, electrical system design, power distribution course, electrical CAD training Mumbai, electrical engineering institute Mumbai',
+  title: 'Electrical Design Engineering Course in Mumbai | Professional Training Institute | TIT India',
+  description: 'Master Electrical Design Engineering Course in Mumbai with AutoCAD Electrical, ETAP, EPLAN training. Professional electrical system design certification for power distribution, lighting design, industrial automation, panel design, and cable routing with hands-on training.',
+  keywords: 'Electrical Design Engineering Course in Mumbai, electrical design training Mumbai, AutoCAD Electrical course Mumbai, ETAP training Mumbai, EPLAN course Mumbai, electrical system design course, power distribution course Mumbai, electrical CAD training Mumbai, electrical engineering institute Mumbai, lighting design course, industrial automation training, panel design course, cable routing training, electrical safety course, protection systems training, load calculation course, energy management training, electrical consultant course Mumbai',
   openGraph: {
     title: 'Electrical Design Engineering Course in Mumbai | Professional Training Institute',
-    description: 'Master Electrical Design Engineering Course in Mumbai with AutoCAD Electrical, ETAP, EPLAN training. Professional certification for electrical system design.',
+    description: 'Master Electrical Design Engineering Course in Mumbai with AutoCAD Electrical, ETAP, EPLAN training. Professional certification for electrical system design with hands-on training and 100% placement support.',
     type: 'website',
     url: 'https://trinkets.com/courses/electrical-design-engineering',
+    images: [
+      {
+        url: 'https://trinkets.com/images/electrical-design-course-mumbai.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Electrical Design Engineering Course in Mumbai - Professional Training',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://trinkets.com/courses/electrical-design-engineering',
@@ -118,26 +126,51 @@ export default function ElectricalDesignEngineeringCoursePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Creative Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-20 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
-              <div className="inline-flex items-center bg-blue-700/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
-                <span className="text-blue-200 font-semibold text-sm">⚡ Professional Training</span>
+              <div className="inline-flex items-center bg-blue-700/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm">
+                <span className="text-blue-200 font-semibold text-sm mr-2">⚡</span>
+                <span className="text-blue-100 font-semibold">Professional Electrical Design Training</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Electrical Design Engineering Course in Mumbai
+              
+              <h1 className="text-4xl md:text-7xl font-bold mb-8">
+                <span className="inline-block">Electrical Design</span>{' '}
+                <span className="text-purple-300">Engineering Course</span>{' '}
+                <span className="text-blue-300">in Mumbai</span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-                Master electrical system design with AutoCAD Electrical, ETAP, and EPLAN for power distribution, lighting design, and industrial automation
+              
+              <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+                Master electrical system design with AutoCAD Electrical, ETAP, and EPLAN for power distribution, lighting design, and industrial automation in Mumbai
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Enroll Now
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <Link href="/contact" className="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                  ⚡ Enroll Now - Limited Seats
                 </Link>
-                <Link href="#curriculum" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  View Curriculum
+                <Link href="#curriculum" className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                  📚 View Curriculum
                 </Link>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-3xl font-bold text-white">6</div>
+                  <div className="text-blue-200 text-sm">Months Duration</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-3xl font-bold text-white">4.8⭐</div>
+                  <div className="text-blue-200 text-sm">Student Rating</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-3xl font-bold text-white">580+</div>
+                  <div className="text-blue-200 text-sm">Students Trained</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-3xl font-bold text-white">100%</div>
+                  <div className="text-blue-200 text-sm">Placement Support</div>
+                </div>
               </div>
             </div>
           </div>
@@ -426,6 +459,127 @@ export default function ElectricalDesignEngineeringCoursePage() {
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Placement Support</h3>
                 <p className="text-gray-600 text-sm">100% placement assistance with top electrical engineering companies in Mumbai</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Industry Focus */}
+        <section className="py-16 bg-indigo-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Electrical Design Engineering Opportunities in Mumbai</h2>
+              <p className="text-lg text-gray-600">Mumbai is India&apos;s financial and industrial capital with massive opportunities for electrical design professionals</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-600 text-2xl">🏢</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Commercial Buildings</h3>
+                <p className="text-gray-600 text-center mb-4">Nariman Point, BKC, Lower Parel, Andheri</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Office complex electrical design</li>
+                  <li>• Shopping mall power systems</li>
+                  <li>• Hotel electrical infrastructure</li>
+                  <li>• Smart building automation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-purple-600 text-2xl">🏭</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Manufacturing Units</h3>
+                <p className="text-gray-600 text-center mb-4">Mahindra, Godrej, Bajaj, Tata Motors</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industrial power distribution</li>
+                  <li>• Motor control centers</li>
+                  <li>• Factory automation systems</li>
+                  <li>• Energy management systems</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-600 text-2xl">🚇</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Infrastructure Projects</h3>
+                <p className="text-gray-600 text-center mb-4">Mumbai Metro, MMRDA, Airport Projects</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Transit electrical systems</li>
+                  <li>• Airport terminal design</li>
+                  <li>• Highway lighting design</li>
+                  <li>• Smart city infrastructure</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-12 bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Mumbai Advantage for Electrical Design Engineers</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">🌟 Corporate Headquarters</h4>
+                  <p className="text-gray-600 mb-4">Mumbai houses head offices of Tata Power, L&T Electrical, Siemens, ABB, Schneider Electric offering direct career opportunities.</p>
+                  
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">💼 Diverse Projects</h4>
+                  <p className="text-gray-600">From residential towers to industrial complexes, Mumbai offers exposure to all types of electrical design projects.</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">🎯 Consulting Opportunities</h4>
+                  <p className="text-gray-600 mb-4">Mumbai&apos;s construction boom creates massive demand for electrical design consultants and freelance opportunities.</p>
+                  
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">📈 Premium Salaries</h4>
+                  <p className="text-gray-600">Electrical design engineers in Mumbai command 25-40% higher salaries compared to other Indian cities due to high demand.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - Voice Search Optimized */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions - Electrical Design Engineering Course in Mumbai</h2>
+              <p className="text-lg text-gray-600">Get answers to common questions about our comprehensive electrical design engineering training</p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What is Electrical Design Engineering and why should I learn it in Mumbai?</h3>
+                <p className="text-gray-600">Electrical Design Engineering involves designing electrical systems for buildings, industries, and infrastructure. Learning in Mumbai provides access to India&apos;s largest industrial and commercial hub, with opportunities in companies like Tata Power, L&T, Siemens, ABB, and numerous engineering consultancies seeking certified electrical design professionals.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">How long does the Electrical Design Engineering course take in Mumbai?</h3>
+                <p className="text-gray-600">Our comprehensive Electrical Design Engineering course in Mumbai takes 6 months to complete, covering AutoCAD Electrical, ETAP, EPLAN, power distribution design, lighting systems, and industrial automation. Weekend and evening batches are available for working professionals.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Which software will I learn in the Electrical Design Engineering course?</h3>
+                <p className="text-gray-600">You&apos;ll master industry-standard software including AutoCAD Electrical for schematic design, ETAP for power system analysis, EPLAN for control panel design, DIALux for lighting design, and other essential electrical design tools used by top companies in Mumbai.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What salary can I expect after Electrical Design Engineering certification in Mumbai?</h3>
+                <p className="text-gray-600">Electrical Design Engineers in Mumbai can expect starting salaries of ₹3.5-5.5 LPA for freshers, ₹6-10 LPA for 2-5 years experience, ₹10-16 LPA for senior designers, and ₹25-35+ LPA for design managers and principal engineers in Mumbai&apos;s electrical industry.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Is online Electrical Design Engineering training available from Mumbai?</h3>
+                <p className="text-gray-600">Yes, we offer both online and classroom Electrical Design Engineering training from Mumbai. Online sessions include live lectures, hands-on software practice, real project work, individual mentoring, and access to our Mumbai-based industry expert faculty.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Which companies in Mumbai hire Electrical Design Engineers?</h3>
+                <p className="text-gray-600">Top companies hiring Electrical Design Engineers in Mumbai include Tata Power, Larsen & Toubro, Siemens India, ABB India, Schneider Electric, Thermax, Crompton Greaves, Godrej, Mahindra, and hundreds of electrical consulting firms and infrastructure companies.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What are the prerequisites for Electrical Design Engineering course?</h3>
+                <p className="text-gray-600">Basic electrical engineering knowledge is sufficient to start. We cover electrical fundamentals before advanced topics. The course is suitable for electrical engineering graduates, diploma holders, and professionals looking to specialize in electrical design and power systems.</p>
               </div>
             </div>
           </div>

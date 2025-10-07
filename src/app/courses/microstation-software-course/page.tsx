@@ -4,7 +4,7 @@ import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monito
 
 export const metadata: Metadata = {
   title: 'MicroStation Software Course in Mumbai | Best CAD Training Institute | Trinkets Institute',
-  description: 'Master MicroStation Software with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier CAD training institute.',
+  description: 'Master MicroStation Software with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Learn 2D/3D design, civil engineering CAD, architectural drafting, and infrastructure design with 100% placement support.',
   keywords: [
     'MicroStation Software Course in Mumbai',
     'MicroStation training Mumbai',
@@ -35,11 +35,13 @@ export const metadata: Metadata = {
     'civil engineering CAD Mumbai',
     'structural design software Mumbai',
     'building design course Mumbai',
-    'construction CAD training Mumbai'
+    'construction CAD training Mumbai',
+    'surveying CAD course Mumbai',
+    'mapping software training Mumbai'
   ].join(', '),
   openGraph: {
     title: 'MicroStation Software Course in Mumbai | Best CAD Training Institute',
-    description: 'Master MicroStation Software with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance.',
+    description: 'Master MicroStation Software with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance with 100% placement support.',
     url: 'https://trinketsinstitute.com/courses/microstation-software-course',
     siteName: 'Trinkets Institute',
     images: [
@@ -206,6 +208,227 @@ const jsonLd = {
 export default function MicroStationCoursePage() {
   return (
     <>
+      {/* Creative Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-slate-800 to-gray-900">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-blue-400 animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 border-2 border-green-400 rotate-45 animate-bounce"></div>
+          <div className="absolute bottom-32 left-32 w-28 h-28 border-2 border-yellow-400 rounded-full animate-spin"></div>
+          <div className="absolute bottom-20 right-20 w-36 h-36 border-2 border-purple-400 animate-pulse"></div>
+        </div>
+
+        {/* Floating CAD Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 animate-float">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="text-blue-400">
+              <rect x="10" y="10" width="60" height="40" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <line x1="10" y1="30" x2="70" y2="30" stroke="currentColor" strokeWidth="1"/>
+              <line x1="30" y1="10" x2="30" y2="50" stroke="currentColor" strokeWidth="1"/>
+              <circle cx="50" cy="25" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+          </div>
+          <div className="absolute top-1/3 right-1/4 animate-float-delayed">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className="text-green-400">
+              <path d="M20 20 L80 20 L80 60 L60 80 L20 80 Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <line x1="20" y1="40" x2="80" y2="40" stroke="currentColor" strokeWidth="1"/>
+              <line x1="40" y1="20" x2="40" y2="60" stroke="currentColor" strokeWidth="1"/>
+              <line x1="60" y1="60" x2="60" y2="80" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-1/3 left-1/3 animate-float">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" className="text-yellow-400">
+              <polygon points="45,10 70,35 70,65 45,80 20,65 20,35" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <circle cx="45" cy="45" r="15" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <line x1="30" y1="30" x2="60" y2="60" stroke="currentColor" strokeWidth="1"/>
+              <line x1="60" y1="30" x2="30" y2="60" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+        </div>
+
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 via-green-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+                MicroStation
+              </span>
+              <br />
+              <span className="text-white">CAD Mastery</span>
+            </h1>
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto mb-6 animate-pulse"></div>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+              Master Bentley MicroStation with Mumbai&apos;s premier CAD training institute. 
+              From 2D drafting to 3D modeling, infrastructure design to architectural excellence.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              Start Your CAD Journey
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+              Download Curriculum
+            </button>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="animate-float">
+              <div className="text-3xl font-bold text-blue-400">100%</div>
+              <div className="text-sm text-gray-300">Job Placement</div>
+            </div>
+            <div className="animate-float-delayed">
+              <div className="text-3xl font-bold text-green-400">50+</div>
+              <div className="text-sm text-gray-300">Live Projects</div>
+            </div>
+            <div className="animate-float">
+              <div className="text-3xl font-bold text-yellow-400">15+</div>
+              <div className="text-sm text-gray-300">Years Experience</div>
+            </div>
+            <div className="animate-float-delayed">
+              <div className="text-3xl font-bold text-purple-400">24/7</div>
+              <div className="text-sm text-gray-300">Lab Access</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </section>
+      {/* Mumbai CAD Industry Opportunities */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Mumbai&apos;s Booming <span className="text-blue-600">CAD & Design Industry</span>
+            </h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Mumbai leads India&apos;s infrastructure development. Master MicroStation and join the city&apos;s thriving architecture, engineering, and construction sector.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Projects</h3>
+              <p className="text-gray-600 mb-4">Mumbai Metro, Coastal Road, and MTHL projects require skilled MicroStation professionals for civil engineering design.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Highway & Bridge Design</li>
+                <li>• Tunnel Engineering</li>
+                <li>• Urban Planning</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 21l4-4 4 4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Real Estate Development</h3>
+              <p className="text-gray-600 mb-4">Leading real estate companies in Mumbai use MicroStation for high-rise buildings and township development projects.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Residential Complexes</li>
+                <li>• Commercial Buildings</li>
+                <li>• Mixed-Use Developments</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Utility & Services</h3>
+              <p className="text-gray-600 mb-4">Mumbai&apos;s utility companies and government agencies need MicroStation experts for mapping and infrastructure planning.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Water Supply Systems</li>
+                <li>• Electrical Networks</li>
+                <li>• Telecommunication</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-gray-700 mb-6">
+              Average MicroStation Professional Salary in Mumbai: <span className="font-bold text-blue-600">₹4.5-8.5 LPA</span>
+            </p>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+              Explore Career Opportunities
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section for Voice Search Optimization */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about our MicroStation course
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">What is MicroStation software and why should I learn it in Mumbai?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                MicroStation is Bentley Systems&apos; premier CAD software for architecture, engineering, and construction. In Mumbai&apos;s booming infrastructure sector, MicroStation skills are essential for metro projects, coastal road development, and high-rise construction. Our comprehensive course prepares you for Mumbai&apos;s top AEC companies with hands-on training and industry-relevant projects.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">How long does it take to become proficient in MicroStation?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Our structured MicroStation course spans 3-4 months with intensive training. You&apos;ll master 2D drafting in the first month, 3D modeling in the second month, and advanced features like parametric modeling and collaboration tools in the final months. With daily practice and our expert guidance, you&apos;ll be job-ready within 4 months.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">What job opportunities are available for MicroStation professionals in Mumbai?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Mumbai offers excellent opportunities for MicroStation professionals in infrastructure companies like L&T, Tata Projects, and Shapoorji Pallonji. Roles include CAD Designer, Civil Draftsman, Structural Designer, and Project Coordinator. With Mumbai&apos;s ongoing metro expansion and smart city initiatives, demand for skilled professionals is constantly growing.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Do you provide placement assistance after completing the MicroStation course?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Yes, we provide 100% placement assistance with our extensive network of AEC companies in Mumbai. Our placement cell conducts mock interviews, resume building workshops, and connects you with hiring managers. We have partnerships with over 200+ companies and maintain an excellent placement record with average starting salaries of ₹4.5-6 LPA.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Is prior CAD experience required for the MicroStation course?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                No prior CAD experience is required. Our course starts with fundamental CAD concepts and gradually progresses to advanced MicroStation features. We provide comprehensive training from basic drawing commands to complex 3D modeling and BIM integration. Our expert instructors ensure every student, regardless of background, achieves proficiency in MicroStation.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">What makes Trinkets Institute the best choice for MicroStation training in Mumbai?</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Trinkets Institute offers industry-leading MicroStation training with certified instructors, state-of-the-art labs, and real project experience. Our curriculum is designed with input from Mumbai&apos;s top AEC companies, ensuring job readiness. We provide flexible timings, weekend batches, and personalized attention with small batch sizes. Our 15+ years of experience and 100% placement record make us Mumbai&apos;s preferred choice for MicroStation training.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

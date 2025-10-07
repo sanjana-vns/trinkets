@@ -2,14 +2,22 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'SP3D Piping Design Training in Mumbai | Professional Piping Course Institute',
-  description: 'Master SP3D Piping Design Training in Mumbai with SmartPlant 3D software. Professional piping design course with AutoCAD Plant 3D, PDMS training for oil & gas, petrochemical industry certification.',
-  keywords: 'SP3D Piping Design Training in Mumbai, SmartPlant 3D course Mumbai, piping design training, AutoCAD Plant 3D course, PDMS training, piping engineering institute Mumbai, oil gas piping course, petrochemical piping design, 3D piping modeling Mumbai',
+  title: 'SP3D Piping Design Training in Mumbai | Professional Piping Course Institute | TIT India',
+  description: 'Master SP3D Piping Design Training in Mumbai with SmartPlant 3D software, AutoCAD Plant 3D, PDMS training for oil & gas, petrochemical industry certification. Comprehensive 3D piping modeling, isometric generation, and plant design with hands-on training and 100% placement support.',
+  keywords: 'SP3D Piping Design Training in Mumbai, SmartPlant 3D course Mumbai, piping design training Mumbai, AutoCAD Plant 3D course Mumbai, PDMS training Mumbai, piping engineering institute Mumbai, oil gas piping course Mumbai, petrochemical piping design Mumbai, 3D piping modeling Mumbai, SP3D certification Mumbai, piping design course Mumbai, plant design training Mumbai, isometric drawing course Mumbai, piping layout training Mumbai, EPC piping training Mumbai, process piping design Mumbai, piping stress analysis Mumbai',
   openGraph: {
     title: 'SP3D Piping Design Training in Mumbai | Professional Piping Course Institute',
-    description: 'Master SP3D Piping Design Training in Mumbai with SmartPlant 3D software. Professional certification for piping design and 3D modeling.',
+    description: 'Master SP3D Piping Design Training in Mumbai with SmartPlant 3D software. Professional certification for piping design and 3D modeling with industry expert training and placement support.',
     type: 'website',
     url: 'https://trinkets.com/courses/sp3d-piping-design-training',
+    images: [
+      {
+        url: 'https://trinkets.com/images/sp3d-piping-design-course-mumbai.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SP3D Piping Design Training in Mumbai - Professional Course',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://trinkets.com/courses/sp3d-piping-design-training',
@@ -118,26 +126,60 @@ export default function SP3DPipingDesignTrainingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Creative Animated Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-12 h-2 bg-blue-400 rounded opacity-60 animate-pulse"></div>
+            <div className="absolute top-20 right-20 w-8 h-3 bg-indigo-400 rounded opacity-40 animate-bounce delay-300"></div>
+            <div className="absolute bottom-20 left-20 w-10 h-2 bg-cyan-400 rounded opacity-50 animate-ping delay-500"></div>
+            <div className="absolute bottom-10 right-10 w-6 h-4 bg-blue-300 rounded opacity-70 animate-pulse delay-700"></div>
+            <div className="absolute top-1/2 left-1/4 w-16 h-3 bg-gradient-to-r from-blue-400 to-indigo-400 rounded opacity-30 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/3 right-1/3 w-12 h-2 bg-gradient-to-r from-cyan-400 to-blue-400 rounded opacity-40 animate-bounce delay-1200"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
-              <div className="inline-flex items-center bg-blue-700/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
-                <span className="text-blue-200 font-semibold text-sm">🏗️ Professional Training</span>
+              <div className="inline-flex items-center bg-blue-700/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
+                <span className="text-blue-200 font-semibold text-sm mr-2 animate-pulse">🏗️</span>
+                <span className="text-blue-100 font-semibold">Professional 3D Piping Design Training</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                SP3D Piping Design Training in Mumbai
+              
+              <h1 className="text-4xl md:text-7xl font-bold mb-8 transform hover:scale-105 transition-transform duration-300">
+                <span className="inline-block bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">SP3D</span>{' '}
+                <span className="inline-block bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent">Piping Design</span>{' '}
+                <span className="text-blue-200">Training in Mumbai</span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-                Master SmartPlant 3D piping design with AutoCAD Plant 3D and PDMS for oil & gas, petrochemical industry 3D modeling and engineering
+              
+              <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+                Master SmartPlant 3D piping design with AutoCAD Plant 3D and PDMS for oil & gas, petrochemical industry 3D modeling and engineering in Mumbai
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Enroll Now
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <Link href="/contact" className="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                  🚀 Enroll Now - Limited Seats
                 </Link>
-                <Link href="#curriculum" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  View Curriculum
+                <Link href="#curriculum" className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                  📚 View Curriculum
                 </Link>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-white">6</div>
+                  <div className="text-blue-200 text-sm">Months Duration</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-white">4.9⭐</div>
+                  <div className="text-blue-200 text-sm">Student Rating</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-white">1200+</div>
+                  <div className="text-blue-200 text-sm">Students Trained</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-white">100%</div>
+                  <div className="text-blue-200 text-sm">Placement Support</div>
+                </div>
               </div>
             </div>
           </div>
@@ -434,6 +476,97 @@ export default function SP3DPipingDesignTrainingPage() {
                   <span className="text-white text-xl">🚰</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Water Treatment</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Industry Focus */}
+        <section className="py-16 bg-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Opportunities in Mumbai</h2>
+              <p className="text-lg text-gray-600">Mumbai is India&apos;s EPC and process industry capital with massive opportunities for SP3D professionals</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-600 text-2xl">🛢️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Oil & Gas Projects</h3>
+                <p className="text-gray-600 text-center mb-4">Reliance, ONGC, Petrofac, KBR, Technip</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Refinery piping design and layout</li>
+                  <li>• Offshore platform piping systems</li>
+                  <li>• LNG terminal design projects</li>
+                  <li>• Petrochemical complex piping</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-indigo-600 text-2xl">🏗️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">EPC Companies</h3>
+                <p className="text-gray-600 text-center mb-4">L&T, Fluor, Wood Group, McDermott</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Large-scale plant design projects</li>
+                  <li>• International EPC assignments</li>
+                  <li>• Brownfield modification projects</li>
+                  <li>• Greenfield facility development</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-600 text-2xl">⚗️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Process Industries</h3>
+                <p className="text-gray-600 text-center mb-4">Tata Chemicals, UPL, Aarti Industries</p>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Chemical plant piping design</li>
+                  <li>• Pharmaceutical facility piping</li>
+                  <li>• Specialty chemicals projects</li>
+                  <li>• Process optimization studies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - Voice Search Optimized */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions - SP3D Piping Design Training in Mumbai</h2>
+              <p className="text-lg text-gray-600">Get answers to common questions about our comprehensive SP3D and 3D piping design training</p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What is SP3D and why should I learn it in Mumbai?</h3>
+                <p className="text-gray-600">SmartPlant 3D (SP3D) is advanced 3D piping design software used by global EPC companies. Learning SP3D in Mumbai provides access to India&apos;s largest concentration of oil & gas projects, refineries, and process industries with companies like Reliance, L&T, Technip, and international EPC firms actively seeking certified SP3D professionals.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">How long does SP3D Piping Design Training take in Mumbai?</h3>
+                <p className="text-gray-600">Our comprehensive SP3D Piping Design Training in Mumbai takes 6 months to complete, covering SmartPlant 3D, AutoCAD Plant 3D, PDMS, isometric generation, and real plant projects. Weekend and evening batches are available for working professionals.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Which piping design software will I learn in this course?</h3>
+                <p className="text-gray-600">You&apos;ll master SmartPlant 3D (SP3D), AutoCAD Plant 3D, PDMS, and CAESAR II integration for stress analysis. These are the industry-standard tools used by Mumbai&apos;s leading EPC companies and oil & gas projects.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What salary can I expect after SP3D certification in Mumbai?</h3>
+                <p className="text-gray-600">SP3D Piping Designers in Mumbai can expect starting salaries of ₹4.5-7 LPA for freshers, ₹8-15 LPA for 2-5 years experience, ₹15-25 LPA for senior designers, and ₹35-70+ LPA for design managers and consultants in Mumbai&apos;s EPC and process industries.</p>
+              </div>
+              
+              <div className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Which companies in Mumbai hire SP3D professionals?</h3>
+                <p className="text-gray-600">Top companies hiring SP3D professionals in Mumbai include Reliance Industries, ONGC, L&T ECC, Technip Energies, KBR India, Wood Group, Fluor Corporation, McDermott, Petrofac, and numerous piping design consultancies and EPC contractors.</p>
               </div>
             </div>
           </div>

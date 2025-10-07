@@ -139,31 +139,100 @@ export default function PipingEngineeringFundamentalsPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         
-        {/* Hero Section */}
-        <section className="relative py-16 md:py-24 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-32 md:w-64 h-32 md:h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-40 md:w-80 h-40 md:h-80 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* Creative Hero Section */}
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-20 w-32 h-32 border-2 border-blue-400 animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 border-2 border-indigo-400 rotate-45 animate-bounce"></div>
+            <div className="absolute bottom-32 left-32 w-28 h-28 border-2 border-purple-400 rounded-full animate-spin"></div>
+            <div className="absolute bottom-20 right-20 w-36 h-36 border-2 border-blue-400 animate-pulse"></div>
           </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                Piping Engineering Fundamentals
-                <span className="block text-blue-300">Training in Mumbai</span>
+
+          {/* Floating Engineering Elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 animate-float">
+              <svg width="110" height="110" viewBox="0 0 110 110" fill="none" className="text-blue-400">
+                <rect x="10" y="30" width="90" height="50" stroke="currentColor" strokeWidth="3" fill="none"/>
+                <line x1="10" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="2"/>
+                <line x1="10" y1="65" x2="100" y2="65" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="20" cy="55" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="50" cy="55" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="80" cy="55" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <text x="55" y="25" fill="currentColor" fontSize="8" textAnchor="middle">PIPING</text>
+              </svg>
+            </div>
+            <div className="absolute top-1/3 right-1/4 animate-float-delayed">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="text-indigo-400">
+                <path d="M20 60 L100 60" stroke="currentColor" strokeWidth="4" fill="none"/>
+                <path d="M30 40 L30 80 M50 40 L50 80 M70 40 L70 80 M90 40 L90 80" stroke="currentColor" strokeWidth="2"/>
+                <rect x="25" y="45" width="10" height="30" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <rect x="45" y="45" width="10" height="30" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <rect x="65" y="45" width="10" height="30" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <rect x="85" y="45" width="10" height="30" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <text x="60" y="100" fill="currentColor" fontSize="10" textAnchor="middle">DESIGN</text>
+              </svg>
+            </div>
+            <div className="absolute bottom-1/3 left-1/3 animate-float">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className="text-purple-400">
+                <polygon points="50,10 80,35 80,65 50,90 20,65 20,35" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M35 35 L65 65 M65 35 L35 65" stroke="currentColor" strokeWidth="2"/>
+                <path d="M50 20 L50 30 M50 70 L50 80 M30 50 L20 50 M80 50 L70 50" stroke="currentColor" strokeWidth="2"/>
+                <text x="50" y="95" fill="currentColor" fontSize="8" textAnchor="middle">ENGINEERING</text>
+              </svg>
+            </div>
+          </div>
+
+          <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
+                  Piping
+                </span>
+                <br />
+                <span className="text-white">Engineering</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Master the fundamentals of piping engineering with comprehensive training in pipe design, routing, materials, stress analysis, and industry standards. Build a strong foundation for your career in oil & gas, petrochemical, and process industries.
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto mb-6 animate-pulse"></div>
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+                Master piping engineering fundamentals with Mumbai&apos;s premier institute. 
+                From design principles to industry standards, build your engineering foundation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="#enrollment" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl">
-                  Enroll Now
-                </Link>
-                <Link href="#curriculum" className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-300">
-                  View Curriculum
-                </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                Start Engineering Journey
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                Download Curriculum
+              </button>
+            </div>
+
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="animate-float">
+                <div className="text-3xl font-bold text-blue-400">100%</div>
+                <div className="text-sm text-gray-300">Job Placement</div>
               </div>
+              <div className="animate-float-delayed">
+                <div className="text-3xl font-bold text-indigo-400">40+</div>
+                <div className="text-sm text-gray-300">Live Projects</div>
+              </div>
+              <div className="animate-float">
+                <div className="text-3xl font-bold text-purple-400">15+</div>
+                <div className="text-sm text-gray-300">Years Experience</div>
+              </div>
+              <div className="animate-float-delayed">
+                <div className="text-3xl font-bold text-blue-400">24/7</div>
+                <div className="text-sm text-gray-300">Lab Access</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </section>
@@ -486,6 +555,136 @@ export default function PipingEngineeringFundamentalsPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Piping Engineering Industry Opportunities */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Mumbai&apos;s <span className="text-blue-600">Piping Engineering Industry</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Mumbai is India&apos;s engineering hub with major EPC companies, refineries, and process industries. Master piping fundamentals and join the city&apos;s thriving engineering sector.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">EPC Companies</h3>
+                <p className="text-gray-600 mb-4">L&T, Technimont, Engineers India, and Petrofac Mumbai offices require skilled piping engineers for major refinery and petrochemical projects across India and overseas.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Process Plant Design</li>
+                  <li>• Equipment Layout</li>
+                  <li>• Piping Specifications</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-indigo-500">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing Industries</h3>
+                <p className="text-gray-600 mb-4">Tata Steel, JSW, and chemical manufacturing companies in Mumbai region need piping engineers for plant utility systems and process piping design.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Utility Piping Systems</li>
+                  <li>• Chemical Process Lines</li>
+                  <li>• Steam Distribution</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Projects</h3>
+                <p className="text-gray-600 mb-4">Mumbai metro, airport expansion, and smart city projects require piping engineers for building services, HVAC systems, and infrastructure piping networks.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Building Services</li>
+                  <li>• HVAC Piping Systems</li>
+                  <li>• Water Distribution</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-lg text-gray-700 mb-6">
+                Average Piping Engineer Salary in Mumbai: <span className="font-bold text-blue-600">₹4.5-9 LPA</span>
+              </p>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+                Explore Career Opportunities
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for Voice Search Optimization */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our Piping Engineering course
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What is piping engineering and why should I learn it in Mumbai?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Piping engineering involves the design, analysis, and specification of piping systems for industrial processes. In Mumbai&apos;s industrial landscape with major refineries, petrochemical plants, and EPC companies like L&T and Technimont, piping engineering skills are essential for process plant design, utility systems, and infrastructure projects. Our comprehensive course prepares you for Mumbai&apos;s high-demand engineering roles.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">How long does it take to master piping engineering fundamentals?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Our comprehensive piping engineering fundamentals course spans 3-4 months with intensive practical training. You&apos;ll master basic concepts in the first month, design principles and standards in the second month, and advanced applications including stress analysis and material selection in the final months. With hands-on projects and expert guidance, you&apos;ll be industry-ready within 4 months.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What job opportunities are available for piping engineers in Mumbai?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Mumbai offers excellent opportunities for piping engineers in EPC companies, refineries, petrochemical plants, and manufacturing industries. Roles include Piping Design Engineer, Process Engineer, Project Engineer, and Design Coordinator. With Mumbai&apos;s expanding industrial sector and new infrastructure projects, demand for skilled piping engineers continues to grow significantly.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Do you provide placement assistance after completing the piping engineering course?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Yes, we provide 100% placement assistance with our extensive network of EPC companies, refineries, and engineering consultancies in Mumbai. Our placement cell conducts technical interviews, project portfolio development, and connects you directly with hiring managers. We maintain partnerships with 200+ companies and achieve excellent placement rates with average starting salaries of ₹4.5-6 LPA.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Is prior engineering experience required for piping engineering fundamentals training?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Basic understanding of mechanical engineering is helpful but not mandatory. Our course starts with engineering fundamentals and gradually progresses to advanced piping design techniques. We provide comprehensive training covering fluid mechanics, material science, and industry codes. Our expert instructors ensure every student, regardless of background, achieves proficiency in piping engineering principles.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What makes Trinkets Institute the best choice for piping engineering training in Mumbai?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Trinkets Institute offers industry-leading piping engineering training with experienced design engineers, state-of-the-art design labs, and real project experience. Our curriculum is developed with input from Mumbai&apos;s top EPC companies, ensuring immediate job readiness. We provide flexible timings, weekend batches, and personalized mentoring with small batch sizes. Our 15+ years of experience and 100% placement record make us Mumbai&apos;s preferred choice for piping engineering training.
+                </p>
+              </div>
             </div>
           </div>
         </section>
