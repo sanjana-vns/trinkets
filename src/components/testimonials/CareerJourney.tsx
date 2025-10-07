@@ -220,11 +220,8 @@ export default function CareerJourney() {
                     </div>
                   </div>
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <journey.courseIcon className="w-6 h-6 text-blue-600" />
-                      <h3 className="text-xl font-bold text-gray-700">{journey.course}</h3>
-                    </div>
-                    <p className="text-blue-600 font-semibold">Success Story</p>
+                    <h3 className="text-2xl font-bold text-gray-900">{journey.name}</h3>
+                    <p className="text-blue-600 font-semibold">{journey.course}</p>
                   </div>
                 </div>
                 
