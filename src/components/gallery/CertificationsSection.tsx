@@ -433,11 +433,6 @@ const CertificationsSection = () => {
                       <Clock className="w-4 h-4 mr-1" />
                       {cert.duration}
                     </div>
-                    <button className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium group">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      Learn More
-                      <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </button>
                   </div>
                 </motion.div>
               ))}

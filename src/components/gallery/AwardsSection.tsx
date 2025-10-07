@@ -251,11 +251,6 @@ const AwardsSection = () => {
                       <Users className="w-4 h-4 mr-1" />
                       {award.impact}
                     </div>
-                    <button className="flex items-center text-blue-600 hover:text-blue-700 font-medium group">
-                      <Eye className="w-4 h-4 mr-1" />
-                      View Details
-                      <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -352,10 +347,6 @@ const AwardsSection = () => {
                     <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">
                       {award.badge}
                     </span>
-                    <button className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium group">
-                      View
-                      <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </button>
                   </div>
                 </motion.div>
               ))}
