@@ -1,57 +1,66 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import RelatedCourses from '@/components/RelatedCourses'
+import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Settings, Zap, TrendingUp, Building, Wrench, Activity } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best Piping Design Engineering Course in Mumbai | 100% Placement | Trinkets Institute',
-  description: 'Join the #1 Piping Design Engineering Course in Mumbai at Trinkets Institute. Master PDMS, SP3D, AutoCAD Plant 3D, Caesar II with 100% placement assistance. Expert training for oil & gas industry careers in Mumbai.',
+  title: 'Piping Design Engineering Course in Mumbai | Best Industrial Training | Trinkets Institute',
+  description: 'Master piping design with our comprehensive course in Mumbai. Industry-expert training in PDMS, SP3D, AutoCAD Plant 3D, Caesar II with job placement assistance.',
   keywords: [
-    'piping design engineering course in mumbai',
-    'best piping design course mumbai',
-    'piping design training mumbai',
-    'PDMS course mumbai',
-    'SP3D training mumbai',
-    'AutoCAD Plant 3D course mumbai',
-    'Caesar II training mumbai',
-    'oil and gas course mumbai',
-    'petrochemical course mumbai',
-    'piping stress analysis course mumbai',
-    'plant design course mumbai',
-    'engineering course mumbai',
-    'piping engineer training mumbai',
-    'industrial training mumbai',
-    'placement assistance mumbai',
-    'piping design certification mumbai',
-    'oil industry course mumbai',
-    'gas industry training mumbai',
-    'pipe stress analysis mumbai',
-    'plant layout course mumbai',
-    'piping design software mumbai',
-    'engineering career mumbai',
-    'technical course mumbai',
-    'professional training mumbai',
-    'skilled development mumbai',
-    'industry training mumbai',
-    'career advancement mumbai',
-    'job oriented course mumbai',
-    'employment training mumbai',
-    'vocational course mumbai'
-  ],
+    'Piping Design Engineering Course in Mumbai',
+    'piping design training Mumbai',
+    'piping design course Mumbai',
+    'piping engineering Mumbai',
+    'PDMS course Mumbai',
+    'SP3D training Mumbai',
+    'AutoCAD Plant 3D Mumbai',
+    'Caesar II course Mumbai',
+    'best piping design training Mumbai',
+    'piping design institute Mumbai',
+    'piping design classes Mumbai',
+    'piping course fees Mumbai',
+    'piping training center Mumbai',
+    'piping course duration Mumbai',
+    'piping design certification Mumbai',
+    'piping training institute Mumbai',
+    'professional piping course Mumbai',
+    'advanced piping training Mumbai',
+    'oil and gas course Mumbai',
+    'petrochemical training Mumbai',
+    'piping stress analysis Mumbai',
+    'plant design course Mumbai',
+    'piping job training Mumbai',
+    'piping placement course Mumbai',
+    'piping skill development Mumbai',
+    'industrial piping Mumbai',
+    'process piping Mumbai',
+    'power plant piping Mumbai',
+    'refinery piping Mumbai',
+    'chemical plant design Mumbai'
+  ].join(', '),
   openGraph: {
-    title: 'Best Piping Design Engineering Course in Mumbai | 100% Placement',
-    description: 'Join the #1 Piping Design Engineering Course in Mumbai. Master PDMS, SP3D, AutoCAD Plant 3D, Caesar II with expert training and guaranteed placement assistance.',
+    title: 'Piping Design Engineering Course in Mumbai | Best Industrial Training',
+    description: 'Master piping design with our comprehensive course in Mumbai. Industry-expert training in PDMS, SP3D, AutoCAD Plant 3D, Caesar II with job placement assistance.',
     url: 'https://trinketsinstitute.com/courses/piping-design-engineering',
     siteName: 'Trinkets Institute',
     images: [
       {
-        url: '/images/courses/piping-design-engineering-mumbai.jpg',
+        url: '/images/courses/piping-design-course-mumbai.jpg',
         width: 1200,
         height: 630,
-        alt: 'Piping Design Engineering Course in Mumbai',
+        alt: 'Piping Design Engineering Course in Mumbai - Trinkets Institute',
       },
     ],
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Piping Design Engineering Course in Mumbai | Best Industrial Training',
+    description: 'Master piping design with our comprehensive course in Mumbai. Industry-expert training in PDMS, SP3D, AutoCAD Plant 3D, Caesar II with job placement assistance.',
+    images: ['/images/courses/piping-design-course-mumbai.jpg'],
+  },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/courses/piping-design-engineering',
   },
   robots: {
     index: true,
@@ -64,374 +73,676 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://trinketsinstitute.com/courses/piping-design-engineering',
-  },
-}
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Course',
+      '@id': 'https://trinketsinstitute.com/courses/piping-design-engineering#course',
+      name: 'Piping Design Engineering Course in Mumbai',
+      description: 'Comprehensive piping design engineering course in Mumbai covering PDMS, SP3D, AutoCAD Plant 3D, Caesar II with hands-on projects, industry certification, and job placement assistance.',
+      provider: {
+        '@type': 'Organization',
+        name: 'Trinkets Institute',
+        '@id': 'https://trinketsinstitute.com/#organization'
+      },
+      courseMode: ['in-person', 'online'],
+      educationalLevel: 'Beginner to Advanced',
+      coursePrerequisites: 'Basic engineering knowledge',
+      timeRequired: 'P6M',
+      offers: {
+        '@type': 'Offer',
+        category: 'Industrial Engineering Training',
+        availabilityEnds: '2025-12-31',
+        availabilityStarts: '2025-10-07'
+      },
+      location: {
+        '@type': 'Place',
+        name: 'Trinkets Institute Mumbai',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Mumbai',
+          addressRegion: 'Maharashtra',
+          addressCountry: 'IN'
+        }
+      },
+      teaches: [
+        'PDMS (Plant Design Management System)',
+        'SP3D (Smart Plant 3D)',
+        'AutoCAD Plant 3D',
+        'Caesar II Pipe Stress Analysis',
+        'P&ID Development',
+        'Piping Layout Design',
+        'Industrial Piping Systems'
+      ]
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://trinketsinstitute.com/#organization',
+      name: 'Trinkets Institute',
+      url: 'https://trinketsinstitute.com',
+      logo: 'https://trinketsinstitute.com/images/logo.png',
+      description: 'Premier piping design and industrial engineering training institute in Mumbai',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Mumbai',
+        addressRegion: 'Maharashtra',
+        addressCountry: 'IN'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+91-9876543210',
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi', 'Marathi']
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://trinketsinstitute.com/courses/piping-design-engineering#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://trinketsinstitute.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Courses',
+          item: 'https://trinketsinstitute.com/courses'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Piping Design Engineering',
+          item: 'https://trinketsinstitute.com/courses/piping-design-engineering'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://trinketsinstitute.com/courses/piping-design-engineering#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is Piping Design Engineering Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our Piping Design Engineering Course in Mumbai is a comprehensive training program covering PDMS, SP3D, AutoCAD Plant 3D, Caesar II, and industrial piping systems design for oil & gas, petrochemical, and power plant industries.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the duration of Piping Design Engineering Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The Piping Design Engineering Course in Mumbai has a duration of 6 months with flexible timing options including weekday, weekend, and evening batches for working professionals and students.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you provide job placement after Piping Design Engineering Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, we provide 100% job placement assistance after completion of our Piping Design Engineering Course in Mumbai with our extensive network of oil & gas companies, refineries, and engineering consultancies.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What are the career opportunities after Piping Design Engineering Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'After completing our Piping Design Engineering Course in Mumbai, you can work as Piping Design Engineer, Plant Design Engineer, Stress Analysis Engineer, or CAD Designer in oil & gas, petrochemical, power plant, and process industries.'
+          }
+        }
+      ]
+    }
+  ]
+};
 
 export default function PipingDesignEngineeringPage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Piping Design Engineering Course in Mumbai",
-    "description": "Comprehensive piping design engineering course in Mumbai covering PDMS, SP3D, AutoCAD Plant 3D, Caesar II with 100% placement assistance",
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Trinkets Institute",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mumbai, Maharashtra",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400001",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": "English"
-      }
-    },
-    "courseMode": ["in-person", "online"],
-    "duration": "P6M",
-    "inLanguage": "en",
-    "educationalCredentialAwarded": "Certificate in Piping Design Engineering",
-    "coursePrerequisites": "Basic engineering knowledge",
-    "occupationalCredentialAwarded": "Piping Design Engineer",
-    "teaches": [
-      "PDMS (Plant Design Management System)",
-      "SP3D (Smart Plant 3D)",
-      "AutoCAD Plant 3D",
-      "Caesar II Pipe Stress Analysis",
-      "P&ID Development",
-      "Piping Layout Design",
-      "Stress Analysis",
-      "Plant Design"
-    ],
-    "audience": {
-      "@type": "EducationalAudience",
-      "educationalRole": "student"
-    },
-    "locationCreated": {
-      "@type": "Place",
-      "name": "Mumbai, Maharashtra, India"
-    }
-  }
-
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the duration of piping design engineering course in Mumbai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our comprehensive piping design engineering course in Mumbai is 6 months duration with both classroom and online training options available at Trinkets Institute."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which software is taught in piping design course in Mumbai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our piping design engineering course in Mumbai covers PDMS, SP3D, AutoCAD Plant 3D, Caesar II, P&ID development, and piping stress analysis software."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the placement rate for piping design course in Mumbai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Trinkets Institute provides 100% placement assistance for piping design engineering course in Mumbai with students placed in top oil & gas, petrochemical companies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the career opportunities after piping design course in Mumbai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After completing piping design engineering course in Mumbai, students can work as Piping Design Engineer, Plant Design Engineer, Stress Analysis Engineer, CAD Designer in oil & gas industry."
-        }
-      }
-    ]
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Hero Section - Optimized for Primary Keyword */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Best Piping Design Engineering Course in Mumbai
-              </h1>
-              <p className="text-xl md:text-2xl mb-6">
-                #1 Piping Design Engineering Course in Mumbai at Trinkets Institute - Master PDMS, SP3D, AutoCAD Plant 3D & Caesar II with 100% Placement Assistance
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-6">
-                <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">6 Months Duration in Mumbai</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">100% Placement Assistance</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Live Mumbai Projects</span>
-                <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Industry Expert Faculty</span>
+      <div className="min-h-screen bg-gray-50">
+        {/* Creative Hero Section with Industrial Theme */}
+        <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-gray-900 text-white py-20 overflow-hidden">
+          {/* Animated Background Elements - Industrial/Piping Theme */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-16 h-4 bg-blue-400/20 animate-pulse"></div>
+            <div className="absolute top-32 left-20 w-4 h-16 bg-slate-400/20 animate-pulse"></div>
+            <div className="absolute top-16 right-16 w-12 h-12 border-2 border-blue-400/30 rounded-full animate-spin" style={{animationDuration: '8s'}}></div>
+            <div className="absolute top-40 right-32 w-20 h-3 bg-blue-400/20 animate-pulse"></div>
+            <div className="absolute bottom-20 left-1/4 w-8 h-8 border border-slate-300/20 rounded-lg rotate-45 animate-bounce"></div>
+            <div className="absolute bottom-32 right-1/3 w-3 h-20 bg-blue-400/20 animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/3 w-6 h-6 border border-slate-300/20 rounded-full animate-ping"></div>
+            <div className="absolute bottom-40 left-1/2 w-24 h-3 bg-slate-400/20 animate-pulse"></div>
+            {/* Industrial Piping Specific Elements */}
+            <div className="absolute top-24 right-1/4 w-10 h-10 border border-blue-300/20 rounded-lg rotate-12 animate-pulse" style={{animationDuration: '10s'}}></div>
+            <div className="absolute bottom-24 left-1/3 w-16 h-4 bg-slate-300/20 animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-1/3 right-1/4 w-6 h-6 border-2 border-blue-300/20 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
+          </div>
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <nav className="flex justify-center mb-8 text-sm" aria-label="Breadcrumb">
+                <ol className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <li><Link href="/" className="hover:text-blue-300 transition-colors">Home</Link></li>
+                  <li className="text-blue-300">/</li>
+                  <li><Link href="/courses" className="hover:text-blue-300 transition-colors">Courses</Link></li>
+                  <li className="text-blue-300">/</li>
+                  <li className="text-blue-200">Piping Design Engineering</li>
+                </ol>
+              </nav>
+              
+              <div className="mb-6">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-slate-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                  <Settings className="w-4 h-4 mr-2" />
+                  Advanced Industrial Engineering Hub
+                </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Enroll in Mumbai Batch Today
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-slate-400">Piping Design</span>
+                <br />Engineering in Mumbai
+              </h1>
+              
+              <p className="text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto">
+                Engineer your future with Mumbai&apos;s most comprehensive Piping Design Engineering Course. 
+                Master PDMS, SP3D, AutoCAD Plant 3D, and Caesar II with industry-expert training and guaranteed placement assistance.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-300" />
+                  <span className="font-medium">Mumbai Location</span>
+                </div>
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
+                  <Clock className="w-5 h-5 mr-2 text-slate-300" />
+                  <span className="font-medium">6 Months Duration</span>
+                </div>
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
+                  <Award className="w-5 h-5 mr-2 text-blue-300" />
+                  <span className="font-medium">Industry Certification</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-gradient-to-r from-blue-500 to-slate-500 hover:from-blue-600 hover:to-slate-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Design Your Career Today
                 </Link>
-                <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Download Mumbai Course Brochure
+                <Link 
+                  href="/courses" 
+                  className="border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm"
+                >
+                  Explore All Programs
                 </Link>
               </div>
             </div>
           </div>
-          
-          <div className="p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Why Choose Our Piping Design Engineering Course in Mumbai?</h2>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>Mumbai Industry Focus:</strong> Course content specifically designed for Mumbai&apos;s oil & gas and petrochemical sectors</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>100% Job Placement:</strong> Guaranteed placement assistance with top Mumbai companies like ONGC, BPCL, Reliance</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>Expert Mumbai Faculty:</strong> Learn from industry professionals with 15+ years experience in Mumbai&apos;s piping sector</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>Live Mumbai Projects:</strong> Work on actual piping design projects from Mumbai-based refineries and plants</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>Comprehensive Software Training:</strong> Master PDMS, SP3D, AutoCAD Plant 3D, Caesar II with Mumbai industry standards</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2 mt-1">✓</span>
-                    <span><strong>Mumbai Company Visits:</strong> Industrial visits to ONGC Mumbai, BPCL Mumbai refinery, and other major facilities</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-green-600">Mumbai Course Highlights</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-green-50 p-4 rounded-lg text-center">
-                    <h4 className="font-semibold text-green-800">Duration</h4>
-                    <p className="text-green-600">6 Months in Mumbai</p>
+        </section>
+
+        {/* Creative Stats Section with Industrial Theme */}
+        <section className="py-16 bg-gradient-to-r from-blue-50 to-slate-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8 text-center">
+                <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Building className="w-8 h-8 text-white" />
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg text-center">
-                    <h4 className="font-semibold text-blue-800">Training Mode</h4>
-                    <p className="text-blue-600">Classroom/Online in Mumbai</p>
-                  </div>
-                  <div className="bg-purple-50 p-4 rounded-lg text-center">
-                    <h4 className="font-semibold text-purple-800">Certification</h4>
-                    <p className="text-purple-600">Industry Recognized</p>
-                  </div>
-                  <div className="bg-orange-50 p-4 rounded-lg text-center">
-                    <h4 className="font-semibold text-orange-800">Projects</h4>
-                    <p className="text-orange-600">Real Mumbai Industry</p>
-                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">2000+</div>
+                  <div className="text-gray-600 font-medium">Engineers Trained</div>
                 </div>
                 
-                <div className="mt-6 p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg">
-                  <h4 className="font-bold text-lg mb-2">Special Mumbai Batch Benefits:</h4>
-                  <ul className="text-sm space-y-1">
-                    <li>✓ Mumbai-based oil & gas company visits</li>
-                    <li>✓ Local petrochemical industry networking</li>
-                    <li>✓ Mumbai job placement assistance</li>
-                    <li>✓ Post-course Mumbai alumni support</li>
+                <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
+                  <div className="text-gray-600 font-medium">Industrial Projects</div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
+                  <div className="text-gray-600 font-medium">Industry Placement Rate</div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Briefcase className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">300+</div>
+                  <div className="text-gray-600 font-medium">Industry Partners</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Course Features with Creative Industrial Design */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-slate-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                  <Wrench className="w-4 h-4 mr-2" />
+                  Why Choose Our Piping Design Engineering Course?
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Engineer Your Future with
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600"> Expert Piping Training</span>
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Our comprehensive Piping Design Engineering Course in Mumbai combines cutting-edge industrial technology 
+                  with practical engineering applications to make you industry-ready for Mumbai&apos;s oil & gas and process industries.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Settings className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-blue-900">Advanced PDMS & SP3D Training</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Master Plant Design Management System and Smart Plant 3D with hands-on experience 
+                    on Mumbai&apos;s major oil & gas and petrochemical projects.
+                  </p>
+                </div>
+
+                <div className="group bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Building className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-slate-900">AutoCAD Plant 3D & P&ID</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Learn comprehensive plant design, P&ID development, and 3D modeling techniques with 
+                    certified professionals experienced in Mumbai&apos;s industrial engineering sector.
+                  </p>
+                </div>
+
+                <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Activity className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-green-900">Caesar II Stress Analysis</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Master pipe stress analysis, support design, and code compliance essential 
+                    for refinery and power plant projects in Mumbai&apos;s industrial landscape.
+                  </p>
+                </div>
+
+                <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-purple-900">Industrial Project Training</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Work on live industrial projects from Mumbai&apos;s refineries, chemical plants, and power stations 
+                    to gain real-world experience in piping design and plant layout.
+                  </p>
+                </div>
+
+                <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-orange-900">Process & Plant Engineering</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Learn process flow diagrams, equipment sizing, and plant layout design following 
+                    international standards and Mumbai&apos;s industrial engineering requirements.
+                  </p>
+                </div>
+
+                <div className="group bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-red-900">Industry Certification</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Receive globally recognized piping design certification that validates your expertise 
+                    and enhances career prospects in Mumbai&apos;s oil & gas and process industries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          
+        {/* Creative Curriculum Section with Industrial Focus */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-slate-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                  <Settings className="w-4 h-4 mr-2" />
+                  Comprehensive Curriculum
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Piping Design Engineering
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600"> Curriculum in Mumbai</span>
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Our structured curriculum covers everything from basic piping fundamentals to advanced plant design, 
+                  ensuring you&apos;re ready for Mumbai&apos;s demanding industrial and process engineering projects.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">01</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-blue-900">Piping Design Fundamentals</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Piping components and materials</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">P&ID symbols and standards</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Process flow diagrams</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Equipment layout principles</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Industry codes and standards</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-slate-600 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">02</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900">PDMS & SP3D Mastery</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-slate-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">3D plant modeling techniques</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-slate-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Equipment placement and routing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-slate-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Intelligent catalog management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-slate-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Clash detection and resolution</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-slate-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Automated drawing generation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">03</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-green-900">AutoCAD Plant 3D & Caesar II</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Spec-driven piping design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Orthographic and isometric views</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Pipe stress analysis fundamentals</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Static and dynamic analysis</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Support design and optimization</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-white font-bold text-lg">04</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-purple-900">Industrial Project & Certification</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Live refinery project work</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Chemical plant design case studies</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Power plant piping systems</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Industry visits and internships</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Professional certification and portfolio</span>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Software Training Section - Mumbai Specific */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Professional Software Training Modules - Mumbai&apos;s Best Piping Design Course</h2>
-          <p className="text-center text-gray-600 mb-8">Master industry-leading piping design software with our comprehensive training in Mumbai</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">PDMS Training Mumbai</h3>
-              <p className="text-blue-100 mb-4">Plant Design Management System</p>
-              <ul className="space-y-2 text-blue-100 text-sm">
-                <li>• Advanced 3D Plant Modeling</li>
-                <li>• Equipment Placement Techniques</li>
-                <li>• Professional Pipe Routing</li>
-                <li>• Intelligent Clash Detection</li>
-                <li>• Automated Drawing Generation</li>
-              </ul>
+        {/* Related Courses with Creative Industrial Layout */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-slate-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                  <Wrench className="w-4 h-4 mr-2" />
+                  Expand Your Engineering Expertise
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Related Engineering Courses
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600"> in Mumbai</span>
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Enhance your piping and industrial engineering skills with our other specialized courses
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Link href="/courses/process-engineering" className="group block bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Settings className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">Process Engineering</h3>
+                  <p className="text-gray-700 mb-4">Advanced process design and optimization</p>
+                  <span className="text-blue-600 font-semibold group-hover:translate-x-2 transition-transform inline-block">Learn More →</span>
+                </Link>
+
+                <Link href="/courses/structural-design-analysis" className="group block bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-slate-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Building className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Structural Design & Analysis</h3>
+                  <p className="text-gray-700 mb-4">Advanced structural engineering and simulation</p>
+                  <span className="text-slate-600 font-semibold group-hover:translate-x-2 transition-transform inline-block">Learn More →</span>
+                </Link>
+
+                <Link href="/courses/mep-engineering" className="group block bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Activity className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-green-900 mb-3">MEP Engineering</h3>
+                  <p className="text-gray-700 mb-4">Mechanical, electrical, and plumbing systems</p>
+                  <span className="text-green-600 font-semibold group-hover:translate-x-2 transition-transform inline-block">Learn More →</span>
+                </Link>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">SP3D Course Mumbai</h3>
-              <p className="text-green-100 mb-4">Smart Plant 3D Excellence</p>
-              <ul className="space-y-2 text-green-100 text-sm">
-                <li>• Intelligent 3D Modeling</li>
-                <li>• Advanced Catalog Management</li>
-                <li>• Equipment Design Mastery</li>
-                <li>• Expert Piping Design</li>
-                <li>• Professional Report Generation</li>
-              </ul>
+          </div>
+        </section>
+
+        {/* Creative FAQ Section with Industrial Theme */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-slate-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Frequently Asked Questions
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Common Questions About Our
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600"> Piping Design Course</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    What is Piping Design Engineering Course in Mumbai?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Our Piping Design Engineering Course in Mumbai is a comprehensive training program covering PDMS, SP3D, AutoCAD Plant 3D, 
+                    Caesar II, and industrial piping systems design for oil & gas, petrochemical, and power plant industries. 
+                    The course includes hands-on projects based on Mumbai&apos;s industrial engineering requirements.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    What is the duration of Piping Design Engineering Course in Mumbai?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    The Piping Design Engineering Course in Mumbai has a duration of 6 months with flexible timing options. 
+                    We offer weekday, weekend, and evening batches to accommodate working professionals and students 
+                    in Mumbai&apos;s oil & gas and process engineering sectors.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    Do you provide job placement after Piping Design Engineering Course in Mumbai?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes, we provide 100% job placement assistance after completion of our Piping Design Engineering Course in Mumbai. 
+                    Our dedicated placement team works with our network of 300+ oil & gas companies, refineries, and engineering consultancies 
+                    including major organizations across Mumbai and India.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    What are the career opportunities after Piping Design Engineering Course in Mumbai?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    After completing our Piping Design Engineering Course in Mumbai, you can work as Piping Design Engineer, 
+                    Plant Design Engineer, Stress Analysis Engineer, or CAD Designer in oil & gas, petrochemical, power plant, 
+                    and process industries across Mumbai&apos;s thriving industrial sector.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Caesar II Mumbai</h3>
-              <p className="text-purple-100 mb-4">Pipe Stress Analysis Expertise</p>
-              <ul className="space-y-2 text-purple-100 text-sm">
-                <li>• Comprehensive Static Analysis</li>
-                <li>• Advanced Dynamic Analysis</li>
-                <li>• Professional Stress Evaluation</li>
-                <li>• Optimal Support Design</li>
-                <li>• Complete Code Compliance</li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">AutoCAD Plant 3D</h3>
-              <p className="text-orange-100 mb-4">Comprehensive Plant Design</p>
-              <ul className="space-y-2 text-orange-100 text-sm">
-                <li>• Professional P&ID Creation</li>
-                <li>• Advanced 3D Modeling</li>
-                <li>• Spec-driven Design Excellence</li>
-                <li>• Orthographic Views Mastery</li>
-                <li>• Expert Isometric Generation</li>
-              </ul>
-            </div>
+          </div>
+        </section>
+
+        {/* Creative Contact CTA with Industrial Theme */}
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-gray-900 text-white relative overflow-hidden">
+          {/* Animated Background Elements - Industrial Theme */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-6 h-6 border border-blue-400/20 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-8 h-8 border border-slate-400/20 rounded-lg animate-spin" style={{animationDuration: '12s'}}></div>
+            <div className="absolute top-1/2 left-1/4 w-12 h-2 bg-blue-400/20 animate-pulse"></div>
+            <div className="absolute bottom-32 right-1/3 w-2 h-16 bg-slate-300/20 animate-pulse"></div>
+            <div className="absolute top-32 right-1/4 w-4 h-4 border border-blue-300/20 rounded-full animate-ping"></div>
           </div>
           
-          <div className="mt-8 text-center p-6 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4 text-gray-800">Mumbai&apos;s Most Advanced Piping Design Software Training</h3>
-            <p className="text-gray-700">
-              Our piping design engineering course in Mumbai provides hands-on training on the latest versions of industry software. 
-              Students get access to licensed software and work on real Mumbai-based oil & gas projects for practical experience.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Frequently Asked Questions - Mumbai SEO */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Frequently Asked Questions - Piping Design Engineering Course in Mumbai</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">What is the duration of piping design engineering course in Mumbai?</h3>
-                <p className="text-gray-600">Our comprehensive piping design engineering course in Mumbai is 6 months duration with both classroom and online training options available.</p>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-8">
+                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-200 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                  <Settings className="w-4 h-4 mr-2" />
+                  Engineer Your Industrial Career Today
+                </div>
               </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Which software is covered in piping design course Mumbai?</h3>
-                <p className="text-gray-600">We provide training on PDMS, SP3D, AutoCAD Plant 3D, Caesar II, and P&ID development software with hands-on projects in Mumbai.</p>
+              
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Master Piping Design Engineering in Mumbai?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of successful piping engineers who have advanced their careers with our expert training 
+                and comprehensive job placement assistance in Mumbai&apos;s oil & gas and process industries.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl">
+                  <Phone className="w-5 h-5 mr-3 text-blue-300" />
+                  <span className="font-medium">+91-9876543210</span>
+                </div>
+                <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl">
+                  <Mail className="w-5 h-5 mr-3 text-slate-300" />
+                  <span className="font-medium">info@trinketsinstitute.com</span>
+                </div>
               </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">What is the fee structure for piping design course in Mumbai?</h3>
-                <p className="text-gray-600">Our piping design engineering course fees in Mumbai are competitive with EMI options available. Contact us for detailed fee structure and early bird discounts.</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Is placement assistance provided for Mumbai students?</h3>
-                <p className="text-gray-600">Yes, we provide 100% placement assistance for piping design course Mumbai students with partnerships with top oil & gas companies in Mumbai region.</p>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">What are the career opportunities after piping design course in Mumbai?</h3>
-                <p className="text-gray-600">Students can work as Piping Design Engineer, Stress Analysis Engineer, Plant Design Engineer in ONGC, BPCL, Reliance, L&T and other Mumbai companies.</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Do you provide practical training in Mumbai?</h3>
-                <p className="text-gray-600">Yes, our piping design engineering course in Mumbai includes hands-on training on live projects from Mumbai&apos;s oil & gas and petrochemical industries.</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">What is the salary range after piping design course Mumbai?</h3>
-                <p className="text-gray-600">Freshers can expect ₹4-6 LPA while experienced professionals earn ₹8-15 LPA in Mumbai&apos;s oil & gas sector after completing our course.</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Can working professionals join piping design course in Mumbai?</h3>
-                <p className="text-gray-600">Yes, we offer weekend and evening batches for working professionals in Mumbai with flexible schedules and online learning options.</p>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-gradient-to-r from-blue-500 to-slate-500 hover:from-blue-600 hover:to-slate-600 text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Enroll Now & Engineer Your Future
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="border-2 border-white hover:bg-white hover:text-blue-900 px-10 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm"
+                >
+                  Discover Our Institute
+                </Link>
               </div>
             </div>
           </div>
-          
-          <div className="mt-8 text-center p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg">
-            <h3 className="text-xl font-bold mb-2">Still Have Questions About Our Piping Design Engineering Course in Mumbai?</h3>
-            <p className="mb-4">Get personalized guidance from our Mumbai-based counselors</p>
-            <Link href="/contact" className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Contact Mumbai Office Now
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Courses Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <RelatedCourses 
-            currentCourse="/courses/piping-design-engineering"
-          />
-        </div>
-      </section>
-
-      {/* Enrollment CTA Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Piping Design Career in Mumbai?</h2>
-          <p className="text-xl mb-6">Join hundreds of successful piping engineers who started their journey with us in Mumbai.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Next Mumbai Batch: </span>15th November 2025
-            </div>
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Limited Seats: </span>Only 20 Students
-            </div>
-          </div>
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Enroll Now - Book Your Mumbai Seat
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Call Mumbai Office for Consultation
-            </Link>
-          </div>
-          <p className="text-blue-100 text-sm mt-4">
-            💡 Special Mumbai Offer: Early Bird Discount Available - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Browse All Courses Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses in Mumbai</h2>
-          <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for Mumbai&apos;s industrial growth</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/courses" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              View All Mumbai Courses
-            </Link>
-            <Link href="/courses#courses-hero" className="inline-block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-              Mumbai Courses Overview
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
+        </section>
+      </div>
+    </>
+  );
 }
