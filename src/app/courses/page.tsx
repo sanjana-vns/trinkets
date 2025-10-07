@@ -34,7 +34,21 @@ export const metadata: Metadata = {
     'placement guarantee engineering',
     'professional engineering certification',
     'electrical design engineering',
-    'instrumentation control course'
+    'instrumentation control course',
+    'MicroStation course Mumbai',
+    'Tekla training Mumbai',
+    'AutoCAD Piping course',
+    'AutoCAD Civil training',
+    'AutoCAD Electrical course',
+    'HVAC drafting training',
+    'Autodesk 3ds Max course',
+    'Cadworx training Mumbai',
+    'MATLAB course Mumbai',
+    'BIM software training',
+    '3D modeling course',
+    'CAD software training',
+    'plant design course',
+    'infrastructure design training'
   ].join(', '),
   authors: [{ name: 'Trinkets Institute of Technology' }],
   creator: 'Trinkets Institute of Technology',
@@ -167,6 +181,60 @@ export default function CoursesPage() {
           "@type": "Course",
           "name": "Piping Engineering Fundamentals Training",
           "description": "Comprehensive piping engineering fundamentals training covering design, materials, routing, and industry standards",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "MicroStation",
+          "description": "CAD software training for 2D and 3D design in infrastructure projects with precise modeling",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "Tekla",
+          "description": "BIM software training for accurate 3D modeling and detailing of structural elements",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "AutoCAD Piping",
+          "description": "Specialized training for designing precise and detailed piping systems for industrial projects",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "AutoCAD Civil",
+          "description": "Civil infrastructure design training with terrain modeling and road planning",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "AutoCAD Electrical",
+          "description": "Electrical control systems design with automated wiring and report generation",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "HVAC Drafting",
+          "description": "Detailed HVAC system design and drafting for residential and commercial buildings",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "Autodesk 3ds Max",
+          "description": "3D modeling and animation software training for realistic visuals and architectural rendering",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "Cadworx",
+          "description": "Plant design software training with real-time collaboration and enhanced productivity",
+          "provider": "Trinkets Institute of Technology"
+        },
+        {
+          "@type": "Course",
+          "name": "MATLAB",
+          "description": "Programming, data analysis and simulation training using advanced MATLAB tools",
           "provider": "Trinkets Institute of Technology"
         }
       ]
@@ -305,6 +373,71 @@ export default function CoursesPage() {
                 <p className="text-gray-600 mb-4">Master piping design basics, materials, routing, and industry standards</p>
                 <Link href="/courses/piping-engineering-fundamentals-training" className="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors">
                   Enroll Now
+                </Link>
+              </div>
+              
+              {/* Additional Courses from Reference Website */}
+              <div className="bg-teal-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-teal-600">MicroStation</h3>
+                <p className="text-gray-600 mb-4">CAD software for 2D and 3D design in infrastructure projects with precise modeling</p>
+                <Link href="/courses/microstation" className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                  Learn CAD
+                </Link>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-gray-600">Tekla</h3>
+                <p className="text-gray-600 mb-4">BIM software for accurate 3D modeling and detailing of structural elements</p>
+                <Link href="/courses/tekla" className="inline-block bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                  Master BIM
+                </Link>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-blue-600">AutoCAD Piping</h3>
+                <p className="text-gray-600 mb-4">Design precise and detailed piping systems for mechanical and industrial projects</p>
+                <Link href="/courses/autocad-piping" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                  Learn Piping
+                </Link>
+              </div>
+              <div className="bg-green-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-green-600">AutoCAD Civil</h3>
+                <p className="text-gray-600 mb-4">Design civil infrastructure projects with terrain modeling and road planning</p>
+                <Link href="/courses/autocad-civil" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                  Civil Design
+                </Link>
+              </div>
+              <div className="bg-yellow-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-yellow-600">AutoCAD Electrical</h3>
+                <p className="text-gray-600 mb-4">Create electrical control systems with automated wiring and report generation</p>
+                <Link href="/courses/autocad-electrical" className="inline-block bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
+                  Electrical CAD
+                </Link>
+              </div>
+              <div className="bg-sky-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-sky-600">HVAC Drafting</h3>
+                <p className="text-gray-600 mb-4">Create detailed HVAC system drawings for residential and commercial buildings</p>
+                <Link href="/courses/hvac-drafting" className="inline-block bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors">
+                  HVAC Design
+                </Link>
+              </div>
+              <div className="bg-purple-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-purple-600">Autodesk 3ds Max</h3>
+                <p className="text-gray-600 mb-4">3D modeling and animation software for realistic visuals and architectural rendering</p>
+                <Link href="/courses/autodesk-3ds-max" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                  3D Animation
+                </Link>
+              </div>
+              <div className="bg-indigo-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-indigo-600">Cadworx</h3>
+                <p className="text-gray-600 mb-4">Plant design software with real-time collaboration and enhanced productivity</p>
+                <Link href="/courses/cadworx" className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                  Plant Design
+                </Link>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold mb-3 text-orange-600">MATLAB</h3>
+                <p className="text-gray-600 mb-4">Programming, data analysis and simulation using advanced MATLAB tools</p>
+                <Link href="/courses/matlab" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+                  Data Science
                 </Link>
               </div>
             </div>
