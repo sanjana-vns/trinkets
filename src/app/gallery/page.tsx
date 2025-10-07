@@ -157,7 +157,10 @@ export default function GalleryPage() {
     "url": "https://trinketsinstitute.com/gallery",
     "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg",
     "image": [
-      "https://trinketsinstitute.com/images/gallery-showcase.jpg",
+      "https://trinketsinstitute.com/images/gallery1.webp",
+      "https://trinketsinstitute.com/images/gallery2.webp",
+      "https://trinketsinstitute.com/images/gallery3.webp",
+      "https://trinketsinstitute.com/images/gallery4.webp",
       "https://trinketsinstitute.com/images/awards-ceremony.jpg",
       "https://trinketsinstitute.com/images/certifications-display.jpg"
     ],

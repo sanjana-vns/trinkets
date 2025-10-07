@@ -67,10 +67,25 @@ const CertificationsSection = () => {
       participants: "450+ designers",
       completionRate: "95%",
       description: "Comprehensive CAD and manufacturing design certification with hands-on industry projects.",
-      image: "/images/gallery1.webp",
+      image: "/images/gallery3.webp",
       color: "from-green-600 to-teal-600",
       features: ["Industry Tools", "Portfolio Projects", "Job Placement"],
       nextBatch: "May 2024"
+    },
+    {
+      id: 4,
+      title: "Advanced Safety & Quality Management",
+      provider: "Safety Engineering Institute",
+      category: "safety",
+      level: "advanced",
+      duration: "5 months",
+      participants: "250+ professionals",
+      completionRate: "91%",
+      description: "Comprehensive safety management and quality assurance certification for industrial environments.",
+      image: "/images/gallery4.webp",
+      color: "from-orange-600 to-red-600",
+      features: ["Safety Protocols", "Quality Systems", "Compliance Certification"],
+      nextBatch: "June 2024"
     }
   ]
 
@@ -237,7 +252,7 @@ const CertificationsSection = () => {
         >
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Programs</h3>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
             {featuredCertifications.map((cert, index) => (
               <motion.div
                 key={cert.id}

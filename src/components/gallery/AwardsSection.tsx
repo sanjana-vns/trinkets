@@ -50,9 +50,33 @@ const AwardsSection = () => {
       category: "innovation",
       level: "Government",
       description: "Pioneering approach to hands-on technical training and industry-ready curriculum development.",
-      image: "/images/gallery1.webp",
+      image: "/images/gallery3.webp",
       color: "from-green-500 to-teal-500",
       impact: "Revolutionary curriculum adopted"
+    },
+    {
+      id: 4,
+      title: "Outstanding Infrastructure Development",
+      organization: "Educational Infrastructure Board",
+      date: "October 2023",
+      category: "innovation",
+      level: "National",
+      description: "State-of-the-art training facilities and advanced laboratory setup for hands-on learning.",
+      image: "/images/gallery4.webp",
+      color: "from-indigo-500 to-purple-500",
+      impact: "Modern facilities for 5,000+ students"
+    },
+    {
+      id: 5,
+      title: "Excellence in Student Development",
+      organization: "Student Welfare Association",
+      date: "August 2023",
+      category: "academic",
+      level: "Regional",
+      description: "Comprehensive student support programs and career development initiatives.",
+      image: "/images/gallery1.webp",
+      color: "from-rose-500 to-pink-500",
+      impact: "Holistic development programs"
     }
   ]
 
@@ -178,7 +202,7 @@ const AwardsSection = () => {
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Awards</h3>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
             {featuredAwards.map((award, index) => (
               <motion.div
                 key={award.id}

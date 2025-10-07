@@ -52,14 +52,14 @@ const GalleryHero = () => {
     {
       title: "Certifications",
       description: "Professional certifications and industry-recognized credentials",
-      image: "/images/gallery1.webp",
+      image: "/images/gallery3.webp",
       count: "25+ Certifications",
       icon: <Medal className="w-8 h-8 text-purple-500" />
     },
     {
       title: "Success Stories",
       description: "Visual testimonials and career transformation journeys",
-      image: "/images/gallery2.webp",
+      image: "/images/gallery4.webp",
       count: "1000+ Stories", 
       icon: <Users className="w-8 h-8 text-green-500" />
     }
