@@ -149,9 +149,9 @@ export default function CaesarIIStressAnalysisPage() {
             <div className="absolute bottom-20 right-20 w-36 h-36 border-2 border-red-400 animate-pulse"></div>
           </div>
 
-          {/* Floating Pipe Stress Elements */}
+          {/* Static Pipe Stress Elements */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-1/4 animate-float">
+            <div className="absolute top-1/4 left-1/4">
               <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className="text-red-400">
                 <rect x="10" y="40" width="80" height="20" stroke="currentColor" strokeWidth="3" fill="none"/>
                 <circle cx="20" cy="50" r="8" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
@@ -160,7 +160,7 @@ export default function CaesarIIStressAnalysisPage() {
                 <text x="50" y="30" fill="currentColor" fontSize="8" textAnchor="middle">STRESS</text>
               </svg>
             </div>
-            <div className="absolute top-1/3 right-1/4 animate-float-delayed">
+            <div className="absolute top-1/3 right-1/4">
               <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="text-orange-400">
                 <path d="M20 60 L100 60" stroke="currentColor" strokeWidth="4" fill="none"/>
                 <path d="M20 60 Q40 30 60 60 Q80 90 100 60" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -169,7 +169,7 @@ export default function CaesarIIStressAnalysisPage() {
                 <text x="60" y="100" fill="currentColor" fontSize="10" textAnchor="middle">CAESAR II</text>
               </svg>
             </div>
-            <div className="absolute bottom-1/3 left-1/3 animate-float">
+            <div className="absolute bottom-1/3 left-1/3">
               <svg width="110" height="110" viewBox="0 0 110 110" fill="none" className="text-yellow-400">
                 <rect x="20" y="30" width="70" height="50" stroke="currentColor" strokeWidth="2" fill="none"/>
                 <path d="M30 40 L80 40 M30 50 L80 50 M30 60 L80 60 M30 70 L80 70" stroke="currentColor" strokeWidth="1"/>
@@ -206,19 +206,19 @@ export default function CaesarIIStressAnalysisPage() {
             </div>
 
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="animate-float">
+              <div>
                 <div className="text-3xl font-bold text-red-400">100%</div>
                 <div className="text-sm text-gray-300">Job Placement</div>
               </div>
-              <div className="animate-float-delayed">
+              <div>
                 <div className="text-3xl font-bold text-orange-400">50+</div>
                 <div className="text-sm text-gray-300">Live Projects</div>
               </div>
-              <div className="animate-float">
+              <div>
                 <div className="text-3xl font-bold text-yellow-400">15+</div>
                 <div className="text-sm text-gray-300">Years Experience</div>
               </div>
-              <div className="animate-float-delayed">
+              <div>
                 <div className="text-3xl font-bold text-red-400">24/7</div>
                 <div className="text-sm text-gray-300">Lab Access</div>
               </div>
