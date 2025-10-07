@@ -296,9 +296,12 @@ const CertificationsSection = () => {
                     </div>
                     
                     <div className="flex gap-3">
-                      <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm">
+                      <a 
+                        href="/contact"
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm text-center inline-block"
+                      >
                         Enroll Now
-                      </button>
+                      </a>
                       <button className="px-4 py-3 border-2 border-blue-200 text-blue-600 rounded-xl hover:bg-blue-50 transition-all duration-300">
                         <Download className="w-4 h-4" />
                       </button>
