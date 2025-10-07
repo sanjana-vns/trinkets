@@ -510,58 +510,88 @@ export default function MicroStationCoursePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6">
+        <section className="py-16 bg-gradient-to-br from-slate-100 via-blue-50 to-white relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-20 left-20 w-32 h-32 border-2 border-blue-600 rounded-lg rotate-12"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-slate-600 rounded-lg -rotate-12"></div>
+            <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400 rounded-full"></div>
+          </div>
+
+          <div className="container mx-auto px-6 relative">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Frequently Asked Questions
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Common questions about our MicroStation Software Course in Mumbai
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-2 h-8 bg-blue-600 mr-3"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="w-2 h-8 bg-slate-600 ml-3"></div>
+                </div>
+                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                  Get answers to common questions about our <span className="font-semibold text-blue-700">MicroStation Software Course in Mumbai</span> and start your infrastructure design career
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What is MicroStation Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    Our MicroStation Software Course in Mumbai is a comprehensive training program that covers 2D drafting, 
-                    3D modeling, parametric design, and industry-standard workflows using Bentley MicroStation software. 
-                    The course is designed for students and professionals looking to enhance their CAD skills.
+              <div className="grid gap-6">
+                {[
+                  {
+                    question: "What is MicroStation Software Course in Mumbai?",
+                    answer: "Our comprehensive MicroStation Software Course in Mumbai is a professional training program covering 2D/3D CAD design, parametric modeling, infrastructure drafting, and Bentley MicroStation workflows. Perfect for aspiring CAD designers, civil engineers, and infrastructure professionals in Mumbai's growing construction sector."
+                  },
+                  {
+                    question: "What is the duration of MicroStation Software Course in Mumbai?",
+                    answer: "The MicroStation Software Course in Mumbai spans 2 months (120 hours) with flexible scheduling options. Choose from weekday batches (Mon-Fri), weekend classes (Sat-Sun), or intensive fast-track programs designed to fit your schedule while ensuring thorough skill development."
+                  },
+                  {
+                    question: "Do you provide job placement after MicroStation Software Course in Mumbai?",
+                    answer: "Yes! We offer 100% job placement assistance with our MicroStation Software Course in Mumbai. Our dedicated placement cell connects you with 500+ partner companies including infrastructure firms, architectural consultancies, and engineering companies across Mumbai and Maharashtra."
+                  },
+                  {
+                    question: "What career opportunities are available after MicroStation Software Course in Mumbai?",
+                    answer: "Graduates of our MicroStation Software Course in Mumbai can pursue roles as CAD Designers, Infrastructure Draftspersons, Design Engineers, Project Coordinators, BIM Specialists, or Technical Consultants in civil engineering, architecture, urban planning, and infrastructure development sectors."
+                  },
+                  {
+                    question: "What software tools are covered in MicroStation Software Course in Mumbai?",
+                    answer: "Our MicroStation Software Course in Mumbai covers Bentley MicroStation (latest version), parametric design tools, 3D modeling features, rendering capabilities, annotation tools, and integration with other Bentley products for comprehensive infrastructure design workflows."
+                  },
+                  {
+                    question: "Is prior CAD experience required for MicroStation Software Course in Mumbai?",
+                    answer: "No prior experience needed! Our MicroStation Software Course in Mumbai is designed for beginners to advanced users. We start with CAD fundamentals, progress through MicroStation basics, and advance to professional infrastructure design techniques suitable for Mumbai's engineering industry."
+                  }
+                ].map((faq, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:border-blue-200 transform hover:-translate-y-1">
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-slate-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <span className="text-white font-bold text-sm">Q</span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
+                            {faq.question}
+                          </h3>
+                          <p className="text-slate-600 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Additional Info Cards */}
+              <div className="mt-12 grid md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 rounded-xl text-white">
+                  <h4 className="text-xl font-semibold mb-3">📍 Location Advantage</h4>
+                  <p className="text-blue-100">
+                    Located in the heart of Mumbai with easy access to major infrastructure projects and engineering hubs
                   </p>
                 </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What is the duration of MicroStation Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    The MicroStation Software Course in Mumbai has a duration of 2 months with flexible timing options. 
-                    We offer weekday, weekend, and fast-track batches to accommodate different schedules and learning preferences.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Do you provide job placement after MicroStation Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    Yes, we provide 100% job placement assistance after completion of our MicroStation Software Course in Mumbai. 
-                    Our dedicated placement team works with our network of 500+ partner companies to help you secure the right job opportunity.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What are the career opportunities after MicroStation Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    After completing our MicroStation Software Course in Mumbai, you can work as CAD Designer, Drafting Engineer, 
-                    Design Engineer, Project Coordinator, Technical Specialist, or pursue careers in architecture, civil engineering, 
-                    infrastructure development, and construction industries.
+                <div className="bg-gradient-to-r from-slate-600 to-slate-700 p-6 rounded-xl text-white">
+                  <h4 className="text-xl font-semibold mb-3">🎯 Industry Focus</h4>
+                  <p className="text-slate-100">
+                    Curriculum aligned with Mumbai&apos;s infrastructure development needs and industry requirements
                   </p>
                 </div>
               </div>

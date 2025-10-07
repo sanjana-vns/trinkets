@@ -511,59 +511,95 @@ export default function TeklaCoursePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6">
+        <section className="py-16 bg-gradient-to-br from-gray-100 via-indigo-50 to-slate-100 relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-16 left-16 w-40 h-40 border-4 border-indigo-600 rounded-lg rotate-12 transform"></div>
+            <div className="absolute bottom-16 right-16 w-32 h-32 border-3 border-gray-600 rounded-lg -rotate-12 transform"></div>
+            <div className="absolute top-1/3 right-1/4 w-20 h-20 border-2 border-indigo-400 rounded-full"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-gray-400 rounded-lg rotate-45"></div>
+          </div>
+
+          <div className="container mx-auto px-6 relative">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Frequently Asked Questions
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Common questions about our Tekla Software Course in Mumbai
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-3 h-10 bg-indigo-600 mr-4 transform rotate-12"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="w-3 h-10 bg-gray-600 ml-4 transform -rotate-12"></div>
+                </div>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Get detailed answers about our <span className="font-semibold text-indigo-700">Tekla Software Course in Mumbai</span> and build your structural engineering career
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What is Tekla Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    Our Tekla Software Course in Mumbai is a comprehensive structural engineering training program covering 
-                    3D modeling, steel and concrete design, BIM workflows, and industry-standard practices using Tekla Structures software. 
-                    The course is designed for engineers and professionals looking to specialize in structural design and construction.
+              <div className="grid gap-6">
+                {[
+                  {
+                    question: "What is Tekla Software Course in Mumbai?",
+                    answer: "Our comprehensive Tekla Software Course in Mumbai is a specialized structural engineering program covering 3D modeling, steel detailing, concrete design, BIM workflows, and advanced Tekla Structures features. Designed for structural engineers, detailers, and construction professionals in Mumbai's thriving infrastructure sector."
+                  },
+                  {
+                    question: "What is the duration of Tekla Software Course in Mumbai?",
+                    answer: "The Tekla Software Course in Mumbai spans 3 months (150 hours) with flexible scheduling options. Choose from weekday sessions (Mon-Fri), weekend intensives (Sat-Sun), or accelerated fast-track programs tailored for working professionals in Mumbai's engineering industry."
+                  },
+                  {
+                    question: "Do you provide job placement after Tekla Software Course in Mumbai?",
+                    answer: "Absolutely! We provide 100% job placement assistance with our Tekla Software Course in Mumbai. Our specialized placement team connects you with 300+ leading construction firms, structural consultancies, and infrastructure companies across Mumbai, Pune, and Maharashtra."
+                  },
+                  {
+                    question: "What career opportunities are available after Tekla Software Course in Mumbai?",
+                    answer: "Graduates of our Tekla Software Course in Mumbai can pursue roles as Structural Detailers, BIM Coordinators, Steel Design Engineers, Project Engineers, Technical Specialists, or senior positions in construction management, infrastructure development, and engineering consultancy."
+                  },
+                  {
+                    question: "What Tekla modules are covered in this course in Mumbai?",
+                    answer: "Our Tekla Software Course in Mumbai covers Tekla Structures (latest version), steel and concrete modeling, advanced detailing tools, drawing automation, clash detection, 4D scheduling, quantity takeoffs, and integration with other BIM software for comprehensive structural workflows."
+                  },
+                  {
+                    question: "Is structural engineering background required for Tekla Software Course in Mumbai?",
+                    answer: "While structural knowledge is beneficial, our Tekla Software Course in Mumbai accommodates various backgrounds. We provide foundational structural concepts alongside Tekla training, making it accessible for engineering graduates, CAD professionals, and career changers in Mumbai."
+                  }
+                ].map((faq, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/60 hover:border-indigo-200 transform hover:-translate-y-2 hover:scale-[1.02]">
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-indigo-600 to-gray-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <span className="text-white font-bold">Q</span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-indigo-700 transition-colors">
+                            {faq.question}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Additional Info Cards */}
+              <div className="mt-12 grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🏗️ Industry Leader</h4>
+                  <p className="text-indigo-100">
+                    Mumbai&apos;s premier Tekla training institute with certified instructors and industry partnerships
                   </p>
                 </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What is the duration of Tekla Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    The Tekla Software Course in Mumbai has a duration of 3 months with flexible timing options. 
-                    We offer weekday, weekend, and intensive batches to accommodate working professionals and students in Mumbai.
+                <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🎯 Project Focus</h4>
+                  <p className="text-gray-100">
+                    Real-world structural projects from Mumbai&apos;s construction and infrastructure developments
                   </p>
                 </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    Do you provide job placement after Tekla Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    Yes, we provide 100% job placement assistance after completion of our Tekla Software Course in Mumbai. 
-                    Our dedicated placement team works with our network of 300+ construction and engineering companies to help 
-                    you secure positions in top firms across Mumbai and Maharashtra.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    What are the career opportunities after Tekla Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-600">
-                    After completing our Tekla Software Course in Mumbai, you can work as Structural Designer, BIM Coordinator, 
-                    Steel Detailer, Project Engineer, Technical Specialist, or pursue senior roles in construction, infrastructure 
-                    development, and engineering consultancy firms in Mumbai&apos;s booming construction sector.
+                <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🚀 Career Growth</h4>
+                  <p className="text-purple-100">
+                    Advanced certification pathway with continuous learning and skill development programs
                   </p>
                 </div>
               </div>
