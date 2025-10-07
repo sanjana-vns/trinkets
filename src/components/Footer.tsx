@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { memo } from 'react'
+import { Facebook, Twitter, Youtube, MessageCircle, Linkedin, Instagram } from 'lucide-react'
 import BackToTopButton from './ui/BackToTopButton'
 
 const Footer = memo(() => {
@@ -204,24 +205,63 @@ const Footer = memo(() => {
               <span className="text-gray-400 text-sm sm:text-base sm:mr-4">Follow us:</span>
               <div className="flex items-center flex-wrap justify-center gap-2 sm:gap-1">
                 {[
-                  { href: "https://www.facebook.com/profile.php?id=61578852495738", icon: "🔵", label: "Facebook", color: "hover:text-blue-400" },
-                  { href: "https://x.com/titindiamumbai", icon: "🔷", label: "Twitter", color: "hover:text-cyan-400" },
-                  { href: "https://www.youtube.com/@trinketsinstituteoftechnol6645", icon: "🔴", label: "YouTube", color: "hover:text-red-400" },
-                  { href: "https://wa.me/+919820924788", icon: "🟢", label: "WhatsApp", color: "hover:text-green-400" },
-                  { href: "https://www.linkedin.com/company/trinkets-institute-of-technology-mumbai/", icon: "🔵", label: "LinkedIn", color: "hover:text-blue-400" },
-                  { href: "https://www.instagram.com/trinketsinstituteinmumbai/", icon: "🟣", label: "Instagram", color: "hover:text-pink-400" }
-                ].map((social, index) => (
-                  <a 
-                    key={index}
-                    href={social.href} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 sm:w-12 sm:h-12 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 flex items-center justify-center ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/10 group`}
-                    aria-label={social.label}
-                  >
-                    <span className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300">{social.icon}</span>
-                  </a>
-                ))}
+                  { 
+                    href: "https://www.facebook.com/profile.php?id=61578852495738", 
+                    icon: Facebook, 
+                    label: "Facebook", 
+                    color: "hover:text-blue-500",
+                    bgColor: "hover:bg-blue-500/10"
+                  },
+                  { 
+                    href: "https://x.com/titindiamumbai", 
+                    icon: Twitter, 
+                    label: "Twitter", 
+                    color: "hover:text-cyan-400",
+                    bgColor: "hover:bg-cyan-400/10"
+                  },
+                  { 
+                    href: "https://www.youtube.com/@trinketsinstituteoftechnol6645", 
+                    icon: Youtube, 
+                    label: "YouTube", 
+                    color: "hover:text-red-500",
+                    bgColor: "hover:bg-red-500/10"
+                  },
+                  { 
+                    href: "https://wa.me/+919820924788", 
+                    icon: MessageCircle, 
+                    label: "WhatsApp", 
+                    color: "hover:text-green-500",
+                    bgColor: "hover:bg-green-500/10"
+                  },
+                  { 
+                    href: "https://www.linkedin.com/company/trinkets-institute-of-technology-mumbai/", 
+                    icon: Linkedin, 
+                    label: "LinkedIn", 
+                    color: "hover:text-blue-600",
+                    bgColor: "hover:bg-blue-600/10"
+                  },
+                  { 
+                    href: "https://www.instagram.com/trinketsinstituteinmumbai/", 
+                    icon: Instagram, 
+                    label: "Instagram", 
+                    color: "hover:text-pink-500",
+                    bgColor: "hover:bg-pink-500/10"
+                  }
+                ].map((social, index) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a 
+                      key={index}
+                      href={social.href} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`w-10 h-10 sm:w-12 sm:h-12 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 flex items-center justify-center ${social.color} ${social.bgColor} transition-all duration-300 hover:scale-110 hover:border-white/30 group`}
+                      aria-label={social.label}
+                    >
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform duration-300" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
