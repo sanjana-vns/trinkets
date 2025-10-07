@@ -136,255 +136,629 @@ export default function MEPEngineeringCoursePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              MEP Engineering Course in Mumbai
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-indigo-100">
-              Master Mechanical, Electrical & Plumbing Design with Industry-Leading Software
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">AutoCAD MEP</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Revit MEP</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">HAP Software</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">TRACE 700</span>
-              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">100% Placement</span>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Enroll Now - Limited Seats
-              </Link>
-              <Link href="#curriculum" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                View Curriculum
-              </Link>
-            </div>
-          </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-32 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float-reverse"></div>
+          <div className="absolute bottom-20 left-32 w-72 h-72 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-float-animated"></div>
         </div>
-      </section>
 
-      {/* Quick Stats Section */}
-      <section className="bg-white py-12 border-b">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">6 Months</div>
-              <div className="text-gray-600">Course Duration</div>
+        {/* Main Hero Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto">
+            {/* Floating Badge */}
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-8 animate-bounce">
+              <span className="text-2xl mr-3">🏗️</span>
+              <span className="font-semibold">MEP Engineering Mastery</span>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">100%</div>
-              <div className="text-gray-600">Placement Assistance</div>
+
+            {/* Main Title with Gradient */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
+                MEP Engineering
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Course in Mumbai
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-3xl mb-12 text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Master <span className="text-indigo-600 font-bold">Mechanical</span>, 
+              <span className="text-purple-600 font-bold"> Electrical</span> & 
+              <span className="text-blue-600 font-bold"> Plumbing Design</span> with Industry-Leading Software
+            </p>
+
+            {/* Software Tags */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {['AutoCAD MEP', 'Revit MEP', 'HAP Software', 'TRACE 700', '100% Placement'].map((item, index) => {
+                const gradients = [
+                  'from-indigo-500 to-purple-600',
+                  'from-purple-500 to-pink-600',
+                  'from-blue-500 to-cyan-600',
+                  'from-teal-500 to-green-600',
+                  'from-orange-500 to-red-600'
+                ];
+                return (
+                  <span key={index} className={`bg-gradient-to-r ${gradients[index]} text-white px-6 py-3 rounded-full font-semibold text-lg hover:scale-110 transition-transform duration-300 cursor-pointer shadow-lg`}>
+                    {item}
+                  </span>
+                );
+              })}
             </div>
-            <div>
-              <div className="text-3xl font-bold text-indigo-600 mb-2">500+</div>
-              <div className="text-gray-600">Students Placed</div>
+
+            {/* Interactive Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-indigo-200">
+                <div className="text-3xl mb-2">⏱️</div>
+                <div className="text-2xl font-bold text-indigo-600">6 Months</div>
+                <div className="text-gray-600">Duration</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-purple-200">
+                <div className="text-3xl mb-2">🎯</div>
+                <div className="text-2xl font-bold text-purple-600">100%</div>
+                <div className="text-gray-600">Placement Rate</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-blue-200">
+                <div className="text-3xl mb-2">👥</div>
+                <div className="text-2xl font-bold text-blue-600">500+</div>
+                <div className="text-gray-600">Students Placed</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-teal-200">
+                <div className="text-3xl mb-2">💰</div>
+                <div className="text-2xl font-bold text-teal-600">₹15L</div>
+                <div className="text-gray-600">Highest Package</div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                <span className="relative z-10 flex items-center">
+                  🚀 Enroll Now - Limited Seats
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
+              <Link href="#curriculum" className="group px-8 py-4 border-2 border-indigo-600 text-indigo-600 rounded-full font-bold text-lg hover:bg-indigo-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <span className="flex items-center">
+                  📚 View Curriculum
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">↓</span>
+                </span>
+              </Link>
+            </div>
+
+            {/* Next Batch Info */}
+            <div className="mt-8 inline-flex items-center bg-gradient-to-r from-green-100 to-blue-100 px-6 py-3 rounded-full border border-green-200">
+              <span className="text-green-600 font-semibold">🎯 Next Batch Starts: 15th November 2025</span>
             </div>
           </div>
         </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-20 text-6xl animate-float opacity-20">⚡</div>
+        <div className="absolute top-40 right-32 text-5xl animate-float-reverse opacity-20">🔧</div>
+        <div className="absolute bottom-32 left-40 text-4xl animate-float-animated opacity-20">🏗️</div>
+        <div className="absolute bottom-20 right-20 text-5xl animate-float opacity-20">💡</div>
       </section>
 
       {/* Course Overview */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-            Best MEP Engineering Course in Mumbai
-          </h2>
-          <div className="prose prose-lg mx-auto text-gray-600">
-            <p className="text-xl leading-relaxed mb-6">
-              Transform your career with Mumbai&apos;s most comprehensive <strong>MEP Engineering Course</strong>. Our industry-aligned curriculum covers Mechanical, Electrical, and Plumbing design using cutting-edge software like AutoCAD MEP, Revit MEP, HAP, and TRACE 700.
-            </p>
-            <p className="leading-relaxed mb-6">
-              Located in the heart of Mumbai, Trinkets Institute offers the premier <strong>MEP engineering training</strong> that has successfully placed over 500+ students in top MEP consultancy firms, construction companies, and building design organizations across Mumbai and India.
-            </p>
-            <p className="leading-relaxed">
-              Our <strong>MEP design course</strong> is meticulously crafted by industry experts who bring real-world project experience into the classroom, ensuring you&apos;re job-ready from day one.
-            </p>
+      <section className="container mx-auto px-4 py-20 relative">
+        {/* Floating background elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-float-reverse"></div>
+
+        <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-indigo-100">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full mb-6">
+                <span className="text-lg mr-2">🏗️</span>
+                <span className="font-semibold">Course Overview</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  Best MEP Engineering
+                </span>
+                <br />
+                <span className="text-gray-800">Course in Mumbai</span>
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-8">
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-200">
+                  <h3 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
+                    <span className="text-3xl mr-3">🎯</span>
+                    Why Choose Our MEP Course?
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    {[
+                      "Industry-aligned curriculum covering M, E & P systems",
+                      "Master AutoCAD MEP, Revit MEP, HAP & TRACE 700",
+                      "Real project training from Mumbai's construction industry",
+                      "100% placement assistance in top MEP companies",
+                      "Expert faculty with 10+ years industry experience",
+                      "Live project exposure and site visits"
+                    ].map((feature, index) => (
+                      <div key={index} className="flex items-start space-x-3 group hover:scale-105 transition-transform">
+                        <div className="w-8 h-8 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">
+                          <span className="text-white font-bold text-sm">✓</span>
+                        </div>
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200">
+                  <h4 className="font-bold text-blue-800 mb-6 text-xl flex items-center">
+                    <span className="text-2xl mr-3">🌆</span>
+                    Mumbai MEP Industry Advantage
+                  </h4>
+                  <div className="space-y-3">
+                    {[
+                      "Gateway to India's largest construction market",
+                      "Home to major MEP consultancy firms",
+                      "Proximity to infrastructure development projects",
+                      "Access to multinational engineering companies",
+                      "Hub for green building and sustainable design"
+                    ].map((advantage, index) => (
+                      <div key={index} className="flex items-center space-x-3 group hover:translate-x-2 transition-transform">
+                        <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-180 transition-transform duration-300">
+                          <span className="text-white font-bold text-xs">★</span>
+                        </div>
+                        <span className="text-gray-700 text-sm">{advantage}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-8">
+                {/* Course Highlights */}
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
+                  <h3 className="text-2xl font-bold text-center mb-8 text-purple-800">
+                    🚀 Course Highlights
+                  </h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-indigo-500">
+                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
+                      <h4 className="font-bold text-indigo-800 text-lg">Duration</h4>
+                      <p className="text-indigo-600 font-semibold">6 Months</p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-purple-500">
+                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💻</div>
+                      <h4 className="font-bold text-purple-800 text-lg">Software</h4>
+                      <p className="text-purple-600 font-semibold">4 Premium Tools</p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-blue-500">
+                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏗️</div>
+                      <h4 className="font-bold text-blue-800 text-lg">Projects</h4>
+                      <p className="text-blue-600 font-semibold">15+ Live Projects</p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-teal-500">
+                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
+                      <h4 className="font-bold text-teal-800 text-lg">Certification</h4>
+                      <p className="text-teal-600 font-semibold">Industry Recognized</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Course Content Overview */}
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-200">
+                  <h4 className="font-bold text-orange-800 mb-6 text-xl flex items-center">
+                    <span className="text-2xl mr-3">📚</span>
+                    What You'll Master
+                  </h4>
+                  <div className="grid grid-cols-1 gap-4">
+                    {[
+                      { title: "Mechanical Systems", desc: "HVAC design, load calculations, ductwork", color: "from-red-500 to-orange-500" },
+                      { title: "Electrical Systems", desc: "Power distribution, lighting, fire alarm", color: "from-yellow-500 to-amber-500" },
+                      { title: "Plumbing Systems", desc: "Water supply, drainage, fire fighting", color: "from-blue-500 to-cyan-500" },
+                      { title: "BIM Integration", desc: "3D modeling, clash detection, coordination", color: "from-purple-500 to-pink-500" }
+                    ].map((system, index) => (
+                      <div key={index} className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                        <div className="flex items-center space-x-4">
+                          <div className={`w-12 h-12 bg-gradient-to-r ${system.color} rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform`}>
+                            <span className="text-white font-bold">M</span>
+                          </div>
+                          <div>
+                            <h5 className="font-bold text-gray-800">{system.title}</h5>
+                            <p className="text-gray-600 text-sm">{system.desc}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-2xl border border-indigo-200">
+                <h4 className="text-2xl font-bold text-indigo-800 mb-4">Ready to Transform Your Career?</h4>
+                <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                  Join Mumbai's most comprehensive MEP Engineering course and become an expert in building services design. 
+                  Our industry-aligned curriculum and 100% placement assistance will launch your successful MEP career.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full font-bold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                    🎯 Start Your Journey Today
+                  </Link>
+                  <Link href="#curriculum" className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-indigo-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    📋 View Detailed Curriculum
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose This MEP Course */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Why Choose Our MEP Engineering Course in Mumbai?
-          </h2>
+      {/* Why Choose MEP Course - Interactive Features */}
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366F1' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+
+        <div className="relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-6">
+              <span className="text-xl mr-3">⭐</span>
+              <span className="font-bold text-lg">Why Choose Us</span>
+            </div>
+            <h2 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Why Choose Our
+              </span>
+              <br />
+              <span className="text-gray-800">MEP Engineering Course?</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience Mumbai's most comprehensive MEP training with industry experts and cutting-edge technology
+            </p>
+          </div>
+
+          {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            {[
+              {
+                icon: "✅",
+                title: "Industry-Certified Curriculum",
+                description: "Learn from Mumbai's top MEP engineering professionals with 10+ years industry experience",
+                gradient: "from-green-500 to-emerald-600",
+                bgGradient: "from-green-50 to-emerald-50",
+                borderColor: "border-green-200"
+              },
+              {
+                icon: "🛠️",
+                title: "Latest MEP Software Training",
+                description: "Master AutoCAD MEP, Revit MEP, HAP, TRACE 700 with hands-on project experience",
+                gradient: "from-blue-500 to-cyan-600",
+                bgGradient: "from-blue-50 to-cyan-50",
+                borderColor: "border-blue-200"
+              },
+              {
+                icon: "🎯",
+                title: "100% Placement Guarantee",
+                description: "Guaranteed job placement in Mumbai's top MEP consultancy and construction companies",
+                gradient: "from-purple-500 to-pink-600",
+                bgGradient: "from-purple-50 to-pink-50",
+                borderColor: "border-purple-200"
+              },
+              {
+                icon: "📚",
+                title: "Real Project Training",
+                description: "Work on live MEP projects from Mumbai's leading construction and infrastructure companies",
+                gradient: "from-orange-500 to-red-600",
+                bgGradient: "from-orange-50 to-red-50",
+                borderColor: "border-orange-200"
+              },
+              {
+                icon: "👨‍🏫",
+                title: "Expert Faculty from Mumbai",
+                description: "Learn from Mumbai's most experienced MEP engineers and consultants",
+                gradient: "from-indigo-500 to-purple-600",
+                bgGradient: "from-indigo-50 to-purple-50",
+                borderColor: "border-indigo-200"
+              },
+              {
+                icon: "🏆",
+                title: "Industry Certification",
+                description: "Receive globally recognized MEP engineering certification upon course completion",
+                gradient: "from-yellow-500 to-amber-600",
+                bgGradient: "from-yellow-50 to-amber-50",
+                borderColor: "border-yellow-200"
+              }
+            ].map((feature, index) => (
+              <div key={index} className={`group bg-gradient-to-br ${feature.bgGradient} p-8 rounded-3xl border-2 ${feature.borderColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-center text-gray-800">{feature.title}</h3>
+                <p className="text-gray-600 text-center leading-relaxed">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Industry-Certified Curriculum</h3>
-              <p className="text-gray-600">Learn from Mumbai&apos;s top MEP engineering professionals with 10+ years industry experience</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+            ))}
+          </div>
+
+          {/* Statistics Section */}
+          <div className="mt-20 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-12 rounded-3xl text-white shadow-2xl">
+            <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
+              <span className="text-4xl mr-4">📊</span>
+              Our Success Metrics
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  👥
+                </div>
+                <div className="text-4xl font-bold mb-2 text-green-400">500+</div>
+                <div className="text-gray-300">Students Trained</div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Latest MEP Software Training</h3>
-              <p className="text-gray-600">Master AutoCAD MEP, Revit MEP, HAP, TRACE 700 with hands-on project experience</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
-                </svg>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  🎯
+                </div>
+                <div className="text-4xl font-bold mb-2 text-blue-400">95%</div>
+                <div className="text-gray-300">Placement Rate</div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">100% Placement Guarantee</h3>
-              <p className="text-gray-600">Guaranteed job placement in Mumbai&apos;s top MEP consultancy and construction companies</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  💰
+                </div>
+                <div className="text-4xl font-bold mb-2 text-purple-400">₹15L</div>
+                <div className="text-gray-300">Highest Package</div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Real Project Training</h3>
-              <p className="text-gray-600">Work on live MEP projects from Mumbai&apos;s leading construction and infrastructure companies</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  🏢
+                </div>
+                <div className="text-4xl font-bold mb-2 text-orange-400">50+</div>
+                <div className="text-gray-300">Partner Companies</div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Expert Faculty from Mumbai</h3>
-              <p className="text-gray-600">Learn from Mumbai&apos;s most experienced MEP engineers and consultants</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Industry Certification</h3>
-              <p className="text-gray-600">Receive globally recognized MEP engineering certification upon course completion</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Curriculum */}
-      <section id="curriculum" className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          Comprehensive MEP Engineering Curriculum
-        </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            {/* Module 1 */}
-            <div className="border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-4">Module 1: MEP Fundamentals & Building Services</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Introduction to MEP Engineering</li>
-                  <li>• Building Services Overview</li>
-                  <li>• MEP Design Standards & Codes</li>
-                  <li>• HVAC System Fundamentals</li>
-                  <li>• Electrical Systems Basics</li>
-                </ul>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Plumbing & Fire Fighting Systems</li>
-                  <li>• Energy Efficiency in Buildings</li>
-                  <li>• Green Building Concepts</li>
-                  <li>• MEP Coordination Principles</li>
-                  <li>• Mumbai Building Bye-laws</li>
-                </ul>
+      {/* Detailed Curriculum - Visual Journey */}
+      <section id="curriculum" className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366F1' fill-opacity='0.1'%3E%3Cpath d='M40 0L40 80M0 40L80 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+
+        <div className="relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-6">
+              <span className="text-xl mr-3">📚</span>
+              <span className="font-bold text-lg">Comprehensive Curriculum</span>
+            </div>
+            <h2 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                MEP Engineering
+              </span>
+              <br />
+              <span className="text-gray-800">Learning Journey</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Master MEP engineering through our structured 6-month program designed by industry experts
+            </p>
+          </div>
+
+          {/* Timeline Journey */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-400 via-purple-500 to-blue-500 rounded-full"></div>
+
+            {/* Module Cards */}
+            <div className="space-y-16">
+              {/* Module 1 - MEP Fundamentals */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-12 text-right">
+                  <div className="group bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-end mb-4">
+                      <h3 className="text-2xl font-bold mr-4">MEP Fundamentals & Building Services</h3>
+                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🏗️</div>
+                    </div>
+                    <p className="text-indigo-100 mb-6">Foundation & Core Concepts</p>
+                    <div className="space-y-3 text-indigo-100">
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="mr-2">Introduction to MEP Engineering</span>
+                        <span className="text-yellow-300">📚</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="mr-2">Building Services Overview</span>
+                        <span className="text-yellow-300">🏢</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="mr-2">MEP Design Standards & Codes</span>
+                        <span className="text-yellow-300">📋</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="mr-2">Mumbai Building Bye-laws</span>
+                        <span className="text-yellow-300">⚖️</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                  1
+                </div>
+                <div className="w-1/2 pl-12"></div>
+              </div>
+
+              {/* Module 2 - AutoCAD MEP */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-12"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                  2
+                </div>
+                <div className="w-1/2 pl-12">
+                  <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center mb-4">
+                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🖥️</div>
+                      <h3 className="text-2xl font-bold">AutoCAD MEP Mastery</h3>
+                    </div>
+                    <p className="text-purple-100 mb-6">Professional CAD Design Skills</p>
+                    <div className="space-y-3 text-purple-100">
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                        <span className="text-yellow-300 mr-2">⚙️</span>
+                        <span>AutoCAD MEP Interface & Tools</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="text-yellow-300 mr-2">🔧</span>
+                        <span>HVAC System Design & Layout</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="text-yellow-300 mr-2">⚡</span>
+                        <span>Electrical Circuit Design</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="text-yellow-300 mr-2">🚿</span>
+                        <span>Plumbing & Fire Fighting Systems</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Module 3 - Revit MEP & BIM */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-12 text-right">
+                  <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-end mb-4">
+                      <h3 className="text-2xl font-bold mr-4">Revit MEP & BIM</h3>
+                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🏛️</div>
+                    </div>
+                    <p className="text-blue-100 mb-6">3D Modeling & BIM Excellence</p>
+                    <div className="space-y-3 text-blue-100">
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="mr-2">Revit MEP Fundamentals</span>
+                        <span className="text-yellow-300">🏗️</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="mr-2">BIM for MEP Engineering</span>
+                        <span className="text-yellow-300">🧠</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="mr-2">MEP Families Creation</span>
+                        <span className="text-yellow-300">🔧</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="mr-2">Coordination Models</span>
+                        <span className="text-yellow-300">🤝</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                  3
+                </div>
+                <div className="w-1/2 pl-12"></div>
+              </div>
+
+              {/* Module 4 - HVAC Design Software */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-12"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                  4
+                </div>
+                <div className="w-1/2 pl-12">
+                  <div className="group bg-gradient-to-br from-teal-500 to-teal-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center mb-4">
+                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🌡️</div>
+                      <h3 className="text-2xl font-bold">HVAC Design Software</h3>
+                    </div>
+                    <p className="text-teal-100 mb-6">HAP & TRACE 700 Expertise</p>
+                    <div className="space-y-3 text-teal-100">
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                        <span className="text-yellow-300 mr-2">📊</span>
+                        <span>HAP Software & Load Calculations</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="text-yellow-300 mr-2">🔍</span>
+                        <span>System Sizing & Selection</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="text-yellow-300 mr-2">⚡</span>
+                        <span>TRACE 700 Energy Analysis</span>
+                      </div>
+                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="text-yellow-300 mr-2">📈</span>
+                        <span>Life Cycle Cost Analysis</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Module 5 - Real Project Implementation */}
+              <div className="relative flex items-center">
+                <div className="w-1/2 pr-12 text-right">
+                  <div className="group bg-gradient-to-br from-orange-500 to-orange-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-end mb-4">
+                      <h3 className="text-2xl font-bold mr-4">Real Project Implementation</h3>
+                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🚀</div>
+                    </div>
+                    <p className="text-orange-100 mb-6">Industry Project Experience</p>
+                    <div className="space-y-3 text-orange-100">
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="mr-2">Live MEP Project Analysis</span>
+                        <span className="text-yellow-300">📋</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="mr-2">Mumbai Construction Case Studies</span>
+                        <span className="text-yellow-300">🏙️</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="mr-2">Site Visit & Inspection</span>
+                        <span className="text-yellow-300">👷</span>
+                      </div>
+                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="mr-2">Final Portfolio Development</span>
+                        <span className="text-yellow-300">📁</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                  5
+                </div>
+                <div className="w-1/2 pl-12"></div>
               </div>
             </div>
+          </div>
 
-            {/* Module 2 */}
-            <div className="border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-4">Module 2: AutoCAD MEP Mastery</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-600">
-                  <li>• AutoCAD MEP Interface & Tools</li>
-                  <li>• MEP Drawing Standards</li>
-                  <li>• HVAC System Design & Layout</li>
-                  <li>• Electrical Circuit Design</li>
-                  <li>• Plumbing System Layout</li>
-                </ul>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Fire Fighting System Design</li>
-                  <li>• MEP Symbols & Annotations</li>
-                  <li>• 3D MEP Modeling</li>
-                  <li>• Clash Detection & Resolution</li>
-                  <li>• MEP Drawing Documentation</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Module 3 */}
-            <div className="border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-4">Module 3: Revit MEP & BIM</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Revit MEP Fundamentals</li>
-                  <li>• BIM for MEP Engineering</li>
-                  <li>• Mechanical Systems in Revit</li>
-                  <li>• Electrical Systems Design</li>
-                  <li>• Plumbing & Fire Protection</li>
-                </ul>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• MEP Families Creation</li>
-                  <li>• System Analysis & Sizing</li>
-                  <li>• Coordination Models</li>
-                  <li>• Quantity Takeoffs</li>
-                  <li>• Construction Documentation</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Module 4 */}
-            <div className="border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-4">Module 4: HVAC Design Software (HAP & TRACE 700)</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-600">
-                  <li>• HAP Software Fundamentals</li>
-                  <li>• Load Calculations</li>
-                  <li>• System Sizing & Selection</li>
-                  <li>• Energy Analysis</li>
-                  <li>• TRACE 700 Basics</li>
-                </ul>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Building Energy Modeling</li>
-                  <li>• HVAC System Optimization</li>
-                  <li>• Energy Code Compliance</li>
-                  <li>• Life Cycle Cost Analysis</li>
-                  <li>• Reports & Documentation</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Module 5 */}
-            <div className="border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-4">Module 5: Real Project Implementation</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Live MEP Project Analysis</li>
-                  <li>• Mumbai Construction Case Studies</li>
-                  <li>• MEP Coordination Meetings</li>
-                  <li>• Value Engineering</li>
-                  <li>• Project Documentation</li>
-                </ul>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Site Visit & Inspection</li>
-                  <li>• MEP Installation Supervision</li>
-                  <li>• Commissioning & Testing</li>
-                  <li>• Final Portfolio Development</li>
-                  <li>• Industry Presentation</li>
-                </ul>
+          {/* Completion Badge */}
+          <div className="text-center mt-20">
+            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+              <span className="text-3xl mr-4 animate-bounce">🏆</span>
+              <div>
+                <div className="font-bold text-lg">MEP Engineering Certification</div>
+                <div className="text-green-100 text-sm">Complete all modules & become MEP expert</div>
               </div>
             </div>
           </div>
@@ -392,130 +766,330 @@ export default function MEPEngineeringCoursePage() {
       </section>
 
       {/* Career Opportunities */}
-      <section className="bg-indigo-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            MEP Engineering Career Opportunities in Mumbai
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">MEP Design Engineer</h3>
-              <p className="text-gray-600 mb-4">Design mechanical, electrical, and plumbing systems for buildings</p>
-              <div className="text-2xl font-bold text-gray-800">₹6-12 LPA</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">HVAC Design Consultant</h3>
-              <p className="text-gray-600 mb-4">Specialize in heating, ventilation, and air conditioning systems</p>
-              <div className="text-2xl font-bold text-gray-800">₹8-15 LPA</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">Project Coordinator</h3>
-              <p className="text-gray-600 mb-4">Coordinate MEP systems in large construction projects</p>
-              <div className="text-2xl font-bold text-gray-800">₹7-14 LPA</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">MEP Supervisor</h3>
-              <p className="text-gray-600 mb-4">Supervise MEP installation and commissioning on sites</p>
-              <div className="text-2xl font-bold text-gray-800">₹5-10 LPA</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">Building Services Engineer</h3>
-              <p className="text-gray-600 mb-4">Design and optimize building services for efficiency</p>
-              <div className="text-2xl font-bold text-gray-800">₹9-18 LPA</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-semibold text-indigo-600 mb-3">MEP Consultant</h3>
-              <p className="text-gray-600 mb-4">Provide expert MEP consulting services to clients</p>
-              <div className="text-2xl font-bold text-gray-800">₹12-25 LPA</div>
-            </div>
-          </div>
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B5CF6' fill-opacity='0.1'%3E%3Cpath d='M40 0L40 80M0 40L80 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
         </div>
-      </section>
 
-      {/* Placement Partners */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          Our MEP Engineering Placement Partners in Mumbai
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">L&T</div>
-            <div className="text-sm text-gray-500">Construction</div>
+        <div className="relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full mb-6">
+              <span className="text-xl mr-3">🚀</span>
+              <span className="font-bold text-lg">Career Launch Pad</span>
+            </div>
+            <h2 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
+                MEP Engineering Careers
+              </span>
+              <br />
+              <span className="text-gray-800">in Mumbai</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Launch your dream MEP career with our comprehensive placement support and industry connections
+            </p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">Godrej</div>
-            <div className="text-sm text-gray-500">Properties</div>
+
+          {/* Career Roles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: "🏗️",
+                title: "MEP Design Engineer",
+                description: "Design mechanical, electrical, and plumbing systems for buildings",
+                salary: "₹6-12 LPA",
+                gradient: "from-indigo-500 to-purple-600",
+                bgGradient: "from-indigo-50 to-purple-100",
+                borderColor: "border-indigo-200"
+              },
+              {
+                icon: "🌡️",
+                title: "HVAC Design Consultant",
+                description: "Specialize in heating, ventilation, and air conditioning systems",
+                salary: "₹8-15 LPA",
+                gradient: "from-blue-500 to-cyan-600",
+                bgGradient: "from-blue-50 to-cyan-100",
+                borderColor: "border-blue-200"
+              },
+              {
+                icon: "📋",
+                title: "Project Coordinator",
+                description: "Coordinate MEP systems in large construction projects",
+                salary: "₹7-14 LPA",
+                gradient: "from-teal-500 to-green-600",
+                bgGradient: "from-teal-50 to-green-100",
+                borderColor: "border-teal-200"
+              },
+              {
+                icon: "👷",
+                title: "MEP Supervisor",
+                description: "Supervise MEP installation and commissioning on sites",
+                salary: "₹5-10 LPA",
+                gradient: "from-orange-500 to-red-600",
+                bgGradient: "from-orange-50 to-red-100",
+                borderColor: "border-orange-200"
+              },
+              {
+                icon: "⚙️",
+                title: "Building Services Engineer",
+                description: "Design and optimize building services for efficiency",
+                salary: "₹9-18 LPA",
+                gradient: "from-purple-500 to-pink-600",
+                bgGradient: "from-purple-50 to-pink-100",
+                borderColor: "border-purple-200"
+              },
+              {
+                icon: "💼",
+                title: "MEP Consultant",
+                description: "Provide expert MEP consulting services to clients",
+                salary: "₹12-25 LPA",
+                gradient: "from-yellow-500 to-amber-600",
+                bgGradient: "from-yellow-50 to-amber-100",
+                borderColor: "border-yellow-200"
+              }
+            ].map((role, index) => (
+              <div key={index} className={`group bg-gradient-to-br ${role.bgGradient} p-8 rounded-3xl border-2 ${role.borderColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer`}>
+                <div className="text-center">
+                  <div className={`w-20 h-20 bg-gradient-to-r ${role.gradient} rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
+                    {role.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{role.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{role.description}</p>
+                  <div className={`bg-white p-4 rounded-xl border-2 ${role.borderColor} shadow-lg`}>
+                    <div className="text-2xl font-bold text-gray-700 mb-1">{role.salary}</div>
+                    <div className="text-gray-600 text-sm">Starting Salary</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">Shapoorji</div>
-            <div className="text-sm text-gray-500">Pallonji</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">Tata</div>
-            <div className="text-sm text-gray-500">Projects</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">Punj Lloyd</div>
-            <div className="text-sm text-gray-500">Engineering</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm border text-center">
-            <div className="font-semibold text-gray-700">JLL</div>
-            <div className="text-sm text-gray-500">India</div>
+          
+          {/* Placement Partners */}
+          <div className="bg-gradient-to-br from-gray-50 to-indigo-50 p-12 rounded-3xl border-2 border-gray-200 shadow-xl">
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-12 flex items-center justify-center">
+              <span className="text-4xl mr-4">🏢</span>
+              Our MEP Engineering Placement Partners in Mumbai
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {[
+                { name: "L&T", subtitle: "Construction", gradient: "from-blue-500 to-indigo-600" },
+                { name: "Godrej", subtitle: "Properties", gradient: "from-green-500 to-teal-600" },
+                { name: "Shapoorji", subtitle: "Pallonji", gradient: "from-purple-500 to-pink-600" },
+                { name: "Tata", subtitle: "Projects", gradient: "from-orange-500 to-red-600" },
+                { name: "Punj Lloyd", subtitle: "Engineering", gradient: "from-indigo-500 to-purple-600" },
+                { name: "JLL", subtitle: "India", gradient: "from-teal-500 to-cyan-600" }
+              ].map((company, index) => (
+                <div key={index} className="group relative">
+                  <div className={`bg-gradient-to-r ${company.gradient} p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 hover:rotate-3 cursor-pointer`}>
+                    <div className="text-center">
+                      <div className="text-white font-bold text-lg">{company.name}</div>
+                      <div className="text-white/80 text-sm">{company.subtitle}</div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              ))}
+            </div>
+
+            {/* Placement Stats */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-indigo-200">
+                <div className="text-3xl font-bold text-indigo-600 mb-2">95%</div>
+                <div className="text-gray-600">Placement Rate</div>
+              </div>
+              <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-green-200">
+                <div className="text-3xl font-bold text-green-600 mb-2">₹10.5L</div>
+                <div className="text-gray-600">Average Package</div>
+              </div>
+              <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-purple-200">
+                <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                <div className="text-gray-600">Hiring Partners</div>
+              </div>
+              <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-orange-200">
+                <div className="text-3xl font-bold text-orange-600 mb-2">20 Days</div>
+                <div className="text-gray-600">Avg. Job Time</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Student Success Stories */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            MEP Engineering Success Stories from Mumbai
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <span className="text-indigo-600 font-semibold">RS</span>
-                </div>
-                <div className="ml-4">
-                  <div className="font-semibold">Rohit Sharma</div>
-                  <div className="text-sm text-gray-500">MEP Design Engineer at L&T</div>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                &ldquo;The MEP course at Trinkets transformed my career. I got placed at L&T Mumbai with a 10 LPA package. The practical training and real project exposure made all the difference.&rdquo;
-              </p>
-              <div className="mt-4 text-indigo-600 font-semibold">Package: ₹10 LPA</div>
+      <section className="container mx-auto px-4 py-20 relative">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-float-reverse"></div>
+
+        <div className="relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-full mb-6">
+              <span className="text-xl mr-3">⭐</span>
+              <span className="font-bold text-lg">Success Stories</span>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <span className="text-indigo-600 font-semibold">PP</span>
+            <h2 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                MEP Engineering Success
+              </span>
+              <br />
+              <span className="text-gray-800">Stories from Mumbai</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real stories from our graduates who transformed their careers with MEP engineering expertise
+            </p>
+          </div>
+
+          {/* Success Stories Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Story 1 - Rohit */}
+            <div className="group bg-gradient-to-br from-indigo-50 to-purple-100 p-8 rounded-3xl border-2 border-indigo-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="flex items-center mb-6">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4 group-hover:rotate-12 transition-transform duration-300">
+                    RS
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-800 font-bold text-sm">⭐</span>
+                  </div>
                 </div>
-                <div className="ml-4">
-                  <div className="font-semibold">Priya Patel</div>
-                  <div className="text-sm text-gray-500">HVAC Consultant at Godrej</div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-gray-800 text-lg">Rohit Sharma</h4>
+                  <div className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-bold">
+                    MEP Design Engineer at L&T
+                  </div>
+                  <div className="text-gray-600 text-sm">Package: ₹10 LPA</div>
                 </div>
               </div>
-              <p className="text-gray-600 italic">
-                &ldquo;Best MEP engineering institute in Mumbai! The AutoCAD MEP and Revit training was comprehensive. Now working as HVAC consultant earning 12 LPA.&rdquo;
-              </p>
-              <div className="mt-4 text-indigo-600 font-semibold">Package: ₹12 LPA</div>
+              
+              <div className="bg-white/70 p-6 rounded-2xl border border-indigo-200 mb-4">
+                <p className="text-gray-700 italic leading-relaxed">
+                  "The MEP course at Trinkets transformed my career. I got placed at L&T Mumbai with a 10 LPA package. The practical training and real project exposure made all the difference."
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 rounded-2xl">
+                <div>
+                  <div className="font-bold">L&T Construction</div>
+                  <div className="text-indigo-100 text-sm">Placed in 15 days</div>
+                </div>
+                <div className="text-2xl group-hover:scale-110 transition-transform">🎯</div>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                  <span className="text-indigo-600 font-semibold">AK</span>
+            
+            {/* Story 2 - Priya */}
+            <div className="group bg-gradient-to-br from-blue-50 to-cyan-100 p-8 rounded-3xl border-2 border-blue-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="flex items-center mb-6">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4 group-hover:rotate-12 transition-transform duration-300">
+                    PP
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-800 font-bold text-sm">⭐</span>
+                  </div>
                 </div>
-                <div className="ml-4">
-                  <div className="font-semibold">Arjun Kumar</div>
-                  <div className="text-sm text-gray-500">Project Coordinator at Shapoorji Pallonji</div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-gray-800 text-lg">Priya Patel</h4>
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent font-bold">
+                    HVAC Consultant at Godrej
+                  </div>
+                  <div className="text-gray-600 text-sm">Package: ₹12 LPA</div>
                 </div>
               </div>
-              <p className="text-gray-600 italic">
-                &ldquo;Mumbai&apos;s top MEP training center! The faculty&apos;s industry experience and placement support helped me secure a project coordinator role with 14 LPA package.&rdquo;
-              </p>
-              <div className="mt-4 text-indigo-600 font-semibold">Package: ₹14 LPA</div>
+              
+              <div className="bg-white/70 p-6 rounded-2xl border border-blue-200 mb-4">
+                <p className="text-gray-700 italic leading-relaxed">
+                  "Best MEP engineering institute in Mumbai! The AutoCAD MEP and Revit training was comprehensive. Now working as HVAC consultant earning 12 LPA."
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-4 rounded-2xl">
+                <div>
+                  <div className="font-bold">Godrej Properties</div>
+                  <div className="text-blue-100 text-sm">Placed in 10 days</div>
+                </div>
+                <div className="text-2xl group-hover:scale-110 transition-transform">🚀</div>
+              </div>
+            </div>
+
+            {/* Story 3 - Arjun */}
+            <div className="group bg-gradient-to-br from-teal-50 to-green-100 p-8 rounded-3xl border-2 border-teal-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="flex items-center mb-6">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl mr-4 group-hover:rotate-12 transition-transform duration-300">
+                    AK
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-yellow-800 font-bold text-sm">⭐</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-gray-800 text-lg">Arjun Kumar</h4>
+                  <div className="bg-gradient-to-r from-teal-600 to-green-600 bg-clip-text text-transparent font-bold">
+                    Project Coordinator
+                  </div>
+                  <div className="text-gray-600 text-sm">Package: ₹14 LPA</div>
+                </div>
+              </div>
+              
+              <div className="bg-white/70 p-6 rounded-2xl border border-teal-200 mb-4">
+                <p className="text-gray-700 italic leading-relaxed">
+                  "Mumbai's top MEP training center! The faculty's industry experience and placement support helped me secure a project coordinator role with 14 LPA package."
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between bg-gradient-to-r from-teal-500 to-green-600 text-white p-4 rounded-2xl">
+                <div>
+                  <div className="font-bold">Shapoorji Pallonji</div>
+                  <div className="text-teal-100 text-sm">Placed in 8 days</div>
+                </div>
+                <div className="text-2xl group-hover:scale-110 transition-transform">🏆</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Overall Success Metrics */}
+          <div className="mt-16 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-12 rounded-3xl text-white shadow-2xl">
+            <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
+              <span className="text-4xl mr-4">📈</span>
+              Our MEP Training Track Record
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  📈
+                </div>
+                <div className="text-4xl font-bold mb-2 text-green-400">500+</div>
+                <div className="text-gray-300">Successful Placements</div>
+              </div>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  ⚡
+                </div>
+                <div className="text-4xl font-bold mb-2 text-blue-400">12 Days</div>
+                <div className="text-gray-300">Average Job Time</div>
+              </div>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  💰
+                </div>
+                <div className="text-4xl font-bold mb-2 text-purple-400">₹25L</div>
+                <div className="text-gray-300">Highest Package</div>
+              </div>
+              
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  🌟
+                </div>
+                <div className="text-4xl font-bold mb-2 text-orange-400">4.8/5</div>
+                <div className="text-gray-300">Student Rating</div>
+              </div>
             </div>
           </div>
         </div>
@@ -678,32 +1252,102 @@ export default function MEPEngineeringCoursePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your MEP Engineering Career in Mumbai?</h2>
-          <p className="text-xl mb-6">Join Mumbai&apos;s best MEP engineering course and transform your career with 100% placement assistance.</p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Course Fee: </span>Contact for Details
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float-reverse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-float-animated"></div>
+        </div>
+
+        <div className="relative z-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-3xl shadow-2xl p-12 text-white overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-24 -translate-x-24"></div>
+          
+          <div className="relative z-10 text-center">
+            {/* Main CTA Header */}
+            <div className="mb-8">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-8 py-3 rounded-full mb-6">
+                <span className="text-2xl mr-3">🚀</span>
+                <span className="font-bold text-lg">Ready to Start Your MEP Career?</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Ready to Start Your <span className="text-yellow-300">MEP Engineering</span>
+                <br />
+                Career in Mumbai?
+              </h2>
+              
+              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto leading-relaxed">
+                Join Mumbai's best MEP engineering course and transform your career with 100% placement assistance.
+              </p>
             </div>
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Duration: </span>6 Months
+
+            {/* Course Details */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-2">💰</div>
+                <div className="font-bold text-xl text-yellow-300">Course Fee</div>
+                <div className="text-indigo-100">Contact for Details</div>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-2">⏱️</div>
+                <div className="font-bold text-xl text-yellow-300">Duration</div>
+                <div className="text-indigo-100">6 Months</div>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-2">👥</div>
+                <div className="font-bold text-xl text-yellow-300">Limited Seats</div>
+                <div className="text-indigo-100">Only 20 Students</div>
+              </div>
             </div>
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Limited Seats: </span>Only 20 Students
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+              <Link href="/contact" className="group relative px-10 py-5 bg-white text-indigo-600 rounded-full font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 shadow-2xl">
+                <span className="relative z-10 flex items-center">
+                  🎯 Enroll Now - Book Your Seat
+                  <span className="ml-3 group-hover:translate-x-2 transition-transform">→</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
+              
+              <Link href="/contact" className="group px-10 py-5 border-2 border-white text-white rounded-full font-bold text-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-110 shadow-lg">
+                <span className="flex items-center">
+                  📞 Call for Consultation
+                  <span className="ml-3 group-hover:translate-x-2 transition-transform">📱</span>
+                </span>
+              </Link>
+            </div>
+
+            {/* Special Offers */}
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-green-300/30 inline-block">
+                <p className="text-green-200 font-semibold">
+                  💡 Special Offer: Early Bird Discount Available - 
+                  <Link href="/contact" className="underline hover:text-white transition-colors ml-1">Contact Us Today!</Link>
+                </p>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="mt-12 bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+              <p className="text-indigo-100 text-lg mb-4">Still have questions? We're here to help!</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex items-center">
+                  <span className="text-yellow-300 text-xl mr-2">📞</span>
+                  <span className="font-semibold">+91-9820064471</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-yellow-300 text-xl mr-2">📧</span>
+                  <span className="font-semibold">info@trinketsinstitute.com</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Enroll Now - Book Your Seat
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-              Call for Consultation
-            </Link>
-          </div>
-          <p className="text-indigo-100 text-sm mt-4">
-            💡 Special Offer: Early Bird Discount Available - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
-          </p>
         </div>
       </section>
 
