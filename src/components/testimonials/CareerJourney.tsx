@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, TrendingUp, Award, ChevronRight, Building2, GraduationCap, Briefcase } from 'lucide-react';
+import { Calendar, MapPin, TrendingUp, Award, ChevronRight, Building2, GraduationCap, Briefcase, Code, Database, Cloud } from 'lucide-react';
 
 export default function CareerJourney() {
   const journeys = [
@@ -10,6 +10,7 @@ export default function CareerJourney() {
       name: "Priya Sharma",
       photo: "/api/placeholder/80/80",
       course: "Full Stack Development",
+      courseIcon: Code,
       timeline: [
         {
           date: "Jan 2023",
@@ -63,6 +64,7 @@ export default function CareerJourney() {
       name: "Rohit Kumar",
       photo: "/api/placeholder/80/80",
       course: "Data Science & AI",
+      courseIcon: Database,
       timeline: [
         {
           date: "Aug 2022",
@@ -116,6 +118,7 @@ export default function CareerJourney() {
       name: "Ananya Patel",
       photo: "/api/placeholder/80/80",
       course: "DevOps & Cloud",
+      courseIcon: Cloud,
       timeline: [
         {
           date: "May 2023",
@@ -209,18 +212,19 @@ export default function CareerJourney() {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
                 <div className="flex items-center gap-6 mb-4 lg:mb-0">
                   <div className="relative">
-                    <img
-                      src={journey.photo}
-                      alt={journey.name}
-                      className="w-20 h-20 rounded-full object-cover border-4 border-blue-200"
-                    />
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center border-4 border-blue-200 shadow-lg">
+                      <journey.courseIcon className="w-10 h-10 text-white" />
+                    </div>
                     <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
                       {journey.course.split(' ')[0]}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{journey.name}</h3>
-                    <p className="text-blue-600 font-semibold">{journey.course}</p>
+                    <div className="flex items-center gap-3 mb-2">
+                      <journey.courseIcon className="w-6 h-6 text-blue-600" />
+                      <h3 className="text-xl font-bold text-gray-700">{journey.course}</h3>
+                    </div>
+                    <p className="text-blue-600 font-semibold">Success Story</p>
                   </div>
                 </div>
                 
