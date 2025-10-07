@@ -426,12 +426,14 @@ const ReviewsSection = () => {
               and share your success with future students.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300">
+              <a 
+                href="https://share.google/o5nH2Fto8hJIVbPGN" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 text-center inline-block"
+              >
                 Write a Review
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                Submit Video Testimonial
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>
