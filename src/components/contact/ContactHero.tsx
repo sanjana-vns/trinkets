@@ -129,15 +129,15 @@ export default function ContactHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex justify-center lg:justify-start"
             >
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all duration-300 flex items-center gap-3 group">
+              <a 
+                href="#contact-form"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all duration-300 flex items-center gap-3 group"
+              >
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              <button className="border-2 border-blue-200 text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all duration-300">
-                Download Brochure
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -150,19 +150,19 @@ export default function ContactHero() {
           >
             <div className="grid grid-cols-2 gap-6">
               {contactHighlights.map((highlight, index) => (
-                <motion.div
+                  <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 group"
+                  className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 group"
                 >
                   <div className="bg-gradient-to-r from-blue-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <highlight.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{highlight.title}</h3>
-                  <p className="text-gray-600">{highlight.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{highlight.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -195,7 +195,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-20 bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 shadow-xl"
+          className="mt-20 bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-blue-100 shadow-xl"
         >
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="flex items-center justify-center gap-3">
