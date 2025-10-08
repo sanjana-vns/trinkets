@@ -520,7 +520,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-xl mr-3">⭐</span>
               <span className="font-bold text-lg">Why Choose Us</span>
             </div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Why Choose Our
               </span>
@@ -649,19 +649,19 @@ export default function MEPEngineeringCoursePage() {
 
         <div className="relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-6">
               <span className="text-xl mr-3">📚</span>
               <span className="font-bold text-lg">Comprehensive Curriculum</span>
             </div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 MEP Engineering
               </span>
               <br />
               <span className="text-gray-800">Learning Journey</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Master MEP engineering through our structured 6-month program designed by industry experts
             </p>
           </div>
@@ -879,7 +879,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-xl mr-3">🚀</span>
               <span className="font-bold text-lg">Career Launch Pad</span>
             </div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
                 MEP Engineering Careers
               </span>
@@ -1029,7 +1029,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-xl mr-3">⭐</span>
               <span className="font-bold text-lg">Success Stories</span>
             </div>
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
                 MEP Engineering Success
               </span>
