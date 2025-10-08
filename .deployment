@@ -1,0 +1,4 @@
+# Force Deployment
+This file forces Vercel to redeploy with fresh cache.
+Deployment timestamp: 2025-10-08T21:17:00Z
+Build ID: force-cache-clear-v2
