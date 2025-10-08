@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { TrendingUp, Users, Award, Target, Building2, MapPin, Calendar, Trophy, Star, CheckCircle, ArrowUpRight } from 'lucide-react'
 
 const SuccessStats = () => {
@@ -350,12 +351,12 @@ const SuccessStats = () => {
               Your success story could be next.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg">
+              <Link href="/courses" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg text-center">
                 Start Your Journey
-              </button>
-              <button className="px-8 py-4 border-2 border-blue-200 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300">
+              </Link>
+              <Link href="/placements" className="px-8 py-4 border-2 border-blue-200 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 text-center">
                 View Placement Records
-              </button>
+              </Link>
             </div>
           </div>
         </motion.div>
