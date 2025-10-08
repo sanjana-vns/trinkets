@@ -8,12 +8,6 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    // Optimize image loading
-    loader: 'default',
-    quality: 85,
-    // Enable progressive JPEG
-    progressive: true,
-    // Optimize image formats
     unoptimized: false,
   },
   output: 'standalone',
@@ -24,17 +18,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
     scrollRestoration: true,
-    // Enable modern bundling
-    optimizeCss: true,
-    // Optimize server components
-    serverComponentsExternalPackages: ['sharp'],
-    // Enable optimized fonts
-    optimizeServerReact: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    // Remove development-only code
-    reactRemoveProperties: process.env.NODE_ENV === 'production',
   },
   swcMinify: true,
   modularizeImports: {
