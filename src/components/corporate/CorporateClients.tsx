@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Corporate Clients Component
 const CorporateClients = () => {
@@ -397,7 +398,10 @@ const CorporateClients = () => {
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-flex items-center gap-4">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25">
+            <Link 
+              href="/about"
+              className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 inline-flex items-center"
+            >
               <span className="relative z-10 flex items-center gap-2">
                 Join Our Success Stories
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,7 +409,7 @@ const CorporateClients = () => {
                 </svg>
               </span>
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
