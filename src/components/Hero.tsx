@@ -5,6 +5,9 @@ import Link from 'next/link'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  
+  // Cache busting key to force re-render
+  const cacheKey = `hero-v2-${Date.now()}`
 
   const slides = [
     {
@@ -58,7 +61,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section key={cacheKey} className="relative min-h-screen overflow-hidden">
       {/* Background Images with Overlay */}
       {slides.map((slide, index) => (
         <div
