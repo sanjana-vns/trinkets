@@ -145,7 +145,9 @@ const TestimonialsHero = () => {
               className="flex flex-wrap gap-4"
             >
               <a 
-                href="/gallery"
+                href="https://www.youtube.com/@trinketsinstituteoftechnol6645"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 <span className="flex items-center">
