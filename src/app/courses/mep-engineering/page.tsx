@@ -428,7 +428,7 @@ export default function MEPEngineeringCoursePage() {
                   <h3 className="text-2xl font-bold text-center mb-8 text-purple-800">
                     🚀 Course Highlights
                   </h3>
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-indigo-500">
                       <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
                       <h4 className="font-bold text-indigo-800 text-lg">Duration</h4>
@@ -668,57 +668,57 @@ export default function MEPEngineeringCoursePage() {
 
           {/* Timeline Journey */}
           <div className="relative max-w-6xl mx-auto">
-            {/* Central Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-400 via-purple-500 to-blue-500 rounded-full"></div>
+            {/* Central Timeline Line - Hidden on mobile */}
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-400 via-purple-500 to-blue-500 rounded-full"></div>
 
             {/* Module Cards */}
-            <div className="space-y-16">
+            <div className="space-y-8 lg:space-y-16">
               {/* Module 1 - MEP Fundamentals */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12 text-right">
-                  <div className="group bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center justify-end mb-4">
-                      <h3 className="text-2xl font-bold mr-4">MEP Fundamentals & Building Services</h3>
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🏗️</div>
+              <div className="relative lg:flex lg:items-center">
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <div className="group bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center lg:justify-end mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">MEP Fundamentals & Building Services</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">🏗️</div>
                     </div>
                     <p className="text-indigo-100 mb-6">Foundation & Core Concepts</p>
                     <div className="space-y-3 text-indigo-100">
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
-                        <span className="mr-2">Introduction to MEP Engineering</span>
-                        <span className="text-yellow-300">📚</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="lg:mr-2">Introduction to MEP Engineering</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">📚</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
-                        <span className="mr-2">Building Services Overview</span>
-                        <span className="text-yellow-300">🏢</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="lg:mr-2">Building Services Overview</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🏢</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
-                        <span className="mr-2">MEP Design Standards & Codes</span>
-                        <span className="text-yellow-300">📋</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="lg:mr-2">MEP Design Standards & Codes</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">📋</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
-                        <span className="mr-2">Mumbai Building Bye-laws</span>
-                        <span className="text-yellow-300">⚖️</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="lg:mr-2">Mumbai Building Bye-laws</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">⚖️</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   1
                 </div>
-                <div className="w-1/2 pl-12"></div>
+                <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
               </div>
 
               {/* Module 2 - AutoCAD MEP */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+              <div className="relative lg:flex lg:items-center">
+                <div className="hidden lg:block lg:w-1/2 lg:pr-12"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   2
                 </div>
-                <div className="w-1/2 pl-12">
-                  <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                <div className="lg:w-1/2 lg:pl-12">
+                  <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
                     <div className="flex items-center mb-4">
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🖥️</div>
-                      <h3 className="text-2xl font-bold">AutoCAD MEP Mastery</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🖥️</div>
+                      <h3 className="text-xl lg:text-2xl font-bold">AutoCAD MEP Mastery</h3>
                     </div>
                     <p className="text-purple-100 mb-6">Professional CAD Design Skills</p>
                     <div className="space-y-3 text-purple-100">
@@ -744,51 +744,51 @@ export default function MEPEngineeringCoursePage() {
               </div>
 
               {/* Module 3 - Revit MEP & BIM */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12 text-right">
-                  <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center justify-end mb-4">
-                      <h3 className="text-2xl font-bold mr-4">Revit MEP & BIM</h3>
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🏛️</div>
+              <div className="relative lg:flex lg:items-center">
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center lg:justify-end mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">Revit MEP & BIM</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">🏛️</div>
                     </div>
                     <p className="text-blue-100 mb-6">3D Modeling & BIM Excellence</p>
                     <div className="space-y-3 text-blue-100">
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
-                        <span className="mr-2">Revit MEP Fundamentals</span>
-                        <span className="text-yellow-300">🏗️</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="lg:mr-2">Revit MEP Fundamentals</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🏗️</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
-                        <span className="mr-2">BIM for MEP Engineering</span>
-                        <span className="text-yellow-300">🧠</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="lg:mr-2">BIM for MEP Engineering</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🧠</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
-                        <span className="mr-2">MEP Families Creation</span>
-                        <span className="text-yellow-300">🔧</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="lg:mr-2">MEP Families Creation</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🔧</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
-                        <span className="mr-2">Coordination Models</span>
-                        <span className="text-yellow-300">🤝</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="lg:mr-2">Coordination Models</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🤝</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   3
                 </div>
-                <div className="w-1/2 pl-12"></div>
+                <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
               </div>
 
               {/* Module 4 - HVAC Design Software */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+              <div className="relative lg:flex lg:items-center">
+                <div className="hidden lg:block lg:w-1/2 lg:pr-12"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   4
                 </div>
-                <div className="w-1/2 pl-12">
-                  <div className="group bg-gradient-to-br from-teal-500 to-teal-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                <div className="lg:w-1/2 lg:pl-12">
+                  <div className="group bg-gradient-to-br from-teal-500 to-teal-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
                     <div className="flex items-center mb-4">
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🌡️</div>
-                      <h3 className="text-2xl font-bold">HVAC Design Software</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🌡️</div>
+                      <h3 className="text-xl lg:text-2xl font-bold">HVAC Design Software</h3>
                     </div>
                     <p className="text-teal-100 mb-6">HAP & TRACE 700 Expertise</p>
                     <div className="space-y-3 text-teal-100">
@@ -814,38 +814,38 @@ export default function MEPEngineeringCoursePage() {
               </div>
 
               {/* Module 5 - Real Project Implementation */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12 text-right">
-                  <div className="group bg-gradient-to-br from-orange-500 to-orange-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center justify-end mb-4">
-                      <h3 className="text-2xl font-bold mr-4">Real Project Implementation</h3>
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🚀</div>
+              <div className="relative lg:flex lg:items-center">
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <div className="group bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center lg:justify-end mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">Real Project Implementation</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">🚀</div>
                     </div>
                     <p className="text-orange-100 mb-6">Industry Project Experience</p>
                     <div className="space-y-3 text-orange-100">
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
-                        <span className="mr-2">Live MEP Project Analysis</span>
-                        <span className="text-yellow-300">📋</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                        <span className="lg:mr-2">Live MEP Project Analysis</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">📋</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
-                        <span className="mr-2">Mumbai Construction Case Studies</span>
-                        <span className="text-yellow-300">🏙️</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                        <span className="lg:mr-2">Mumbai Construction Case Studies</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">🏙️</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
-                        <span className="mr-2">Site Visit & Inspection</span>
-                        <span className="text-yellow-300">👷</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                        <span className="lg:mr-2">Site Visit & Inspection</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">👷</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
-                        <span className="mr-2">Final Portfolio Development</span>
-                        <span className="text-yellow-300">📁</span>
+                      <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                        <span className="lg:mr-2">Final Portfolio Development</span>
+                        <span className="text-yellow-300 ml-2 lg:ml-0">📁</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   5
                 </div>
-                <div className="w-1/2 pl-12"></div>
+                <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
               </div>
             </div>
           </div>
@@ -972,7 +972,7 @@ export default function MEPEngineeringCoursePage() {
               Our MEP Engineering Placement Partners in Mumbai
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {[
                 { name: "L&T", subtitle: "Construction", gradient: "from-blue-500 to-indigo-600" },
                 { name: "Godrej", subtitle: "Properties", gradient: "from-green-500 to-teal-600" },
