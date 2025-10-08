@@ -1,0 +1,271 @@
+import React from 'react'
+
+interface StructuredDataProps {
+  type: 'organization' | 'course' | 'service' | 'localBusiness' | 'breadcrumb' | 'website' | 'faq'
+  data: any
+}
+
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const generateStructuredData = () => {
+    const baseContext = "https://schema.org"
+    
+    switch (type) {
+      case 'organization':
+        return {
+          "@context": baseContext,
+          "@type": "EducationalOrganization",
+          "name": data.name || "Trinkets Institute of Technology",
+          "alternateName": ["Trinkets Institute", "TIT Mumbai"],
+          "url": "https://trinketsinstitute.com",
+          "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg",
+          "description": data.description || "Leading technical education institute specializing in Engineering Design, Piping, HVAC, MEP, Structural Engineering, and Professional Training Programs in Mumbai.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "823, Ecstasy Business Park, City of Joy, JSD Road",
+            "addressLocality": "Mulund West",
+            "addressRegion": "Mumbai",
+            "postalCode": "400080",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9820924788",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/trinkets-institute",
+            "https://www.facebook.com/trinketsinstitute",
+            "https://twitter.com/trinketsinstitute",
+            "https://www.youtube.com/c/trinketsinstitute",
+            "https://www.instagram.com/trinketsinstitute"
+          ],
+          "foundingDate": "2010",
+          "founder": {
+            "@type": "Person",
+            "name": "Trinkets Institute Founders"
+          },
+          "numberOfEmployees": "50-100",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "500",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Engineering Training Courses",
+            "itemListElement": [
+              {
+                "@type": "OfferCatalog",
+                "name": "Piping Engineering Courses",
+                "itemListElement": [
+                  { "@type": "Course", "name": "SP3D Piping Design Training" },
+                  { "@type": "Course", "name": "CAESAR II Stress Analysis" },
+                  { "@type": "Course", "name": "Piping Engineering Fundamentals" }
+                ]
+              },
+              {
+                "@type": "OfferCatalog", 
+                "name": "MEP Engineering Courses",
+                "itemListElement": [
+                  { "@type": "Course", "name": "HVAC System Design" },
+                  { "@type": "Course", "name": "MEP Engineering" },
+                  { "@type": "Course", "name": "HVAC Drafting Course" }
+                ]
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Structural Engineering Courses", 
+                "itemListElement": [
+                  { "@type": "Course", "name": "STAAD Pro" },
+                  { "@type": "Course", "name": "ETABS" },
+                  { "@type": "Course", "name": "Structural Design Analysis" }
+                ]
+              }
+            ]
+          }
+        }
+
+      case 'course':
+        return {
+          "@context": baseContext,
+          "@type": "Course",
+          "name": data.name,
+          "description": data.description,
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Trinkets Institute of Technology",
+            "url": "https://trinketsinstitute.com"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": ["onsite", "online"],
+            "duration": data.duration || "P3M",
+            "startDate": data.startDate,
+            "endDate": data.endDate,
+            "location": {
+              "@type": "Place",
+              "name": "Trinkets Institute",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "823, Ecstasy Business Park",
+                "addressLocality": "Mulund West",
+                "addressRegion": "Mumbai",
+                "postalCode": "400080",
+                "addressCountry": "IN"
+              }
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": data.price,
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "category": "Education"
+          },
+          "coursePrerequisites": data.prerequisites || "Basic Engineering Knowledge",
+          "educationalCredentialAwarded": data.certification || "Professional Certificate",
+          "timeRequired": data.duration || "P3M",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": data.rating || "4.7",
+            "reviewCount": data.reviewCount || "150",
+            "bestRating": "5"
+          }
+        }
+
+      case 'service':
+        return {
+          "@context": baseContext,
+          "@type": "ProfessionalService",
+          "name": data.name,
+          "description": data.description,
+          "provider": {
+            "@type": "Organization",
+            "name": "Trinkets Institute of Technology",
+            "url": "https://trinketsinstitute.com"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Mumbai, Maharashtra, India"
+          },
+          "serviceType": data.serviceType || "Engineering Consulting",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceRange": data.priceRange || "₹₹-₹₹₹",
+            "priceCurrency": "INR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "200",
+            "bestRating": "5"
+          }
+        }
+
+      case 'localBusiness':
+        return {
+          "@context": baseContext,
+          "@type": "LocalBusiness",
+          "name": "Trinkets Institute of Technology",
+          "image": "https://trinketsinstitute.com/images/trinketlogo.jpg",
+          "telephone": "+91-9820924788",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "823, Ecstasy Business Park, City of Joy, JSD Road",
+            "addressLocality": "Mulund West",
+            "addressRegion": "Mumbai",
+            "postalCode": "400080",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 19.1729,
+            "longitude": 72.9573
+          },
+          "url": "https://trinketsinstitute.com",
+          "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-15:00"
+          ],
+          "priceRange": "₹₹-₹₹₹",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "500"
+          }
+        }
+
+      case 'breadcrumb':
+        return {
+          "@context": baseContext,
+          "@type": "BreadcrumbList",
+          "itemListElement": data.map((item: any, index: number) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": item.url
+          }))
+        }
+
+      case 'website':
+        return {
+          "@context": baseContext,
+          "@type": "WebSite",
+          "name": "Trinkets Institute",
+          "alternateName": "Trinkets Institute of Technology",
+          "url": "https://trinketsinstitute.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://trinketsinstitute.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Trinkets Institute of Technology",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://trinketsinstitute.com/images/trinketlogo.jpg"
+            }
+          }
+        }
+
+      case 'faq':
+        return {
+          "@context": baseContext,
+          "@type": "FAQPage",
+          "mainEntity": data.map((faq: any) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }
+
+      default:
+        return {}
+    }
+  }
+
+  const structuredData = generateStructuredData()
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />
+  )
+}
+
+export default StructuredData

@@ -8,17 +8,33 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Optimize image loading
+    loader: 'default',
+    quality: 85,
+    // Enable progressive JPEG
+    progressive: true,
+    // Optimize image formats
+    unoptimized: false,
   },
   output: 'standalone',
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  // Enhanced experimental features
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
     scrollRestoration: true,
+    // Enable modern bundling
+    optimizeCss: true,
+    // Optimize server components
+    serverComponentsExternalPackages: ['sharp'],
+    // Enable optimized fonts
+    optimizeServerReact: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    // Remove development-only code
+    reactRemoveProperties: process.env.NODE_ENV === 'production',
   },
   swcMinify: true,
   modularizeImports: {
@@ -26,6 +42,130 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
     },
+  },
+  // Performance optimizations
+  headers: async () => [
+    {
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'X-Content-Type-Options',
+          value: 'nosniff',
+        },
+        {
+          key: 'X-Frame-Options',
+          value: 'DENY',
+        },
+        {
+          key: 'X-XSS-Protection',
+          value: '1; mode=block',
+        },
+        {
+          key: 'Referrer-Policy',
+          value: 'strict-origin-when-cross-origin',
+        },
+      ],
+    },
+    {
+      source: '/images/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      source: '/icons/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      source: '/_next/static/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    {
+      source: '/manifest.json',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400',
+        },
+      ],
+    },
+    {
+      source: '/sw.js',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=0, must-revalidate',
+        },
+        {
+          key: 'Service-Worker-Allowed',
+          value: '/',
+        },
+      ],
+    },
+  ],
+  // Redirect configuration for SEO
+  redirects: async () => [
+    {
+      source: '/course/:path*',
+      destination: '/courses/:path*',
+      permanent: true,
+    },
+    {
+      source: '/service/:path*', 
+      destination: '/services/:path*',
+      permanent: true,
+    },
+  ],
+  // Rewrites for clean URLs
+  rewrites: async () => [
+    {
+      source: '/sitemap.xml',
+      destination: '/api/sitemap',
+    },
+  ],
+  // Webpack optimizations
+  webpack: (config, { dev, isServer }) => {
+    // Optimize bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        // Bundle vendor libraries separately
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          priority: 10,
+        },
+        // Bundle common components
+        common: {
+          name: 'common',
+          minChunks: 2,
+          priority: 5,
+          reuseExistingChunk: true,
+        },
+      }
+    }
+
+    // Optimize SVG imports
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack']
+    })
+
+    return config
   },
 }
 
