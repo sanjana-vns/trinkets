@@ -27,24 +27,9 @@ const animationStyles = `
     from { opacity: 0; transform: translateY(-40px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-  }
-  @keyframes float-reverse {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(-2deg); }
-  }
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
-  }
   .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
   .animate-slideUp { animation: slideUp 0.8s ease-out forwards; }
   .animate-slideDown { animation: slideDown 0.8s ease-out forwards; }
-  .animate-float { animation: float 6s ease-in-out infinite; }
-  .animate-float-reverse { animation: float-reverse 8s ease-in-out infinite; }
-  .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 `;
 
 const RelatedCourses = () => {
@@ -99,10 +84,10 @@ export default function STAADProCoursePage() {
       
       {/* Enhanced Creative Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-float-reverse"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-indigo-400/10 to-purple-400/10 rounded-full blur-3xl animate-float"></div>
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-indigo-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -179,7 +164,7 @@ export default function STAADProCoursePage() {
                 <div className="grid grid-cols-2 gap-6">
                   
                   {/* Structural Modeling */}
-                  <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🏗️</div>
                     <h3 className="text-xl font-bold mb-2">Structural Modeling</h3>
                     <p className="text-sm text-blue-200">Complete 3D structure creation</p>
@@ -190,7 +175,7 @@ export default function STAADProCoursePage() {
                   </div>
 
                   {/* Analysis Engine */}
-                  <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 animate-float-reverse">
+                  <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">⚡</div>
                     <h3 className="text-xl font-bold mb-2">Analysis Engine</h3>
                     <p className="text-sm text-blue-200">Advanced structural analysis</p>
@@ -212,7 +197,7 @@ export default function STAADProCoursePage() {
                   </div>
 
                   {/* Bridge Design */}
-                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 animate-float-reverse">
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🌉</div>
                     <h3 className="text-xl font-bold mb-2">Bridge Design</h3>
                     <p className="text-sm text-blue-200">Specialized bridge modeling</p>
@@ -223,9 +208,9 @@ export default function STAADProCoursePage() {
                   </div>
                 </div>
 
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full opacity-20 animate-pulse-glow"></div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-20 animate-float"></div>
+                {/* Decorative Elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full opacity-20"></div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-20"></div>
               </div>
 
               {/* Stats Row */}
@@ -250,9 +235,9 @@ export default function STAADProCoursePage() {
 
       {/* Enhanced Course Overview */}
       <section className="container mx-auto px-4 py-20 relative" id="course-details">
-        {/* Floating background elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-cyan-200/30 to-blue-200/30 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Background elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-cyan-200/30 to-blue-200/30 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-blue-100">
           <div className="max-w-6xl mx-auto">
@@ -409,9 +394,9 @@ export default function STAADProCoursePage() {
 
       {/* Enhanced FAQ Section for Voice Search */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-cyan-50 py-20 relative overflow-hidden" id="faqs">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-indigo-200/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-indigo-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fadeIn">

@@ -258,11 +258,11 @@ export default function HVACSystemDesignCoursePage() {
       
       {/* Creative Animated Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white overflow-hidden" id="hero">
-        {/* Animated Background Elements */}
+        {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-3xl animate-float-reverse"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full blur-3xl animate-float-animated"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
           
           {/* Mumbai Skyline Silhouette */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -350,7 +350,7 @@ export default function HVACSystemDesignCoursePage() {
                 <div className="grid grid-cols-2 gap-6">
                   
                   {/* AutoCAD MEP */}
-                  <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🔧</div>
                     <h3 className="text-xl font-bold mb-2">AutoCAD MEP</h3>
                     <p className="text-sm text-blue-200">Mechanical, Electrical & Plumbing Design</p>
@@ -361,7 +361,7 @@ export default function HVACSystemDesignCoursePage() {
                   </div>
 
                   {/* Revit MEP */}
-                  <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 animate-float-reverse">
+                  <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🏗️</div>
                     <h3 className="text-xl font-bold mb-2">Revit MEP</h3>
                     <p className="text-sm text-blue-200">Building Information Modeling</p>
@@ -372,7 +372,7 @@ export default function HVACSystemDesignCoursePage() {
                   </div>
 
                   {/* HAP Software */}
-                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 animate-float-animated">
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">📊</div>
                     <h3 className="text-xl font-bold mb-2">HAP Software</h3>
                     <p className="text-sm text-blue-200">Hourly Analysis Program</p>
@@ -383,7 +383,7 @@ export default function HVACSystemDesignCoursePage() {
                   </div>
 
                   {/* TRACE 700 */}
-                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">⚡</div>
                     <h3 className="text-xl font-bold mb-2">TRACE 700</h3>
                     <p className="text-sm text-blue-200">Building Energy Simulation</p>
@@ -395,7 +395,7 @@ export default function HVACSystemDesignCoursePage() {
                 </div>
 
                 {/* Mumbai Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-bounce">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                   Mumbai&apos;s #1 Choice
                 </div>
               </div>
@@ -428,18 +428,18 @@ export default function HVACSystemDesignCoursePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
           </div>
         </div>
       </section>
 
       {/* Enhanced Course Overview */}
       <section className="container mx-auto px-4 py-20 relative" id="course-details">
-        {/* Floating background elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-green-200/30 to-blue-200/30 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Background elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-green-200/30 to-blue-200/30 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-blue-100">
           <div className="max-w-6xl mx-auto">

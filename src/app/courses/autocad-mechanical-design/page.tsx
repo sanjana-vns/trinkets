@@ -251,11 +251,11 @@ export default function AutoCADMechanicalDesignCoursePage() {
       
       {/* Creative Animated Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white overflow-hidden" id="hero">
-        {/* Animated Background Elements */}
+        {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-teal-400/30 to-cyan-400/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-float-reverse"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-full blur-3xl animate-float-animated"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-teal-400/30 to-cyan-400/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
           
           {/* CAD Design Grid Pattern */}
           <div className="absolute inset-0 opacity-10">
