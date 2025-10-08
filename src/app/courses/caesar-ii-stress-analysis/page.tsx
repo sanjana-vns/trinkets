@@ -197,12 +197,16 @@ export default function CaesarIIStressAnalysisPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                Start Stress Analysis Journey
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
-                Download Curriculum
-              </button>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                  Start Stress Analysis Journey
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                  Download Curriculum
+                </button>
+              </Link>
             </div>
 
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -619,9 +623,11 @@ export default function CaesarIIStressAnalysisPage() {
               <p className="text-lg text-gray-700 mb-6">
                 Average CAESAR II Professional Salary in Mumbai: <span className="font-bold text-red-600">₹6-12 LPA</span>
               </p>
-              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
-                Explore Career Opportunities
-              </button>
+              <Link href="/placements">
+                <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+                  Explore Career Opportunities
+                </button>
+              </Link>
             </div>
           </div>
         </section>

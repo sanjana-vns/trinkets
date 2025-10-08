@@ -14,7 +14,6 @@ interface TrainingProgram {
   technologies: string[];
   participants: string;
   customizable: boolean;
-  price: string;
   features: string[];
   courseLink?: string;
 }
@@ -46,7 +45,6 @@ const TrainingPrograms = () => {
         technologies: ["SP3D", "AutoCAD", "Piping Specifications", "Isometric Generation"],
         participants: "10-15",
         customizable: true,
-        price: "Contact for Quote",
         features: ["3D Modeling", "Clash Detection", "Isometric Drawings", "Equipment Placement"],
         courseLink: "/courses/sp3d-piping-design-training"
       },
@@ -60,7 +58,6 @@ const TrainingPrograms = () => {
         technologies: ["CAESAR II", "ASME B31.3", "Stress Analysis", "Support Design"],
         participants: "8-12",
         customizable: true,
-        price: "Contact for Quote",
         features: ["Thermal Stress Analysis", "Seismic Analysis", "Support Optimization", "Code Compliance"],
         courseLink: "/courses/caesar-ii-stress-analysis"
       },
@@ -74,7 +71,6 @@ const TrainingPrograms = () => {
         technologies: ["AutoCAD", "P&ID", "Piping Design", "Material Selection"],
         participants: "15-20",
         customizable: true,
-        price: "Contact for Quote",
         features: ["Piping Fundamentals", "Design Standards", "Material Engineering", "Project Management"],
         courseLink: "/courses/piping-engineering-fundamentals-training"
       }
@@ -90,7 +86,6 @@ const TrainingPrograms = () => {
         technologies: ["Revit MEP", "AutoCAD MEP", "HAP", "Elite Software"],
         participants: "12-18",
         customizable: true,
-        price: "Contact for Quote",
         features: ["Electrical Design", "Plumbing Systems", "Fire Protection", "BIM Coordination"],
         courseLink: "/courses/mep-engineering"
       },
@@ -104,7 +99,6 @@ const TrainingPrograms = () => {
         technologies: ["Revit MEP", "Navisworks", "BIM 360", "Dynamo"],
         participants: "10-15",
         customizable: true,
-        price: "Contact for Quote",
         features: ["3D Modeling", "Clash Detection", "4D Scheduling", "5D Cost Analysis"],
         courseLink: undefined
       }
@@ -120,7 +114,7 @@ const TrainingPrograms = () => {
         technologies: ["HAP", "Trace 700", "Elite CHVAC", "Duct Design"],
         participants: "12-16",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Load Calculations", "System Design", "Energy Analysis", "Duct Sizing"],
         courseLink: "/courses/hvac-system-design"
       },
@@ -134,7 +128,7 @@ const TrainingPrograms = () => {
         technologies: ["eQUEST", "EnergyPlus", "Green Building", "LEED"],
         participants: "8-12",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Energy Simulation", "LEED Compliance", "Sustainable Design", "Cost-Benefit Analysis"],
         courseLink: undefined
       }
@@ -150,7 +144,7 @@ const TrainingPrograms = () => {
         technologies: ["STAAD Pro", "ETABS", "Structural Design", "IS Codes"],
         participants: "12-16",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Structural Modeling", "Load Analysis", "Design Optimization", "Code Compliance"],
         courseLink: "/courses/staad-pro"
       },
@@ -164,7 +158,7 @@ const TrainingPrograms = () => {
         technologies: ["STAAD Pro", "SAP2000", "Connection Design", "Fabrication"],
         participants: "8-12",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Connection Design", "Fabrication Details", "Erection Planning", "Cost Optimization"],
         courseLink: undefined
       }
@@ -180,7 +174,7 @@ const TrainingPrograms = () => {
         technologies: ["AutoCAD", "Technical Drawing", "Dimensioning", "3D Modeling"],
         participants: "15-20",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["2D Drafting", "3D Modeling", "Technical Standards", "Plot Management"],
         courseLink: "/courses/autocad-mechanical-design"
       },
@@ -194,7 +188,7 @@ const TrainingPrograms = () => {
         technologies: ["AutoCAD 3D", "Inventor", "SolidWorks", "3D Printing"],
         participants: "10-15",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Parametric Modeling", "Assembly Design", "Simulation", "Manufacturing Integration"],
         courseLink: undefined
       }
@@ -210,7 +204,7 @@ const TrainingPrograms = () => {
         technologies: ["HYSYS", "Aspen Plus", "P&ID", "Process Simulation"],
         participants: "12-18",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Process Design", "Heat Integration", "Safety Analysis", "Economic Evaluation"],
         courseLink: undefined
       },
@@ -224,7 +218,7 @@ const TrainingPrograms = () => {
         technologies: ["PDMS", "E3D", "Plant Layout", "Safety Considerations"],
         participants: "8-12",
         customizable: true,
-        price: "Contact for Quote",
+
         features: ["Equipment Layout", "Pipe Routing", "Safety Compliance", "Maintenance Access"],
         courseLink: undefined
       }
@@ -387,16 +381,6 @@ const TrainingPrograms = () => {
                   </div>
                 </div>
 
-                {/* Pricing */}
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <span className="text-lg font-bold text-gray-800">{program.price}</span>
-                  </div>
-                  <div className="text-sm text-green-600 font-semibold">
-                    Enterprise Pricing
-                  </div>
-                </div>
-
                 {/* Action Buttons */}
                 <div className="space-y-3">
                   {program.courseLink ? (
@@ -410,9 +394,11 @@ const TrainingPrograms = () => {
                       Request Information
                     </button>
                   )}
-                  <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
-                    Schedule Demo
-                  </button>
+                  <Link href="/contact">
+                    <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
+                      Schedule Demo
+                    </button>
+                  </Link>
                 </div>
               </div>
 

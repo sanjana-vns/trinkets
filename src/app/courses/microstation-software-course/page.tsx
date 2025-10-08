@@ -263,12 +263,16 @@ export default function MicroStationCoursePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
-              Start Your CAD Journey
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
-              Download Curriculum
-            </button>
+            <Link href="/contact">
+              <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                Start Your CAD Journey
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                Download Curriculum
+              </button>
+            </Link>
           </div>
 
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -363,9 +367,11 @@ export default function MicroStationCoursePage() {
             <p className="text-lg text-gray-700 mb-6">
               Average MicroStation Professional Salary in Mumbai: <span className="font-bold text-blue-600">₹4.5-8.5 LPA</span>
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
-              Explore Career Opportunities
-            </button>
+            <Link href="/placements">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+                Explore Career Opportunities
+              </button>
+            </Link>
           </div>
         </div>
       </section>

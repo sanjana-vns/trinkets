@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 import { Award, Trophy, Medal, Star, Camera, Image as ImageIcon, ArrowRight, Eye, Users, Target } from 'lucide-react'
 
 const GalleryHero = () => {
@@ -132,19 +133,23 @@ const GalleryHero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-wrap gap-4"
             >
-              <button className="group px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center">
-                  <Eye className="w-5 h-5 mr-2" />
-                  Explore Gallery
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-              <button className="px-8 py-4 border-2 border-yellow-400/50 rounded-xl font-semibold text-yellow-100 hover:bg-yellow-500/10 transition-all duration-300">
-                <span className="flex items-center">
-                  <ImageIcon className="w-5 h-5 mr-2" />
-                  View Awards
-                </span>
-              </button>
+              <Link href="/gallery">
+                <button className="group px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 transform hover:scale-105">
+                  <span className="flex items-center">
+                    <Eye className="w-5 h-5 mr-2" />
+                    Explore Gallery
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
+              </Link>
+              <Link href="/gallery">
+                <button className="px-8 py-4 border-2 border-yellow-400/50 rounded-xl font-semibold text-yellow-100 hover:bg-yellow-500/10 transition-all duration-300">
+                  <span className="flex items-center">
+                    <ImageIcon className="w-5 h-5 mr-2" />
+                    View Awards
+                  </span>
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
 

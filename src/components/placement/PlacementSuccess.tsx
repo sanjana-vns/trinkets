@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 import { Quote, Star, ArrowLeft, ArrowRight, MapPin, Calendar, TrendingUp, Award, User, Briefcase } from 'lucide-react'
 
 const PlacementSuccess = () => {
@@ -358,12 +359,16 @@ const PlacementSuccess = () => {
               Join thousands of successful engineers who have transformed their careers through our comprehensive placement assistance program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                Start Your Journey
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Success Stories
-              </button>
+              <Link href="/courses">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                  Start Your Journey
+                </button>
+              </Link>
+              <Link href="/placements">
+                <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
+                  View All Success Stories
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

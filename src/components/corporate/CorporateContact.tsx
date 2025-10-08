@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Corporate Contact Component
 const CorporateContact = () => {
@@ -379,9 +380,11 @@ const CorporateContact = () => {
                       <option value="cloud" className="text-gray-800">Cloud & DevOps</option>
                       <option value="security" className="text-gray-800">Cybersecurity</option>
                     </select>
-                    <button className="w-full py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                      Schedule Demo
-                    </button>
+                    <Link href="/contact">
+                      <button className="w-full py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        Schedule Demo
+                      </button>
+                    </Link>
                   </div>
                 )}
               </div>

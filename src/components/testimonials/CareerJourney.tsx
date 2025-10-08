@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Calendar, MapPin, TrendingUp, Award, ChevronRight, Building2, GraduationCap, Briefcase, Code, Database, Cloud } from 'lucide-react';
 
 export default function CareerJourney() {
@@ -325,10 +326,12 @@ export default function CareerJourney() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of students who have successfully transformed their careers with our expert guidance
             </p>
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors duration-300 flex items-center gap-3 mx-auto">
-              Begin Your Journey
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            <Link href="/courses">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors duration-300 flex items-center gap-3 mx-auto">
+                Begin Your Journey
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>

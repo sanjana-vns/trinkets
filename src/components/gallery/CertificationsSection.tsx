@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 import { Award, Star, Filter, Search, CheckCircle, Clock, Users, Target, ExternalLink, Download, BookOpen, TrendingUp, FileText } from 'lucide-react'
 
 const CertificationsSection = () => {
@@ -464,12 +465,16 @@ const CertificationsSection = () => {
               Join thousands of professionals who have transformed their careers with our industry-recognized certifications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300">
-                Browse All Programs
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                Download Catalog
-              </button>
+              <Link href="/courses">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300">
+                  Browse All Programs
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
+                  Download Catalog
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

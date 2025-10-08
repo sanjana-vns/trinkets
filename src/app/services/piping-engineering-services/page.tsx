@@ -108,9 +108,7 @@ const jsonLd = {
   },
   offers: {
     '@type': 'Offer',
-    availability: 'https://schema.org/InStock',
-    price: 'Contact for pricing',
-    priceCurrency: 'INR'
+    availability: 'https://schema.org/InStock'
   },
   aggregateRating: {
     '@type': 'AggregateRating',

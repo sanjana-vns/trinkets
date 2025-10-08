@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { 
   UserPlus, 
   BookOpen, 
@@ -344,12 +345,16 @@ const PlacementProcess = () => {
               Our proven 8-step process has helped thousands of engineers secure their dream jobs. Take the first step today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                Begin Assessment
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                Schedule Consultation
-              </button>
+              <Link href="/contact">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                  Begin Assessment
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
+                  Schedule Consultation
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

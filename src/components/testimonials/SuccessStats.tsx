@@ -328,9 +328,11 @@ const SuccessStats = () => {
           </div>
 
           <div className="text-center mt-8">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg">
-              View All Recruiters
-            </button>
+            <Link href="/placements">
+              <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg">
+                View All Recruiters
+              </button>
+            </Link>
           </div>
         </motion.div>
 

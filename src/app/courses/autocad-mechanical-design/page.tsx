@@ -33,11 +33,9 @@ export const metadata: Metadata = {
     'design engineer training mumbai',
     'autocad placement mumbai',
     'mumbai autocad training center',
-    'autocad course fees mumbai',
     'autocad software training mumbai',
     'professional autocad course',
     'trinkets institute mumbai',
-    'autocad design mumbai fees',
     'autocad course duration mumbai',
     'mumbai engineering design training',
     'autocad career mumbai'
@@ -127,10 +125,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
         "offers": {
           "@type": "Offer",
           "category": "AutoCAD Design Training",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2024-01-01",
-          "priceValidUntil": "2024-12-31"
+          "availability": "https://schema.org/InStock"
         },
         "courseMode": ["classroom", "online", "blended"],
         "educationalLevel": "Professional",
@@ -204,7 +199,6 @@ export default function AutoCADMechanicalDesignCoursePage() {
           "longitude": 72.8777
         },
         "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00",
-        "priceRange": "₹₹",
         "servesCuisine": "Education",
         "areaServed": {
           "@type": "City",
@@ -868,10 +862,6 @@ export default function AutoCADMechanicalDesignCoursePage() {
                 {
                   question: "How long is the AutoCAD Design course duration in Mumbai?",
                   answer: "Our AutoCAD Design course in Mumbai is a comprehensive 4-month program. This includes 2 months of intensive AutoCAD 2D and 3D training, 1 month of advanced software like Inventor and SolidWorks, and 1 month of live project training with Mumbai-based design companies. We also offer flexible weekend batches for working professionals in Mumbai."
-                },
-                {
-                  question: "What is the AutoCAD Design course fees in Mumbai?",
-                  answer: "Our AutoCAD Design course fees in Mumbai is very competitive and includes all software licenses, study materials, and placement assistance. We offer flexible payment options including EMI facilities. The course fee covers AutoCAD, Inventor, SolidWorks training, live projects, and guaranteed job placement support. Contact us for current fees and special Mumbai resident discounts."
                 },
                 {
                   question: "Is placement assistance provided for AutoCAD Design course in Mumbai?",

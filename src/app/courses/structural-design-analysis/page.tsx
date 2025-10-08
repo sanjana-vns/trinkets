@@ -131,11 +131,7 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
         "offers": {
           "@type": "Offer",
           "category": "Professional Training",
-          "priceCurrency": "INR",
-          "price": "45000",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2024-01-01",
-          "priceValidUntil": "2024-12-31"
+          "availability": "https://schema.org/InStock"
         },
         "courseMode": ["classroom", "online"],
         "educationalLevel": "Professional",
@@ -228,7 +224,6 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
         "telephone": "+91-9876543210",
         "email": "info@trinketsinstitute.com",
         "url": "https://trinketsinstitute.com",
-        "priceRange": "₹₹",
         "openingHours": "Mo-Sa 09:00-18:00",
         "areaServed": {
           "@type": "City",
