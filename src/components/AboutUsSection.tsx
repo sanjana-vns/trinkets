@@ -180,7 +180,7 @@ const AboutUsSection = () => {
                     <h3 className="font-bold text-gray-900 text-sm lg:text-base group-hover:text-blue-700 transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-xs lg:text-sm text-gray-600 leading-relaxed mt-1">
+                    <p className="text-sm lg:text-base text-gray-700 leading-relaxed mt-2 font-medium">
                       {feature.description}
                     </p>
                   </div>
@@ -231,24 +231,24 @@ const AboutUsSection = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
                 {/* Enhanced gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/50 to-transparent 
-                               group-hover:from-blue-900/95 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/95 via-blue-800/60 to-transparent 
+                               group-hover:from-blue-900/98 transition-all duration-500"></div>
                 
                 {/* Floating elements for visual interest */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
                 <div className="absolute top-8 right-8 w-2 h-2 bg-white rounded-full animate-pulse delay-500"></div>
                 
                 {/* Enhanced text overlay */}
-                <div className="absolute bottom-4 left-4 right-4 lg:bottom-6 lg:left-6 lg:right-6 z-10">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 lg:p-6 border border-white/20 
-                                 transform group-hover:scale-105 transition-all duration-300">
-                    <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 lg:mb-3 leading-tight">
+                <div className="absolute bottom-6 left-4 right-4 lg:bottom-8 lg:left-6 lg:right-6 z-10">
+                  <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-5 lg:p-7 border border-white/30 
+                                 transform group-hover:scale-105 transition-all duration-300 shadow-2xl">
+                    <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-3 lg:mb-4 leading-tight">
                       Excellence in 
-                      <span className="block text-blue-400 font-extrabold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                      <span className="block text-blue-300 font-extrabold bg-gradient-to-r from-blue-300 to-cyan-200 bg-clip-text text-transparent">
                         Education & Innovation
                       </span>
                     </h2>
-                    <p className="text-white/95 text-sm lg:text-base leading-relaxed font-medium">
+                    <p className="text-white text-base lg:text-lg leading-relaxed font-medium mb-4">
                       Building tomorrow&apos;s engineers today with cutting-edge technology and industry expertise
                     </p>
                     <div className="mt-3 lg:mt-4 flex items-center space-x-4">

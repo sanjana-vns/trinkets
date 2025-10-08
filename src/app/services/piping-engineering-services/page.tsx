@@ -219,7 +219,7 @@ export default function PipingEngineeringServicesPage() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <Image
-                  src="/images/piping-engineering-services.jpg"
+                  src="/images/services.jpg"
                   alt="Piping Engineering Services in Mumbai - Professional Piping Design"
                   width={600}
                   height={400}
