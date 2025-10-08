@@ -272,7 +272,7 @@ export default function MEPEngineeringCoursePage() {
       />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20 overflow-hidden">
         {/* Background Animation Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"></div>
@@ -281,7 +281,7 @@ export default function MEPEngineeringCoursePage() {
           <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-white rounded-full animate-pulse"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             {/* Mumbai Badge */}
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 animate-slideDown">
@@ -289,12 +289,12 @@ export default function MEPEngineeringCoursePage() {
               <span className="font-semibold text-sm">#1 MEP Engineering Training Institute in Mumbai</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeIn">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeIn">
               <span className="block">MEP Engineering Course</span>
               <span className="block text-yellow-300">in Mumbai</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-4xl mx-auto animate-slideUp">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-indigo-100 max-w-4xl mx-auto animate-slideUp">
               Master Mechanical, Electrical & Plumbing Design at Mumbai&apos;s Best MEP Training Institute | 100% Placement Assistance
             </p>
             
@@ -314,14 +314,14 @@ export default function MEPEngineeringCoursePage() {
               <span className="bg-teal-500/90 text-white px-3 py-1 rounded-full text-xs font-semibold">TRACE 700</span>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Duration: </span>6 Months
               </div>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Mode: </span>Classroom/Online
               </div>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Location: </span>Mumbai
               </div>
             </div>
