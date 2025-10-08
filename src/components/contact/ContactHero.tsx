@@ -148,7 +148,7 @@ export default function ContactHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 mb-12">
               {contactHighlights.map((highlight, index) => (
                   <motion.div
                   key={index}
@@ -156,13 +156,13 @@ export default function ContactHero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 group"
+                  className="bg-white backdrop-blur-sm p-6 rounded-3xl shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 group min-h-[180px] flex flex-col"
                 >
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     <highlight.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{highlight.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{highlight.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex-shrink-0">{highlight.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm flex-grow">{highlight.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -172,20 +172,20 @@ export default function ContactHero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="absolute -bottom-8 -left-8 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6 rounded-2xl shadow-xl"
+              className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-2xl shadow-xl z-10"
             >
-              <div className="text-3xl font-bold">5000+</div>
-              <div className="text-sm opacity-90">Happy Students</div>
+              <div className="text-2xl font-bold">5000+</div>
+              <div className="text-xs opacity-90">Happy Students</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="absolute -top-8 -right-8 bg-gradient-to-r from-purple-500 to-violet-600 text-white p-6 rounded-2xl shadow-xl"
+              className="absolute -top-4 -right-4 bg-gradient-to-r from-purple-500 to-violet-600 text-white p-4 rounded-2xl shadow-xl z-10"
             >
-              <div className="text-3xl font-bold">96%</div>
-              <div className="text-sm opacity-90">Placement Rate</div>
+              <div className="text-2xl font-bold">96%</div>
+              <div className="text-xs opacity-90">Placement Rate</div>
             </motion.div>
           </motion.div>
         </div>
