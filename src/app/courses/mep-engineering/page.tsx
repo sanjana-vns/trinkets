@@ -327,19 +327,12 @@ export default function MEPEngineeringCoursePage() {
               </div>
             </div>
             
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center animate-slideUp" style={{animationDelay: '0.9s'}}>
+            <div className="flex justify-center animate-slideUp" style={{animationDelay: '0.9s'}}>
               <Link href="/contact" className="group bg-white text-indigo-600 px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <span className="flex items-center justify-center">
                   <span className="hidden sm:inline">🚀 Enroll in Mumbai&apos;s Best MEP Course</span>
                   <span className="sm:hidden">🚀 Enroll Now</span>
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-              </Link>
-              <Link href="/contact" className="group border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <span className="flex items-center justify-center">
-                  <span className="hidden sm:inline">📥 Download MEP Syllabus</span>
-                  <span className="sm:hidden">📥 Download Syllabus</span>
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">⬇</span>
                 </span>
               </Link>
             </div>

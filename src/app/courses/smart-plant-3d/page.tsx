@@ -287,12 +287,12 @@ export default function SmartPlant3DCoursePage() {
               <span className="font-semibold text-sm">#1 Smart Plant 3D Training Institute in Mumbai</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeIn">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeIn">
               <span className="block">Smart Plant 3D Course</span>
               <span className="block text-yellow-300">in Mumbai</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto animate-slideUp">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto animate-slideUp">
               Master AVEVA Smart Plant 3D with Mumbai&apos;s Best SP3D Training Institute | 100% Placement Assistance
             </p>
             
@@ -304,29 +304,24 @@ export default function SmartPlant3DCoursePage() {
               <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">📜 AVEVA Certification</span>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Duration: </span>4 Months
               </div>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Mode: </span>Classroom/Online
               </div>
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-lg border border-white/30 text-center">
                 <span className="font-semibold">Location: </span>Mumbai
               </div>
             </div>
             
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center animate-slideUp" style={{animationDelay: '0.9s'}}>
-              <Link href="/contact" className="group bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <div className="flex justify-center animate-slideUp" style={{animationDelay: '0.9s'}}>
+              <Link href="/contact" className="group bg-white text-blue-600 px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <span className="flex items-center justify-center">
-                  🚀 Enroll in Mumbai&apos;s Best SP3D Course
+                  <span className="hidden sm:inline">🚀 Enroll in Mumbai&apos;s Best SP3D Course</span>
+                  <span className="sm:hidden">🚀 Enroll Now</span>
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-              </Link>
-              <Link href="/contact" className="group border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <span className="flex items-center justify-center">
-                  📥 Download SP3D Syllabus
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">⬇</span>
                 </span>
               </Link>
             </div>
@@ -348,7 +343,7 @@ export default function SmartPlant3DCoursePage() {
                   <span className="text-lg mr-2">🏭</span>
                   <span className="font-semibold">Best Smart Plant 3D Course in Mumbai</span>
                 </div>
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-2xl md:text-4xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Mumbai&apos;s Premier
                   </span>
