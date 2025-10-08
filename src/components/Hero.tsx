@@ -233,21 +233,24 @@ const Hero = () => {
                   </Link>
                 </div>
                 
-                {/* Quick Contact Form */}
-                <div className="space-y-3">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                  />
-                  <button className={`w-full bg-gradient-to-r ${slides[currentSlide].accentColor} text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105`}>
+                {/* Expert Guidance CTA */}
+                <div className="space-y-4">
+                  <div className="text-center mb-4">
+                    <h4 className="text-white font-semibold text-lg mb-2">Need Expert Guidance?</h4>
+                    <p className="text-gray-300 text-sm">Get personalized counseling from our industry experts</p>
+                  </div>
+                  <Link 
+                    href="/contact"
+                    className={`w-full bg-gradient-to-r ${slides[currentSlide].accentColor} text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2 text-lg`}
+                  >
                     Get Free Counseling
-                  </button>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                  <div className="text-center">
+                    <p className="text-gray-400 text-xs">✓ Free Career Consultation ✓ Course Recommendations ✓ Placement Guidance</p>
+                  </div>
                 </div>
                 
                 <div className="mt-4 text-center">
