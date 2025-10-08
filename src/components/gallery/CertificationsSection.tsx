@@ -267,7 +267,8 @@ const CertificationsSection = () => {
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
+                      style={{ objectPosition: 'center 20%' }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-90 flex items-center justify-center`}>
                       <FileText className="w-20 h-20 text-white" />

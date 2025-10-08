@@ -177,7 +177,8 @@ const GalleryHero = () => {
                       <img
                         src={galleryCategories[currentSlide].image}
                         alt={galleryCategories[currentSlide].title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
+                        style={{ objectPosition: 'center 20%' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center">
                         {galleryCategories[currentSlide].icon}

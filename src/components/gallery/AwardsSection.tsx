@@ -216,7 +216,8 @@ const AwardsSection = () => {
                     <img
                       src={award.image}
                       alt={award.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
+                      style={{ objectPosition: 'center 20%' }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-80 flex items-center justify-center`}>
                       <Trophy className="w-16 h-16 text-white" />
