@@ -1,34 +1,34 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'trinketsinstitute.com', 'via.placeholder.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'trinketsinstitute.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    unoptimized: false,
   },
-  output: 'standalone',
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
   // Enhanced experimental features
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
-    scrollRestoration: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   swcMinify: true,
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-      skipDefaultConversion: true,
-    },
-  },
   // Performance optimizations
   headers: async () => [
     {
@@ -115,13 +115,6 @@ const nextConfig = {
       permanent: true,
     },
   ],
-  // Rewrites for clean URLs
-  rewrites: async () => [
-    {
-      source: '/sitemap.xml',
-      destination: '/api/sitemap',
-    },
-  ],
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle size
@@ -144,12 +137,6 @@ const nextConfig = {
         },
       }
     }
-
-    // Optimize SVG imports
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack']
-    })
 
     return config
   },
