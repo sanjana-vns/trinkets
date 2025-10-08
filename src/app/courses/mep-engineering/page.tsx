@@ -377,7 +377,7 @@ export default function MEPEngineeringCoursePage() {
               <div className="space-y-8 animate-slideUp">
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-200 hover:shadow-xl transition-all duration-300">
                   <h3 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
-                    <span className="text-3xl mr-3">🎯</span>
+                    <span className="text-2xl md:text-3xl mr-3">🎯</span>
                     Why Choose Our MEP Engineering Course in Mumbai?
                   </h3>
                   
@@ -432,22 +432,22 @@ export default function MEPEngineeringCoursePage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-indigo-500">
-                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
+                      <div className="text-2xl md:text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
                       <h4 className="font-bold text-indigo-800 text-lg">Duration</h4>
                       <p className="text-indigo-600 font-semibold">6 Months</p>
                     </div>
                     <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-purple-500">
-                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💻</div>
+                      <div className="text-2xl md:text-3xl mb-3 group-hover:scale-110 transition-transform">💻</div>
                       <h4 className="font-bold text-purple-800 text-lg">Software</h4>
                       <p className="text-purple-600 font-semibold">4 Premium Tools</p>
                     </div>
                     <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-blue-500">
-                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏗️</div>
+                      <div className="text-2xl md:text-3xl mb-3 group-hover:scale-110 transition-transform">🏗️</div>
                       <h4 className="font-bold text-blue-800 text-lg">Projects</h4>
                       <p className="text-blue-600 font-semibold">15+ Live Projects</p>
                     </div>
                     <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-l-4 border-teal-500">
-                      <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
+                      <div className="text-2xl md:text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
                       <h4 className="font-bold text-teal-800 text-lg">Certification</h4>
                       <p className="text-teal-600 font-semibold">Industry Recognized</p>
                     </div>
@@ -493,10 +493,10 @@ export default function MEPEngineeringCoursePage() {
                   Our industry-aligned curriculum and 100% placement assistance will launch your successful MEP career.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full font-bold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  <Link href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 sm:px-8 py-3 rounded-full font-bold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                     🎯 Start Your Journey Today
                   </Link>
-                  <Link href="#curriculum" className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-indigo-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+                  <Link href="#curriculum" className="border-2 border-indigo-600 text-indigo-600 px-4 sm:px-8 py-3 rounded-full font-bold hover:bg-indigo-600 hover:text-white transition-all duration-300 transform hover:scale-105">
                     📋 View Detailed Curriculum
                   </Link>
                 </div>
@@ -518,7 +518,7 @@ export default function MEPEngineeringCoursePage() {
         <div className="relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 sm:px-8 py-3 rounded-full mb-6">
               <span className="text-xl mr-3">⭐</span>
               <span className="font-bold text-lg">Why Choose Us</span>
             </div>
@@ -598,41 +598,41 @@ export default function MEPEngineeringCoursePage() {
 
           {/* Statistics Section */}
           <div className="mt-20 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-6 lg:p-12 rounded-3xl text-white shadow-2xl">
-            <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
-              <span className="text-4xl mr-4">📊</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 flex items-center justify-center">
+              <span className="text-3xl md:text-4xl mr-4">📊</span>
               Our Success Metrics
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   👥
                 </div>
-                <div className="text-4xl font-bold mb-2 text-green-400">500+</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-green-400">500+</div>
                 <div className="text-gray-300">Students Trained</div>
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   🎯
                 </div>
-                <div className="text-4xl font-bold mb-2 text-blue-400">95%</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">95%</div>
                 <div className="text-gray-300">Placement Rate</div>
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   💰
                 </div>
-                <div className="text-4xl font-bold mb-2 text-purple-400">₹15L</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-purple-400">₹15L</div>
                 <div className="text-gray-300">Highest Package</div>
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   🏢
                 </div>
-                <div className="text-4xl font-bold mb-2 text-orange-400">50+</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-orange-400">50+</div>
                 <div className="text-gray-300">Partner Companies</div>
               </div>
             </div>
@@ -652,7 +652,7 @@ export default function MEPEngineeringCoursePage() {
         <div className="relative z-10">
           {/* Section Header */}
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 sm:px-8 py-3 rounded-full mb-6">
               <span className="text-xl mr-3">📚</span>
               <span className="font-bold text-lg">Comprehensive Curriculum</span>
             </div>
@@ -877,7 +877,7 @@ export default function MEPEngineeringCoursePage() {
         <div className="relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-8 py-3 rounded-full mb-6">
               <span className="text-xl mr-3">🚀</span>
               <span className="font-bold text-lg">Career Launch Pad</span>
             </div>
@@ -953,7 +953,7 @@ export default function MEPEngineeringCoursePage() {
             ].map((role, index) => (
               <div key={index} className={`group bg-gradient-to-br ${role.bgGradient} p-8 rounded-3xl border-2 ${role.borderColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer`}>
                 <div className="text-center">
-                  <div className={`w-20 h-20 bg-gradient-to-r ${role.gradient} rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
+                  <div className={`w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r ${role.gradient} rounded-2xl flex items-center justify-center text-white text-2xl md:text-3xl mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
                     {role.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{role.title}</h3>
@@ -969,8 +969,8 @@ export default function MEPEngineeringCoursePage() {
           
           {/* Placement Partners */}
           <div className="bg-gradient-to-br from-gray-50 to-indigo-50 p-6 lg:p-12 rounded-3xl border-2 border-gray-200 shadow-xl">
-            <h3 className="text-3xl font-bold text-center text-gray-800 mb-12 flex items-center justify-center">
-              <span className="text-4xl mr-4">🏢</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 flex items-center justify-center">
+              <span className="text-3xl md:text-4xl mr-4">🏢</span>
               Our MEP Engineering Placement Partners in Mumbai
             </h3>
             
@@ -998,19 +998,19 @@ export default function MEPEngineeringCoursePage() {
             {/* Placement Stats */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-indigo-200">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">95%</div>
+                <div className="text-2xl md:text-3xl font-bold text-indigo-600 mb-2">95%</div>
                 <div className="text-gray-600">Placement Rate</div>
               </div>
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-green-200">
-                <div className="text-3xl font-bold text-green-600 mb-2">₹10.5L</div>
+                <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">₹10.5L</div>
                 <div className="text-gray-600">Average Package</div>
               </div>
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-purple-200">
-                <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">50+</div>
                 <div className="text-gray-600">Hiring Partners</div>
               </div>
               <div className="text-center bg-white p-6 rounded-2xl shadow-lg border border-orange-200">
-                <div className="text-3xl font-bold text-orange-600 mb-2">20 Days</div>
+                <div className="text-2xl md:text-3xl font-bold text-orange-600 mb-2">20 Days</div>
                 <div className="text-gray-600">Avg. Job Time</div>
               </div>
             </div>
@@ -1027,7 +1027,7 @@ export default function MEPEngineeringCoursePage() {
         <div className="relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 sm:px-8 py-3 rounded-full mb-6">
               <span className="text-xl mr-3">⭐</span>
               <span className="font-bold text-lg">Success Stories</span>
             </div>
@@ -1153,14 +1153,14 @@ export default function MEPEngineeringCoursePage() {
 
           {/* Overall Success Metrics */}
           <div className="mt-16 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-6 lg:p-12 rounded-3xl text-white shadow-2xl">
-            <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
-              <span className="text-4xl mr-4">📈</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 flex items-center justify-center">
+              <span className="text-3xl md:text-4xl mr-4">📈</span>
               Our MEP Training Track Record
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   📈
                 </div>
                 <div className="text-4xl font-bold mb-2 text-green-400">500+</div>
@@ -1168,15 +1168,15 @@ export default function MEPEngineeringCoursePage() {
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   ⚡
                 </div>
-                <div className="text-4xl font-bold mb-2 text-blue-400">12 Days</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">12 Days</div>
                 <div className="text-gray-300">Average Job Time</div>
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   💰
                 </div>
                 <div className="text-4xl font-bold mb-2 text-purple-400">₹25L</div>
@@ -1184,10 +1184,10 @@ export default function MEPEngineeringCoursePage() {
               </div>
               
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
                   🌟
                 </div>
-                <div className="text-4xl font-bold mb-2 text-orange-400">4.8/5</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-orange-400">4.8/5</div>
                 <div className="text-gray-300">Student Rating</div>
               </div>
             </div>
@@ -1643,7 +1643,7 @@ export default function MEPEngineeringCoursePage() {
             currentCourse="/courses/mep-engineering"
           />
           <div className="mt-8 text-center">
-            <Link href="/courses" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            <Link href="/courses" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 sm:px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               🎯 Discover All Our Engineering Programs
             </Link>
           </div>
@@ -1667,7 +1667,7 @@ export default function MEPEngineeringCoursePage() {
           <div className="relative z-10 text-center">
             {/* Main CTA Header */}
             <div className="mb-8">
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-8 py-3 rounded-full mb-6">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 sm:px-8 py-3 rounded-full mb-6">
                 <span className="text-2xl mr-3">🚀</span>
                 <span className="font-bold text-lg">Ready to Start Your MEP Career?</span>
               </div>
@@ -1756,10 +1756,10 @@ export default function MEPEngineeringCoursePage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
           <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/courses" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+            <Link href="/courses" className="inline-block bg-indigo-600 text-white px-4 sm:px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
               View All Courses
             </Link>
-            <Link href="/courses#courses-hero" className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+            <Link href="/courses#courses-hero" className="inline-block bg-green-600 text-white px-4 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
               Courses Overview
             </Link>
           </div>
