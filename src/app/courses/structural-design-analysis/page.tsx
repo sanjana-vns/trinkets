@@ -300,16 +300,10 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/contact" 
+                  href="/contact#get-expert-guidance" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 >
                   Enroll Now - Limited Seats
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  Download Syllabus
                 </Link>
               </div>
 
@@ -655,13 +649,13 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link 
-                  href="/contact" 
+                  href="/contact#get-expert-guidance" 
                   className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Enroll Now - Mumbai Batch
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href="/contact#get-expert-guidance" 
                   className="border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Mumbai Visit

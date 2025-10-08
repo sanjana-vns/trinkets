@@ -526,8 +526,7 @@ export default function PipingEngineeringServicesPage() {
                 level: "Professional",
                 description: "Master Smart Plant 3D for comprehensive piping design and modeling with hands-on projects.",
                 features: ["3D Modeling", "Clash Detection", "Isometric Generation", "Industry Projects"],
-                link: "/courses/sp3d-piping-design-training",
-                price: "₹45,000"
+                link: "/courses/sp3d-piping-design-training"
               },
               {
                 title: "CAESAR II Stress Analysis",
@@ -535,8 +534,7 @@ export default function PipingEngineeringServicesPage() {
                 level: "Advanced",
                 description: "Advanced pipe stress analysis and flexibility analysis using CAESAR II software.",
                 features: ["Stress Analysis", "Code Compliance", "Dynamic Analysis", "Certification"],
-                link: "/courses/caesar-ii-stress-analysis",
-                price: "₹35,000"
+                link: "/courses/caesar-ii-stress-analysis"
               },
               {
                 title: "Piping Engineering Fundamentals",
@@ -544,15 +542,13 @@ export default function PipingEngineeringServicesPage() {
                 level: "Beginner to Advanced",
                 description: "Complete piping engineering fundamentals from basics to advanced concepts.",
                 features: ["Theory & Practical", "Industry Standards", "Design Principles", "Career Support"],
-                link: "/courses/piping-engineering-fundamentals-training",
-                price: "₹25,000"
+                link: "/courses/piping-engineering-fundamentals-training"
               }
             ].map((course, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 group">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
                   <div className="flex justify-between items-start mb-4">
                     <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">{course.level}</span>
-                    <span className="text-2xl font-bold">{course.price}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{course.title}</h3>
                   <p className="text-blue-100">Duration: {course.duration}</p>
