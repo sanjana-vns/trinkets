@@ -1445,18 +1445,12 @@ export default function MEPEngineeringCoursePage() {
                 <p className="text-indigo-100 mb-6 text-lg">
                   Join thousands of successful MEP engineers who started their journey with us
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <Link
                     href="/contact"
                     className="bg-white text-indigo-600 px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     📞 Book Free Counseling
-                  </Link>
-                  <Link
-                    href="#course-details"
-                    className="border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105"
-                  >
-                    📋 Download Syllabus
                   </Link>
                 </div>
               </div>
