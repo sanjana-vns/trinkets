@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { Play, Quote, Star, ChevronLeft, ChevronRight, Calendar, MapPin, Building2 } from 'lucide-react';
 
 const VideoTestimonials = () => {
@@ -134,9 +135,11 @@ const VideoTestimonials = () => {
                     />
                   ) : (
                     <>
-                      <img
+                      <Image
                         src={videoTestimonials[currentVideo].thumbnail}
                         alt={videoTestimonials[currentVideo].name}
+                        width={800}
+                        height={450}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -182,7 +185,7 @@ const VideoTestimonials = () => {
                   <Quote className="w-8 h-8 text-blue-600 mb-4" />
                   
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    "{videoTestimonials[currentVideo].testimonial}"
+                    &quot;{videoTestimonials[currentVideo].testimonial}&quot;
                   </p>
                 </div>
 
@@ -256,9 +259,11 @@ const VideoTestimonials = () => {
               onClick={() => setCurrentVideo(index)}
             >
               <div className="relative">
-                <img
+                <Image
                   src={video.thumbnail}
                   alt={video.name}
+                  width={200}
+                  height={112}
                   className="w-full aspect-video object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import TestimonialsHero from '@/components/testimonials/TestimonialsHero'
-import VideoTestimonials from '@/components/testimonials/VideoTestimonials'
+import FeaturedTestimonials from '@/components/testimonials/FeaturedTestimonials'
 import SuccessStats from '@/components/testimonials/SuccessStats'
 import ReviewsSection from '@/components/testimonials/ReviewsSection'
 import CareerJourney from '@/components/testimonials/CareerJourney'
@@ -268,7 +268,7 @@ export default function TestimonialsPage() {
       />
       
       <TestimonialsHero />
-      <VideoTestimonials />
+      <FeaturedTestimonials />
       <SuccessStats />
       <CareerJourney />
       <ReviewsSection />
