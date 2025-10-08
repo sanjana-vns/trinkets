@@ -350,14 +350,14 @@ export default function MEPEngineeringCoursePage() {
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-float-reverse"></div>
 
-        <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-indigo-100">
+        <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-6 lg:p-12 border border-indigo-100">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 animate-fadeIn">
               <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full mb-6 shadow-lg">
                 <span className="text-lg mr-2">🏗️</span>
                 <span className="font-semibold">Professional MEP Engineering Course</span>
               </div>
-              <h2 className="text-4xl font-bold mb-6 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                   Best MEP Engineering Course in Mumbai
                 </span>
@@ -371,7 +371,7 @@ export default function MEPEngineeringCoursePage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
               <div className="space-y-8 animate-slideUp">
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-200 hover:shadow-xl transition-all duration-300">
                   <h3 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
@@ -595,7 +595,7 @@ export default function MEPEngineeringCoursePage() {
           </div>
 
           {/* Statistics Section */}
-          <div className="mt-20 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-12 rounded-3xl text-white shadow-2xl">
+          <div className="mt-20 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-6 lg:p-12 rounded-3xl text-white shadow-2xl">
             <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
               <span className="text-4xl mr-4">📊</span>
               Our Success Metrics
@@ -966,7 +966,7 @@ export default function MEPEngineeringCoursePage() {
           </div>
           
           {/* Placement Partners */}
-          <div className="bg-gradient-to-br from-gray-50 to-indigo-50 p-12 rounded-3xl border-2 border-gray-200 shadow-xl">
+          <div className="bg-gradient-to-br from-gray-50 to-indigo-50 p-6 lg:p-12 rounded-3xl border-2 border-gray-200 shadow-xl">
             <h3 className="text-3xl font-bold text-center text-gray-800 mb-12 flex items-center justify-center">
               <span className="text-4xl mr-4">🏢</span>
               Our MEP Engineering Placement Partners in Mumbai
@@ -1042,7 +1042,7 @@ export default function MEPEngineeringCoursePage() {
           </div>
 
           {/* Success Stories Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
             {/* Story 1 - Rohit */}
             <div className="group bg-gradient-to-br from-indigo-50 to-purple-100 p-8 rounded-3xl border-2 border-indigo-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
               <div className="flex items-center mb-6">
@@ -1150,7 +1150,7 @@ export default function MEPEngineeringCoursePage() {
           </div>
 
           {/* Overall Success Metrics */}
-          <div className="mt-16 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-12 rounded-3xl text-white shadow-2xl">
+          <div className="mt-16 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 p-6 lg:p-12 rounded-3xl text-white shadow-2xl">
             <h3 className="text-3xl font-bold text-center mb-12 flex items-center justify-center">
               <span className="text-4xl mr-4">📈</span>
               Our MEP Training Track Record
@@ -1302,7 +1302,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-lg mr-2">❓</span>
               <span className="font-semibold">MEP Engineering Course FAQ</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">
               Frequently Asked Questions
               <br />
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
@@ -1477,7 +1477,7 @@ export default function MEPEngineeringCoursePage() {
               <span className="text-lg mr-2">🏙️</span>
               <span className="font-semibold">Why Mumbai for MEP Engineering Career</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 MEP Engineering Opportunities in Mumbai
               </span>
@@ -1656,7 +1656,7 @@ export default function MEPEngineeringCoursePage() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-float-animated"></div>
         </div>
 
-        <div className="relative z-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-3xl shadow-2xl p-12 text-white overflow-hidden">
+        <div className="relative z-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-3xl shadow-2xl p-6 lg:p-12 text-white overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-24 -translate-x-24"></div>
