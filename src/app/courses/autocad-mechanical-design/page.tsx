@@ -349,7 +349,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
                 <div className="grid grid-cols-2 gap-6">
                   
                   {/* AutoCAD 2D */}
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">📐</div>
                     <h3 className="text-xl font-bold mb-2">AutoCAD 2D</h3>
                     <p className="text-sm text-teal-200">Technical Drafting & Design</p>
@@ -360,7 +360,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
                   </div>
 
                   {/* AutoCAD 3D */}
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 animate-float-reverse">
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🗂️</div>
                     <h3 className="text-xl font-bold mb-2">AutoCAD 3D</h3>
                     <p className="text-sm text-teal-200">3D Modeling & Visualization</p>
@@ -371,7 +371,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
                   </div>
 
                   {/* AutoCAD Inventor */}
-                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 animate-float-animated">
+                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">⚙️</div>
                     <h3 className="text-xl font-bold mb-2">Inventor</h3>
                     <p className="text-sm text-teal-200">Parametric Design</p>
@@ -382,7 +382,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
                   </div>
 
                   {/* SolidWorks */}
-                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">🔧</div>
                     <h3 className="text-xl font-bold mb-2">SolidWorks</h3>
                     <p className="text-sm text-teal-200">Advanced Product Design</p>
@@ -394,7 +394,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
                 </div>
 
                 {/* Mumbai Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-bounce">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                   Mumbai&apos;s #1 Choice
                 </div>
               </div>
@@ -427,18 +427,18 @@ export default function AutoCADMechanicalDesignCoursePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
           </div>
         </div>
       </section>
 
       {/* Enhanced Course Overview */}
       <section className="container mx-auto px-4 py-20 relative" id="course-details">
-        {/* Floating background elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-teal-200/30 to-cyan-200/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Background elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-teal-200/30 to-cyan-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-teal-100">
           <div className="max-w-6xl mx-auto">
@@ -829,9 +829,9 @@ export default function AutoCADMechanicalDesignCoursePage() {
 
       {/* Enhanced FAQ Section for Voice Search */}
       <section className="bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 py-20 relative overflow-hidden" id="faqs">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-float-reverse"></div>
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-200/20 to-purple-200/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fadeIn">

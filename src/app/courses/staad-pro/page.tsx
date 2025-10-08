@@ -186,7 +186,7 @@ export default function STAADProCoursePage() {
                   </div>
 
                   {/* Design Codes */}
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 animate-float">
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">📋</div>
                     <h3 className="text-xl font-bold mb-2">Design Codes</h3>
                     <p className="text-sm text-blue-200">IS, ACI, BS, Eurocode support</p>
