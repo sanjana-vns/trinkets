@@ -327,15 +327,17 @@ export default function MEPEngineeringCoursePage() {
             </div>
             
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center animate-slideUp" style={{animationDelay: '0.9s'}}>
-              <Link href="/contact" className="group bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="group bg-white text-indigo-600 px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <span className="flex items-center justify-center">
-                  🚀 Enroll in Mumbai&apos;s Best MEP Course
+                  <span className="hidden sm:inline">🚀 Enroll in Mumbai&apos;s Best MEP Course</span>
+                  <span className="sm:hidden">🚀 Enroll Now</span>
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </Link>
-              <Link href="/contact" className="group border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/contact" className="group border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 <span className="flex items-center justify-center">
-                  📥 Download MEP Syllabus
+                  <span className="hidden sm:inline">📥 Download MEP Syllabus</span>
+                  <span className="sm:hidden">📥 Download Syllabus</span>
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">⬇</span>
                 </span>
               </Link>
@@ -852,11 +854,11 @@ export default function MEPEngineeringCoursePage() {
 
           {/* Completion Badge */}
           <div className="text-center mt-20">
-            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
-              <span className="text-3xl mr-4 animate-bounce">🏆</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+              <span className="text-2xl sm:text-3xl mr-2 sm:mr-4 animate-bounce">🏆</span>
               <div>
-                <div className="font-bold text-lg">MEP Engineering Certification</div>
-                <div className="text-green-100 text-sm">Complete all modules & become MEP expert</div>
+                <div className="font-bold text-sm sm:text-lg">MEP Engineering Certification</div>
+                <div className="text-green-100 text-xs sm:text-sm">Complete all modules & become MEP expert</div>
               </div>
             </div>
           </div>
@@ -1452,13 +1454,13 @@ export default function MEPEngineeringCoursePage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/contact"
-                    className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="bg-white text-indigo-600 px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     📞 Book Free Counseling
                   </Link>
                   <Link
                     href="#course-details"
-                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105"
+                    className="border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-white hover:text-indigo-600 transition-all duration-300 transform hover:scale-105"
                   >
                     📋 Download Syllabus
                   </Link>
@@ -1622,10 +1624,11 @@ export default function MEPEngineeringCoursePage() {
               <div className="mt-8 text-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="inline-flex items-center bg-white text-indigo-600 px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   <span className="mr-2">🚀</span>
-                  Start Your Mumbai MEP Career Journey
+                  <span className="hidden sm:inline">Start Your Mumbai MEP Career Journey</span>
+                  <span className="sm:hidden">Start MEP Career</span>
                 </Link>
               </div>
             </div>
