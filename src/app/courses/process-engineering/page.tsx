@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedCourses from '@/components/RelatedCourses'
+import LocationSection from '@/components/LocationSection'
 
 export const metadata: Metadata = {
   title: 'Process Engineering Course - Master HYSYS, Aspen Plus, HTRI, Pro/II | Trinkets Institute',
@@ -572,6 +573,13 @@ export default function ProcessEngineeringCoursePage() {
           </p>
         </div>
       </section>
+
+      {/* Location Section */}
+      <LocationSection 
+        title="Visit Our Process Engineering Centers"
+        subtitle="Experience our advanced process simulation labs and industrial training facilities"
+        compact={true}
+      />
 
       {/* Browse All Courses Section */}
       <section className="container mx-auto px-4 py-12">

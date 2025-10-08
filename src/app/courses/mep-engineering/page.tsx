@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedCourses from '@/components/RelatedCourses'
+import LocationSection from '@/components/LocationSection'
 
 export const metadata: Metadata = {
   title: 'MEP Engineering Course in Mumbai | #1 MEP Training Institute | 100% Placement | Trinkets Institute',
@@ -1749,6 +1750,13 @@ export default function MEPEngineeringCoursePage() {
           </div>
         </div>
       </section>
+
+      {/* Location Section */}
+      <LocationSection 
+        title="Visit Our MEP Training Centers"
+        subtitle="Experience our state-of-the-art MEP labs and meet our expert faculty across multiple locations"
+        compact={true}
+      />
 
       {/* Browse All Courses Section */}
       <section className="container mx-auto px-4 py-12">

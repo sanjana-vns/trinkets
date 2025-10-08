@@ -32,6 +32,11 @@ const SEOContentSection = dynamic(() => import('@/components/SEOContentSection')
   ssr: true,
 })
 
+const LocationSection = dynamic(() => import('@/components/LocationSection'), {
+  loading: () => <div className="h-96 bg-blue-50 animate-pulse" />,
+  ssr: true,
+})
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -40,6 +45,7 @@ export default function Home() {
       <AboutUsSection />
       <StatsSection />
       <PlacementSection />
+      <LocationSection compact={false} />
       <FAQSection />
       <SEOContentSection />
     </div>

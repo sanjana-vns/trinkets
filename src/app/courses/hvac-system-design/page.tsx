@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedCourses from '@/components/RelatedCourses'
+import LocationSection from '@/components/LocationSection'
 
 export const metadata: Metadata = {
   title: 'HVAC System Design Course in Mumbai | Best HVAC Training Institute | 100% Placement',
@@ -1243,6 +1244,13 @@ export default function HVACSystemDesignCoursePage() {
           </p>
         </div>
       </section>
+
+      {/* Location Section */}
+      <LocationSection 
+        title="Visit Our HVAC Training Centers"
+        subtitle="Experience our advanced HVAC labs and simulation software across multiple locations"
+        compact={true}
+      />
 
       {/* Browse All Courses Section */}
       <section className="container mx-auto px-4 py-12">
