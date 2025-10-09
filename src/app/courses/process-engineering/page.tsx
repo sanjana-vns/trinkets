@@ -175,9 +175,6 @@ export default function ProcessEngineeringCoursePage() {
               <Link href="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Enroll Now
               </Link>
-              <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-                Download Syllabus
-              </Link>
             </div>
           </div>
         </div>

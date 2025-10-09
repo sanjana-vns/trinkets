@@ -704,9 +704,6 @@ export default function ETABSCoursePage() {
             <Link href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
               Enroll Now
             </Link>
-            <Link href="/contact" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Download Syllabus
-            </Link>
           </div>
         </div>
       </section>

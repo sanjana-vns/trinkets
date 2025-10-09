@@ -332,14 +332,6 @@ export default function HVACSystemDesignCoursePage() {
                   Enroll in Mumbai&apos;s Best HVAC Course
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
-                <Link 
-                  href="#course-details"
-                  className="group border-2 border-white/30 hover:border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                >
-                  <span className="mr-2">📋</span>
-                  Download Syllabus
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">⬇</span>
-                </Link>
               </div>
             </div>
 
@@ -1026,12 +1018,6 @@ export default function HVACSystemDesignCoursePage() {
                     className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     📞 Book Free Counseling
-                  </Link>
-                  <Link
-                    href="#course-details"
-                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
-                  >
-                    📋 Download Syllabus
                   </Link>
                 </div>
               </div>
