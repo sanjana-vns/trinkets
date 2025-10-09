@@ -60,23 +60,25 @@ const PlacementHero = () => {
 
   useEffect(() => {
     setIsVisible(true)
+    // Reduce animation frequency on mobile for better performance
+    const isMobile = window.innerWidth < 768
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
-    }, 4000)
+    }, isMobile ? 6000 : 4000) // Slower on mobile
     return () => clearInterval(interval)
   }, [careerPaths.length])
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      {/* Animated Background Elements - Reduced complexity for mobile */}
+      <div className="absolute inset-0 hidden md:block">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative container mx-auto px-4 py-8 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -99,7 +101,7 @@ const PlacementHero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight"
+                className="text-3xl sm:text-4xl lg:text-7xl font-bold leading-tight"
               >
                 <span className="text-white">Launch Your</span>
                 <br />

@@ -103,8 +103,10 @@ const PlacementStats = () => {
   ]
 
   const startCounters = useCallback(() => {
-    const duration = 2000
-    const steps = 60
+    // Reduce animation complexity on mobile
+    const isMobile = window.innerWidth < 768
+    const duration = isMobile ? 1000 : 2000
+    const steps = isMobile ? 30 : 60
     const interval = duration / steps
 
     stats.forEach((stat, index) => {
@@ -132,6 +134,8 @@ const PlacementStats = () => {
   }
 
   useEffect(() => {
+    // Use lower threshold on mobile for better performance
+    const isMobile = window.innerWidth < 768
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -139,7 +143,7 @@ const PlacementStats = () => {
           startCounters()
         }
       },
-      { threshold: 0.3 }
+      { threshold: isMobile ? 0.1 : 0.3 }
     )
 
     if (sectionRef.current) {
@@ -274,7 +278,7 @@ const PlacementStats = () => {
               </Link>
               <Link href="/contact">
                 <button className="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
-                  Download Placement Brochure
+                  Get Placement Assistance
                 </button>
               </Link>
             </div>
