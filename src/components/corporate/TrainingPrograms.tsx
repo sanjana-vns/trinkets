@@ -100,7 +100,7 @@ const TrainingPrograms = () => {
         participants: "10-15",
         customizable: true,
         features: ["3D Modeling", "Clash Detection", "4D Scheduling", "5D Cost Analysis"],
-        courseLink: undefined
+        courseLink: "/courses/building-information-modelling-training"
       }
     ],
     hvac: [
@@ -160,7 +160,7 @@ const TrainingPrograms = () => {
         customizable: true,
 
         features: ["Connection Design", "Fabrication Details", "Erection Planning", "Cost Optimization"],
-        courseLink: undefined
+        courseLink: "/courses/structural-design-analysis"
       }
     ],
     cad: [
@@ -190,7 +190,7 @@ const TrainingPrograms = () => {
         customizable: true,
 
         features: ["Parametric Modeling", "Assembly Design", "Simulation", "Manufacturing Integration"],
-        courseLink: undefined
+        courseLink: "/courses/solidworks-professional"
       }
     ],
     process: [
@@ -206,7 +206,7 @@ const TrainingPrograms = () => {
         customizable: true,
 
         features: ["Process Design", "Heat Integration", "Safety Analysis", "Economic Evaluation"],
-        courseLink: undefined
+        courseLink: "/courses/process-engineering"
       },
       {
         id: 13,
@@ -383,7 +383,7 @@ const TrainingPrograms = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <Link href="/corporate-training">
+                  <Link href={program.courseLink || "/courses"}>
                     <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
                       View Details
                     </button>
