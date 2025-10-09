@@ -234,17 +234,15 @@ export default function OfficeLocations() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-4">
-                    <motion.a
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.address)}`}
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-r ${office.color} text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300`}
+                      className={`bg-gradient-to-r ${office.color} text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-105`}
                     >
                       <Navigation className="w-4 h-4" />
                       Get Directions
-                    </motion.a>
+                    </a>
                     <motion.a
                       href={`tel:${office.phone.replace(/\s/g, '')}`}
                       whileHover={{ scale: 1.05 }}
