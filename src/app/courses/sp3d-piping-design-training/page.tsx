@@ -197,7 +197,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <p className="text-lg text-gray-600 mb-8">
                   This course is designed for mechanical engineers, piping designers, and professionals looking to enhance their skills in 3D piping design with hands-on training on SP3D, AutoCAD Plant 3D, PDMS, and advanced piping engineering tools.
                 </p>
-                <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-gray-900 mb-2">Duration</h3>
                     <p className="text-blue-600 font-medium">6 Months</p>

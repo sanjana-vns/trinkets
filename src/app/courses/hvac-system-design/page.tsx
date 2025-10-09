@@ -323,7 +323,7 @@ export default function HVACSystemDesignCoursePage() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-slideUp" style={{animationDelay: '0.8s'}}>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-16 animate-slideUp" style={{animationDelay: '0.8s'}}>
                 <Link 
                   href="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center min-w-[200px]"
@@ -395,7 +395,7 @@ export default function HVACSystemDesignCoursePage() {
           </div>
 
           {/* Bottom Stats Bar */}
-          <div className="absolute bottom-8 left-0 right-0 animate-slideUp" style={{animationDelay: '1.2s'}}>
+          <div className="mt-16 mb-8 animate-slideUp" style={{animationDelay: '1.2s'}}>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
