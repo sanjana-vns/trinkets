@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useState, useEffect } from 'react'
 
 const companies = [
   {
@@ -11,7 +12,7 @@ const companies = [
     package: "₹6-12 LPA"
   },
   {
-    name: "L&T Construction",
+    name: "L&T Construction", 
     logo: "/api/placeholder/120/60",
     sector: "Construction",
     positions: "Site Engineer, Project Manager",
@@ -20,7 +21,7 @@ const companies = [
   {
     name: "Siemens",
     logo: "/api/placeholder/120/60",
-    sector: "Technology",
+    sector: "Technology", 
     positions: "Automation Engineer, R&D Engineer",
     package: "₹8-15 LPA"
   },
@@ -28,38 +29,13 @@ const companies = [
     name: "NTPC",
     logo: "/api/placeholder/120/60",
     sector: "Power",
-    positions: "Power Engineer, Operations Engineer",
+    positions: "Power Engineer, Operations Engineer", 
     package: "₹7-14 LPA"
-  },
-  {
-    name: "Reliance Industries",
-    logo: "/api/placeholder/120/60",
-    sector: "Oil & Gas",
-    positions: "Process Engineer, Safety Engineer",
-    package: "₹9-18 LPA"
-  },
-  {
-    name: "Mahindra Group",
-    logo: "/api/placeholder/120/60",
-    sector: "Manufacturing",
-    positions: "Design Engineer, Quality Engineer",
-    package: "₹6-11 LPA"
-  },
-  {
-    name: "ABB India",
-    logo: "/api/placeholder/120/60",
-    sector: "Electrical",
-    positions: "Electrical Engineer, Control Engineer",
-    package: "₹7-13 LPA"
-  },
-  {
-    name: "ONGC",
-    logo: "/api/placeholder/120/60",
-    sector: "Oil & Gas",
-    positions: "Drilling Engineer, Production Engineer",
-    package: "₹10-20 LPA"
   }
 ]
+
+// Reduce the number of companies displayed initially for better mobile performance
+const mobileCompanies = companies.slice(0, 4)
 
 const sectors = [
   {
@@ -101,6 +77,18 @@ const sectors = [
 ]
 
 export default function CompanyPartners() {
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Use fewer companies on mobile for better performance
+  const displayCompanies = isMobile ? mobileCompanies : companies
+
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -157,7 +145,7 @@ export default function CompanyPartners() {
         >
           <h3 className="text-2xl font-bold text-center text-gray-800 mb-12">Featured Hiring Partners</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companies.map((company, index) => (
+            {displayCompanies.map((company, index) => (
               <motion.div
                 key={company.name}
                 initial={{ opacity: 0, y: 20 }}

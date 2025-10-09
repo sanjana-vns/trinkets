@@ -1,11 +1,37 @@
 ﻿import { Metadata } from "next"
 import Link from "next/link"
-import PlacementHero from '@/components/placement/PlacementHero'
-import PlacementStats from '@/components/placement/PlacementStats'
-import PlacementProcess from '@/components/placement/PlacementProcess'
-import PlacementSuccess from '@/components/placement/PlacementSuccess'
-import CompanyPartners from '@/components/placement/CompanyPartners'
-import PlacementTestimonials from '@/components/placement/PlacementTestimonials'
+import dynamic from 'next/dynamic'
+
+// Lazy load heavy components for better mobile performance
+const PlacementHero = dynamic(() => import('@/components/placement/PlacementHero'), {
+  loading: () => <div className="h-96 bg-gradient-to-br from-slate-900 to-blue-900 animate-pulse" />,
+  ssr: true,
+})
+
+const PlacementStats = dynamic(() => import('@/components/placement/PlacementStats'), {
+  loading: () => <div className="h-96 bg-gradient-to-br from-slate-50 to-blue-50 animate-pulse" />,
+  ssr: true,
+})
+
+const PlacementProcess = dynamic(() => import('@/components/placement/PlacementProcess'), {
+  loading: () => <div className="h-96 bg-white animate-pulse" />,
+  ssr: false, // Heavy component - load after interaction
+})
+
+const PlacementSuccess = dynamic(() => import('@/components/placement/PlacementSuccess'), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  ssr: false, // Heavy images - load after interaction
+})
+
+const CompanyPartners = dynamic(() => import('@/components/placement/CompanyPartners'), {
+  loading: () => <div className="h-96 bg-blue-50 animate-pulse" />,
+  ssr: false, // Many images - load after interaction
+})
+
+const PlacementTestimonials = dynamic(() => import('@/components/placement/PlacementTestimonials'), {
+  loading: () => <div className="h-96 bg-white animate-pulse" />,
+  ssr: false, // Heavy images - load after interaction
+})
 
 export const metadata: Metadata = {
   title: "Engineering Placement Services - 100% Placement Assistance | Trinkets Institute",

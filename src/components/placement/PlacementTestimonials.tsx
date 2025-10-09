@@ -41,44 +41,11 @@ const testimonials = [
     rating: 5,
     testimonial: "From a fresher to a process engineer in 6 months! The mentorship and placement guidance were outstanding. The course content was exactly what industry needs.",
     location: "Vadodara, Gujarat"
-  },
-  {
-    id: 4,
-    name: "Sneha Reddy",
-    role: "Structural Engineer",
-    company: "DLF Limited",
-    package: "₹9 LPA",
-    course: "Structural Engineering & Design",
-    image: "/api/placeholder/80/80",
-    rating: 5,
-    testimonial: "The personalized attention and career counseling helped me identify my strengths. The placement team worked tirelessly to match me with the right opportunity.",
-    location: "Hyderabad, Telangana"
-  },
-  {
-    id: 5,
-    name: "Vikram Singh",
-    role: "HVAC Design Engineer",
-    company: "Johnson Controls",
-    package: "₹10.5 LPA",
-    course: "HVAC System Design",
-    image: "/api/placeholder/80/80",
-    rating: 5,
-    testimonial: "The hands-on training with industry-standard software and the placement support made me job-ready. I appreciate the continuous support even after placement.",
-    location: "Delhi, NCR"
-  },
-  {
-    id: 6,
-    name: "Kavya Nair",
-    role: "Quality Engineer",
-    company: "Mahindra Group",
-    package: "₹7.5 LPA",
-    course: "Quality Engineering & Six Sigma",
-    image: "/api/placeholder/80/80",
-    rating: 5,
-    testimonial: "The course curriculum was perfectly aligned with industry requirements. The placement team's dedication and the alumni network support were incredible.",
-    location: "Chennai, Tamil Nadu"
   }
 ]
+
+// Mobile optimized testimonials (fewer for faster loading)
+const mobileTestimonials = testimonials.slice(0, 3)
 
 const stats = [
   {
@@ -104,6 +71,10 @@ const stats = [
 ]
 
 export default function PlacementTestimonials() {
+  // Optimize for mobile by using fewer testimonials
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const displayTestimonials = isMobile ? mobileTestimonials : testimonials
+  
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto px-4">
@@ -156,7 +127,7 @@ export default function PlacementTestimonials() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {testimonials.map((testimonial, index) => (
+          {displayTestimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 20 }}

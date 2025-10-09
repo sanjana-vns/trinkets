@@ -125,13 +125,15 @@ const PlacementSuccess = () => {
   ]
 
   useEffect(() => {
+    // Lower threshold for mobile performance
+    const isMobile = window.innerWidth < 768
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
         }
       },
-      { threshold: 0.3 }
+      { threshold: isMobile ? 0.1 : 0.3 }
     )
 
     if (sectionRef.current) {
@@ -143,9 +145,11 @@ const PlacementSuccess = () => {
 
   useEffect(() => {
     if (autoPlay) {
+      // Slower auto-play on mobile for better performance
+      const isMobile = window.innerWidth < 768
       const interval = setInterval(() => {
         setCurrentStory((prev) => (prev + 1) % successStories.length)
-      }, 6000)
+      }, isMobile ? 8000 : 6000)
       return () => clearInterval(interval)
     }
   }, [autoPlay, successStories.length])
