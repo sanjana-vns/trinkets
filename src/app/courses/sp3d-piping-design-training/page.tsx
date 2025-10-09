@@ -262,86 +262,250 @@ export default function SP3DPipingDesignTrainingPage() {
           </div>
         </section>
 
-        {/* Curriculum */}
-                {/* SP3D Curriculum */}
-        <section id="curriculum" className="py-16 sm:py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Training Curriculum</h2>
-              <p className="text-base sm:text-lg text-gray-600">Comprehensive modules covering all aspects of 3D piping design and SmartPlant 3D software</p>
+        {/* SP3D Curriculum - Visual Journey */}
+        <section id="curriculum" className="container mx-auto px-4 py-16 sm:py-20 relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563EB' fill-opacity='0.1'%3E%3Cpath d='M40 0L40 80M0 40L80 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}></div>
+          </div>
+
+          <div className="relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-8 md:mb-16">
+              <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 sm:px-8 py-3 rounded-full mb-6">
+                <span className="text-xl mr-3">🏗️</span>
+                <span className="font-bold text-lg">Comprehensive Curriculum</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 bg-clip-text text-transparent">
+                  SP3D Piping Design
+                </span>
+                <br />
+                <span className="text-gray-800">Learning Journey</span>
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                Master 3D piping design through our structured 6-month program designed by industry experts
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-blue-600 text-xl font-bold">1</span>
+
+            {/* Timeline Journey */}
+            <div className="relative max-w-6xl mx-auto">
+              {/* Central Timeline Line - Hidden on mobile */}
+              <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-indigo-500 to-cyan-500 rounded-full"></div>
+
+              {/* Module Cards */}
+              <div className="space-y-8 lg:space-y-16">
+                {/* Module 1 - Piping Fundamentals */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                    <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center lg:justify-end mb-4">
+                        <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">Piping Fundamentals</h3>
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">🔧</div>
+                      </div>
+                      <p className="text-blue-100 mb-6">Foundation & Core Concepts</p>
+                      <div className="space-y-3 text-blue-100">
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                          <span className="lg:mr-2">Piping engineering basics</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">📚</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="lg:mr-2">Industry codes and standards</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">📋</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="lg:mr-2">Material specifications</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">🔩</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="lg:mr-2">P&ID interpretation</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">📊</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    1
+                  </div>
+                  <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Piping Fundamentals</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Piping engineering basics</li>
-                  <li>• Industry codes and standards</li>
-                  <li>• Material specifications</li>
-                  <li>• P&ID interpretation</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-indigo-600 text-xl font-bold">2</span>
+
+                {/* Module 2 - AutoCAD Plant 3D */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="hidden lg:block lg:w-1/2 lg:pr-12"></div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    2
+                  </div>
+                  <div className="lg:w-1/2 lg:pl-12">
+                    <div className="group bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center mb-4">
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🖥️</div>
+                        <h3 className="text-xl lg:text-2xl font-bold">AutoCAD Plant 3D</h3>
+                      </div>
+                      <p className="text-indigo-100 mb-6">Professional CAD Design Skills</p>
+                      <div className="space-y-3 text-indigo-100">
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                          <span className="text-yellow-300 mr-2">⚙️</span>
+                          <span>Plant 3D interface and tools</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="text-yellow-300 mr-2">🏭</span>
+                          <span>Equipment modeling</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="text-yellow-300 mr-2">🔧</span>
+                          <span>Piping and instrumentation</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="text-yellow-300 mr-2">📐</span>
+                          <span>Orthographic drawings</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">AutoCAD Plant 3D</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Plant 3D interface and tools</li>
-                  <li>• Equipment modeling</li>
-                  <li>• Piping and instrumentation</li>
-                  <li>• Orthographic drawings</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-green-600 text-xl font-bold">3</span>
+
+                {/* Module 3 - SmartPlant 3D */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                    <div className="group bg-gradient-to-br from-green-500 to-green-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center lg:justify-end mb-4">
+                        <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">SmartPlant 3D (SP3D)</h3>
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">🌱</div>
+                      </div>
+                      <p className="text-green-100 mb-6">Advanced 3D Modeling</p>
+                      <div className="space-y-3 text-green-100">
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                          <span className="lg:mr-2">SP3D fundamentals and interface</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">💻</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="lg:mr-2">3D piping modeling techniques</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">🧩</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="lg:mr-2">Equipment placement and routing</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">🎯</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="lg:mr-2">Catalog and specifications</span>
+                          <span className="text-yellow-300 ml-2 lg:ml-0">📚</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    3
+                  </div>
+                  <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">SmartPlant 3D (SP3D)</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• SP3D fundamentals and interface</li>
-                  <li>• 3D piping modeling techniques</li>
-                  <li>• Equipment placement and routing</li>
-                  <li>• Catalog and specifications</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-purple-600 text-xl font-bold">4</span>
+
+                {/* Module 4 - PDMS Design */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="hidden lg:block lg:w-1/2 lg:pr-12"></div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    4
+                  </div>
+                  <div className="lg:w-1/2 lg:pl-12">
+                    <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center mb-4">
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🔮</div>
+                        <h3 className="text-xl lg:text-2xl font-bold">PDMS Design</h3>
+                      </div>
+                      <p className="text-purple-100 mb-6">Plant Design Management</p>
+                      <div className="space-y-3 text-purple-100">
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                          <span className="text-yellow-300 mr-2">🧭</span>
+                          <span>PDMS interface and navigation</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="text-yellow-300 mr-2">🛤️</span>
+                          <span>Piping design and routing</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="text-yellow-300 mr-2">⚠️</span>
+                          <span>Clash detection and resolution</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="text-yellow-300 mr-2">👁️</span>
+                          <span>Model review and walkthroughs</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">PDMS Design</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• PDMS interface and navigation</li>
-                  <li>• Piping design and routing</li>
-                  <li>• Clash detection and resolution</li>
-                  <li>• Model review and walkthroughs</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-yellow-600 text-xl font-bold">5</span>
+
+                {/* Module 5 - Advanced Modeling */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                    <div className="group bg-gradient-to-br from-yellow-500 to-yellow-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center lg:justify-end mb-4">
+                        <h3 className="text-xl lg:text-2xl font-bold lg:mr-4">Advanced Modeling</h3>
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 ml-2 lg:ml-0">⚡</div>
+                      </div>
+                      <p className="text-yellow-100 mb-6">Expert Level Techniques</p>
+                      <div className="space-y-3 text-yellow-100">
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform">
+                          <span className="lg:mr-2">Complex piping arrangements</span>
+                          <span className="text-orange-300 ml-2 lg:ml-0">🧮</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="lg:mr-2">Support design and modeling</span>
+                          <span className="text-orange-300 ml-2 lg:ml-0">🏗️</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="lg:mr-2">Stress analysis integration</span>
+                          <span className="text-orange-300 ml-2 lg:ml-0">🔬</span>
+                        </div>
+                        <div className="flex items-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="lg:mr-2">Plant optimization techniques</span>
+                          <span className="text-orange-300 ml-2 lg:ml-0">🎯</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    5
+                  </div>
+                  <div className="hidden lg:block lg:w-1/2 lg:pl-12"></div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Advanced Modeling</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Complex piping arrangements</li>
-                  <li>• Support design and modeling</li>
-                  <li>• Stress analysis integration</li>
-                  <li>• Plant optimization techniques</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-red-600 text-xl font-bold">6</span>
+
+                {/* Module 6 - Project Implementation */}
+                <div className="relative lg:flex lg:items-center">
+                  <div className="hidden lg:block lg:w-1/2 lg:pr-12"></div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-red-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                    6
+                  </div>
+                  <div className="lg:w-1/2 lg:pl-12">
+                    <div className="group bg-gradient-to-br from-red-500 to-red-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                      <div className="flex items-center mb-4">
+                        <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🚀</div>
+                        <h3 className="text-xl lg:text-2xl font-bold">Project Implementation</h3>
+                      </div>
+                      <p className="text-red-100 mb-6">Real-World Application</p>
+                      <div className="space-y-3 text-red-100">
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                          <span className="text-yellow-300 mr-2">🏭</span>
+                          <span>Real plant design projects</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                          <span className="text-yellow-300 mr-2">📊</span>
+                          <span>MTO and material reporting</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                          <span className="text-yellow-300 mr-2">📐</span>
+                          <span>Drawing production and standards</span>
+                        </div>
+                        <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                          <span className="text-yellow-300 mr-2">✅</span>
+                          <span>Quality assurance and delivery</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Project Implementation</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Real plant design projects</li>
-                  <li>• MTO and material reporting</li>
-                  <li>• Drawing production and standards</li>
-                  <li>• Quality assurance and delivery</li>
-                </ul>
               </div>
             </div>
           </div>
