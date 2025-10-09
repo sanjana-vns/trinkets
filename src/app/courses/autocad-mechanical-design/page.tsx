@@ -271,7 +271,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
           <div className="flex flex-col lg:flex-row items-center min-h-screen py-20">
             
             {/* Left Content */}
-            <div className="lg:w-1/2 space-y-8 animate-slideUp">
+            <div className="lg:w-1/2 space-y-8 animate-slideUp pb-24 lg:pb-16">
               {/* Course Badge */}
               <div className="inline-flex items-center bg-gradient-to-r from-teal-500 to-cyan-500 px-6 py-3 rounded-full shadow-lg animate-fadeIn">
                 <span className="text-2xl mr-3">🎨</span>
@@ -322,14 +322,15 @@ export default function AutoCADMechanicalDesignCoursePage() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 animate-slideUp" style={{animationDelay: '0.8s'}}>
+              <div className="flex flex-col sm:flex-row gap-4 animate-slideUp mt-8" style={{animationDelay: '0.8s'}}>
                 <Link 
                   href="/contact"
-                  className="group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  className="group bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 px-6 sm:px-8 py-4 rounded-xl font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center text-center min-w-0 flex-shrink-0"
                 >
-                  <span className="mr-2">🚀</span>
-                  Enroll in Mumbai&apos;s Best AutoCAD Course
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                  <span className="mr-2 flex-shrink-0">🚀</span>
+                  <span className="sm:hidden truncate">Enroll Now</span>
+                  <span className="hidden sm:inline truncate">Start AutoCAD Course</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0">→</span>
                 </Link>
               </div>
             </div>
@@ -394,24 +395,24 @@ export default function AutoCADMechanicalDesignCoursePage() {
           </div>
 
           {/* Bottom Stats Bar */}
-          <div className="absolute bottom-8 left-0 right-0 animate-slideUp" style={{animationDelay: '1.2s'}}>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="absolute bottom-4 lg:bottom-8 left-0 right-0 animate-slideUp z-20" style={{animationDelay: '1.2s'}}>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-6 border border-white/20 mx-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-teal-400">800+</div>
-                  <div className="text-sm text-teal-200">Students Trained</div>
+                  <div className="text-lg lg:text-2xl font-bold text-teal-400">800+</div>
+                  <div className="text-xs lg:text-sm text-teal-200">Students Trained</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-cyan-400">96%</div>
-                  <div className="text-sm text-teal-200">Placement Rate</div>
+                  <div className="text-lg lg:text-2xl font-bold text-cyan-400">96%</div>
+                  <div className="text-xs lg:text-sm text-teal-200">Placement Rate</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-400">12+</div>
-                  <div className="text-sm text-teal-200">Years Experience</div>
+                  <div className="text-lg lg:text-2xl font-bold text-blue-400">12+</div>
+                  <div className="text-xs lg:text-sm text-teal-200">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-400">250+</div>
-                  <div className="text-sm text-teal-200">Hiring Partners</div>
+                  <div className="text-lg lg:text-2xl font-bold text-green-400">250+</div>
+                  <div className="text-xs lg:text-sm text-teal-200">Hiring Partners</div>
                 </div>
               </div>
             </div>
