@@ -269,45 +269,45 @@ export default function HVACSystemDesignCoursePage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center min-h-screen py-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen py-12 lg:py-20 gap-8 lg:gap-12">
             
             {/* Left Content */}
-            <div className="lg:w-1/2 space-y-8 animate-slideUp">
+            <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8 text-center lg:text-left animate-slideUp">
               {/* Course Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-full shadow-lg animate-fadeIn">
-                <span className="text-2xl mr-3">🏗️</span>
-                <span className="font-bold text-lg">HVAC System Design Course Mumbai</span>
+              <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 px-4 lg:px-6 py-2 lg:py-3 rounded-full shadow-lg animate-fadeIn">
+                <span className="text-xl lg:text-2xl mr-2 lg:mr-3">🏗️</span>
+                <span className="font-bold text-sm lg:text-lg">HVAC System Design Course Mumbai</span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight animate-fadeIn" style={{animationDelay: '0.2s'}}>
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fadeIn" style={{animationDelay: '0.2s'}}>
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Best HVAC System Design
                 </span>
                 <br />
                 <span className="text-white">Course in Mumbai</span>
                 <br />
-                <span className="text-2xl lg:text-3xl font-normal text-blue-200 mt-4 block">
+                <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-normal text-blue-200 mt-2 lg:mt-4 block">
                   Master AutoCAD MEP, Revit MEP, HAP & TRACE 700
                 </span>
               </h1>
 
               {/* Description */}
-              <p className="text-xl text-blue-100 leading-relaxed animate-fadeIn" style={{animationDelay: '0.4s'}}>
+              <p className="text-base lg:text-xl text-blue-100 leading-relaxed max-w-2xl animate-fadeIn" style={{animationDelay: '0.4s'}}>
                 Join Mumbai&apos;s premier HVAC System Design training institute. Learn from industry experts, work on real 
                 projects, and get 100% placement assistance in top HVAC companies across Mumbai&apos;s construction industry.
               </p>
 
               {/* Key Features */}
-              <div className="grid grid-cols-2 gap-4 animate-slideUp" style={{animationDelay: '0.6s'}}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl mb-2">⏱️</div>
-                  <div className="font-semibold">6 Months Duration</div>
-                  <div className="text-sm text-blue-200">Flexible Batches</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 animate-slideUp" style={{animationDelay: '0.6s'}}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 lg:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="text-xl lg:text-2xl mb-1 lg:mb-2">⏱️</div>
+                  <div className="font-semibold text-sm lg:text-base">6 Months Duration</div>
+                  <div className="text-xs lg:text-sm text-blue-200">Flexible Batches</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-2xl mb-2">💻</div>
-                  <div className="font-semibold">4 Industry Software</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 lg:p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="text-xl lg:text-2xl mb-1 lg:mb-2">💻</div>
+                  <div className="font-semibold text-sm lg:text-base">4 Industry Software</div>
                   <div className="text-sm text-blue-200">AutoCAD MEP, Revit MEP</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -344,58 +344,58 @@ export default function HVACSystemDesignCoursePage() {
             </div>
 
             {/* Right Content - HVAC Software Showcase */}
-            <div className="lg:w-1/2 mt-16 lg:mt-0 animate-slideDown" style={{animationDelay: '1s'}}>
-              <div className="relative">
+            <div className="w-full lg:w-1/2 mt-8 lg:mt-0 animate-slideDown" style={{animationDelay: '1s'}}>
+              <div className="relative max-w-lg mx-auto lg:max-w-none">
                 {/* Main Software Grid */}
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                   
                   {/* AutoCAD MEP */}
-                  <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">🔧</div>
-                    <h3 className="text-xl font-bold mb-2">AutoCAD MEP</h3>
-                    <p className="text-sm text-blue-200">Mechanical, Electrical & Plumbing Design</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl lg:text-4xl mb-2 lg:mb-4">🔧</div>
+                    <h3 className="text-sm lg:text-xl font-bold mb-1 lg:mb-2">AutoCAD MEP</h3>
+                    <p className="text-xs lg:text-sm text-blue-200">Mechanical, Electrical & Plumbing Design</p>
+                    <div className="mt-2 lg:mt-4 flex items-center text-xs text-green-300">
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full mr-1 lg:mr-2"></span>
                       Industry Standard
                     </div>
                   </div>
 
                   {/* Revit MEP */}
-                  <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">🏗️</div>
-                    <h3 className="text-xl font-bold mb-2">Revit MEP</h3>
-                    <p className="text-sm text-blue-200">Building Information Modeling</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl lg:text-4xl mb-2 lg:mb-4">🏗️</div>
+                    <h3 className="text-sm lg:text-xl font-bold mb-1 lg:mb-2">Revit MEP</h3>
+                    <p className="text-xs lg:text-sm text-blue-200">Building Information Modeling</p>
+                    <div className="mt-2 lg:mt-4 flex items-center text-xs text-green-300">
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full mr-1 lg:mr-2"></span>
                       3D Modeling
                     </div>
                   </div>
 
                   {/* HAP Software */}
-                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">📊</div>
-                    <h3 className="text-xl font-bold mb-2">HAP Software</h3>
-                    <p className="text-sm text-blue-200">Hourly Analysis Program</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl lg:text-4xl mb-2 lg:mb-4">📊</div>
+                    <h3 className="text-sm lg:text-xl font-bold mb-1 lg:mb-2">HAP Software</h3>
+                    <p className="text-xs lg:text-sm text-blue-200">Hourly Analysis Program</p>
+                    <div className="mt-2 lg:mt-4 flex items-center text-xs text-green-300">
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full mr-1 lg:mr-2"></span>
                       Energy Analysis
                     </div>
                   </div>
 
                   {/* TRACE 700 */}
-                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold mb-2">TRACE 700</h3>
-                    <p className="text-sm text-blue-200">Building Energy Simulation</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl lg:text-4xl mb-2 lg:mb-4">⚡</div>
+                    <h3 className="text-sm lg:text-xl font-bold mb-1 lg:mb-2">TRACE 700</h3>
+                    <p className="text-xs lg:text-sm text-blue-200">Building Energy Simulation</p>
+                    <div className="mt-2 lg:mt-4 flex items-center text-xs text-green-300">
+                      <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full mr-1 lg:mr-2"></span>
                       LEED Certified
                     </div>
                   </div>
                 </div>
 
                 {/* Mumbai Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute -top-2 -right-2 lg:-top-4 lg:-right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-full text-xs lg:text-sm font-bold shadow-lg">
                   Mumbai&apos;s #1 Choice
                 </div>
               </div>

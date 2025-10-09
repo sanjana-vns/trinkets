@@ -344,49 +344,49 @@ export default function AutoCADMechanicalDesignCoursePage() {
 
             {/* Right Content - AutoCAD Software Showcase */}
             <div className="lg:w-1/2 mt-16 lg:mt-0 animate-slideDown" style={{animationDelay: '1s'}}>
-              <div className="relative">
+              <div className="relative max-w-2xl mx-auto lg:mx-0">
                 {/* Main Software Grid */}
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   
                   {/* AutoCAD 2D */}
-                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">📐</div>
-                    <h3 className="text-xl font-bold mb-2">AutoCAD 2D</h3>
-                    <p className="text-sm text-teal-200">Technical Drafting & Design</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
+                  <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-300 hover:scale-105 h-full">
+                    <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📐</div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">AutoCAD 2D</h3>
+                    <p className="text-xs sm:text-sm text-teal-200 leading-relaxed">Technical Drafting & Design</p>
+                    <div className="mt-3 sm:mt-4 flex items-center text-xs text-green-300">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       Industry Standard
                     </div>
                   </div>
 
                   {/* AutoCAD 3D */}
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">🗂️</div>
-                    <h3 className="text-xl font-bold mb-2">AutoCAD 3D</h3>
-                    <p className="text-sm text-teal-200">3D Modeling & Visualization</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 h-full">
+                    <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗂️</div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">AutoCAD 3D</h3>
+                    <p className="text-xs sm:text-sm text-teal-200 leading-relaxed">3D Modeling & Visualization</p>
+                    <div className="mt-3 sm:mt-4 flex items-center text-xs text-green-300">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       3D Design
                     </div>
                   </div>
 
                   {/* AutoCAD Inventor */}
-                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">⚙️</div>
-                    <h3 className="text-xl font-bold mb-2">Inventor</h3>
-                    <p className="text-sm text-teal-200">Parametric Design</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
+                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 h-full">
+                    <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">Inventor</h3>
+                    <p className="text-xs sm:text-sm text-teal-200 leading-relaxed">Parametric Design</p>
+                    <div className="mt-3 sm:mt-4 flex items-center text-xs text-green-300">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       Professional
                     </div>
                   </div>
 
                   {/* SolidWorks */}
-                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-4xl mb-4">🔧</div>
-                    <h3 className="text-xl font-bold mb-2">SolidWorks</h3>
-                    <p className="text-sm text-teal-200">Advanced Product Design</p>
-                    <div className="mt-4 flex items-center text-xs text-green-300">
+                  <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300 hover:scale-105 h-full">
+                    <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">SolidWorks</h3>
+                    <p className="text-xs sm:text-sm text-teal-200 leading-relaxed">Advanced Product Design</p>
+                    <div className="mt-3 sm:mt-4 flex items-center text-xs text-green-300">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       CAD Excellence
                     </div>
