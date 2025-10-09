@@ -163,7 +163,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 </Link>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
                   <div className="text-3xl font-bold text-white">6</div>
                   <div className="text-blue-200 text-sm">Months Duration</div>
@@ -440,7 +440,7 @@ export default function SP3DPipingDesignTrainingPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries Covered</h2>
               <p className="text-lg text-gray-600">Apply SP3D piping design skills across diverse Mumbai industries</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white text-xl">🛢️</span>
