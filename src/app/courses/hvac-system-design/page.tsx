@@ -323,13 +323,13 @@ export default function HVACSystemDesignCoursePage() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 animate-slideUp" style={{animationDelay: '0.8s'}}>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-slideUp" style={{animationDelay: '0.8s'}}>
                 <Link 
                   href="/contact"
-                  className="group bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  className="group bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center min-w-[200px]"
                 >
                   <span className="mr-2">🚀</span>
-                  Enroll in Mumbai&apos;s Best HVAC Course
+                  Enroll Now
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
@@ -1219,7 +1219,7 @@ export default function HVACSystemDesignCoursePage() {
           </div>
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Enroll Now - Book Your Seat
+              Enroll Now
             </Link>
             <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Call for Consultation
