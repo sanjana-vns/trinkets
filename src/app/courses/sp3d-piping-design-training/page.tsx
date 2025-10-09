@@ -156,7 +156,7 @@ export default function SP3DPipingDesignTrainingPage() {
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
                 <Link href="/contact" className="bg-white text-blue-900 px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                  <span className="hidden sm:inline">🚀 Enroll in Mumbai's Best SP3D Course</span>
+                  <span className="hidden sm:inline">🚀 Enroll in Mumbai&apos;s Best SP3D Course</span>
                   <span className="sm:hidden">🚀 Enroll Now</span>
                 </Link>
                 <Link href="#curriculum" className="border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
