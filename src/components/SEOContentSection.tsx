@@ -664,9 +664,12 @@ export default function SEOContentSection() {
                   </div>
 
                   {/* Action Button */}
-                  <button className={`w-full py-3 bg-gradient-to-r ${contact.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0`}>
+                  <Link 
+                    href="/contact"
+                    className={`block w-full py-3 bg-gradient-to-r ${contact.gradient} text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 text-center`}
+                  >
                     Get in Touch
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
