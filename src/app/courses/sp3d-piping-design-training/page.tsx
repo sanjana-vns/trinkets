@@ -127,7 +127,7 @@ export default function SP3DPipingDesignTrainingPage() {
       />
       <div className="min-h-screen bg-white">
         {/* Creative Animated Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-12 sm:py-16 md:py-20 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-12 h-2 bg-blue-400 rounded opacity-60 animate-pulse"></div>
             <div className="absolute top-20 right-20 w-8 h-3 bg-indigo-400 rounded opacity-40 animate-bounce delay-300"></div>
@@ -144,21 +144,21 @@ export default function SP3DPipingDesignTrainingPage() {
                 <span className="text-blue-100 font-semibold">Professional 3D Piping Design Training</span>
               </div>
               
-              <h1 className="text-4xl md:text-7xl font-bold mb-8 transform hover:scale-105 transition-transform duration-300">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 transform hover:scale-105 transition-transform duration-300">
                 <span className="inline-block bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">SP3D</span>{' '}
                 <span className="inline-block bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent">Piping Design</span>{' '}
                 <span className="text-blue-200">Training in Mumbai</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
                 Master SmartPlant 3D piping design with AutoCAD Plant 3D and PDMS for oil & gas, petrochemical industry 3D modeling and engineering in Mumbai
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <Link href="/contact" className="bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <Link href="/contact" className="bg-white text-blue-900 px-6 py-3 sm:px-10 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                   🚀 Enroll Now - Limited Seats
                 </Link>
-                <Link href="#curriculum" className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                <Link href="#curriculum" className="border-2 border-white text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
                   📚 View Curriculum
                 </Link>
               </div>
@@ -186,15 +186,15 @@ export default function SP3DPipingDesignTrainingPage() {
         </section>
 
         {/* Course Overview */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Master SP3D Piping Design in Mumbai</h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Master SP3D Piping Design in Mumbai</h2>
+                <p className="text-base sm:text-lg text-gray-600 mb-6">
                   Our comprehensive SP3D Piping Design Training in Mumbai covers the complete spectrum of 3D piping design from basic modeling to advanced plant design using SmartPlant 3D software. Learn industry-standard methodologies used by leading oil & gas and petrochemical companies in Mumbai and across India.
                 </p>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-base sm:text-lg text-gray-600 mb-8">
                   This course is designed for mechanical engineers, piping designers, and professionals looking to enhance their skills in 3D piping design with hands-on training on SP3D, AutoCAD Plant 3D, PDMS, and advanced piping engineering tools.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -262,10 +262,11 @@ export default function SP3DPipingDesignTrainingPage() {
         </section>
 
         {/* Curriculum */}
-        <section id="curriculum" className="py-16 bg-gray-50">
+                {/* SP3D Curriculum */}
+        <section id="curriculum" className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Training Curriculum</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Training Curriculum</h2>
               <p className="text-lg text-gray-600">Comprehensive modules covering all aspects of 3D piping design and SmartPlant 3D software</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
