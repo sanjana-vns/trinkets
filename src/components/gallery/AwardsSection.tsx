@@ -370,20 +370,6 @@ const AwardsSection = () => {
             </motion.div>
           )}
         </motion.div>
-
-        {/* Load More Button */}
-        {filteredAwards.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="text-center mt-12"
-          >
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Load More Awards
-            </button>
-          </motion.div>
-        )}
       </div>
     </section>
   )

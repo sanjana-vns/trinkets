@@ -203,11 +203,6 @@ const GalleryHero = () => {
                       {galleryCategories[currentSlide].description}
                     </p>
                   </div>
-
-                  <button className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group">
-                    View Category
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
                 </motion.div>
               </AnimatePresence>
 
