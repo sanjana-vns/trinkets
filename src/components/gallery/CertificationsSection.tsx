@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Award, Star, Filter, Search, CheckCircle, Clock, Users, Target, ExternalLink, Download, BookOpen, TrendingUp, FileText } from 'lucide-react'
 
 const CertificationsSection = () => {
@@ -264,11 +265,15 @@ const CertificationsSection = () => {
               >
                 <div className="relative">
                   <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
-                    <img
+                    <Image
                       src={cert.image}
                       alt={cert.title}
+                      width={600}
+                      height={300}
                       className="w-full h-full object-cover object-top"
                       style={{ objectPosition: 'center 20%' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyDebvlGkn9f3K4//2Q=="
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-90 flex items-center justify-center`}>
                       <FileText className="w-20 h-20 text-white" />

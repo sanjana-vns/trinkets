@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { Award, Trophy, Medal, Star, Calendar, MapPin, Users, Target, ExternalLink, Eye, Filter, Search } from 'lucide-react'
 
 const AwardsSection = () => {
@@ -213,11 +214,15 @@ const AwardsSection = () => {
               >
                 <div className="relative">
                   <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
-                    <img
+                    <Image
                       src={award.image}
                       alt={award.title}
+                      width={600}
+                      height={300}
                       className="w-full h-full object-cover object-top"
                       style={{ objectPosition: 'center 20%' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyDebvlGkn9f3K4//2Q=="
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-80 flex items-center justify-center`}>
                       <Trophy className="w-16 h-16 text-white" />
