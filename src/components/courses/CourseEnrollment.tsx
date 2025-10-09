@@ -248,10 +248,6 @@ const CourseEnrollment = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
 
-                <button className="w-full py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300">
-                  Download Detailed Brochure
-                </button>
-
                 <button className="w-full py-4 bg-white/20 text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300">
                   Schedule Free Demo Class
                 </button>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 // Ultra-Creative Course Details Component
 const CourseDetails = () => {
@@ -366,12 +367,12 @@ const CourseDetails = () => {
 
                 <div className="p-6">
                   <div className="space-y-3">
-                    <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <Link 
+                      href="/contact"
+                      className="block w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-center"
+                    >
                       Enroll Now
-                    </button>
-                    <button className="w-full py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300">
-                      Download Syllabus
-                    </button>
+                    </Link>
                     <button className="w-full py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all duration-300">
                       Schedule Demo
                     </button>
