@@ -119,7 +119,7 @@ export default function ContactHero() {
                 >
                   <contact.icon className="w-8 h-8 mb-3 group-hover:scale-110 transition-transform duration-300" />
                   <div className="text-sm opacity-90 mb-1">{contact.label}</div>
-                  <div className="font-bold text-sm">{contact.value}</div>
+                  <div className="font-bold text-sm break-words overflow-hidden">{contact.value}</div>
                 </motion.a>
               ))}
             </motion.div>
