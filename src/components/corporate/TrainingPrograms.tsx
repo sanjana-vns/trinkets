@@ -383,17 +383,11 @@ const TrainingPrograms = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  {program.courseLink ? (
-                    <Link href={program.courseLink}>
-                      <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
-                        View Details
-                      </button>
-                    </Link>
-                  ) : (
+                  <Link href="/corporate-training">
                     <button className={`w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${categories.find(c => c.id === activeCategory)?.gradient || 'from-blue-600 to-purple-600'} hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
-                      Request Information
+                      View Details
                     </button>
-                  )}
+                  </Link>
                   <Link href="/contact">
                     <button className="w-full py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all duration-300">
                       Schedule Demo
