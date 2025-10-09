@@ -528,74 +528,74 @@ export default function SmartPlant3DCoursePage() {
           </div>
 
           {/* Timeline Journey */}
-          <div className="relative">
-            {/* Central Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-purple-500 to-teal-500 rounded-full"></div>
+          <div className="relative max-w-6xl mx-auto">
+            {/* Central Timeline Line - Hidden on mobile */}
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-purple-500 to-teal-500 rounded-full"></div>
 
             {/* Module Cards */}
-            <div className="space-y-16">
+            <div className="space-y-8 lg:space-y-16">
               {/* Module 1 - SP3D Fundamentals */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12 text-right">
-                  <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center justify-end mb-4">
-                      <h3 className="text-2xl font-bold mr-4">SP3D Fundamentals</h3>
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🏗️</div>
+              <div className="relative flex flex-col lg:flex-row items-center">
+                <div className="w-full lg:w-1/2 lg:pr-12 mb-4 lg:mb-0 text-center lg:text-right">
+                  <div className="group bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-center lg:justify-end mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold mr-4">SP3D Fundamentals</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300">🏗️</div>
                     </div>
-                    <p className="text-blue-100 mb-6">Foundation & Interface Mastery</p>
-                    <div className="space-y-3 text-blue-100">
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
+                    <p className="text-blue-100 mb-4 lg:mb-6 text-sm lg:text-base">Foundation & Interface Mastery</p>
+                    <div className="space-y-2 lg:space-y-3 text-blue-100 text-sm lg:text-base">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform">
                         <span className="mr-2">Interface Navigation</span>
                         <span className="text-yellow-300">✨</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
                         <span className="mr-2">Project Setup & Database</span>
                         <span className="text-yellow-300">⚙️</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
                         <span className="mr-2">User Administration</span>
                         <span className="text-yellow-300">👤</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
                         <span className="mr-2">Workspace Customization</span>
                         <span className="text-yellow-300">🎨</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   1
                 </div>
-                <div className="w-1/2 pl-12"></div>
+                <div className="w-full lg:w-1/2 lg:pl-12"></div>
               </div>
 
               {/* Module 2 - Equipment Modeling */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+              <div className="relative flex flex-col lg:flex-row items-center">
+                <div className="w-full lg:w-1/2 lg:pr-12 mb-4 lg:mb-0 order-2 lg:order-1"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   2
                 </div>
-                <div className="w-1/2 pl-12">
-                  <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">⚙️</div>
-                      <h3 className="text-2xl font-bold">Equipment Modeling</h3>
+                <div className="w-full lg:w-1/2 lg:pl-12 mb-4 lg:mb-0 order-1 lg:order-2 text-center lg:text-left">
+                  <div className="group bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-center lg:justify-start mb-4">
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">⚙️</div>
+                      <h3 className="text-xl lg:text-2xl font-bold">Equipment Modeling</h3>
                     </div>
-                    <p className="text-purple-100 mb-6">3D Equipment Design Excellence</p>
-                    <div className="space-y-3 text-purple-100">
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                    <p className="text-purple-100 mb-4 lg:mb-6 text-sm lg:text-base">3D Equipment Design Excellence</p>
+                    <div className="space-y-2 lg:space-y-3 text-purple-100 text-sm lg:text-base">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform">
                         <span className="text-yellow-300 mr-2">🏭</span>
                         <span>Equipment Placement & Orientation</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-75">
                         <span className="text-yellow-300 mr-2">🔧</span>
                         <span>Vessel & Tank Modeling</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-150">
                         <span className="text-yellow-300 mr-2">🌡️</span>
                         <span>Heat Exchanger Design</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-200">
                         <span className="text-yellow-300 mr-2">⚡</span>
                         <span>Pump & Compressor Modeling</span>
                       </div>
@@ -605,67 +605,67 @@ export default function SmartPlant3DCoursePage() {
               </div>
 
               {/* Module 3 - Piping Design */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12 text-right">
-                  <div className="group bg-gradient-to-br from-teal-500 to-teal-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center justify-end mb-4">
-                      <h3 className="text-2xl font-bold mr-4">Piping Design</h3>
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300">🔧</div>
+              <div className="relative flex flex-col lg:flex-row items-center">
+                <div className="w-full lg:w-1/2 lg:pr-12 mb-4 lg:mb-0 text-center lg:text-right">
+                  <div className="group bg-gradient-to-br from-teal-500 to-teal-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-center lg:justify-end mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold mr-4">Piping Design</h3>
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300">🔧</div>
                     </div>
-                    <p className="text-teal-100 mb-6">Advanced Piping Layout Systems</p>
-                    <div className="space-y-3 text-teal-100">
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform">
+                    <p className="text-teal-100 mb-4 lg:mb-6 text-sm lg:text-base">Advanced Piping Layout Systems</p>
+                    <div className="space-y-2 lg:space-y-3 text-teal-100 text-sm lg:text-base">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform">
                         <span className="mr-2">Piping Routing & Layout</span>
                         <span className="text-yellow-300">🛤️</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-75">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-75">
                         <span className="mr-2">Fittings & Valves</span>
                         <span className="text-yellow-300">🔩</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-150">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-150">
                         <span className="mr-2">Support Modeling</span>
                         <span className="text-yellow-300">🏗️</span>
                       </div>
-                      <div className="flex items-center justify-end group-hover:translate-x-2 transition-transform delay-200">
+                      <div className="flex items-center justify-center lg:justify-end group-hover:translate-x-2 transition-transform delay-200">
                         <span className="mr-2">Insulation Design</span>
                         <span className="text-yellow-300">🛡️</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   3
                 </div>
-                <div className="w-1/2 pl-12"></div>
+                <div className="w-full lg:w-1/2 lg:pl-12"></div>
               </div>
 
               {/* Module 4 - Advanced Features */}
-              <div className="relative flex items-center">
-                <div className="w-1/2 pr-12"></div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
+              <div className="relative flex flex-col lg:flex-row items-center">
+                <div className="w-full lg:w-1/2 lg:pr-12 mb-4 lg:mb-0 order-2 lg:order-1"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10 border-4 border-white">
                   4
                 </div>
-                <div className="w-1/2 pl-12">
-                  <div className="group bg-gradient-to-br from-orange-500 to-orange-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🚀</div>
-                      <h3 className="text-2xl font-bold">Advanced Features</h3>
+                <div className="w-full lg:w-1/2 lg:pl-12 mb-4 lg:mb-0 order-1 lg:order-2 text-center lg:text-left">
+                  <div className="group bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 lg:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 cursor-pointer">
+                    <div className="flex items-center justify-center lg:justify-start mb-4">
+                      <div className="text-3xl lg:text-4xl group-hover:rotate-12 transition-transform duration-300 mr-4">🚀</div>
+                      <h3 className="text-xl lg:text-2xl font-bold">Advanced Features</h3>
                     </div>
-                    <p className="text-orange-100 mb-6">Professional Tools & Automation</p>
-                    <div className="space-y-3 text-orange-100">
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform">
+                    <p className="text-orange-100 mb-4 lg:mb-6 text-sm lg:text-base">Professional Tools & Automation</p>
+                    <div className="space-y-2 lg:space-y-3 text-orange-100 text-sm lg:text-base">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform">
                         <span className="text-yellow-300 mr-2">🔍</span>
                         <span>Clash Detection & Resolution</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-75">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-75">
                         <span className="text-yellow-300 mr-2">📐</span>
                         <span>Isometric Generation</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-150">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-150">
                         <span className="text-yellow-300 mr-2">📊</span>
                         <span>Materials Management</span>
                       </div>
-                      <div className="flex items-center group-hover:translate-x-2 transition-transform delay-200">
+                      <div className="flex items-center justify-center lg:justify-start group-hover:translate-x-2 transition-transform delay-200">
                         <span className="text-yellow-300 mr-2">👁️</span>
                         <span>3D Walkthrough & Reports</span>
                       </div>
