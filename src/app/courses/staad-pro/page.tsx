@@ -113,7 +113,7 @@ export default function STAADProCoursePage() {
               </p>
 
               {/* Key Features */}
-              <div className="grid grid-cols-2 gap-4 mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 animate-slideUp" style={{animationDelay: '0.6s'}}>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="text-2xl mb-2">🏢</div>
                   <div className="font-semibold">Building Design</div>
@@ -161,7 +161,7 @@ export default function STAADProCoursePage() {
             <div className="lg:w-full mt-16 lg:mt-0 animate-slideDown" style={{animationDelay: '1s'}}>
               <div className="relative">
                 {/* Main Features Grid */}
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   
                   {/* Structural Modeling */}
                   <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
@@ -214,7 +214,7 @@ export default function STAADProCoursePage() {
               </div>
 
               {/* Stats Row */}
-              <div className="grid grid-cols-3 gap-4 mt-8 animate-fadeIn" style={{animationDelay: '1.2s'}}>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 animate-fadeIn" style={{animationDelay: '1.2s'}}>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                   <div className="text-2xl font-bold text-cyan-300">450+</div>
                   <div className="text-sm text-blue-200">Students Trained</div>

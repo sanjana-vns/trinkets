@@ -254,7 +254,7 @@ export default function AutoCADCivilCoursePage() {
                 Learn advanced infrastructure design, road planning, and land development with guaranteed placement assistance.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl">
                   <MapPin className="w-5 h-5 mr-2 text-orange-300" />
                   <span className="font-medium">Mumbai Location</span>
@@ -291,7 +291,7 @@ export default function AutoCADCivilCoursePage() {
         <section className="py-16 bg-gradient-to-r from-orange-50 to-yellow-50">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Building2 className="w-8 h-8 text-white" />
@@ -437,7 +437,7 @@ export default function AutoCADCivilCoursePage() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
@@ -707,7 +707,7 @@ export default function AutoCADCivilCoursePage() {
                 and comprehensive job placement assistance in Mumbai&apos;s infrastructure sector.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl">
                   <Phone className="w-5 h-5 mr-3 text-orange-300" />
                   <span className="font-medium">+91-9876543210</span>

@@ -347,7 +347,7 @@ export default function HVACSystemDesignCoursePage() {
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 animate-slideDown" style={{animationDelay: '1s'}}>
               <div className="relative max-w-lg mx-auto lg:max-w-none">
                 {/* Main Software Grid */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                   
                   {/* AutoCAD MEP */}
                   <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
@@ -405,7 +405,7 @@ export default function HVACSystemDesignCoursePage() {
           {/* Bottom Stats Bar */}
           <div className="absolute bottom-8 left-0 right-0 animate-slideUp" style={{animationDelay: '1.2s'}}>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-cyan-400">500+</div>
                   <div className="text-sm text-blue-200">Students Trained</div>
@@ -496,7 +496,7 @@ export default function HVACSystemDesignCoursePage() {
                     HVAC Software Mastery
                   </h3>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
                       { name: "AutoCAD MEP", desc: "HVAC Design & Drafting", color: "from-red-400 to-orange-500" },
                       { name: "Revit MEP", desc: "3D BIM Modeling", color: "from-blue-400 to-cyan-500" },
@@ -548,7 +548,7 @@ export default function HVACSystemDesignCoursePage() {
                     Course Highlights
                   </h3>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
                       { label: "Duration", value: "6 Months", icon: "⏱️" },
                       { label: "Mode", value: "Classroom/Online", icon: "💻" },
