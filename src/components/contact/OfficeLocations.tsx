@@ -235,7 +235,7 @@ export default function OfficeLocations() {
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-4">
                     <motion.a
-                      href={`https://maps.google.com/?q=${office.coordinates.lat},${office.coordinates.lng}`}
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
