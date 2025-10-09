@@ -64,7 +64,7 @@ const RelatedCourses = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {relatedCourses.map((course, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{course.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{course.title}</h3>
               <p className="text-gray-600 mb-4">{course.description}</p>
               <div className="flex justify-between items-center">
                 <span className="text-blue-600 font-medium">{course.duration}</span>
@@ -267,14 +267,14 @@ export default function SP3DPipingDesignTrainingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Training Curriculum</h2>
-              <p className="text-lg text-gray-600">Comprehensive modules covering all aspects of 3D piping design and SmartPlant 3D software</p>
+              <p className="text-base sm:text-lg text-gray-600">Comprehensive modules covering all aspects of 3D piping design and SmartPlant 3D software</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-blue-600 text-xl font-bold">1</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Piping Fundamentals</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Piping Fundamentals</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Piping engineering basics</li>
                   <li>• Industry codes and standards</li>
@@ -286,7 +286,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-indigo-600 text-xl font-bold">2</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">AutoCAD Plant 3D</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">AutoCAD Plant 3D</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Plant 3D interface and tools</li>
                   <li>• Equipment modeling</li>
@@ -298,7 +298,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-green-600 text-xl font-bold">3</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">SmartPlant 3D (SP3D)</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">SmartPlant 3D (SP3D)</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• SP3D fundamentals and interface</li>
                   <li>• 3D piping modeling techniques</li>
@@ -310,7 +310,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-purple-600 text-xl font-bold">4</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">PDMS Design</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">PDMS Design</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• PDMS interface and navigation</li>
                   <li>• Piping design and routing</li>
@@ -322,7 +322,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-yellow-600 text-xl font-bold">5</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Advanced Modeling</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Advanced Modeling</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Complex piping arrangements</li>
                   <li>• Support design and modeling</li>
@@ -334,7 +334,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-red-600 text-xl font-bold">6</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Project Implementation</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Project Implementation</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Real plant design projects</li>
                   <li>• MTO and material reporting</li>
@@ -395,7 +395,7 @@ export default function SP3DPipingDesignTrainingPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Job Roles</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Job Roles</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• SP3D Piping Designer</li>
                   <li>• Plant Design Engineer</li>
@@ -407,7 +407,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Top Companies in Mumbai</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Top Companies in Mumbai</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Reliance Industries</li>
                   <li>• ONGC</li>
@@ -419,7 +419,7 @@ export default function SP3DPipingDesignTrainingPage() {
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Salary Range in Mumbai</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Salary Range in Mumbai</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li>• Fresher: ₹4.5-7.0 LPA</li>
                   <li>• 2-5 Years: ₹8-15 LPA</li>
