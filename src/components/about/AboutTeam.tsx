@@ -160,16 +160,9 @@ const AboutTeam = () => {
                   </div>
                   
                   {/* Description */}
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-0">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {member.description}
                   </p>
-
-                  {/* Interactive Connect Button */}
-                  <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                    <button className={`w-full py-2 bg-gradient-to-r ${member.gradient} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 text-xs sm:text-sm`}>
-                      Connect with {member.name.split(' ')[0]} 💬
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

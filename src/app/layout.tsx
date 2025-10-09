@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import Map from '@/components/Map'
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
 import StructuredData from '@/components/StructuredData'
 
@@ -160,6 +161,7 @@ export default function RootLayout({
         />
         <Navigation />
         <main role="main">{children}</main>
+        <Map />
         <Footer />
       </body>
     </html>
