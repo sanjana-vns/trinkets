@@ -144,41 +144,42 @@ export default function SP3DPipingDesignTrainingPage() {
                 <span className="text-blue-100 font-semibold">Professional 3D Piping Design Training</span>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 transform hover:scale-105 transition-transform duration-300">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight transform hover:scale-105 transition-transform duration-300">
                 <span className="inline-block bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">SP3D</span>{' '}
                 <span className="inline-block bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent">Piping Design</span>{' '}
                 <span className="text-blue-200">Training in Mumbai</span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
                 Master SmartPlant 3D piping design with AutoCAD Plant 3D and PDMS for oil & gas, petrochemical industry 3D modeling and engineering in Mumbai
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <Link href="/contact" className="bg-white text-blue-900 px-6 py-3 sm:px-10 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                  🚀 Enroll Now - Limited Seats
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
+                <Link href="/contact" className="bg-white text-blue-900 px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                  <span className="hidden sm:inline">🚀 Enroll in Mumbai's Best SP3D Course</span>
+                  <span className="sm:hidden">🚀 Enroll Now</span>
                 </Link>
-                <Link href="#curriculum" className="border-2 border-white text-white px-6 py-3 sm:px-10 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                <Link href="#curriculum" className="border-2 border-white text-white px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
                   📚 View Curriculum
                 </Link>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-white">6</div>
-                  <div className="text-blue-200 text-sm">Months Duration</div>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-white">6</div>
+                  <div className="text-blue-200 text-xs sm:text-sm">Months Duration</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-white">4.9⭐</div>
-                  <div className="text-blue-200 text-sm">Student Rating</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-white">4.9⭐</div>
+                  <div className="text-blue-200 text-xs sm:text-sm">Student Rating</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-white">1200+</div>
-                  <div className="text-blue-200 text-sm">Students Trained</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-white">1200+</div>
+                  <div className="text-blue-200 text-xs sm:text-sm">Students Trained</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-all duration-300">
-                  <div className="text-3xl font-bold text-white">100%</div>
-                  <div className="text-blue-200 text-sm">Placement Support</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl font-bold text-white">100%</div>
+                  <div className="text-blue-200 text-xs sm:text-sm">Placement Support</div>
                 </div>
               </div>
             </div>
@@ -186,7 +187,7 @@ export default function SP3DPipingDesignTrainingPage() {
         </section>
 
         {/* Course Overview */}
-        <section className="py-12 sm:py-16">
+        <section className="py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -263,7 +264,7 @@ export default function SP3DPipingDesignTrainingPage() {
 
         {/* Curriculum */}
                 {/* SP3D Curriculum */}
-        <section id="curriculum" className="py-12 sm:py-16 bg-gray-50">
+        <section id="curriculum" className="py-16 sm:py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">SP3D Piping Design Training Curriculum</h2>
