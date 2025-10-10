@@ -1,5 +1,6 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
+import ReloadButton from './ReloadButton'
 
 interface Props {
   children: ReactNode
@@ -35,12 +36,9 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="text-center">
             <div className="text-red-600 mb-2">⚠️ Something went wrong</div>
             <p className="text-sm text-gray-600">Please refresh the page to try again.</p>
-            <button 
-              onClick={() => window.location.reload()}
-              className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
-            >
+            <ReloadButton className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors">
               Reload Page
-            </button>
+            </ReloadButton>
           </div>
         </div>
       )

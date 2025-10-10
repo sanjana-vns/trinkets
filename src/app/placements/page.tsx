@@ -4,26 +4,16 @@ import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import LazySection from '@/components/LazySection'
 import ErrorBoundary from '@/components/ErrorBoundary'
+import ReloadButton from '@/components/ReloadButton'
 
 // Ultra-lightweight mobile hero for instant loading
 const MobilePlacementHero = dynamic(() => import('@/components/placement/MobilePlacementHero'), {
-  ssr: true,
+  ssr: false,
 })
 
-// Full hero for desktop
+// Full hero for desktop  
 const PlacementHero = dynamic(() => import('@/components/placement/PlacementHero'), {
-  loading: () => (
-    <div className="min-h-[50vh] bg-gradient-to-br from-slate-900 to-blue-900">
-      <div className="container mx-auto px-4 py-16 text-white">
-        <div className="animate-pulse">
-          <div className="h-8 bg-white/20 rounded w-3/4 mb-4"></div>
-          <div className="h-4 bg-white/10 rounded w-1/2 mb-8"></div>
-          <div className="h-12 bg-blue-600/50 rounded w-40"></div>
-        </div>
-      </div>
-    </div>
-  ),
-  ssr: true,
+  ssr: false,
 })
 
 // Other components load with lazy intersection observer
@@ -93,9 +83,9 @@ export default function PlacementPage() {
           <div className="h-64 bg-red-50 flex items-center justify-center">
             <div className="text-center text-red-600">
               <div className="mb-2">Failed to load statistics</div>
-              <button onClick={() => window.location.reload()} className="text-sm underline">
+              <ReloadButton className="text-sm underline">
                 Retry
-              </button>
+              </ReloadButton>
             </div>
           </div>
         }>
