@@ -1,19 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [animatedNumbers, setAnimatedNumbers] = useState<Record<string, number>>({})
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: "15+", label: "Years Experience", icon: "🏆", color: "from-yellow-400 to-orange-500" },
     { number: "50+", label: "Courses", icon: "📚", color: "from-green-400 to-teal-500" },
     { number: "5000+", label: "Trained Students", icon: "👥", color: "from-blue-400 to-cyan-500" },
     { number: "95%", label: "Placement Rate", icon: "🎯", color: "from-purple-400 to-pink-500" },
     { number: "100+", label: "Expert Teachers", icon: "👨‍🏫", color: "from-indigo-400 to-blue-500" },
     { number: "25+", label: "Industry Awards", icon: "🏅", color: "from-red-400 to-rose-500" }
-  ]
+  ], [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,7 +52,7 @@ const StatsSection = () => {
         }, 30)
       })
     }
-  }, [isVisible])
+  }, [isVisible, stats])
 
   return (
     <section id="stats-section" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
