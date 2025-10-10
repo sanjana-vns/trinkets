@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { memo } from 'react'
 import { Facebook, Twitter, Youtube, MessageCircle, Linkedin, Instagram } from 'lucide-react'
 import BackToTopButton from './ui/BackToTopButton'
+import TrinketsLogo from './TrinketsLogo'
 
 const Footer = memo(() => {
   return (
