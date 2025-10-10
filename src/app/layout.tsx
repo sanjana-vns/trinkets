@@ -52,9 +52,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code', // TODO: Replace with actual Google Search Console verification code
-  },
   alternates: {
     canonical: 'https://trinketsinstitute.com',
     languages: {
