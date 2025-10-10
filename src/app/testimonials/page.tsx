@@ -1,9 +1,36 @@
 import { Metadata } from 'next'
-import TestimonialsHero from '@/components/testimonials/TestimonialsHero'
-import FeaturedTestimonials from '@/components/testimonials/FeaturedTestimonials'
-import SuccessStats from '@/components/testimonials/SuccessStats'
-import ReviewsSection from '@/components/testimonials/ReviewsSection'
-import CareerJourney from '@/components/testimonials/CareerJourney'
+import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
+
+// Dynamically import heavy components with loading states for better mobile performance
+const TestimonialsHero = dynamic(() => import('@/components/testimonials/TestimonialsHero'), {
+  loading: () => (
+    <div className="min-h-[60vh] bg-gradient-to-br from-blue-600 to-indigo-600 animate-pulse flex items-center justify-center">
+      <div className="text-white text-lg">Loading testimonials...</div>
+    </div>
+  ),
+  ssr: true,
+})
+
+const FeaturedTestimonials = dynamic(() => import('@/components/testimonials/FeaturedTestimonials'), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-lg"></div>,
+  ssr: true,
+})
+
+const SuccessStats = dynamic(() => import('@/components/testimonials/SuccessStats'), {
+  loading: () => <div className="h-64 bg-gray-100 animate-pulse"></div>,
+  ssr: true,
+})
+
+const CareerJourney = dynamic(() => import('@/components/testimonials/CareerJourney'), {
+  loading: () => <div className="h-96 bg-white animate-pulse"></div>,
+  ssr: true,
+})
+
+const ReviewsSection = dynamic(() => import('@/components/testimonials/ReviewsSection'), {
+  loading: () => <div className="h-screen bg-gray-50 animate-pulse"></div>,
+  ssr: false, // This component is heavy, load it only on client side
+})
 
 export const metadata: Metadata = {
   title: 'Student Testimonials & Success Stories - Engineering Career Transformations | Trinkets Institute',
@@ -267,11 +294,32 @@ export default function TestimonialsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
       
+      {/* Progressive loading for better mobile performance */}
       <TestimonialsHero />
-      <FeaturedTestimonials />
-      <SuccessStats />
-      <CareerJourney />
-      <ReviewsSection />
+      
+      <Suspense fallback={<div className="h-96 bg-gray-50 animate-pulse"></div>}>
+        <FeaturedTestimonials />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse"></div>}>
+        <SuccessStats />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-96 bg-white animate-pulse"></div>}>
+        <CareerJourney />
+      </Suspense>
+      
+      {/* Load heavy reviews section last */}
+      <Suspense fallback={
+        <div className="h-screen bg-gray-50 animate-pulse flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading student reviews...</p>
+          </div>
+        </div>
+      }>
+        <ReviewsSection />
+      </Suspense>
     </div>
   )
 }

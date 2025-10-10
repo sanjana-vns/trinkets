@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, Quote, Filter, Search, Play, ThumbsUp, MessageSquare, Calendar, User, Award, CheckCircle, ExternalLink } from 'lucide-react'
 
@@ -9,7 +9,21 @@ const ReviewsSection = () => {
   const [selectedRating, setSelectedRating] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
   const reviewsPerPage = 6
+
+  // Check for mobile device and reduced motion preference
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    const checkReducedMotion = () => setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    
+    checkMobile()
+    checkReducedMotion()
+    
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const filters = [
     { id: 'all', label: 'All Reviews', count: 150 },
