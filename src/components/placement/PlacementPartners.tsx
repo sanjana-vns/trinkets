@@ -374,12 +374,6 @@ const PlacementPartners = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Apply Button */}
-                <button className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 group-hover:scale-105">
-                  View Opportunities
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
               </div>
             </motion.div>
           ))}
