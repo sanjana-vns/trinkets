@@ -130,7 +130,7 @@ const TrainingPrograms = () => {
         customizable: true,
 
         features: ["Energy Simulation", "LEED Compliance", "Sustainable Design", "Cost-Benefit Analysis"],
-        courseLink: undefined
+        courseLink: "/courses/energy-modeling-green-building-training"
       }
     ],
     structural: [
@@ -220,7 +220,7 @@ const TrainingPrograms = () => {
         customizable: true,
 
         features: ["Equipment Layout", "Pipe Routing", "Safety Compliance", "Maintenance Access"],
-        courseLink: undefined
+        courseLink: "/courses/plant-design-layout-training"
       }
     ]
   }
