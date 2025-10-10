@@ -7,42 +7,6 @@ import Link from 'next/link'
 const PlacementHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [reducedMotion, setReducedMotion] = useState(false)
-
-  // Check for mobile and reduced motion preferences
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    const checkReducedMotion = () => {
-      setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
-    }
-    
-    checkMobile()
-    checkReducedMotion()
-    
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
-
-  // Mobile-friendly motion configurations
-  const mobileMotionConfig = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
-
-  const desktopMotionConfig = {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-
-  const getMotionConfig = () => {
-    return (isMobile || reducedMotion) ? mobileMotionConfig : desktopMotionConfig
-  }
 
   const highlights = [
     {
@@ -97,48 +61,36 @@ const PlacementHero = () => {
   useEffect(() => {
     setIsVisible(true)
     
-    // Disable auto-sliding on mobile and for users who prefer reduced motion
-    if (!isMobile && !reducedMotion) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
-      }, 5000) // Increased interval for better performance
-      return () => clearInterval(interval)
-    }
-  }, [careerPaths.length, isMobile, reducedMotion])
+    // Simplified auto-sliding - no mobile/motion detection needed
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
+    }, 6000) // Longer interval for better performance
+    return () => clearInterval(interval)
+  }, [careerPaths.length])
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Optimized Background Elements - Simplified for mobile */}
-      {!isMobile && !reducedMotion && (
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        </div>
-      )}
-      
-      {/* Static background for mobile */}
-      {isMobile && (
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-2xl"></div>
-        </div>
-      )}
+      {/* Simplified Background Elements - Single layer for better performance */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
 
       <div className="relative container mx-auto px-4 py-8 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
             className="space-y-8"
           >
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30"
               >
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
@@ -148,7 +100,7 @@ const PlacementHero = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl sm:text-4xl lg:text-7xl font-bold leading-tight"
               >
                 <span className="text-white">Launch Your</span>
@@ -161,7 +113,7 @@ const PlacementHero = () => {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-xl text-gray-300 leading-relaxed max-w-2xl"
               >
                 Transform your engineering knowledge into a successful career with our comprehensive placement assistance. 
@@ -172,7 +124,7 @@ const PlacementHero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
               <Link 
@@ -196,7 +148,7 @@ const PlacementHero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-wrap gap-6 text-sm"
             >
               <Link href="/courses" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
@@ -218,7 +170,7 @@ const PlacementHero = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -287,9 +239,9 @@ const PlacementHero = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20"
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -298,7 +250,7 @@ const PlacementHero = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.05 }}
                 className="group p-6 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex flex-col items-center text-center space-y-3">
@@ -317,26 +269,18 @@ const PlacementHero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Simplified Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
-        transition={{ duration: 0.8, delay: 1.5 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center space-y-2">
           <span className="text-white/60 text-sm">Scroll to explore</span>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-white/60 rounded-full mt-2"
-            />
-          </motion.div>
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
+          </div>
         </div>
       </motion.div>
     </section>

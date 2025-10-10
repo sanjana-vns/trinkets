@@ -3,6 +3,7 @@ import Link from "next/link"
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import LazySection from '@/components/LazySection'
+import ErrorBoundary from '@/components/ErrorBoundary'
 
 // Ultra-lightweight mobile hero for instant loading
 const MobilePlacementHero = dynamic(() => import('@/components/placement/MobilePlacementHero'), {
@@ -77,77 +78,98 @@ export const metadata: Metadata = {
 
 export default function PlacementPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Conditional hero based on screen size */}
-      <div className="block md:hidden">
-        <MobilePlacementHero />
-      </div>
-      <div className="hidden md:block">
-        <PlacementHero />
-      </div>
-      
-      {/* Below-the-fold sections load only when scrolled into view */}
-      <LazySection
-        fallback={
-          <div className="h-64 bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }
-        rootMargin="300px"
-        priority={true}
-      >
-        <PlacementStats />
-      </LazySection>
-      
-      <LazySection
-        fallback={
-          <div className="h-48 bg-white flex items-center justify-center">
-            <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }
-        rootMargin="200px"
-      >
-        <PlacementProcess />
-      </LazySection>
-      
-      <LazySection
-        fallback={
-          <div className="h-48 bg-gray-50 flex items-center justify-center">
-            <div className="w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }
-        rootMargin="100px"
-      >
-        <PlacementSuccess />
-      </LazySection>
-      
-      <LazySection
-        fallback={
-          <div className="h-40 bg-blue-50 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-              <p className="text-xs text-gray-500">Loading partners...</p>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        {/* Conditional hero based on screen size */}
+        <div className="block md:hidden">
+          <MobilePlacementHero />
+        </div>
+        <div className="hidden md:block">
+          <PlacementHero />
+        </div>
+        
+        {/* Below-the-fold sections load with more aggressive margins for better performance */}
+        <ErrorBoundary fallback={
+          <div className="h-64 bg-red-50 flex items-center justify-center">
+            <div className="text-center text-red-600">
+              <div className="mb-2">Failed to load statistics</div>
+              <button onClick={() => window.location.reload()} className="text-sm underline">
+                Retry
+              </button>
             </div>
           </div>
-        }
-        rootMargin="50px"
-      >
-        <PlacementPartners />
-      </LazySection>
-      
-      <LazySection
-        fallback={
-          <div className="h-40 bg-white flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-4 h-4 border-2 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-              <p className="text-xs text-gray-500">Loading testimonials...</p>
-            </div>
-          </div>
-        }
-        rootMargin="0px"
-      >
-        <PlacementTestimonials />
-      </LazySection>
-    </div>
+        }>
+          <LazySection
+            fallback={
+              <div className="h-64 bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+                <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }
+            rootMargin="400px"
+            priority={true}
+          >
+            <PlacementStats />
+          </LazySection>
+        </ErrorBoundary>
+        
+        <ErrorBoundary fallback={<div className="h-48 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load process section</span></div>}>
+          <LazySection
+            fallback={
+              <div className="h-48 bg-white flex items-center justify-center">
+                <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }
+            rootMargin="300px"
+          >
+            <PlacementProcess />
+          </LazySection>
+        </ErrorBoundary>
+        
+        <ErrorBoundary fallback={<div className="h-48 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load success stories</span></div>}>
+          <LazySection
+            fallback={
+              <div className="h-48 bg-gray-50 flex items-center justify-center">
+                <div className="w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }
+            rootMargin="200px"
+          >
+            <PlacementSuccess />
+          </LazySection>
+        </ErrorBoundary>
+        
+        <ErrorBoundary fallback={<div className="h-40 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load partners</span></div>}>
+          <LazySection
+            fallback={
+              <div className="h-40 bg-blue-50 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                  <p className="text-xs text-gray-500">Loading partners...</p>
+                </div>
+              </div>
+            }
+            rootMargin="150px"
+          >
+            <PlacementPartners />
+          </LazySection>
+        </ErrorBoundary>
+        
+        <ErrorBoundary fallback={<div className="h-40 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load testimonials</span></div>}>
+          <LazySection
+            fallback={
+              <div className="h-40 bg-white flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-4 h-4 border-2 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                  <p className="text-xs text-gray-500">Loading testimonials...</p>
+                </div>
+              </div>
+            }
+            rootMargin="100px"
+          >
+            <PlacementTestimonials />
+          </LazySection>
+        </ErrorBoundary>
+      </div>
+    </ErrorBoundary>
   )
 }

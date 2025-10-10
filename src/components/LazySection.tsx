@@ -16,24 +16,15 @@ const LazySection = ({
   threshold = 0.1,
   priority = false
 }: LazySectionProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [hasLoaded, setHasLoaded] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isVisible, setIsVisible] = useState(priority) // Start visible if priority
+  const [hasLoaded, setHasLoaded] = useState(priority)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
+    // If already loaded or priority, don't setup observer
+    if (hasLoaded || priority) return
 
-  useEffect(() => {
-    // For priority sections or desktop, use original behavior
-    // For mobile non-priority, be more aggressive with margins
-    const mobileRootMargin = priority ? rootMargin : '50px'
-    const mobileThreshold = priority ? threshold : 0.05
-    
+    // Simplified intersection observer - no mobile detection needed
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasLoaded) {
@@ -43,8 +34,8 @@ const LazySection = ({
         }
       },
       {
-        rootMargin: isMobile ? mobileRootMargin : rootMargin,
-        threshold: isMobile ? mobileThreshold : threshold
+        rootMargin,
+        threshold
       }
     )
 
@@ -53,7 +44,7 @@ const LazySection = ({
     }
 
     return () => observer.disconnect()
-  }, [rootMargin, threshold, hasLoaded, isMobile, priority])
+  }, [rootMargin, threshold, hasLoaded, priority])
 
   return (
     <div ref={ref}>

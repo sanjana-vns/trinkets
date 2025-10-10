@@ -2,9 +2,9 @@
 import { motion } from "framer-motion"
 import { StarIcon } from "@heroicons/react/24/solid"
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline"
-import Image from "next/image"
 import Link from "next/link"
 
+// Streamlined testimonials for consistent mobile/desktop performance
 const testimonials = [
   {
     id: 1,
@@ -13,7 +13,6 @@ const testimonials = [
     company: "Tata Motors",
     package: "₹8.5 LPA",
     course: "Mechanical Design & AutoCAD",
-    image: "/api/placeholder/80/80",
     rating: 5,
     testimonial: "The placement support was exceptional. From resume building to interview preparation, everything was perfectly planned. I got placed in my dream company within 2 months of course completion.",
     location: "Pune, Maharashtra"
@@ -25,7 +24,6 @@ const testimonials = [
     company: "L&T Hydrocarbon",
     package: "₹12 LPA",
     course: "Piping Design & Engineering",
-    image: "/api/placeholder/80/80",
     rating: 5,
     testimonial: "The industry connections and practical training made all the difference. I was confident during interviews because of the real-world projects we worked on during the course.",
     location: "Mumbai, Maharashtra"
@@ -37,15 +35,11 @@ const testimonials = [
     company: "Reliance Industries",
     package: "₹15 LPA",
     course: "Process Engineering",
-    image: "/api/placeholder/80/80",
     rating: 5,
     testimonial: "From a fresher to a process engineer in 6 months! The mentorship and placement guidance were outstanding. The course content was exactly what industry needs.",
     location: "Vadodara, Gujarat"
   }
 ]
-
-// Mobile optimized testimonials (fewer for faster loading)
-const mobileTestimonials = testimonials.slice(0, 3)
 
 const stats = [
   {
@@ -71,10 +65,6 @@ const stats = [
 ]
 
 export default function PlacementTestimonials() {
-  // Optimize for mobile by using fewer testimonials
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
-  const displayTestimonials = isMobile ? mobileTestimonials : testimonials
-  
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto px-4">
@@ -82,7 +72,7 @@ export default function PlacementTestimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -99,7 +89,7 @@ export default function PlacementTestimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -108,7 +98,7 @@ export default function PlacementTestimonials() {
               key={stat.label}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
@@ -123,16 +113,16 @@ export default function PlacementTestimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {displayTestimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               viewport={{ once: true }}
               className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-purple-200 relative overflow-hidden"
             >
@@ -158,7 +148,7 @@ export default function PlacementTestimonials() {
                 {/* User Info */}
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    {testimonial.name.split(' ').map((n: string) => n[0]).join('')}
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
@@ -184,7 +174,7 @@ export default function PlacementTestimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
         >
@@ -227,7 +217,7 @@ export default function PlacementTestimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center mt-12"
         >
