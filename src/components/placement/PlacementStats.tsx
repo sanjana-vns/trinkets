@@ -1,11 +1,13 @@
 'use client'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { TrendingUp, Users, Award, Building, Target, Clock, Star, CheckCircle, BookOpen, Briefcase } from 'lucide-react'
 
 const PlacementStats = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
   const [counters, setCounters] = useState({
     placementRate: 0,
     studentsPlaced: 0,
@@ -16,7 +18,20 @@ const PlacementStats = () => {
   })
   const sectionRef = useRef<HTMLDivElement>(null)
 
-  const stats = [
+  // Mobile detection and reduced motion preference
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    const checkReducedMotion = () => setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    
+    checkMobile()
+    checkReducedMotion()
+    
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Memoize stats data to prevent unnecessary re-renders
+  const stats = useMemo(() => [
     {
       icon: <Target className="w-8 h-8" />,
       value: 98,
@@ -77,9 +92,10 @@ const PlacementStats = () => {
       bgColor: 'bg-yellow-500/10',
       borderColor: 'border-yellow-400/30'
     }
-  ]
+  ], [])
 
-  const achievements = [
+  // Memoize achievements data
+  const achievements = useMemo(() => [
     {
       icon: <BookOpen className="w-6 h-6 text-blue-400" />,
       title: 'Curriculum-Industry Alignment',
@@ -100,11 +116,26 @@ const PlacementStats = () => {
       title: 'Career Growth Tracking',
       description: 'Post-placement career monitoring and advancement support'
     }
-  ]
+  ], [])
+
+  // Mobile-optimized motion configurations
+  const getMotionConfig = () => {
+    if (reducedMotion) {
+      return { initial: { opacity: 1 }, animate: { opacity: 1 }, transition: { duration: 0 } }
+    }
+    
+    return isMobile 
+      ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.3 } }
+      : { initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } }
+  }
+
+  const getCounterKey = useCallback((index: number) => {
+    const keys = ['placementRate', 'studentsPlaced', 'companies', 'averagePackage', 'experience', 'satisfaction']
+    return keys[index]
+  }, [])
 
   const startCounters = useCallback(() => {
-    // Reduce animation complexity on mobile
-    const isMobile = window.innerWidth < 768
+    // Use isMobile state instead of window check
     const duration = isMobile ? 1000 : 2000
     const steps = isMobile ? 30 : 60
     const interval = duration / steps
@@ -126,16 +157,10 @@ const PlacementStats = () => {
         }))
       }, interval)
     })
-  }, [stats])
-
-  const getCounterKey = (index: number) => {
-    const keys = ['placementRate', 'studentsPlaced', 'companies', 'averagePackage', 'experience', 'satisfaction']
-    return keys[index]
-  }
+  }, [stats, isMobile, getCounterKey])
 
   useEffect(() => {
-    // Use lower threshold on mobile for better performance
-    const isMobile = window.innerWidth < 768
+    // Use mobile state for better performance optimization
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -151,7 +176,7 @@ const PlacementStats = () => {
     }
 
     return () => observer.disconnect()
-  }, [startCounters])
+  }, [startCounters, isMobile])
 
   const getCounterValue = (index: number) => {
     const values = [
@@ -170,9 +195,8 @@ const PlacementStats = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+          {...getMotionConfig()}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible && !isMobile ? 0 : (isMobile ? 0 : 30) }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-4">
@@ -192,13 +216,19 @@ const PlacementStats = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`group relative p-8 ${stat.bgColor} backdrop-blur-sm rounded-2xl border ${stat.borderColor} hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:scale-105`}
+              {...getMotionConfig()}
+              animate={{ 
+                opacity: isVisible ? 1 : 0, 
+                y: isVisible && !isMobile ? 0 : (isMobile ? 0 : 30) 
+              }}
+              transition={{ 
+                duration: isMobile ? 0.3 : 0.6, 
+                delay: isMobile ? 0 : index * 0.1 
+              }}
+              className={`group relative p-8 ${stat.bgColor} backdrop-blur-sm rounded-2xl border ${stat.borderColor} hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 ${!isMobile ? 'hover:scale-105' : ''}`}
             >
               <div className="relative z-10">
-                <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-4 ${!isMobile ? 'group-hover:scale-110' : ''} transition-transform duration-300`}>
                   {stat.icon}
                 </div>
                 
@@ -219,9 +249,15 @@ const PlacementStats = () => {
 
         {/* Achievements Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          {...getMotionConfig()}
+          animate={{ 
+            opacity: isVisible ? 1 : 0, 
+            y: isVisible && !isMobile ? 0 : (isMobile ? 0 : 30) 
+          }}
+          transition={{ 
+            duration: isMobile ? 0.3 : 0.8, 
+            delay: isMobile ? 0 : 0.6 
+          }}
           className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100"
         >
           <div className="text-center mb-12">
@@ -237,9 +273,15 @@ const PlacementStats = () => {
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : (index % 2 === 0 ? -30 : 30) }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                {...getMotionConfig()}
+                animate={{ 
+                  opacity: isVisible ? 1 : 0, 
+                  x: isVisible && !isMobile ? 0 : (isMobile ? 0 : (index % 2 === 0 ? -30 : 30))
+                }}
+                transition={{ 
+                  duration: isMobile ? 0.3 : 0.6, 
+                  delay: isMobile ? 0 : 0.8 + index * 0.1 
+                }}
                 className="group flex items-start space-x-4 p-6 rounded-2xl hover:bg-blue-50 transition-all duration-300"
               >
                 <div className="flex-shrink-0 p-3 bg-blue-100 rounded-2xl group-hover:bg-blue-200 transition-colors duration-300">
@@ -260,9 +302,15 @@ const PlacementStats = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          {...getMotionConfig()}
+          animate={{ 
+            opacity: isVisible ? 1 : 0, 
+            y: isVisible && !isMobile ? 0 : (isMobile ? 0 : 30) 
+          }}
+          transition={{ 
+            duration: isMobile ? 0.3 : 0.8, 
+            delay: isMobile ? 0 : 1.0 
+          }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 lg:p-12 text-white">

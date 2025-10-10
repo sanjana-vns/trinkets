@@ -1,35 +1,40 @@
 ﻿import { Metadata } from "next"
 import Link from "next/link"
 import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 
-// Lazy load heavy components for better mobile performance
+// Optimized dynamic loading for better mobile performance
 const PlacementHero = dynamic(() => import('@/components/placement/PlacementHero'), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-slate-900 to-blue-900 animate-pulse" />,
+  loading: () => (
+    <div className="min-h-[60vh] bg-gradient-to-br from-slate-900 to-blue-900 animate-pulse flex items-center justify-center">
+      <div className="text-white text-lg">Loading placement information...</div>
+    </div>
+  ),
   ssr: true,
 })
 
 const PlacementStats = dynamic(() => import('@/components/placement/PlacementStats'), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-slate-50 to-blue-50 animate-pulse" />,
+  loading: () => <div className="h-96 bg-gradient-to-br from-slate-50 to-blue-50 animate-pulse rounded-lg"></div>,
   ssr: true,
 })
 
 const PlacementProcess = dynamic(() => import('@/components/placement/PlacementProcess'), {
-  loading: () => <div className="h-96 bg-white animate-pulse" />,
+  loading: () => <div className="h-96 bg-white animate-pulse"></div>,
   ssr: false, // Heavy component - load after interaction
 })
 
 const PlacementSuccess = dynamic(() => import('@/components/placement/PlacementSuccess'), {
-  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse"></div>,
   ssr: false, // Heavy images - load after interaction
 })
 
-const CompanyPartners = dynamic(() => import('@/components/placement/CompanyPartners'), {
-  loading: () => <div className="h-96 bg-blue-50 animate-pulse" />,
+const PlacementPartners = dynamic(() => import('@/components/placement/PlacementPartners'), {
+  loading: () => <div className="h-96 bg-blue-50 animate-pulse"></div>,
   ssr: false, // Many images - load after interaction
 })
 
 const PlacementTestimonials = dynamic(() => import('@/components/placement/PlacementTestimonials'), {
-  loading: () => <div className="h-96 bg-white animate-pulse" />,
+  loading: () => <div className="h-96 bg-white animate-pulse"></div>,
   ssr: false, // Heavy images - load after interaction
 })
 
@@ -65,12 +70,43 @@ export const metadata: Metadata = {
 export default function PlacementPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Progressive loading for better mobile performance */}
       <PlacementHero />
-      <PlacementStats />
-      <PlacementProcess />
-      <PlacementSuccess />
-      <CompanyPartners />
-      <PlacementTestimonials />
+      
+      <Suspense fallback={<div className="h-96 bg-gradient-to-br from-slate-50 to-blue-50 animate-pulse"></div>}>
+        <PlacementStats />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-96 bg-white animate-pulse"></div>}>
+        <PlacementProcess />
+      </Suspense>
+      
+      <Suspense fallback={<div className="h-96 bg-gray-50 animate-pulse"></div>}>
+        <PlacementSuccess />
+      </Suspense>
+      
+      {/* Load heavy image components last */}
+      <Suspense fallback={
+        <div className="h-96 bg-blue-50 animate-pulse flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading company partners...</p>
+          </div>
+        </div>
+      }>
+        <PlacementPartners />
+      </Suspense>
+      
+      <Suspense fallback={
+        <div className="h-96 bg-white animate-pulse flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading student testimonials...</p>
+          </div>
+        </div>
+      }>
+        <PlacementTestimonials />
+      </Suspense>
     </div>
   )
 }

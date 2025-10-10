@@ -7,6 +7,42 @@ import Link from 'next/link'
 const PlacementHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
+
+  // Check for mobile and reduced motion preferences
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    
+    const checkReducedMotion = () => {
+      setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    }
+    
+    checkMobile()
+    checkReducedMotion()
+    
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Mobile-friendly motion configurations
+  const mobileMotionConfig = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 0.3, ease: "easeOut" }
+  }
+
+  const desktopMotionConfig = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+
+  const getMotionConfig = () => {
+    return (isMobile || reducedMotion) ? mobileMotionConfig : desktopMotionConfig
+  }
 
   const highlights = [
     {
@@ -60,22 +96,34 @@ const PlacementHero = () => {
 
   useEffect(() => {
     setIsVisible(true)
-    // Reduce animation frequency on mobile for better performance
-    const isMobile = window.innerWidth < 768
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
-    }, isMobile ? 6000 : 4000) // Slower on mobile
-    return () => clearInterval(interval)
-  }, [careerPaths.length])
+    
+    // Disable auto-sliding on mobile and for users who prefer reduced motion
+    if (!isMobile && !reducedMotion) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
+      }, 5000) // Increased interval for better performance
+      return () => clearInterval(interval)
+    }
+  }, [careerPaths.length, isMobile, reducedMotion])
 
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background Elements - Reduced complexity for mobile */}
-      <div className="absolute inset-0 hidden md:block">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
+      {/* Optimized Background Elements - Simplified for mobile */}
+      {!isMobile && !reducedMotion && (
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+      )}
+      
+      {/* Static background for mobile */}
+      {isMobile && (
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-2xl"></div>
+        </div>
+      )}
 
       <div className="relative container mx-auto px-4 py-8 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
