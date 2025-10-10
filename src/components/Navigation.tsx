@@ -2,6 +2,7 @@
 
 import { useState, memo } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navigation = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,17 +23,23 @@ const Navigation = memo(() => {
     <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo with Footer-style design */}
+          {/* Logo with actual trinketlogo.jpg image */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group space-x-3">
-              {/* Circular Logo Icon */}
+              {/* Circular Logo with Real Image */}
               <div className="relative">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-indigo-700 
-                               shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center">
-                  {/* Gear Icon */}
-                  <svg className="w-7 h-7 text-white drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/>
-                  </svg>
+                               shadow-lg group-hover:shadow-xl transition-all duration-300 p-0.5 overflow-hidden">
+                  {/* Trinket Logo Image */}
+                  <div className="w-full h-full rounded-full overflow-hidden bg-white">
+                    <Image
+                      src="/images/trinketlogo.jpg"
+                      alt="Trinkets Institute Logo"
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
                 </div>
                 {/* Green Badge */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white
