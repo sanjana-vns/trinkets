@@ -40,6 +40,8 @@ const LocationSection = dynamic(() => import('@/components/LocationSection'), {
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* SEO H1 - Hidden but accessible to search engines */}
+      <h1 className="sr-only">Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute</h1>
       <Hero />
       <CoursesSection />
       <AboutUsSection />

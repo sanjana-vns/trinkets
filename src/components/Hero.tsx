@@ -11,32 +11,32 @@ const Hero = () => {
 
   const slides = [
     {
-      title: "Transform Your Engineering Career",
-      subtitle: "Join India's leading engineering training institute with 98% placement success rate",
+      title: "Best Piping Course In Mumbai",
+      subtitle: "Master Piping Design with PDMS, SP3D, E3D & CAESAR II. Join Mumbai's leading piping training institute with 98% placement success rate",
       bgColor: "from-slate-900/80 via-blue-900/80 to-indigo-900/80",
       accentColor: "from-cyan-400 to-blue-500",
       image: "/images/bg1.jpg",
-      icon: "🚀"
+      icon: "�"
     },
     {
-      title: "Master Industry-Leading Technologies",
-      subtitle: "Learn AutoCAD, SolidWorks, PDMS, STAAD Pro with real-world projects and expert mentorship",
+      title: "Advanced Piping Design Training",
+      subtitle: "Learn comprehensive piping course in Mumbai with AutoCAD Plant 3D, PDMS, SP3D, STAAD Pro with real-world piping projects and expert mentorship",
       bgColor: "from-gray-900/80 via-purple-900/80 to-violet-900/80",
       accentColor: "from-purple-400 to-pink-500",
       image: "/images/bg2.jpg",
       icon: "⚙️"
     },
     {
-      title: "Build Your Professional Portfolio",
-      subtitle: "Work on live industry projects and build an impressive portfolio that gets you hired",
+      title: "Professional Piping Engineering Career",
+      subtitle: "Build your piping engineering career with live industry piping projects and professional portfolio through our comprehensive piping course in Mumbai",
       bgColor: "from-slate-900/80 via-green-900/80 to-emerald-900/80",
       accentColor: "from-emerald-400 to-teal-500",
       image: "/images/bg3.jpg",
       icon: "💼"
     },
     {
-      title: "Guaranteed Career Success",
-      subtitle: "100% placement assistance with top companies. Start your dream career today",
+      title: "Guaranteed Piping Job Placement",
+      subtitle: "100% placement assistance in piping engineering roles with top oil & gas, petrochemical companies. Start your piping career today",
       bgColor: "from-gray-900/80 via-orange-900/80 to-red-900/80",
       accentColor: "from-orange-400 to-red-500",
       image: "/images/bg4.jpg",
@@ -117,7 +117,7 @@ const Hero = () => {
               {/* Badge */}
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-6">
                 <span className="text-2xl mr-2">{slides[currentSlide].icon}</span>
-                <span className="text-white font-semibold">India&apos;s #1 Engineering Institute</span>
+                <span className="text-white font-semibold">Mumbai&apos;s #1 Piping Course Institute</span>
               </div>
               
               {/* Main Heading */}
@@ -214,10 +214,10 @@ const Hero = () => {
                 
                 {/* Popular Courses */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <Link href="/courses/piping-design-engineering" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
+                  <Link href="/courses/piping-design-course-mumbai" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
                     <div className="text-2xl mb-1">🔧</div>
-                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">Piping Design</div>
-                    <div className="text-gray-400 text-xs">6 Months</div>
+                    <div className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">Piping Course Mumbai</div>
+                    <div className="text-gray-400 text-xs">Best in Mumbai</div>
                   </Link>
                   <Link href="/courses/hvac-system-design" className="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-3 transition-all duration-200">
                     <div className="text-2xl mb-1">❄️</div>

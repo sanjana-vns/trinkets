@@ -18,24 +18,38 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trinkets Institute - Leading Engineering Training Institute in Mumbai',
+    default: 'Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute',
     template: '%s | Trinkets Institute - Professional Engineering Training'
   },
-  description: 'Premier engineering training institute in Mumbai offering professional courses in Piping Design, HVAC, MEP, Structural Engineering, SP3D, CAESAR II, AutoCAD with 100% placement assistance.',
+  description: 'Leading Piping Course In Mumbai at Trinkets Institute. Learn piping design, PDMS, SP3D, E3D, CAESAR II with 100% placement assistance. Best piping training institute in Mumbai with industry expert faculty.',
   keywords: [
+    'piping course in mumbai',
+    'piping course mumbai',
+    'piping design course mumbai',
+    'piping training mumbai',
+    'piping engineering course mumbai',
+    'best piping course mumbai',
+    'piping design training mumbai',
+    'professional piping course',
+    'SP3D training mumbai',
+    'PDMS training mumbai',
+    'E3D piping course',
+    'CAESAR II course mumbai',
+    'piping stress analysis training',
+    'process piping course mumbai',
+    'oil gas piping training',
+    'petrochemical piping course',
+    'mechanical piping course',
+    'piping layout training',
+    'piping isometric course',
     'engineering training Mumbai',
-    'piping design course',
     'HVAC training institute',
     'MEP engineering course',
-    'SP3D training',
-    'CAESAR II course',
     'structural engineering training',
     'AutoCAD course Mumbai',
     'engineering placement assistance',
     'professional engineering courses',
-    'piping stress analysis training',
     'STAAD Pro course',
-    'E3D piping training',
     'engineering design institute Mumbai'
   ],
   authors: [{ name: 'Trinkets Institute of Technology' }],
@@ -63,9 +77,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://trinketsinstitute.com',
-    siteName: 'Trinkets Institute - Engineering Training Mumbai',
-    title: 'Trinkets Institute - Leading Engineering Training Institute in Mumbai',
-    description: 'Premier engineering training institute offering professional courses in Piping Design, HVAC, MEP, Structural Engineering with 100% placement assistance in Mumbai.',
+    siteName: 'Trinkets Institute - Piping Course In Mumbai',
+    title: 'Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute',
+    description: 'Leading Piping Course In Mumbai at Trinkets Institute. Learn piping design, PDMS, SP3D, E3D, CAESAR II with 100% placement assistance. Best piping training institute in Mumbai.',
     images: [
       {
         url: 'https://trinketsinstitute.com/images/og-trinkets-institute.jpg',
@@ -87,8 +101,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@TrinketsInstitute',
     creator: '@TrinketsInstitute',
-    title: 'Trinkets Institute - Engineering Training Mumbai',
-    description: 'Premier engineering training institute offering professional courses in Piping Design, HVAC, MEP, Structural Engineering with placement assistance.',
+    title: 'Piping Course In Mumbai | Best Piping Design Training Institute',
+    description: 'Leading Piping Course In Mumbai at Trinkets Institute. Learn piping design, PDMS, SP3D, E3D, CAESAR II with 100% placement assistance.',
     images: ['https://trinketsinstitute.com/images/og-trinkets-institute.jpg'],
   },
   manifest: '/manifest.json',
@@ -149,12 +163,45 @@ export default function RootLayout({
           type="organization" 
           data={{
             name: "Trinkets Institute of Technology",
-            description: "Leading technical education institute specializing in Engineering Design, Piping, HVAC, MEP, Structural Engineering, and Professional Training Programs in Mumbai."
+            description: "Mumbai's Best Piping Course Institute offering comprehensive Piping Design Training, PDMS, SP3D, E3D, CAESAR II courses. Leading piping training institute in Mumbai with 100% placement assistance."
           }} 
         />
         <StructuredData 
           type="website" 
           data={{}} 
+        />
+        <StructuredData 
+          type="course" 
+          data={{
+            name: "Piping Course In Mumbai - Comprehensive Piping Design Training",
+            description: "Best Piping Course In Mumbai at Trinkets Institute. Learn PDMS, SP3D, E3D, AutoCAD Plant 3D, CAESAR II, piping stress analysis with 100% placement assistance.",
+            duration: "P6M",
+            price: "Contact for pricing",
+            rating: "4.9",
+            reviewCount: "1200",
+            certification: "Professional Piping Design Certificate"
+          }} 
+        />
+        <StructuredData 
+          type="faq" 
+          data={[
+            {
+              question: "What is the best Piping Course In Mumbai?",
+              answer: "Trinkets Institute offers the best Piping Course In Mumbai covering comprehensive piping design training including PDMS, SP3D, E3D, AutoCAD Plant 3D, CAESAR II, and piping stress analysis. Our piping course in Mumbai includes live industry projects and 100% placement assistance."
+            },
+            {
+              question: "What is the duration of Piping Course In Mumbai?",
+              answer: "Our comprehensive Piping Course In Mumbai duration is 6 months with flexible timing options. We offer weekday, weekend, and evening batches for our piping design training. Fast-track 4-month piping courses are also available for working professionals in Mumbai."
+            },
+            {
+              question: "Do you provide placement assistance after Piping Course In Mumbai?",
+              answer: "Yes, we provide 100% placement assistance after completing our Piping Course In Mumbai. Our dedicated placement team has partnerships with leading oil & gas, petrochemical, and EPC companies. Students from our piping course in Mumbai get placed in top companies with attractive packages."
+            },
+            {
+              question: "What software is covered in Piping Course In Mumbai?",
+              answer: "Our Piping Course In Mumbai covers industry-standard piping design software including PDMS, SP3D (SmartPlant 3D), E3D, AutoCAD Plant 3D, CAESAR II for stress analysis, and PDS. You'll gain hands-on experience with the same piping design tools used by professionals in Mumbai's top engineering companies."
+            }
+          ]} 
         />
         <Navigation />
         <main role="main">{children}</main>

@@ -109,8 +109,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
-    // All course pages
-    ...coursePages.map(course => ({
+    // Piping courses with higher priority
+    {
+      url: `${baseUrl}/courses/piping-design-course-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/courses/sp3d-piping-design-training`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/courses/e3d-piping`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/courses/piping-design-engineering`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // All other course pages
+    ...coursePages.filter(course => !['piping-design-course-mumbai', 'sp3d-piping-design-training', 'e3d-piping', 'piping-design-engineering'].includes(course)).map(course => ({
       url: `${baseUrl}/courses/${course}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

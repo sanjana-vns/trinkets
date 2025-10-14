@@ -20,34 +20,34 @@ const CoursesSection = () => {
 
   const courses = [
     {
-      title: "Piping Engineering",
-      description: "Piping Engineering is a specialized field of Mechanical Engineering focused on designing safe, efficient piping systems for industrial facilities.",
+      title: "Piping Course In Mumbai",
+      description: "Comprehensive Piping Course In Mumbai covering piping design fundamentals, PDMS, SP3D, E3D, AutoCAD Plant 3D, and stress analysis. Best piping training institute in Mumbai.",
       duration: "6 Months",
-      rating: "4.8",
-      students: "850+",
+      rating: "4.9",
+      students: "1200+",
       category: "piping",
-      link: "/courses/piping-design-engineering",
-      features: ["AutoCAD Plant 3D", "PDMS Training", "Industry Projects", "Job Placement"]
+      link: "/courses/piping-design-course-mumbai",
+      features: ["Complete Piping Design", "PDMS & SP3D Training", "Live Industry Projects", "100% Job Placement"]
     },
     {
-      title: "E3D Piping Course",
-      description: "E3D Piping is a powerful 3D design tool for modeling complex piping systems, enhancing accuracy, collaboration, efficiency and clash detection.",
+      title: "Advanced Piping Design Training",
+      description: "Professional piping design course Mumbai with E3D, PDMS, SP3D training. Learn advanced 3D piping layout, clash detection, and plant modeling techniques.",
       duration: "4 Months",
       rating: "4.9",
-      students: "480+",
+      students: "680+",
       category: "piping",
       link: "/courses/e3d-piping",
-      features: ["AVEVA E3D", "3D Piping Layout", "Clash Detection", "Plant Modeling"]
+      features: ["AVEVA E3D Training", "Professional Piping Design", "Advanced 3D Modeling", "Industry Certification"]
     },
     {
-      title: "SMART PLANT 3D (SP3D)",
-      description: "SP3D is a 3D modeling software used for designing piping, equipment, and structures in industrial plants with precision and efficiency.",
+      title: "SP3D Piping Course Mumbai",
+      description: "Specialized SP3D piping course in Mumbai for advanced 3D piping design. Learn SmartPlant 3D modeling, equipment design, and piping layout for industrial plants.",
       duration: "5 Months",
       rating: "4.8",
-      students: "520+",
+      students: "750+",
       category: "piping",
-      link: "/courses/smart-plant-3d",
-      features: ["SP3D Modeling", "Equipment Design", "Piping Layout", "Industrial Plants"]
+      link: "/courses/sp3d-piping-design-training",
+      features: ["SP3D Professional Training", "Piping Equipment Design", "3D Plant Layout", "Industry Projects"]
     },
     {
       title: "HVAC Engineering",
@@ -162,13 +162,13 @@ const CoursesSection = () => {
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Our Courses</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-            Professional Training
+            Best Piping Course In Mumbai
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Programs
+              & Engineering Programs
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Industry-focused courses designed to advance your engineering career with hands-on training and expert guidance.
+            Mumbai's leading piping course institute offering comprehensive piping design training, PDMS, SP3D, E3D courses with hands-on training and expert guidance.
           </p>
         </div>
 

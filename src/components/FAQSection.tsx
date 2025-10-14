@@ -7,28 +7,28 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What courses does Trinkets Institute offer?",
-      answer: "We offer comprehensive programs in Piping Design, HVAC Systems, Process Engineering, and Structural Design. All our courses are designed by industry experts and include hands-on training with the latest software and tools used in the engineering industry."
+      question: "What is the best Piping Course In Mumbai?",
+      answer: "Trinkets Institute offers the best Piping Course In Mumbai covering comprehensive piping design training including PDMS, SP3D, E3D, AutoCAD Plant 3D, CAESAR II, and piping stress analysis. Our piping course in Mumbai includes live industry projects and 100% placement assistance."
     },
     {
-      question: "Are your courses suitable for beginners?",
-      answer: "Yes, our courses are designed to accommodate students from all backgrounds. We start with fundamentals and gradually progress to advanced topics. Our experienced instructors provide personalized attention to ensure every student succeeds."
+      question: "Is the Piping Course In Mumbai suitable for beginners?",
+      answer: "Yes, our Piping Course In Mumbai is designed for both beginners and experienced professionals. We start with piping design fundamentals and progress to advanced topics including 3D piping modeling, stress analysis, and industry standards. Our experienced piping instructors provide personalized attention."
     },
     {
-      question: "What is the duration of the courses?",
-      answer: "Course duration varies depending on the program. Our standard courses range from 3 to 6 months, with flexible timing options including weekday and weekend batches. We also offer intensive crash courses for working professionals."
+      question: "What is the duration of Piping Course In Mumbai?",
+      answer: "Our comprehensive Piping Course In Mumbai duration is 6 months with flexible timing options. We offer weekday, weekend, and evening batches for our piping design training. Fast-track 4-month piping courses are also available for working professionals in Mumbai."
     },
     {
-      question: "Do you provide placement assistance?",
-      answer: "Yes, we offer 100% placement support to all our students. Our dedicated placement team works with leading companies in the industry to ensure our graduates find suitable employment opportunities. We have a strong track record of successful placements."
+      question: "Do you provide placement assistance after Piping Course In Mumbai?",
+      answer: "Yes, we provide 100% placement assistance after completing our Piping Course In Mumbai. Our dedicated placement team has partnerships with leading oil & gas, petrochemical, and EPC companies. Students from our piping course in Mumbai get placed in top companies with attractive packages."
     },
     {
-      question: "What software will I learn in the courses?",
-      answer: "Our courses cover industry-standard software including AutoCAD, SolidWorks, ANSYS, Revit, Bentley MicroStation, PDMS, and many more depending on your chosen specialization. You'll gain hands-on experience with the same tools used by professionals in the field."
+      question: "What software is covered in Piping Course In Mumbai?",
+      answer: "Our Piping Course In Mumbai covers industry-standard piping design software including PDMS, SP3D (SmartPlant 3D), E3D, AutoCAD Plant 3D, CAESAR II for stress analysis, and PDS. You'll gain hands-on experience with the same piping design tools used by professionals in Mumbai's top engineering companies."
     },
     {
-      question: "What certifications will I receive?",
-      answer: "Upon successful completion, you'll receive industry-recognized certificates from Trinkets Institute. We also provide preparation for various professional certifications that are valued by employers in the engineering and design industries."
+      question: "What certification do I get after Piping Course In Mumbai?",
+      answer: "After completing our Piping Course In Mumbai, you receive industry-recognized piping design certification from Trinkets Institute. We also provide preparation for PDMS, SP3D, and CAESAR II professional certifications that are highly valued by employers in Mumbai's engineering sector."
     }
   ]
 
@@ -45,10 +45,10 @@ const FAQSection = () => {
             <span className="text-blue-600 font-semibold text-sm">💡 FAQ</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+            Piping Course In Mumbai - FAQs
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get answers to common questions about our courses and services
+            Get answers to common questions about our Piping Course In Mumbai and training programs
           </p>
         </div>
 

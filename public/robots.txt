@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 
-# Optimize crawling for important pages
+# Optimize crawling for important pages - Piping Course Priority
+Allow: /courses/piping-design-course-mumbai
+Allow: /courses/sp3d-piping-design-training
+Allow: /courses/e3d-piping
+Allow: /courses/piping-design-engineering
 Allow: /about
 Allow: /courses
 Allow: /placements

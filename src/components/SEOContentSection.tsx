@@ -83,23 +83,23 @@ export default function SEOContentSection() {
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-semibold mb-8 shadow-lg">
             <Sparkles className="w-4 h-4 mr-2 animate-spin" />
-            Mumbai&apos;s #1 Engineering Institute
+            Mumbai&apos;s #1 Piping Course Institute
             <Sparkles className="w-4 h-4 ml-2 animate-spin" />
           </div>
           
           <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="text-gray-900">Transform Your</span>
+            <span className="text-gray-900">Best Piping Course</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient-x">
-              Engineering Dreams
+              In Mumbai
             </span>
             <br />
-            <span className="text-gray-900">Into Reality</span>
+            <span className="text-gray-900">For Your Career</span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-            Join the elite league of engineers with cutting-edge training in structural design, MEP engineering, 
-            and advanced CAD technologies. Where innovation meets excellence.
+            Master comprehensive piping course in Mumbai with advanced piping design training, PDMS, SP3D, E3D, 
+            CAESAR II, and piping stress analysis. Mumbai's premier piping training institute with 100% placement assistance.
           </p>
 
           {/* Animated Stats */}
@@ -173,14 +173,14 @@ export default function SEOContentSection() {
                 delay: 0.2
               },
               {
-                title: 'Piping Artistry',
-                subtitle: 'Industrial Flow Dynamics',
-                description: 'Master the art of moving fluids through complex industrial systems with precision.',
+                title: 'Piping Course In Mumbai',
+                subtitle: 'Professional Piping Design Training',
+                description: 'Comprehensive piping course in Mumbai covering PDMS, SP3D, E3D, AutoCAD Plant 3D, and stress analysis with industry projects.',
                 icon: Globe,
                 gradient: 'from-purple-500 to-violet-500',
                 bgGradient: 'from-purple-50 to-violet-50',
-                features: ['SP3D Mastery', 'CAESAR II Pro', 'Process Excellence', 'Stress Analysis'],
-                link: '/courses/piping-design-engineering',
+                features: ['Complete Piping Design', 'PDMS & SP3D Training', 'Live Industry Projects', '100% Job Placement'],
+                link: '/courses/piping-design-course-mumbai',
                 delay: 0.4
               }
             ].map((course, index) => (
