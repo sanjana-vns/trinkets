@@ -168,7 +168,7 @@ const CoursesSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Mumbai's leading piping course institute offering comprehensive piping design training, PDMS, SP3D, E3D courses with hands-on training and expert guidance.
+            Mumbai&apos;s leading piping course institute offering comprehensive piping design training, PDMS, SP3D, E3D courses with hands-on training and expert guidance.
           </p>
         </div>
 

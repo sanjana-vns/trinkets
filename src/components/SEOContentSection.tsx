@@ -99,7 +99,7 @@ export default function SEOContentSection() {
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
             Master comprehensive piping course in Mumbai with advanced piping design training, PDMS, SP3D, E3D, 
-            CAESAR II, and piping stress analysis. Mumbai's premier piping training institute with 100% placement assistance.
+            CAESAR II, and piping stress analysis. Mumbai&apos;s premier piping training institute with 100% placement assistance.
           </p>
 
           {/* Animated Stats */}
