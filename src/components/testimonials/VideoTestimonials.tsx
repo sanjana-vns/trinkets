@@ -137,7 +137,7 @@ const VideoTestimonials = () => {
                     <>
                       <Image
                         src={videoTestimonials[currentVideo].thumbnail}
-                        alt={videoTestimonials[currentVideo].name}
+                        alt={`${videoTestimonials[currentVideo].name} - Piping Course Mumbai Success Story at Trinkets Institute`}
                         width={800}
                         height={450}
                         className="w-full h-full object-cover"
@@ -261,7 +261,7 @@ const VideoTestimonials = () => {
               <div className="relative">
                 <Image
                   src={video.thumbnail}
-                  alt={video.name}
+                  alt={`${video.name} - Piping Engineering Course Graduate Mumbai Success Story`}
                   width={200}
                   height={112}
                   className="w-full aspect-video object-cover"

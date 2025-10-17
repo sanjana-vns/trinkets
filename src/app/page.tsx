@@ -37,14 +37,47 @@ const LocationSection = dynamic(() => import('@/components/LocationSection'), {
   ssr: true,
 })
 
+// Additional content section for piping course focus
+const PipingCourseSection = dynamic(() => import('@/components/PipingCourseSection'), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+  ssr: true,
+})
+
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* SEO H1 - Hidden but accessible to search engines */}
       <h1 className="sr-only">Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute</h1>
+      
+      {/* Breadcrumb structured data for homepage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://trinketsinstitute.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Piping Course In Mumbai",
+                "item": "https://trinketsinstitute.com/courses/piping-design-course-mumbai"
+              }
+            ]
+          })
+        }}
+      />
+      
       <Hero />
       <CoursesSection />
       <AboutUsSection />
+      <PipingCourseSection />
       <StatsSection />
       <PlacementSection />
       <LocationSection compact={false} />

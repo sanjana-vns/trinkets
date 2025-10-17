@@ -102,27 +102,27 @@ const AboutUsSection = () => {
                   About Trinkets Institute
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
-                Empowering Future 
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
+                Leading Piping Course Institute 
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 animate-gradient">
-                  Engineers & Innovators
+                  In Mumbai
                 </span>
-              </h1>
+              </h2>
             </header>
 
             {/* Enhanced Description with better typography */}
             <div className="space-y-4 lg:space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg lg:text-xl font-medium text-gray-800 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-600 first-letter:float-left first-letter:mr-2 first-letter:leading-none">
-                Trinkets Institute of Technology stands at the forefront of technical education, 
-                bridging the gap between academic learning and industry requirements. With over 
-                a decade of excellence, we have transformed thousands of students into skilled 
-                professionals ready to tackle real-world engineering challenges.
+                Trinkets Institute offers the best Piping Course In Mumbai, standing at the forefront of piping design education 
+                and bridging the gap between academic learning and industry requirements. With over 
+                a decade of excellence in piping training, we have transformed thousands of students into skilled 
+                piping professionals ready to tackle real-world piping engineering challenges in Mumbai.
               </p>
               <p className="text-base lg:text-lg">
-                Our comprehensive programs in <strong className="text-blue-700">Piping Design</strong>, <strong className="text-blue-700">HVAC Systems</strong>, 
-                <strong className="text-blue-700"> Process Engineering</strong>, and <strong className="text-blue-700">Structural Design</strong> are meticulously crafted by industry experts to ensure 
-                our graduates possess the practical skills and theoretical knowledge demanded 
-                by today&apos;s competitive marketplace.
+                Our comprehensive <strong className="text-blue-700">Piping Course In Mumbai</strong> includes <strong className="text-blue-700">PDMS Training</strong>, 
+                <strong className="text-blue-700">SP3D Piping Design</strong>, <strong className="text-blue-700">E3D Training</strong>, and <strong className="text-blue-700">CAESAR II Stress Analysis</strong> programs that are meticulously crafted by piping industry experts to ensure 
+                our piping course graduates possess the practical piping design skills and theoretical knowledge demanded 
+                by Mumbai&apos;s competitive engineering marketplace.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ const AboutUsSection = () => {
               <div className="relative h-80 sm:h-96 lg:h-[520px] xl:h-[580px]">
                 <Image
                   src="/images/engineer.jpg"
-                  alt="Trinkets Institute of Technology - Professional Engineering Training and Technical Education Excellence"
+                  alt="Piping Course In Mumbai - Professional Piping Design Engineering Training at Trinkets Institute"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   priority

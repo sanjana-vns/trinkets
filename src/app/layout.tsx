@@ -85,14 +85,14 @@ export const metadata: Metadata = {
         url: 'https://trinketsinstitute.com/images/og-trinkets-institute.jpg',
         width: 1200,
         height: 630,
-        alt: 'Trinkets Institute - Leading Engineering Training Institute Mumbai',
+        alt: 'Piping Course In Mumbai - Best Piping Design Engineering Training at Trinkets Institute',
         type: 'image/jpeg',
       },
       {
         url: 'https://trinketsinstitute.com/images/trinketlogo.jpg',
         width: 400,
         height: 400,
-        alt: 'Trinkets Institute Logo',
+        alt: 'Trinkets Institute Mumbai - Professional Piping Course Training Center',
         type: 'image/jpeg',
       }
     ],
@@ -103,7 +103,12 @@ export const metadata: Metadata = {
     creator: '@TrinketsInstitute',
     title: 'Piping Course In Mumbai | Best Piping Design Training Institute',
     description: 'Leading Piping Course In Mumbai at Trinkets Institute. Learn piping design, PDMS, SP3D, E3D, CAESAR II with 100% placement assistance.',
-    images: ['https://trinketsinstitute.com/images/og-trinkets-institute.jpg'],
+    images: [
+      {
+        url: 'https://trinketsinstitute.com/images/og-trinkets-institute.jpg',
+        alt: 'Piping Course In Mumbai - Best Piping Design Engineering Training Institute'
+      }
+    ],
   },
   manifest: '/manifest.json',
   category: 'education',
@@ -137,8 +142,10 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#3b82f6" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-16x16.svg" sizes="16x16" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         {/* Critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{
@@ -155,6 +162,8 @@ export default function RootLayout({
         }} />
         {/* Preload critical resources */}
         <link rel="preload" href="/images/trinketlogo.jpg" as="image" />
+        <link rel="preload" href="/images/engineer.jpg" as="image" />
+        <link rel="preload" href="/images/bg1.jpg" as="image" />
         <link rel="preload" href="/icons/icon-192x192.svg" as="image" />
       </head>
       <body className={`${inter.className} antialiased`}>
@@ -202,6 +211,37 @@ export default function RootLayout({
               answer: "Our Piping Course In Mumbai covers industry-standard piping design software including PDMS, SP3D (SmartPlant 3D), E3D, AutoCAD Plant 3D, CAESAR II for stress analysis, and PDS. You'll gain hands-on experience with the same piping design tools used by professionals in Mumbai's top engineering companies."
             }
           ]} 
+        />
+        <StructuredData 
+          type="localBusiness" 
+          data={{
+            name: "Trinkets Institute - Best Piping Course In Mumbai",
+            description: "Leading Piping Course Institute in Mumbai offering comprehensive piping design training with PDMS, SP3D, E3D, CAESAR II courses and 100% placement assistance.",
+            telephone: "+91-9820924788",
+            email: "info@trinketsinstitute.com",
+            address: {
+              streetAddress: "823, Ecstasy Business Park, City of Joy, JSD Road",
+              addressLocality: "Mulund West",
+              addressRegion: "Mumbai",
+              postalCode: "400080",
+              addressCountry: "India"
+            },
+            geo: {
+              latitude: "19.1729",
+              longitude: "72.9573"
+            },
+            openingHours: ["Mo-Sa 09:00-19:00"],
+            priceRange: "₹₹-₹₹₹",
+            paymentAccepted: ["Cash", "Credit Card", "UPI", "Bank Transfer"],
+            currenciesAccepted: ["INR"],
+            areaServed: ["Mumbai", "Thane", "Navi Mumbai", "Maharashtra"],
+            serviceArea: {
+              geo: {
+                addressCountry: "India",
+                addressRegion: "Maharashtra"
+              }
+            }
+          }} 
         />
         <Navigation />
         <main role="main">{children}</main>

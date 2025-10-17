@@ -43,10 +43,10 @@ const PlacementSection = () => {
   ]
 
   const stats = [
-    { number: "95%", label: "Placement Rate", icon: "🎯" },
-    { number: "500+", label: "Companies Hiring", icon: "🏢" },
-    { number: "8.5L", label: "Highest Package", icon: "💰" },
-    { number: "24/7", label: "Career Support", icon: "📞" }
+    { number: "98%", label: "Piping Job Placement", icon: "🎯" },
+    { number: "250+", label: "Piping Companies", icon: "🏢" },
+    { number: "8.5L", label: "Highest Piping Package", icon: "💰" },
+    { number: "24/7", label: "Piping Career Support", icon: "📞" }
   ]
 
   useEffect(() => {
@@ -92,13 +92,13 @@ const PlacementSection = () => {
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">Student Success Stories</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 leading-tight">
-            Outstanding
+            Piping Course In Mumbai
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Placements
+              Placement Success
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our students have been successfully placed in leading companies across the industry with exceptional packages
+            Our Piping Course In Mumbai students have been successfully placed in leading piping engineering companies across Mumbai and India with exceptional packages
           </p>
         </div>
 

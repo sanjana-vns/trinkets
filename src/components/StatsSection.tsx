@@ -7,12 +7,12 @@ const StatsSection = () => {
   const [animatedNumbers, setAnimatedNumbers] = useState<Record<string, number>>({})
 
   const stats = useMemo(() => [
-    { number: "15+", label: "Years Experience", icon: "🏆", color: "from-yellow-400 to-orange-500" },
-    { number: "50+", label: "Courses", icon: "📚", color: "from-green-400 to-teal-500" },
-    { number: "5000+", label: "Trained Students", icon: "👥", color: "from-blue-400 to-cyan-500" },
-    { number: "95%", label: "Placement Rate", icon: "🎯", color: "from-purple-400 to-pink-500" },
-    { number: "100+", label: "Expert Teachers", icon: "👨‍🏫", color: "from-indigo-400 to-blue-500" },
-    { number: "25+", label: "Industry Awards", icon: "🏅", color: "from-red-400 to-rose-500" }
+    { number: "1200+", label: "Piping Course Students", icon: "🔧", color: "from-blue-400 to-cyan-500" },
+    { number: "98%", label: "Piping Job Placement", icon: "🎯", color: "from-green-400 to-teal-500" },
+    { number: "15+", label: "Years Piping Training", icon: "🏆", color: "from-yellow-400 to-orange-500" },
+    { number: "25+", label: "Piping Software Tools", icon: "💻", color: "from-purple-400 to-pink-500" },
+    { number: "500+", label: "Live Piping Projects", icon: "�", color: "from-indigo-400 to-blue-500" },
+    { number: "50+", label: "Piping Industry Partners", icon: "🤝", color: "from-red-400 to-rose-500" }
   ], [])
 
   useEffect(() => {
@@ -71,13 +71,13 @@ const StatsSection = () => {
             <span className="text-white font-semibold">Our Achievements</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-            Helping Growing Industries by
+            Mumbai&apos;s Leading
             <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
-              Providing Trained Manpower
+              Piping Course Institute
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transforming careers and building futures with industry-leading training programs
+            Transforming piping engineering careers with comprehensive piping course training in Mumbai
           </p>
         </div>
 
