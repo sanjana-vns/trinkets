@@ -148,7 +148,7 @@ const Map = () => {
                 <div className="text-6xl mb-4">🗺️</div>
                 <h3 className="text-2xl font-bold mb-4">Interactive Map</h3>
                 <p className="text-blue-100 mb-6">
-                  We're located in Andheri East, Mumbai - easily accessible by metro, bus, and train
+                  We&apos;re located in Andheri East, Mumbai - easily accessible by metro, bus, and train
                 </p>
                 <a
                   href="https://maps.google.com/?q=Andheri+East+Mumbai+Maharashtra+400069"
