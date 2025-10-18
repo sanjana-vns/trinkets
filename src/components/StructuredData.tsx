@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface StructuredDataProps {
-  type: 'organization' | 'course' | 'service' | 'localBusiness' | 'breadcrumb' | 'website' | 'faq'
+  type: 'organization' | 'course' | 'service' | 'localBusiness' | 'breadcrumb' | 'website' | 'faq' | 'educationalOrganization' | 'siteNavigation' | 'review'
   data: any
 }
 
@@ -249,6 +249,93 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
               "text": faq.answer
             }
           }))
+        }
+
+      case 'educationalOrganization':
+        return {
+          "@context": baseContext,
+          "@type": "EducationalOrganization",
+          "name": "Trinkets Institute of Technology",
+          "url": "https://trinketsinstitute.com",
+          "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg",
+          "description": "Premier Engineering Training Institute in Mumbai specializing in Piping Design, MEP, HVAC, Structural Engineering with 100% placement assistance.",
+          "foundingDate": "2015",
+          "numberOfEmployees": "50-100",
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Professional Certificate",
+              "name": "Piping Design Engineering Certificate"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Engineering Courses",
+            "itemListElement": [
+              {
+                "@type": "Course",
+                "name": "Piping Design Course Mumbai",
+                "courseCode": "PDC-001",
+                "description": "Comprehensive Piping Design Training with PDMS, SP3D, E3D, and CAESAR II"
+              }
+            ]
+          },
+          "alumni": [
+            {
+              "@type": "Person",
+              "name": "Engineering Professionals",
+              "jobTitle": "Piping Engineers"
+            }
+          ]
+        }
+
+      case 'siteNavigation':
+        return {
+          "@context": baseContext,
+          "@type": "SiteNavigationElement",
+          "name": "Main Navigation",
+          "url": "https://trinketsinstitute.com",
+          "hasPart": [
+            {
+              "@type": "WebPage",
+              "name": "Piping Courses",
+              "url": "https://trinketsinstitute.com/courses",
+              "description": "Professional piping design and engineering courses"
+            },
+            {
+              "@type": "WebPage", 
+              "name": "About Us",
+              "url": "https://trinketsinstitute.com/about",
+              "description": "Learn about Trinkets Institute and our mission"
+            },
+            {
+              "@type": "WebPage",
+              "name": "Placements",
+              "url": "https://trinketsinstitute.com/placements", 
+              "description": "Student placement records and success stories"
+            }
+          ]
+        }
+
+      case 'review':
+        return {
+          "@context": baseContext,
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Trinkets Institute Students"
+          },
+          "reviewBody": "Excellent piping course training in Mumbai with industry expert faculty and 100% placement assistance.",
+          "itemReviewed": {
+            "@type": "EducationalOrganization",
+            "name": "Trinkets Institute of Technology"
+          }
         }
 
       default:

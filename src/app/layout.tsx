@@ -129,6 +129,27 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#3b82f6',
     'msapplication-config': '/browserconfig.xml',
     'theme-color': '#3b82f6',
+    
+    // Advanced SEO Meta Tags
+    'google-site-verification': 'your-google-site-verification-code',
+    'yandex-verification': 'your-yandex-verification-code',
+    'pinterest-rich-pins': 'true',
+    'fb:app_id': 'your-facebook-app-id',
+    'fb:admins': 'your-facebook-admin-id',
+    
+    // Business and Location
+    'business:contact_data:street_address': '823, Ecstasy Business Park, City of Joy, JSD Road',
+    'business:contact_data:locality': 'Mulund West',
+    'business:contact_data:region': 'Mumbai',
+    'business:contact_data:postal_code': '400080',
+    'business:contact_data:country_name': 'India',
+    'business:contact_data:phone_number': '+91-9820924788',
+    'business:contact_data:email': 'info@trinketsinstitute.com',
+    
+    // Industry and Category
+    'og:business:industry': 'Engineering Education',
+    'og:business:category': 'Piping Training Institute',
+    'og:business:specialty': 'Piping Design Training Mumbai',
   }
 }
 
@@ -138,10 +159,39 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-IN" className={inter.variable}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#3b82f6" />
+        <meta name="color-scheme" content="light" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Trinkets Institute" />
+        <meta name="application-name" content="Trinkets Institute" />
+        <meta name="msapplication-TileColor" content="#3b82f6" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Geo and Location Meta Tags */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Mumbai, Maharashtra, India" />
+        <meta name="geo.position" content="19.1762;72.9951" />
+        <meta name="ICBM" content="19.1762, 72.9951" />
+        
+        {/* Security and Privacy */}
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
+        
+        {/* Content and Language */}
+        <meta name="content-language" content="en-IN" />
+        <meta name="language" content="English" />
+        <meta name="distribution" content="global" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="target" content="all" />
+        <meta name="audience" content="all" />
+        <meta name="rating" content="general" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon-16x16.svg" sizes="16x16" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />

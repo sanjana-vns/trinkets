@@ -15,8 +15,37 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb = ({ items, className = '' }: BreadcrumbProps) => {
+  // Generate JSON-LD structured data for breadcrumbs
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://trinketsinstitute.com"
+      },
+      ...items.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": item.label,
+        "item": item.href ? `https://trinketsinstitute.com${item.href}` : `https://trinketsinstitute.com`
+      }))
+    ]
+  }
+
   return (
-    <nav className={`flex items-center space-x-2 text-sm ${className}`} aria-label="Breadcrumb">
+    <>
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData, null, 2)
+        }}
+      />
+      
+      <nav className={`flex items-center space-x-2 text-sm ${className}`} aria-label="Breadcrumb">
       <Link 
         href="/" 
         className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
@@ -43,6 +72,7 @@ const Breadcrumb = ({ items, className = '' }: BreadcrumbProps) => {
         </div>
       ))}
     </nav>
+    </>
   )
 }
 

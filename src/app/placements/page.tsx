@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next"
+import { Metadata } from "next"
 import Link from "next/link"
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
@@ -38,128 +38,237 @@ const PlacementTestimonials = dynamic(() => import('@/components/placement/Place
 })
 
 export const metadata: Metadata = {
-  title: "Engineering Placement Services - 100% Placement Assistance | Trinkets Institute",
-  description: "Get guaranteed placement assistance in top engineering companies. Expert career guidance, industry partnerships, and 100% placement support for mechanical, electrical, civil engineering professionals.",
+  title: "Engineering Placements | 100% Job Placement Assistance | Trinkets Institute Mumbai",
+  description: "Guaranteed engineering job placements in Mumbai's top companies. 5000+ successful placements in piping design, MEP, HVAC, structural engineering. Industry partnerships, career guidance, salary negotiations, interview preparation.",
   keywords: [
-    'engineering placement services',
-    'engineering job placement',
+    'engineering placements mumbai',
+    'engineering job placement mumbai',
     '100% placement assistance',
-    'engineering career guidance',
+    'engineering career guidance mumbai',
+    'piping engineer jobs mumbai',
+    'MEP engineer placement mumbai',
+    'HVAC engineer jobs mumbai',
+    'structural engineer placement',
     'mechanical engineering jobs',
     'civil engineering placement',
     'electrical engineering jobs',
     'piping engineering placement',
-    'engineering recruitment',
+    'engineering placement services',
+    'engineering recruitment mumbai',
     'technical job placement',
-    'engineering career development',
+    'engineering career opportunities',
     'industry placement program',
     'engineering job guarantee',
+    'professional engineering careers',
+    'engineering employment assistance',
+    'technical career guidance',
+    'engineering interview preparation',
+    'salary negotiation support',
+    'engineering job search',
+    'technical recruitment services',
+    'engineering placement consultancy',
+    'career development support',
+    'engineering job portal',
+    'technical job opportunities',
+    'engineering employment solutions',
     'professional placement services',
-    'engineering employment support'
+    'engineering career advancement',
+    'technical skill placement',
+    'engineering job training',
+    'placement success stories',
+    'engineering career transformation',
+    'job placement guarantee',
+    'engineering placement record',
+    'technical career support',
+    'industry job placement',
+    'engineering employment program'
   ],
+  authors: [{ name: 'Trinkets Institute of Technology' }],
+  creator: 'Trinkets Institute of Technology',
+  publisher: 'Trinkets Institute of Technology',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Engineering Placement Services - 100% Placement Assistance | Trinkets Institute',
-    description: 'Get guaranteed placement assistance in top engineering companies with our comprehensive career support program.',
+    title: "Engineering Placements | 100% Job Placement Assistance | Trinkets Institute Mumbai",
+    description: "Guaranteed engineering job placements in Mumbai's top companies. 5000+ successful placements with industry partnerships and career guidance.",
     url: 'https://trinketsinstitute.com/placements',
     siteName: 'Trinkets Institute',
+    images: [
+      {
+        url: 'https://trinketsinstitute.com/images/placements-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Trinkets Institute Engineering Placements - 100% Job Placement Mumbai',
+      },
+    ],
+    locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Engineering Placements | 100% Job Placement Assistance | Trinkets Institute Mumbai",
+    description: "Guaranteed engineering job placements in Mumbai's top companies with expert career guidance.",
+    images: ['https://trinketsinstitute.com/images/placements-twitter.jpg'],
+    creator: '@TrinketsInstitute',
+  },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/placements',
+  },
+  category: 'Employment',
 }
 
-export default function PlacementPage() {
+export default function PlacementsPage() {
+  // JobPosting structured data
+  const jobPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Engineering Positions - Multiple Openings",
+    "description": "Excellent career opportunities for engineering graduates trained at Trinkets Institute Mumbai. Positions available in piping design, MEP, HVAC, structural engineering across top companies.",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "Trinkets Institute Placements",
+      "value": "ENG-PLACEMENT-2024"
+    },
+    "datePosted": "2024-01-01",
+    "validThrough": "2024-12-31",
+    "employmentType": ["FULL_TIME", "CONTRACT"],
+    "hiringOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "Trinkets Institute of Technology",
+      "sameAs": "https://trinketsinstitute.com",
+      "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "INR",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 300000,
+        "maxValue": 1500000,
+        "unitText": "YEAR"
+      }
+    },
+    "qualifications": [
+      "Engineering degree from recognized university",
+      "Professional certification from Trinkets Institute",
+      "Hands-on experience with engineering software (SP3D, PDMS, E3D, CAESAR II, STAAD Pro)"
+    ],
+    "skills": [
+      "Piping Design",
+      "MEP Engineering", 
+      "HVAC Systems",
+      "Structural Analysis",
+      "SP3D",
+      "PDMS",
+      "E3D",
+      "CAESAR II",
+      "STAAD Pro",
+      "AutoCAD"
+    ],
+    "benefits": [
+      "100% placement assistance",
+      "Career guidance and mentoring",
+      "Interview preparation",
+      "Salary negotiation support",
+      "Continuous professional development"
+    ]
+  }
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://trinketsinstitute.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Placements",
+        "item": "https://trinketsinstitute.com/placements"
+      }
+    ]
+  }
+
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        {/* Conditional hero based on screen size */}
-        <div className="block md:hidden">
-          <MobilePlacementHero />
-        </div>
-        <div className="hidden md:block">
-          <PlacementHero />
-        </div>
+    <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jobPostingSchema, null, 2)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbData, null, 2)
+        }}
+      />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" role="main">
+        {/* SEO H1 for Placements page */}
+        <h1 className="sr-only">Engineering Placements | 100% Job Placement Assistance | Trinkets Institute Mumbai</h1>
         
-        {/* Below-the-fold sections load with more aggressive margins for better performance */}
-        <ErrorBoundary fallback={
-          <div className="h-64 bg-red-50 flex items-center justify-center">
-            <div className="text-center text-red-600">
-              <div className="mb-2">Failed to load statistics</div>
-              <ReloadButton className="text-sm underline">
-                Retry
-              </ReloadButton>
+        <ErrorBoundary>
+          <Suspense fallback={<div className="h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 animate-pulse" />}>
+            {/* Mobile-first hero for performance */}
+            <div className="block md:hidden">
+              <section aria-label="Mobile placement hero">
+                <MobilePlacementHero />
+              </section>
             </div>
-          </div>
-        }>
-          <LazySection
-            fallback={
-              <div className="h-64 bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
-                <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            }
-            rootMargin="400px"
-            priority={true}
-          >
+            
+            {/* Desktop hero */}
+            <div className="hidden md:block">
+              <section aria-label="Desktop placement hero">
+                <PlacementHero />
+              </section>
+            </div>
+          </Suspense>
+
+          <section aria-label="Placement statistics">
             <PlacementStats />
-          </LazySection>
-        </ErrorBoundary>
-        
-        <ErrorBoundary fallback={<div className="h-48 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load process section</span></div>}>
-          <LazySection
-            fallback={
-              <div className="h-48 bg-white flex items-center justify-center">
-                <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            }
-            rootMargin="300px"
-          >
+          </section>
+
+          <section aria-label="Placement process">
             <PlacementProcess />
-          </LazySection>
-        </ErrorBoundary>
-        
-        <ErrorBoundary fallback={<div className="h-48 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load success stories</span></div>}>
-          <LazySection
-            fallback={
-              <div className="h-48 bg-gray-50 flex items-center justify-center">
-                <div className="w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            }
-            rootMargin="200px"
-          >
+          </section>
+
+          <section aria-label="Success stories">
             <PlacementSuccess />
-          </LazySection>
-        </ErrorBoundary>
-        
-        <ErrorBoundary fallback={<div className="h-40 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load partners</span></div>}>
-          <LazySection
-            fallback={
-              <div className="h-40 bg-blue-50 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                  <p className="text-xs text-gray-500">Loading partners...</p>
-                </div>
-              </div>
-            }
-            rootMargin="150px"
-          >
+          </section>
+
+          <section aria-label="Industry partners">
             <PlacementPartners />
-          </LazySection>
-        </ErrorBoundary>
-        
-        <ErrorBoundary fallback={<div className="h-40 bg-red-50 flex items-center justify-center"><span className="text-red-600">Failed to load testimonials</span></div>}>
-          <LazySection
-            fallback={
-              <div className="h-40 bg-white flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-4 h-4 border-2 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                  <p className="text-xs text-gray-500">Loading testimonials...</p>
-                </div>
-              </div>
-            }
-            rootMargin="100px"
-          >
+          </section>
+
+          <section aria-label="Student testimonials">
             <PlacementTestimonials />
-          </LazySection>
+          </section>
         </ErrorBoundary>
-      </div>
-    </ErrorBoundary>
+      </main>
+    </>
   )
 }

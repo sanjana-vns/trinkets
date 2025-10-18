@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import Hero from '@/components/Hero'
+import AdvancedSEO from '@/components/AdvancedSEO'
 
 // Dynamically import non-critical components with loading optimization
 const CoursesSection = dynamic(() => import('@/components/CoursesSection'), {
@@ -45,9 +46,12 @@ const PipingCourseSection = dynamic(() => import('@/components/PipingCourseSecti
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen" role="main">
       {/* SEO H1 - Hidden but accessible to search engines */}
       <h1 className="sr-only">Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute</h1>
+      
+      {/* Advanced SEO Structured Data */}
+      <AdvancedSEO />
       
       {/* Breadcrumb structured data for homepage */}
       <script
@@ -74,15 +78,43 @@ export default function Home() {
         }}
       />
       
-      <Hero />
-      <CoursesSection />
-      <AboutUsSection />
-      <PipingCourseSection />
-      <StatsSection />
-      <PlacementSection />
-      <LocationSection compact={false} />
-      <FAQSection />
-      <SEOContentSection />
-    </div>
+      {/* Hero Section - Above the fold */}
+      <section aria-label="Hero banner for Piping Course in Mumbai">
+        <Hero />
+      </section>
+
+      {/* Core Content Sections */}
+      <section aria-label="Available courses">
+        <CoursesSection />
+      </section>
+      
+      <section aria-label="About Trinkets Institute">
+        <AboutUsSection />
+      </section>
+      
+      <article aria-label="Piping course details and curriculum">
+        <PipingCourseSection />
+      </article>
+      
+      <section aria-label="Institute statistics and achievements">
+        <StatsSection />
+      </section>
+      
+      <section aria-label="Student placement records">
+        <PlacementSection />
+      </section>
+      
+      <section aria-label="Frequently asked questions">
+        <FAQSection />
+      </section>
+      
+      <article aria-label="Comprehensive piping course information">
+        <SEOContentSection />
+      </article>
+      
+      <section aria-label="Institute location and contact">
+        <LocationSection />
+      </section>
+    </main>
   )
 }

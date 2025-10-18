@@ -4,193 +4,175 @@ import AwardsSection from '@/components/gallery/AwardsSection'
 import CertificationsSection from '@/components/gallery/CertificationsSection'
 
 export const metadata: Metadata = {
-  title: 'Gallery & Awards - Engineering Excellence Recognition | Trinkets Institute',
-  description: 'Explore our gallery of achievements, awards, certifications, and engineering project showcases. Discover why Trinkets Institute is the leading choice for engineering education and professional development.',
+  title: 'Gallery & Awards | Engineering Excellence Recognition | Trinkets Institute Mumbai',
+  description: 'Explore Trinkets Institute Mumbai gallery showcasing engineering projects, student achievements, industry awards, certifications. Witness piping design, MEP, HVAC, structural engineering excellence. 5000+ success stories documented.',
   keywords: [
-    'engineering institute gallery',
-    'engineering awards recognition',
+    'trinkets institute gallery mumbai',
+    'engineering institute awards mumbai',
+    'piping design projects gallery',
+    'MEP engineering projects showcase',
+    'HVAC design portfolio mumbai',
+    'structural engineering gallery',
+    'engineering student achievements',
     'professional certifications showcase',
-    'engineering project gallery',
-    'institute achievements',
+    'engineering project gallery mumbai',
+    'institute achievements recognition',
     'engineering excellence awards',
     'student project showcase',
-    'industry recognition',
+    'industry recognition mumbai',
     'engineering training certifications',
     'professional development awards',
     'engineering design projects',
-    'mechanical engineering projects',
-    'electrical engineering showcase',
-    'civil engineering gallery',
-    'petrochemical engineering projects',
-    'piping design gallery',
-    'plant design showcase',
-    'structural engineering projects',
-    'HVAC design gallery',
-    'MEP engineering projects',
-    'CAD design showcase',
-    'engineering software training',
     'SP3D project gallery',
-    'CAESAR II projects',
-    'STAAD Pro showcase',
-    'ETABS project gallery',
-    'Revit MEP projects',
+    'PDMS design showcase',
+    'E3D piping projects',
+    'CAESAR II analysis showcase',
+    'STAAD Pro projects',
     'AutoCAD design gallery',
-    'engineering institute testimonials',
-    'student success gallery',
-    'professional achievement awards',
-    'industry partnership recognition',
-    'engineering education excellence',
-    'technical training awards',
-    'engineering consultancy projects',
-    'real-world engineering solutions'
+    'engineering portfolio mumbai',
+    'technical training achievements',
+    'engineering innovation showcase',
+    'industrial project gallery',
+    'engineering competition awards',
+    'technical excellence recognition',
+    'engineering skill demonstration',
+    'professional project portfolio'
   ],
-  authors: [{ name: 'Trinkets Institute' }],
-  creator: 'Trinkets Institute',
-  publisher: 'Trinkets Institute',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://trinketsinstitute.com'),
-  alternates: {
-    canonical: '/gallery',
-  },
-  openGraph: {
-    title: 'Gallery & Awards - Engineering Excellence Recognition | Trinkets Institute',
-    description: 'Explore our gallery of achievements, awards, certifications, and engineering project showcases. Discover engineering excellence and professional recognition.',
-    url: 'https://trinketsinstitute.com/gallery',
-    siteName: 'Trinkets Institute',
-    images: [
-      {
-        url: '/images/gallery-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Trinkets Institute Gallery & Awards Showcase',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Gallery & Awards - Engineering Excellence Recognition | Trinkets Institute',
-    description: 'Explore our gallery of achievements, awards, and engineering project showcases.',
-    images: ['/images/gallery-twitter.jpg'],
-    creator: '@TrinketsInstitute',
-  },
+  authors: [{ name: 'Trinkets Institute of Technology' }],
+  creator: 'Trinkets Institute of Technology',
+  publisher: 'Trinkets Institute of Technology',
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+  openGraph: {
+    title: 'Gallery & Awards | Engineering Excellence Recognition | Trinkets Institute Mumbai',
+    description: 'Explore Trinkets Institute Mumbai gallery showcasing engineering projects, student achievements, industry awards, certifications.',
+    url: 'https://trinketsinstitute.com/gallery',
+    siteName: 'Trinkets Institute',
+    images: [
+      {
+        url: 'https://trinketsinstitute.com/images/gallery-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Trinkets Institute Gallery - Engineering Projects and Awards Mumbai',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gallery & Awards | Engineering Excellence Recognition | Trinkets Institute Mumbai',
+    description: 'Explore engineering projects, student achievements, and industry awards at Mumbai\'s leading engineering institute.',
+    images: ['https://trinketsinstitute.com/images/gallery-twitter.jpg'],
+    creator: '@TrinketsInstitute',
+  },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/gallery',
+  },
+  category: 'Education',
 }
 
 export default function GalleryPage() {
-  const structuredData = {
+  // Structured data for Gallery page
+  const galleryStructuredData = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Trinkets Institute",
-    "url": "https://trinketsinstitute.com",
-    "description": "Leading engineering education institute showcasing excellence through awards, certifications, and project achievements.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Engineering Excellence Center",
-      "addressLocality": "Technology Hub",
-      "addressRegion": "Tech State",
-      "postalCode": "12345",
-      "addressCountry": "IN"
+    "@type": "ImageGallery",
+    "name": "Trinkets Institute Engineering Projects Gallery",
+    "description": "Showcase of engineering projects, student achievements, and industry awards from Trinkets Institute Mumbai",
+    "url": "https://trinketsinstitute.com/gallery",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Trinkets Institute of Technology",
+      "url": "https://trinketsinstitute.com"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-XXX-XXX-XXXX",
-      "contactType": "Gallery Information",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi"]
-    },
-    "award": [
+    "image": [
       {
-        "@type": "Award",
-        "name": "Excellence in Engineering Education",
-        "description": "Recognition for outstanding contribution to engineering education and professional development"
+        "@type": "ImageObject",
+        "url": "https://trinketsinstitute.com/images/gallery1.webp",
+        "caption": "Piping Design Projects by Trinkets Institute Students",
+        "description": "Professional piping design projects completed by students using SP3D, PDMS, and E3D software"
       },
       {
-        "@type": "Award", 
-        "name": "Industry Partnership Excellence",
-        "description": "Award for exceptional industry collaboration and student placement success"
-      }
-    ],
-    "hasCredential": [
+        "@type": "ImageObject",
+        "url": "https://trinketsinstitute.com/images/gallery2.webp",
+        "caption": "MEP Engineering Project Portfolio",
+        "description": "Comprehensive MEP engineering designs and HVAC system layouts"
+      },
       {
-        "@type": "EducationalOccupationalCredential",
-        "name": "Professional Engineering Training Certification",
-        "description": "Certified training programs in mechanical, electrical, civil, and petrochemical engineering"
-      }
-    ],
-    "alumni": [
+        "@type": "ImageObject",
+        "url": "https://trinketsinstitute.com/images/gallery3.webp",
+        "caption": "Structural Engineering Excellence",
+        "description": "STAAD Pro and ETABS structural analysis and design projects"
+      },
       {
-        "@type": "Person",
-        "name": "Engineering Professionals",
-        "description": "Thousands of successful engineering professionals trained and placed"
+        "@type": "ImageObject",
+        "url": "https://trinketsinstitute.com/images/gallery4.webp",
+        "caption": "Industry Recognition and Awards",
+        "description": "Awards and certifications received for engineering excellence"
       }
     ]
   }
 
-  const organizationData = {
+  const breadcrumbData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Trinkets Institute",
-    "description": "Premier engineering education institute with award-winning training programs and industry recognition",
-    "url": "https://trinketsinstitute.com/gallery",
-    "logo": "https://trinketsinstitute.com/images/trinketlogo.jpg",
-    "image": [
-      "https://trinketsinstitute.com/images/gallery1.webp",
-      "https://trinketsinstitute.com/images/gallery2.webp",
-      "https://trinketsinstitute.com/images/gallery3.webp",
-      "https://trinketsinstitute.com/images/gallery4.webp",
-      "https://trinketsinstitute.com/images/awards-ceremony.jpg",
-      "https://trinketsinstitute.com/images/certifications-display.jpg"
-    ],
-    "sameAs": [
-      "https://www.linkedin.com/company/trinkets-institute",
-      "https://www.facebook.com/trinketsinstitute",
-      "https://twitter.com/trinketsinstitute"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "500",
-      "bestRating": "5"
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://trinketsinstitute.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://trinketsinstitute.com/gallery"
+      }
+    ]
   }
 
   return (
-    <div>
+    <>
+      {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(galleryStructuredData, null, 2)
+        }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbData, null, 2)
+        }}
       />
       
-      <GalleryHero />
-      <AwardsSection />
-      <CertificationsSection />
-    </div>
+      <main className="min-h-screen" role="main">
+        {/* SEO H1 for Gallery page */}
+        <h1 className="sr-only">Gallery & Awards - Engineering Projects Showcase | Trinkets Institute Mumbai</h1>
+        
+        <article aria-label="Engineering projects gallery">
+          <GalleryHero />
+        </article>
+        
+        <section aria-label="Awards and recognition">
+          <AwardsSection />
+        </section>
+        
+        <section aria-label="Professional certifications">
+          <CertificationsSection />
+        </section>
+      </main>
+    </>
   )
 }
