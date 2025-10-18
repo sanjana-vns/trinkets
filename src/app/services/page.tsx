@@ -1,10 +1,37 @@
 import { Metadata } from 'next'
-import ServicesHero from '@/components/services/ServicesHero'
-import ServiceCategories from '@/components/services/ServiceCategories'
-import ServiceFeatures from '@/components/services/ServiceFeatures'
-import ServiceProcess from '@/components/services/ServiceProcess'
-import ServiceTestimonials from '@/components/services/ServiceTestimonials'
-import ServiceContact from '@/components/services/ServiceContact'
+import dynamic from 'next/dynamic'
+import ErrorBoundary from '@/components/ErrorBoundary'
+
+// Dynamic imports with error boundaries for better loading
+const ServicesHero = dynamic(() => import('@/components/services/ServicesHero'), {
+  loading: () => <div className="h-96 bg-gradient-to-r from-blue-50 to-indigo-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
+
+const ServiceCategories = dynamic(() => import('@/components/services/ServiceCategories'), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
+
+const ServiceFeatures = dynamic(() => import('@/components/services/ServiceFeatures'), {
+  loading: () => <div className="h-64 bg-blue-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
+
+const ServiceProcess = dynamic(() => import('@/components/services/ServiceProcess'), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
+
+const ServiceTestimonials = dynamic(() => import('@/components/services/ServiceTestimonials'), {
+  loading: () => <div className="h-64 bg-blue-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
+
+const ServiceContact = dynamic(() => import('@/components/services/ServiceContact'), {
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg"></div>,
+  ssr: true
+})
 
 export const metadata: Metadata = {
   title: 'Engineering Services Mumbai | Professional Piping, MEP, HVAC & Structural Engineering Solutions | Trinkets Institute',
@@ -369,34 +396,129 @@ export default function ServicesPage() {
         
         {/* Services Hero Section */}
         <section aria-labelledby="services-hero-title">
-          <ServicesHero />
+          <ErrorBoundary fallback={<div className="h-96 bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center"><h1 className="text-4xl font-bold">Engineering Services Mumbai</h1></div>}>
+            <ServicesHero />
+          </ErrorBoundary>
         </section>
         
         {/* Service Categories */}
         <section aria-labelledby="service-categories-title">
-          <ServiceCategories />
+          <ErrorBoundary fallback={<div className="py-16 text-center"><h2 className="text-2xl font-bold">Service Categories Loading...</h2></div>}>
+            <ServiceCategories />
+          </ErrorBoundary>
         </section>
         
         {/* Service Features & Benefits */}
         <section aria-labelledby="service-features-title">
-          <ServiceFeatures />
+          <ErrorBoundary fallback={<div className="py-16 text-center"><h2 className="text-2xl font-bold">Service Features Loading...</h2></div>}>
+            <ServiceFeatures />
+          </ErrorBoundary>
         </section>
         
         {/* Service Process & Methodology */}
         <section aria-labelledby="service-process-title">
-          <ServiceProcess />
+          <ErrorBoundary fallback={<div className="py-16 text-center"><h2 className="text-2xl font-bold">Service Process Loading...</h2></div>}>
+            <ServiceProcess />
+          </ErrorBoundary>
         </section>
         
         {/* Client Testimonials */}
         <section aria-labelledby="service-testimonials-title">
-          <ServiceTestimonials />
+          <ErrorBoundary fallback={<div className="py-16 text-center"><h2 className="text-2xl font-bold">Testimonials Loading...</h2></div>}>
+            <ServiceTestimonials />
+          </ErrorBoundary>
         </section>
         
         {/* Service Contact & Consultation */}
         <section aria-labelledby="service-contact-title">
-          <ServiceContact />
+          <ErrorBoundary fallback={<div className="py-16 text-center"><h2 className="text-2xl font-bold">Contact Information Loading...</h2></div>}>
+            <ServiceContact />
+          </ErrorBoundary>
         </section>
         
+        {/* Backup Static Content */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Professional Engineering Services in Mumbai
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Trinkets Institute provides comprehensive engineering services with over 15 years of experience 
+                in Mumbai&apos;s industrial and commercial sectors.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-blue-600 mb-4">🔧 Piping Engineering</h3>
+                <p className="text-gray-600 mb-4">Expert piping design using SP3D, E3D, AutoCAD Plant 3D, and CAESAR II stress analysis.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• 3D Piping Modeling</li>
+                  <li>• Stress Analysis</li>
+                  <li>• P&ID Development</li>
+                  <li>• Material Specifications</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-indigo-600 mb-4">⚡ MEP Engineering</h3>
+                <p className="text-gray-600 mb-4">Complete Mechanical, Electrical & Plumbing design for commercial and industrial buildings.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• MEP System Design</li>
+                  <li>• Load Calculations</li>
+                  <li>• Equipment Selection</li>
+                  <li>• Coordination Services</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-purple-600 mb-4">❄️ HVAC Systems</h3>
+                <p className="text-gray-600 mb-4">Advanced HVAC system design and analysis using HAP, TRACE 700, and Revit MEP.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• System Design</li>
+                  <li>• Load Analysis</li>
+                  <li>• Energy Optimization</li>
+                  <li>• Building Automation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-green-600 mb-4">🏢 Structural Engineering</h3>
+                <p className="text-gray-600 mb-4">Structural analysis and design using STAAD Pro, ETABS, and SAP2000.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Structural Analysis</li>
+                  <li>• Foundation Design</li>
+                  <li>• Steel Structures</li>
+                  <li>• Seismic Analysis</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-orange-600 mb-4">📊 Project Management</h3>
+                <p className="text-gray-600 mb-4">End-to-end project management for engineering and construction projects.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Project Planning</li>
+                  <li>• Resource Management</li>
+                  <li>• Quality Control</li>
+                  <li>• Timeline Management</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-red-600 mb-4">💻 CAD Services</h3>
+                <p className="text-gray-600 mb-4">Professional CAD design and drafting services for all engineering disciplines.</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Technical Drawings</li>
+                  <li>• 3D Modeling</li>
+                  <li>• As-Built Drawings</li>
+                  <li>• Design Documentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Additional SEO Content for Services */}
         <article className="container mx-auto px-4 py-16" itemScope itemType="https://schema.org/Article">
           <div className="max-w-4xl mx-auto">
