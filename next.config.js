@@ -45,10 +45,6 @@ const nextConfig = {
           value: 'nosniff',
         },
         {
-          key: 'X-Frame-Options',
-          value: 'SAMEORIGIN',
-        },
-        {
           key: 'X-XSS-Protection',
           value: '1; mode=block',
         },
@@ -58,7 +54,7 @@ const nextConfig = {
         },
         {
           key: 'Content-Security-Policy',
-          value: "frame-src 'self' https://www.google.com https://maps.google.com; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';",
+          value: "frame-src 'self' https://*.google.com https://*.gstatic.com https://*.googleapis.com https://maps.google.com https://www.google.com; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.gstatic.com; style-src 'self' 'unsafe-inline' https://*.google.com https://*.gstatic.com; img-src 'self' data: https: https://*.google.com https://*.gstatic.com https://*.googleapis.com; font-src 'self' data: https://*.gstatic.com; connect-src 'self' https: https://*.google.com https://*.googleapis.com; object-src 'none'; base-uri 'self'; form-action 'self';",
         },
       ],
     },
