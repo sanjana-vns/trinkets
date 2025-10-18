@@ -122,7 +122,7 @@ const Map = () => {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100">
             <div className="relative w-full h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3861736716537!2d72.8468542!3d19.1059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c85099bd2947%3A0x1ecc1a60c4e6c4e7!2sAndheri%20East%2C%20Mumbai%2C%20Maharashtra%20400069!5e0!3m2!1sen!2sin!4v1729267200000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4291086676067!2d72.9598975!3d19.1764513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8e4fd3a29e9%3A0xe3b5f41748bd7113!2sTrinkets%20Institute%20of%20Technology%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1760776179521!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ 
@@ -132,7 +132,7 @@ const Map = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Trinkets Institute Mumbai Location - Andheri East"
+                title="Trinkets Institute of Technology Pvt. Ltd. - Actual Location"
                 onError={(e) => {
                   console.error('Map failed to load:', e);
                   // Fallback: hide iframe and show static map info
@@ -148,10 +148,10 @@ const Map = () => {
                 <div className="text-6xl mb-4">🗺️</div>
                 <h3 className="text-2xl font-bold mb-4">Interactive Map</h3>
                 <p className="text-blue-100 mb-6">
-                  We&apos;re located in Andheri East, Mumbai - easily accessible by metro, bus, and train
+                  We&apos;re located at Trinkets Institute of Technology Pvt. Ltd. - easily accessible by metro, bus, and train
                 </p>
                 <a
-                  href="https://maps.google.com/?q=Andheri+East+Mumbai+Maharashtra+400069"
+                  href="https://maps.google.com/?q=Trinkets+Institute+of+Technology+Pvt+Ltd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
@@ -169,7 +169,7 @@ const Map = () => {
                   <p className="text-blue-100">Click map to open in Google Maps</p>
                 </div>
                 <a
-                  href="https://maps.google.com/?q=Andheri+East+Mumbai+Maharashtra"
+                  href="https://maps.google.com/?q=Trinkets+Institute+of+Technology+Pvt+Ltd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-300"
