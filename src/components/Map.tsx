@@ -120,25 +120,45 @@ const Map = () => {
 
           {/* Google Maps Embed */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100">
-            <div className="relative w-full" style={{ paddingBottom: '75%' }}>
+            <div className="relative w-full h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4728168671975!2d72.86866731490252!3d19.11854745705894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c85099bd2947%3A0x1ecc1a60c4e6c4e7!2sAndheri%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1697705000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.3861736716537!2d72.8468542!3d19.1059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c85099bd2947%3A0x1ecc1a60c4e6c4e7!2sAndheri%20East%2C%20Mumbai%2C%20Maharashtra%20400069!5e0!3m2!1sen!2sin!4v1729267200000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ 
-                  border: 0, 
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%'
+                  border: 0,
+                  borderRadius: '1rem 1rem 0 0'
                 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-t-2xl"
-                title="Trinkets Institute Mumbai Location"
+                title="Trinkets Institute Mumbai Location - Andheri East"
+                onError={(e) => {
+                  console.error('Map failed to load:', e);
+                  // Fallback: hide iframe and show static map info
+                  const iframe = e.target as HTMLIFrameElement;
+                  iframe.style.display = 'none';
+                  const fallback = iframe.parentElement?.querySelector('.map-fallback');
+                  if (fallback) fallback.classList.remove('hidden');
+                }}
               ></iframe>
+              
+              {/* Fallback content in case iframe fails */}
+              <div className="map-fallback hidden absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 text-white p-8 flex flex-col justify-center items-center text-center rounded-t-2xl">
+                <div className="text-6xl mb-4">🗺️</div>
+                <h3 className="text-2xl font-bold mb-4">Interactive Map</h3>
+                <p className="text-blue-100 mb-6">
+                  We're located in Andheri East, Mumbai - easily accessible by metro, bus, and train
+                </p>
+                <a
+                  href="https://maps.google.com/?q=Andheri+East+Mumbai+Maharashtra+400069"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
+                >
+                  View on Google Maps →
+                </a>
+              </div>
             </div>
             
             {/* Map Footer */}

@@ -46,7 +46,7 @@ const nextConfig = {
         },
         {
           key: 'X-Frame-Options',
-          value: 'DENY',
+          value: 'SAMEORIGIN',
         },
         {
           key: 'X-XSS-Protection',
@@ -55,6 +55,10 @@ const nextConfig = {
         {
           key: 'Referrer-Policy',
           value: 'strict-origin-when-cross-origin',
+        },
+        {
+          key: 'Content-Security-Policy',
+          value: "frame-src 'self' https://www.google.com https://maps.google.com; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';",
         },
       ],
     },
