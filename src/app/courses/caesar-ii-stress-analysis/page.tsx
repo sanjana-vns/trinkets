@@ -192,7 +192,7 @@ export default function CaesarIIStressAnalysisPage() {
                   CAESAR II
                 </span>
                 <br />
-                <span className="text-white">Stress Analysis</span>
+                <span className="text-white">Stress Analysis Course in Mumbai</span>
               </h1>
               <div className="w-32 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6 animate-pulse"></div>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto leading-relaxed">
