@@ -13,11 +13,11 @@ Allow: /gallery
 Allow: /testimonials
 Allow: /contact
 
-# Block unnecessary crawling
+# Block system files and API routes
 Disallow: /api/
 Disallow: /_next/
-Disallow: /admin/
-Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
 
 # Allow search engines to access images
 Allow: /images/
