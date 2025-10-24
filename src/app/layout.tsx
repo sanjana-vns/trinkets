@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Map from '@/components/Map'
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
 import StructuredData from '@/components/StructuredData'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -297,6 +298,14 @@ export default function RootLayout({
         <main role="main">{children}</main>
         <Map />
         <Footer />
+        
+        {/* WhatsApp Button - appears on all 56 pages */}
+        <WhatsAppButton 
+          phoneNumber="+919820924788"
+          message="Hi! I'm interested in engineering courses at Trinkets Institute Mumbai. Please provide course details, fees, and admission process."
+          position="bottom-right"
+          size="medium"
+        />
       </body>
     </html>
   )
