@@ -247,7 +247,7 @@ const SuccessStories = () => (
           </div>
           <Quote className="w-10 h-10 text-blue-400 mb-6" />
           <p className="text-gray-700 mb-6 italic leading-relaxed">
-            "The comprehensive training helped me transition from campus to a senior design role. The placement team's guidance was instrumental in landing my dream job at Siemens."
+            &ldquo;The comprehensive training helped me transition from campus to a senior design role. The placement team&rsquo;s guidance was instrumental in landing my dream job at Siemens.&rdquo;
           </p>
           <div className="border-t pt-6">
             <div className="font-semibold text-gray-800 text-lg">Rajesh Kumar</div>
@@ -264,7 +264,7 @@ const SuccessStories = () => (
           </div>
           <Quote className="w-10 h-10 text-blue-400 mb-6" />
           <p className="text-gray-700 mb-6 italic leading-relaxed">
-            "Amazing support throughout the journey. The interview preparation sessions gave me confidence to crack multiple technical rounds and secure my position at ABB."
+            &ldquo;Amazing support throughout the journey. The interview preparation sessions gave me confidence to crack multiple technical rounds and secure my position at ABB.&rdquo;
           </p>
           <div className="border-t pt-6">
             <div className="font-semibold text-gray-800 text-lg">Priya Sharma</div>
@@ -281,7 +281,7 @@ const SuccessStories = () => (
           </div>
           <Quote className="w-10 h-10 text-blue-400 mb-6" />
           <p className="text-gray-700 mb-6 italic leading-relaxed">
-            "Helped me switch from general civil role to specialized structural engineering with 80% salary hike. The industry connections made all the difference."
+            &ldquo;Helped me switch from general civil role to specialized structural engineering with 80% salary hike. The industry connections made all the difference.&rdquo;
           </p>
           <div className="border-t pt-6">
             <div className="font-semibold text-gray-800 text-lg">Arjun Patel</div>
