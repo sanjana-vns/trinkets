@@ -21,11 +21,18 @@ const WhatsAppButton = ({
 
   // Show button after page loads to avoid layout shift
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000)
+    console.log('WhatsApp button component mounted')
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+      console.log('WhatsApp button set to visible')
+    }, 1000)
     
-    // Check if mobile device
+    // Check if mobile device with better detection
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
+      const isMobileDevice = window.innerWidth <= 768 || 
+                           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      setIsMobile(isMobileDevice)
+      console.log('Mobile detection:', isMobileDevice, 'Window width:', window.innerWidth)
     }
     
     checkMobile()
@@ -65,9 +72,9 @@ const WhatsAppButton = ({
   }
 
   const positionClasses = {
-    'bottom-right': 'bottom-20 right-6', // Moved higher to avoid reload button
-    'bottom-left': 'bottom-20 left-6',   // Moved higher to avoid reload button  
-    'bottom-center': 'bottom-20 left-1/2 transform -translate-x-1/2'
+    'bottom-right': isMobile ? 'bottom-6 right-4' : 'bottom-20 right-6', // Mobile-friendly positioning
+    'bottom-left': isMobile ? 'bottom-6 left-4' : 'bottom-20 left-6',   // Mobile-friendly positioning  
+    'bottom-center': isMobile ? 'bottom-6 left-1/2 transform -translate-x-1/2' : 'bottom-20 left-1/2 transform -translate-x-1/2'
   }
 
   const sizeClasses = {
@@ -82,15 +89,20 @@ const WhatsAppButton = ({
     large: 'w-8 h-8'
   }
 
-  if (!isVisible) return null
+  if (!isVisible) {
+    console.log('WhatsApp button not visible yet')
+    return null
+  }
+
+  console.log('WhatsApp button rendering, isMobile:', isMobile, 'position:', position)
 
   return (
     <>
       {/* WhatsApp Floating Button */}
-      <div className={`fixed ${positionClasses[position]} z-50 group`}>
-        {/* Tooltip */}
+      <div className={`fixed ${positionClasses[position]} z-[9999] group`} style={{ zIndex: 9999 }}>
+        {/* Tooltip - Mobile optimized */}
         {showTooltip && (
-          <div className="absolute bottom-full right-0 mb-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 p-4 transform translate-y-2 opacity-0 animate-fadeInUp">
+          <div className={`absolute bottom-full ${isMobile ? 'right-0 w-56' : 'right-0 w-64'} mb-2 bg-white rounded-lg shadow-xl border border-gray-200 p-4 transform translate-y-2 opacity-0 animate-fadeInUp`}>
             <button
               onClick={() => setShowTooltip(false)}
               className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
@@ -131,16 +143,23 @@ const WhatsAppButton = ({
           onClick={handleWhatsAppClick}
           onMouseEnter={() => !isMobile && setShowTooltip(true)}
           onMouseLeave={() => !isMobile && setShowTooltip(false)}
+          onTouchStart={() => isMobile && setShowTooltip(true)} // Add touch support for mobile
           className={`
             ${sizeClasses[size]}
-            bg-green-500 hover:bg-green-600 
+            bg-green-500 hover:bg-green-600 active:bg-green-700
             text-white rounded-full shadow-lg hover:shadow-xl 
             transition-all duration-300 ease-out
             flex items-center justify-center
             transform hover:scale-110 active:scale-95
             ring-4 ring-green-500/20 hover:ring-green-500/40
             group-hover:animate-pulse
+            ${isMobile ? 'touch-manipulation' : ''}
           `}
+          style={{ 
+            WebkitTapHighlightColor: 'transparent',
+            zIndex: 9999,
+            position: 'relative'
+          }}
           aria-label="Contact us on WhatsApp"
         >
           <MessageCircle className={`${iconSizes[size]} transition-transform group-hover:rotate-12`} />
