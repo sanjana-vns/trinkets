@@ -371,23 +371,23 @@ export default function TeklaCoursePage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Tekla Structures interface and workspace setup</span>
+                      <span className="text-gray-700">Tekla Structures interface and workspace setup</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Project setup and model organization</span>
+                      <span className="text-gray-700">Project setup and model organization</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Basic modeling tools and commands</span>
+                      <span className="text-gray-700">Basic modeling tools and commands</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Grid systems and reference planes</span>
+                      <span className="text-gray-700">Grid systems and reference planes</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Materials and section properties</span>
+                      <span className="text-gray-700">Materials and section properties</span>
                     </li>
                   </ul>
                 </div>
@@ -397,23 +397,23 @@ export default function TeklaCoursePage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Steel frame modeling and design</span>
+                      <span className="text-gray-700">Steel frame modeling and design</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Connection design and detailing</span>
+                      <span className="text-gray-700">Connection design and detailing</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Bolted and welded connections</span>
+                      <span className="text-gray-700">Bolted and welded connections</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Steel member optimization</span>
+                      <span className="text-gray-700">Steel member optimization</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Fabrication drawings and details</span>
+                      <span className="text-gray-700">Fabrication drawings and details</span>
                     </li>
                   </ul>
                 </div>
@@ -423,23 +423,23 @@ export default function TeklaCoursePage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Concrete modeling fundamentals</span>
+                      <span className="text-gray-700">Concrete modeling fundamentals</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Reinforcement design and detailing</span>
+                      <span className="text-gray-700">Reinforcement design and detailing</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Precast and cast-in-place elements</span>
+                      <span className="text-gray-700">Precast and cast-in-place elements</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Rebar scheduling and quantity takeoff</span>
+                      <span className="text-gray-700">Rebar scheduling and quantity takeoff</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Construction documentation</span>
+                      <span className="text-gray-700">Construction documentation</span>
                     </li>
                   </ul>
                 </div>
@@ -449,23 +449,23 @@ export default function TeklaCoursePage() {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>BIM collaboration workflows</span>
+                      <span className="text-gray-700">BIM collaboration workflows</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Model sharing and version control</span>
+                      <span className="text-gray-700">Model sharing and version control</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Clash detection and resolution</span>
+                      <span className="text-gray-700">Clash detection and resolution</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>4D sequencing and project planning</span>
+                      <span className="text-gray-700">4D sequencing and project planning</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Portfolio project and certification</span>
+                      <span className="text-gray-700">Portfolio project and certification</span>
                     </li>
                   </ul>
                 </div>
