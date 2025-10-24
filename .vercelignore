@@ -1,0 +1,59 @@
+# Vercel deployment optimization - exclude unnecessary files
+
+# Development files
+.git/
+node_modules/
+.next/
+.vscode/
+.env*
+
+# Documentation  
+README.md
+AUDIT_RECOMMENDATIONS.md
+
+# Development tools
+*.log
+*.map
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+tests/
+**/*.test.*
+**/*.spec.*
+
+# Cache directories
+.cache/
+tmp/
+temp/
+
+# Source maps and debug files
+**/*.map
+**/*.d.ts.map
+
+# Large development dependencies
+cypress/
+coverage/
+.nyc_output/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts that aren't needed
+dist/
+build/
+out/

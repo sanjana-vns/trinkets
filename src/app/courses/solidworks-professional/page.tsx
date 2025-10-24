@@ -1,636 +1,744 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import RelatedCourses from '@/components/RelatedCourses'
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Building, Zap, Target, Cpu, Trophy, Settings, Globe, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'SolidWorks Professional Course - Master 3D CAD Design, Simulation, PDM | Trinkets Institute',
-  description: 'Advanced SolidWorks Professional course with 3D modeling, simulation, sheet metal, surfacing, PDM. 100% placement assistance in product design, automotive, aerospace industries. CSWA/CSWP certification prep.',
+  title: 'SolidWorks Professional Course in Mumbai | Best CSWA CSWP Training Institute | Trinkets Institute',
+  description: 'Leading SolidWorks Professional Course in Mumbai with CSWA/CSWP certification, 3D CAD modeling, simulation, PDM training. 100% job placement in Mumbai\'s top product design companies. Expert faculty, hands-on projects.',
   keywords: [
-    'SolidWorks professional course',
-    'SolidWorks training',
-    'SolidWorks certification',
-    'CSWA certification',
-    'CSWP certification',
-    '3D CAD modeling course',
-    'SolidWorks simulation',
-    'product design course',
-    'mechanical design training',
-    'SolidWorks PDM',
-    'parametric modeling',
-    'assembly design',
-    'sheet metal design',
-    'surface modeling',
-    'finite element analysis',
-    'CAD design training',
-    'SolidWorks professional certification',
-    'mechanical engineering design',
-    'automotive design course',
-    'aerospace design training',
-    '3D modeling course',
-    'SolidWorks advanced training',
-    'design for manufacturing',
-    'product development course',
-    'CAD engineer training',
-    'SolidWorks expert',
-    'mechanical CAD course',
-    'industrial design training',
-    'SolidWorks flow simulation',
-    'motion analysis',
-    'stress analysis course',
-    'design optimization',
-    'SolidWorks professional institute'
-  ],
-  authors: [{ name: 'Trinkets Institute' }],
-  creator: 'Trinkets Institute',
-  publisher: 'Trinkets Institute',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://trinketsinstitute.com'),
-  alternates: {
-    canonical: '/courses/solidworks-professional',
-  },
+    'SolidWorks Professional Course in Mumbai',
+    'SolidWorks training Mumbai',
+    'CSWA certification Mumbai',
+    'CSWP certification Mumbai',
+    'SolidWorks institute Mumbai',
+    'best SolidWorks course Mumbai',
+    'SolidWorks classes Mumbai',
+    'CAD training Mumbai',
+    '3D modeling course Mumbai',
+    'product design course Mumbai',
+    'mechanical design training Mumbai',
+    'SolidWorks simulation Mumbai',
+    'SolidWorks PDM training Mumbai',
+    'engineering course Mumbai',
+    'SolidWorks professional training Mumbai',
+    'CSWA CSWP exam preparation Mumbai',
+    'SolidWorks course fees Mumbai',
+    'SolidWorks placement Mumbai',
+    'automotive design course Mumbai',
+    'manufacturing design Mumbai',
+    'mechanical engineering course Mumbai',
+    'CAD institute Mumbai',
+    'product development course Mumbai',
+    'design engineering training Mumbai',
+    'SolidWorks career Mumbai',
+    'Mumbai SolidWorks jobs',
+    'SolidWorks freelancing Mumbai',
+    'industrial design course Mumbai',
+    'machine design course Mumbai',
+    'sheet metal design Mumbai',
+    'surface modeling Mumbai',
+    'finite element analysis Mumbai',
+    'motion simulation Mumbai',
+    'SolidWorks expert Mumbai',
+    'design consultant training Mumbai'
+  ].join(', '),
   openGraph: {
-    title: 'SolidWorks Professional Course - Master 3D CAD Design, Simulation, PDM | Trinkets Institute',
-    description: 'Join our advanced SolidWorks Professional course. Master 3D modeling, simulation, PDM with CSWA/CSWP certification prep. 100% placement assistance in product design industry.',
+    title: 'SolidWorks Professional Course in Mumbai | Best CSWA CSWP Training Institute',
+    description: 'Master SolidWorks Professional in Mumbai with hands-on training, CSWA/CSWP certification, and guaranteed job placement. Join Mumbai\'s premier CAD design institute.',
     url: 'https://trinketsinstitute.com/courses/solidworks-professional',
     siteName: 'Trinkets Institute',
     images: [
       {
-        url: '/images/solidworks-professional-course-og.jpg',
+        url: '/images/courses/solidworks-professional-mumbai.jpg',
         width: 1200,
         height: 630,
-        alt: 'SolidWorks Professional Course - Trinkets Institute',
+        alt: 'SolidWorks Professional Course in Mumbai - Trinkets Institute',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SolidWorks Professional Course - Master Advanced 3D Design | Trinkets Institute',
-    description: 'Master SolidWorks Professional with 3D modeling, simulation, PDM. CSWA/CSWP certification prep with 100% placement assistance.',
-    images: ['/images/solidworks-professional-course-twitter.jpg'],
-    creator: '@TrinketsInstitute',
+    title: 'SolidWorks Professional Course in Mumbai | Best CAD Training Institute',
+    description: 'Master SolidWorks Professional with CSWA/CSWP certification in Mumbai. Expert training, real projects, guaranteed placement.',
+    images: ['/images/courses/solidworks-professional-mumbai.jpg'],
+  },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/courses/solidworks-professional',
   },
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
-}
+};
 
-export default function SolidWorksProCoursePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "SolidWorks Professional Course",
-    "description": "Advanced training in professional 3D CAD design using SolidWorks with simulation, PDM, and certification preparation",
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Trinkets Institute",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Engineering Hub",
-        "addressLocality": "Tech City",
-        "addressRegion": "State",
-        "postalCode": "12345",
-        "addressCountry": "IN"
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Course',
+      '@id': 'https://trinketsinstitute.com/courses/solidworks-professional#course',
+      name: 'SolidWorks Professional Course in Mumbai',
+      description: 'Comprehensive SolidWorks Professional training course in Mumbai with CSWA/CSWP certification, 3D CAD modeling, simulation, PDM, and guaranteed job placement assistance.',
+      provider: {
+        '@type': 'Organization',
+        name: 'Trinkets Institute',
+        '@id': 'https://trinketsinstitute.com/#organization'
+      },
+      courseMode: ['in-person', 'online'],
+      educationalLevel: 'Professional',
+      coursePrerequisites: 'Basic engineering knowledge and computer proficiency',
+      timeRequired: 'P5M',
+      offers: {
+        '@type': 'Offer',
+        category: 'SolidWorks Professional Training',
+        availabilityEnds: '2025-12-31',
+        availabilityStarts: '2025-10-24'
+      },
+      location: {
+        '@type': 'Place',
+        name: 'Trinkets Institute Mumbai',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Mumbai',
+          addressRegion: 'Maharashtra',
+          addressCountry: 'IN'
+        }
+      },
+      teaches: [
+        'SolidWorks 3D CAD Modeling',
+        'Advanced Assembly Design',
+        'CSWA Certification Preparation',
+        'CSWP Certification Preparation',
+        'SolidWorks Simulation and FEA',
+        'Sheet Metal Design',
+        'Surface Modeling',
+        'Product Data Management (PDM)',
+        'Motion Analysis',
+        'Design for Manufacturing'
+      ]
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://trinketsinstitute.com/#organization',
+      name: 'Trinkets Institute',
+      url: 'https://trinketsinstitute.com',
+      logo: 'https://trinketsinstitute.com/images/logo.png',
+      description: 'Premier engineering and CAD training institute in Mumbai specializing in SolidWorks, AutoCAD, and advanced design courses',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Mumbai',
+        addressRegion: 'Maharashtra',
+        addressCountry: 'IN'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+91-9876543210',
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi', 'Marathi']
       }
     },
-    "offers": {
-      "@type": "Offer",
-      "category": "Professional Training",
-      "availability": "https://schema.org/InStock"
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://trinketsinstitute.com/courses/solidworks-professional#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://trinketsinstitute.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Courses',
+          item: 'https://trinketsinstitute.com/courses'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'SolidWorks Professional Course',
+          item: 'https://trinketsinstitute.com/courses/solidworks-professional'
+        }
+      ]
     },
-    "courseMode": ["classroom", "online"],
-    "educationalLevel": "Professional",
-    "teaches": [
-      "SolidWorks 3D Modeling",
-      "Advanced Assembly Design",
-      "Simulation and Analysis",
-      "Sheet Metal Design",
-      "Surface Modeling",
-      "PDM Implementation",
-      "CSWA/CSWP Certification",
-      "Product Development"
-    ],
-    "timeRequired": "P5M",
-    "inLanguage": "en-IN",
-    "isAccessibleForFree": false,
-    "educationalUse": "Professional Development",
-    "audience": {
-      "@type": "EducationalAudience",
-      "educationalRole": "student"
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://trinketsinstitute.com/courses/solidworks-professional#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the best SolidWorks Professional Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Trinkets Institute offers the best SolidWorks Professional Course in Mumbai with comprehensive training in 3D CAD modeling, CSWA/CSWP certification preparation, simulation, PDM, and guaranteed job placement assistance.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the duration of SolidWorks Professional Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our SolidWorks Professional Course in Mumbai spans 5 months (160 hours) with flexible timing options including weekday, weekend, and fast-track batches for working professionals.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you provide CSWA and CSWP certification preparation in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, our SolidWorks Professional Course in Mumbai includes comprehensive CSWA and CSWP certification preparation with practice tests, mock exams, and exam strategies.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What career opportunities are available after SolidWorks Professional Course in Mumbai?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'After completing our SolidWorks Professional Course in Mumbai, you can work as Product Design Engineer, CAD Designer, Mechanical Design Engineer, R&D Engineer, or Design Consultant in Mumbai\'s automotive, aerospace, and manufacturing industries.'
+          }
+        }
+      ]
     }
-  }
+  ]
+};
 
+export default function SolidWorksProCoursePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-600 to-emerald-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              SolidWorks Professional Course
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-slate-100">
-              Master Advanced 3D CAD Design, Simulation & Product Development
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <div className="bg-white/20 px-6 py-3 rounded-lg">
-                <span className="font-semibold">Duration: </span>5 Months
-              </div>
-              <div className="bg-white/20 px-6 py-3 rounded-lg">
-                <span className="font-semibold">Mode: </span>Classroom/Online
-              </div>
-              <div className="bg-white/20 px-6 py-3 rounded-lg">
-                <span className="font-semibold">Certification: </span>CSWA/CSWP Prep
-              </div>
-            </div>
-            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-              <Link href="/contact" className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Enroll Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Overview */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Course Overview</h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Our comprehensive SolidWorks Professional course is designed to master advanced 3D CAD design and product development. 
-                This program covers everything from fundamental parametric modeling to advanced simulation and PDM implementation, 
-                preparing you for industry certifications and career advancement in product design and engineering.
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <nav className="flex justify-center mb-8 text-sm" aria-label="Breadcrumb">
+                <ol className="flex items-center space-x-2">
+                  <li><Link href="/" className="hover:text-blue-300 transition-colors">Home</Link></li>
+                  <li className="text-blue-300">/</li>
+                  <li><Link href="/courses" className="hover:text-blue-300 transition-colors">Courses</Link></li>
+                  <li className="text-blue-300">/</li>
+                  <li className="text-blue-200">SolidWorks Professional Course</li>
+                </ol>
+              </nav>
+              
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Master <span className="text-yellow-400">SolidWorks Professional Course</span> in Mumbai
+              </h1>
+              <p className="text-xl mb-8 text-blue-100 leading-relaxed">
+                Join Mumbai&apos;s premier SolidWorks Professional Course with CSWA/CSWP certification, advanced 3D CAD modeling, 
+                simulation training, and guaranteed job placement in top product design companies.
               </p>
-              
-              <h3 className="text-xl font-semibold mb-4 text-slate-600">What You&apos;ll Master</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Advanced 3D parametric modeling and feature-based design</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Complex assembly design with mates and constraints</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Sheet metal design and weldment structures</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Advanced surface modeling and organic shapes</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Simulation and finite element analysis (FEA)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Motion analysis and mechanism design</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>PDM (Product Data Management) implementation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>CSWA and CSWP certification preparation</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-emerald-600">Course Highlights</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-emerald-50 p-4 rounded-lg text-center">
-                  <h4 className="font-semibold text-emerald-800">Duration</h4>
-                  <p className="text-emerald-600">5 Months</p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <div className="flex items-center bg-white/10 px-4 py-2 rounded-full">
+                  <MapPin className="w-5 h-5 mr-2" />
+                  <span>Mumbai Location</span>
                 </div>
-                <div className="bg-slate-50 p-4 rounded-lg text-center">
-                  <h4 className="font-semibold text-slate-800">Mode</h4>
-                  <p className="text-slate-600">Classroom/Online</p>
+                <div className="flex items-center bg-white/10 px-4 py-2 rounded-full">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>5 Months Duration</span>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <h4 className="font-semibold text-blue-800">Certification</h4>
-                  <p className="text-blue-600">CSWA/CSWP Prep</p>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg text-center">
-                  <h4 className="font-semibold text-green-800">Projects</h4>
-                  <p className="text-green-600">15+ Real Products</p>
+                <div className="flex items-center bg-white/10 px-4 py-2 rounded-full">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span>CSWA/CSWP Certification</span>
                 </div>
               </div>
-              
-              <div className="mt-6 bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-800 mb-3">Industry Applications</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-slate-100 text-slate-800 px-3 py-1 rounded-full text-sm">Product Design</span>
-                  <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Automotive</span>
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Aerospace</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Manufacturing</span>
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Consumer Goods</span>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Medical Devices</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Enroll Now
+                </Link>
+                <Link 
+                  href="/courses" 
+                  className="border border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  View All Courses
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Software Training Modules */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Advanced Training Modules</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-slate-500 to-slate-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Core SolidWorks</h3>
-              <p className="text-slate-100 mb-4">Advanced 3D Modeling & Assembly</p>
-              <ul className="space-y-2 text-slate-100 text-sm">
-                <li>• Advanced Part Modeling</li>
-                <li>• Complex Assemblies</li>
-                <li>• Configurations & Design Tables</li>
-                <li>• Advanced Mates</li>
-                <li>• Drawing Documentation</li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Simulation & Analysis</h3>
-              <p className="text-emerald-100 mb-4">FEA & Motion Analysis</p>
-              <ul className="space-y-2 text-emerald-100 text-sm">
-                <li>• Static Stress Analysis</li>
-                <li>• Thermal Analysis</li>
-                <li>• Frequency Analysis</li>
-                <li>• Motion Simulation</li>
-                <li>• Flow Simulation Basics</li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Specialized Design</h3>
-              <p className="text-blue-100 mb-4">Sheet Metal & Surfacing</p>
-              <ul className="space-y-2 text-blue-100 text-sm">
-                <li>• Sheet Metal Design</li>
-                <li>• Surface Modeling</li>
-                <li>• Weldments</li>
-                <li>• Plastic Features</li>
-                <li>• Mold Design Basics</li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">PDM & Collaboration</h3>
-              <p className="text-green-100 mb-4">Data Management & Workflow</p>
-              <ul className="space-y-2 text-green-100 text-sm">
-                <li>• PDM Setup & Admin</li>
-                <li>• Workflow Management</li>
-                <li>• Version Control</li>
-                <li>• Team Collaboration</li>
-                <li>• File Management</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certification Preparation */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Certification Preparation</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-slate-50 to-emerald-50 p-6 rounded-lg border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-700 mb-4">CSWA Certification</h3>
-              <p className="text-gray-600 mb-4">Certified SolidWorks Associate - Entry level certification</p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-slate-500 rounded-full mr-3 mt-2"></span>
-                  <span>Basic part modeling and modifications</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-slate-500 rounded-full mr-3 mt-2"></span>
-                  <span>Assembly modeling and mate creation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-slate-500 rounded-full mr-3 mt-2"></span>
-                  <span>Drawing creation and annotation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-slate-500 rounded-full mr-3 mt-2"></span>
-                  <span>Practice tests and exam strategies</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-6 rounded-lg border border-emerald-200">
-              <h3 className="text-2xl font-bold text-emerald-700 mb-4">CSWP Certification</h3>
-              <p className="text-gray-600 mb-4">Certified SolidWorks Professional - Advanced certification</p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Advanced part modeling techniques</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Complex assembly modifications</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Advanced drawing views and dimensions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3 mt-2"></span>
-                  <span>Mock exams and performance analysis</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Curriculum */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Detailed Curriculum</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-slate-600">Module 1-2: Foundation & Advanced Modeling</h3>
-              <div className="space-y-4">
-                <div className="border-l-4 border-slate-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">SolidWorks Fundamentals</h4>
-                  <p className="text-gray-600 text-sm">Interface, sketching, basic features, design intent</p>
-                </div>
-                <div className="border-l-4 border-slate-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">Advanced Part Modeling</h4>
-                  <p className="text-gray-600 text-sm">Complex features, patterns, configurations, design tables</p>
-                </div>
-                <div className="border-l-4 border-slate-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">Assembly Design</h4>
-                  <p className="text-gray-600 text-sm">Advanced mates, sub-assemblies, large assembly management</p>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-semibold mb-4 mt-8 text-emerald-600">Module 3-4: Specialized Applications</h3>
-              <div className="space-y-4">
-                <div className="border-l-4 border-emerald-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">Sheet Metal & Weldments</h4>
-                  <p className="text-gray-600 text-sm">Flanges, bends, forming tools, weldment profiles</p>
-                </div>
-                <div className="border-l-4 border-emerald-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">Surface Modeling</h4>
-                  <p className="text-gray-600 text-sm">Complex surfaces, boundary surfaces, organic shapes</p>
-                </div>
-                <div className="border-l-4 border-emerald-500 pl-4">
-                  <h4 className="font-semibold text-gray-800">Drawing & Documentation</h4>
-                  <p className="text-gray-600 text-sm">Advanced views, annotations, GD&T, standards</p>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">Module 5: Simulation & Analysis</h3>
-              <div className="space-y-4">
-                <div className="bg-slate-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-slate-800 mb-2">SolidWorks Simulation (Weeks 17-20)</h4>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• Static stress analysis and safety factors</li>
-                    <li>• Thermal analysis and heat transfer</li>
-                    <li>• Frequency and buckling analysis</li>
-                    <li>• Non-linear and contact analysis</li>
-                  </ul>
-                </div>
-                <div className="bg-emerald-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-emerald-800 mb-2">Motion Analysis (Weeks 21-22)</h4>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• Mechanism design and constraints</li>
-                    <li>• Motion studies and animations</li>
-                    <li>• Force and acceleration analysis</li>
-                    <li>• Optimization studies</li>
-                  </ul>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800 mb-2">PDM & Collaboration (Weeks 23-24)</h4>
-                  <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• PDM installation and setup</li>
-                    <li>• Workflow design and approval process</li>
-                    <li>• Version control and file management</li>
-                    <li>• Team collaboration tools</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="mt-6 bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2">Capstone Project & Certification</h4>
-                <p className="text-gray-600 text-sm">
-                  Complete product development project from concept to manufacturing with simulation validation, 
-                  followed by intensive CSWA/CSWP exam preparation and practice tests.
+        {/* Course Overview */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Choose Our SolidWorks Professional Course in Mumbai?
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Mumbai&apos;s most comprehensive SolidWorks Professional Course designed to make you industry-ready with 
+                  advanced 3D CAD skills, CSWA/CSWP certification, and guaranteed job placement assistance.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Career Prospects */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Career Prospects & Job Opportunities</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-slate-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-slate-800 mb-3">Senior Design Engineer</h3>
-              <p className="text-sm text-gray-500">Lead product development and design optimization projects</p>
-            </div>
-            <div className="text-center p-6 bg-emerald-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-emerald-800 mb-3">Product Development Engineer</h3>
-              <p className="text-sm text-gray-500">Develop innovative products from concept to market</p>
-            </div>
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">CAD/CAE Specialist</h3>
-              <p className="text-sm text-gray-500">Specialize in advanced modeling and simulation analysis</p>
-            </div>
-            <div className="text-center p-6 bg-green-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-green-800 mb-3">Mechanical Design Consultant</h3>
-              <p className="text-sm text-gray-500">Provide expert design solutions and technical consulting</p>
-            </div>
-            <div className="text-center p-6 bg-purple-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-purple-800 mb-3">R&D Engineer</h3>
-              <p className="text-sm text-gray-500">Research and develop cutting-edge products and technologies</p>
-            </div>
-            <div className="text-center p-6 bg-orange-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-orange-800 mb-3">Design Manager</h3>
-              <p className="text-sm text-gray-500">Lead design teams and manage product development cycles</p>
-            </div>
-          </div>
-          
-          <div className="mt-8 bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-center text-gray-800 mb-6">Top Hiring Companies</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
-              <div className="bg-white p-3 rounded shadow">Tesla</div>
-              <div className="bg-white p-3 rounded shadow">Apple</div>
-              <div className="bg-white p-3 rounded shadow">Boeing</div>
-              <div className="bg-white p-3 rounded shadow">General Electric</div>
-              <div className="bg-white p-3 rounded shadow">Ford Motor</div>
-              <div className="bg-white p-3 rounded shadow">Siemens</div>
-              <div className="bg-white p-3 rounded shadow">Honeywell</div>
-              <div className="bg-white p-3 rounded shadow">Caterpillar</div>
-              <div className="bg-white p-3 rounded shadow">John Deere</div>
-              <div className="bg-white p-3 rounded shadow">3M Company</div>
-              <div className="bg-white p-3 rounded shadow">Johnson & Johnson</div>
-              <div className="bg-white p-3 rounded shadow">Philips</div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div className="bg-blue-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <Cpu className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Advanced 3D CAD Modeling</h3>
+                  <p className="text-gray-600">
+                    Master professional-grade 3D CAD modeling, parametric design, advanced assembly creation, 
+                    and complex surface modeling techniques used by Mumbai&apos;s top product design companies.
+                  </p>
+                </div>
 
-      {/* Placement Support */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-slate-500 to-emerald-500 rounded-lg shadow-lg p-8 text-white">
-          <h2 className="text-3xl font-bold text-center mb-8">100% Placement Support</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">1200+</div>
-              <div className="text-slate-100">Students Placed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">350+</div>
-              <div className="text-slate-100">Hiring Partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-slate-100">Placement Rate</div>
-            </div>
-          </div>
-          
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Professional Portfolio</h3>
-              <p className="text-slate-100 text-sm">Build impressive design portfolio with real product development projects</p>
-            </div>
-            <div className="bg-white/20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Industry Certification</h3>
-              <p className="text-slate-100 text-sm">CSWA/CSWP certified professionals with proven expertise</p>
-            </div>
-            <div className="bg-white/20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Premium Partnerships</h3>
-              <p className="text-slate-100 text-sm">Exclusive tie-ups with Fortune 500 and leading product companies</p>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div className="bg-green-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                    <Trophy className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">CSWA/CSWP Certification</h3>
+                  <p className="text-gray-600">
+                    Comprehensive preparation for Certified SolidWorks Associate (CSWA) and Certified SolidWorks 
+                    Professional (CSWP) exams with mock tests and expert guidance.
+                  </p>
+                </div>
 
-      {/* Internal Links Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Explore More at Trinkets Institute</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <h3 className="text-lg font-semibold mb-3 text-blue-600">All Engineering Courses</h3>
-              <p className="text-gray-600 mb-4">Explore our complete range of advanced engineering courses.</p>
-              <Link href="/courses" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                View All Courses
-              </Link>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <h3 className="text-lg font-semibold mb-3 text-green-600">Placement Services</h3>
-              <p className="text-gray-600 mb-4">Learn about our comprehensive placement assistance program.</p>
-              <Link href="/placements" className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                Placement Details
-              </Link>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <h3 className="text-lg font-semibold mb-3 text-purple-600">Student Success Stories</h3>
-              <p className="text-gray-600 mb-4">Read testimonials from our successful SolidWorks graduates.</p>
-              <Link href="/testimonials" className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
-                Read Stories
-              </Link>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <h3 className="text-lg font-semibold mb-3 text-orange-600">Corporate Training</h3>
-              <p className="text-gray-600 mb-4">Customized SolidWorks training for your design teams.</p>
-              <Link href="/corporate-training" className="inline-block bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/courses" className="inline-block bg-gradient-to-r from-slate-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-slate-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              🎯 Discover All Our Engineering Programs
-            </Link>
-          </div>
-        </div>
-      </section>
+                <div className="bg-purple-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <Settings className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Simulation & Analysis</h3>
+                  <p className="text-gray-600">
+                    Learn advanced SolidWorks Simulation, Finite Element Analysis (FEA), motion analysis, 
+                    and thermal analysis for real-world engineering applications.
+                  </p>
+                </div>
 
-      {/* Related Courses Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <RelatedCourses 
-            currentCourse="/courses/solidworks-professional"
-          />
-        </div>
-      </section>
+                <div className="bg-orange-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Expert Faculty Mumbai</h3>
+                  <p className="text-gray-600">
+                    Learn from certified SolidWorks professionals and industry experts with 15+ years experience 
+                    in product design and manufacturing in Mumbai&apos;s automotive and aerospace sectors.
+                  </p>
+                </div>
 
-      {/* Enrollment CTA */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-slate-600 to-emerald-600 rounded-lg shadow-lg p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Become a SolidWorks Professional?</h2>
-          <p className="text-xl mb-6">Join the elite group of certified SolidWorks professionals leading product innovation.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Next Batch Starts: </span>20th November 2025
-            </div>
-            <div className="bg-white/20 px-6 py-3 rounded-lg">
-              <span className="font-semibold">Limited Seats: </span>Only 25 Students
-            </div>
-          </div>
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-            <Link href="/contact" className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Enroll Now - Secure Your Spot
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-600 transition-colors">
-              Schedule Free Demo
-            </Link>
-          </div>
-          <p className="text-slate-100 text-sm mt-4">
-            🎯 Special Offer: Get CSWA Exam Voucher FREE with Course Enrollment - <Link href="/contact" className="underline hover:text-white">Contact Us Today!</Link>
-          </p>
-        </div>
-      </section>
+                <div className="bg-red-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                    <Briefcase className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Mumbai Job Placement</h3>
+                  <p className="text-gray-600">
+                    100% job placement assistance with our network of 500+ product design and manufacturing 
+                    companies across Mumbai, Pune, and Maharashtra region.
+                  </p>
+                </div>
 
-      {/* Browse All Courses Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Explore More Engineering Courses</h2>
-          <p className="text-gray-600 mb-6">Discover our comprehensive range of professional engineering courses designed for career growth</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/courses" className="inline-block bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-colors">
-              View All Courses
-            </Link>
-            <Link href="/courses#courses-hero" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Courses Overview
-            </Link>
+                <div className="bg-indigo-50 p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Industry Projects</h3>
+                  <p className="text-gray-600">
+                    Work on real Mumbai industry projects from automotive, aerospace, consumer goods, and 
+                    medical device companies to build professional portfolio.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  )
+        </section>
+
+        {/* Course Curriculum */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  SolidWorks Professional Course Curriculum in Mumbai
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive 5-month curriculum covering all aspects of professional SolidWorks training from 
+                  fundamentals to advanced certification preparation.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 1: SolidWorks Fundamentals</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">SolidWorks interface and workspace customization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Advanced sketching techniques and constraints</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">3D feature creation and parametric modeling</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Design intent and feature trees</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Part configurations and design tables</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 2: Advanced Assembly Design</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Complex assembly creation and management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Advanced mates and mechanical relationships</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Large assembly performance optimization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Sub-assemblies and component patterns</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Assembly configurations and exploded views</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 3: Sheet Metal & Surfacing</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Sheet metal design and bend calculations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Advanced surface modeling techniques</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Weldment structures and framework design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Complex organic shapes and NURBS</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Surface repair and quality analysis</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 4: Simulation & Analysis</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Static stress analysis and safety factors</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Thermal analysis and heat transfer</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Frequency and buckling analysis</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Motion analysis and mechanism simulation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Design optimization and study validation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 5: CSWA Certification Prep</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">CSWA exam format and requirements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Part modeling and modification exercises</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Assembly modeling and mates practice</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Drawing creation and annotation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Practice tests and time management</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-6">Module 6: CSWP Certification Prep</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">CSWP exam structure and strategy</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Advanced part modeling challenges</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Complex assembly modifications</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Advanced drawing views and dimensions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">Mock exams and performance analysis</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Placement Statistics */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Mumbai Placement Success Statistics
+                </h2>
+                <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+                  Exclusive placement data for SolidWorks Professional Course graduates in Mumbai&apos;s thriving 
+                  product design and manufacturing industry.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-4 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">98%</div>
+                  <div className="text-blue-200">Placement Rate Mumbai</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">₹4.2L</div>
+                  <div className="text-blue-200">Average Salary Mumbai</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">500+</div>
+                  <div className="text-blue-200">Hiring Partners Mumbai</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">2400+</div>
+                  <div className="text-blue-200">Students Placed</div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white/10 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold mb-4">Top Hiring Companies in Mumbai</h3>
+                  <ul className="space-y-2 text-blue-100">
+                    <li>• Tata Motors (Automotive Design)</li>
+                    <li>• Mahindra Group (Product Development)</li>
+                    <li>• L&T Technology Services</li>
+                    <li>• Bajaj Auto (Design Engineering)</li>
+                    <li>• Godrej & Boyce (Industrial Design)</li>
+                    <li>• Siemens Mumbai (CAD Solutions)</li>
+                  </ul>
+                </div>
+                <div className="bg-white/10 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold mb-4">Popular Job Roles Mumbai</h3>
+                  <ul className="space-y-2 text-blue-100">
+                    <li>• Product Design Engineer</li>
+                    <li>• CAD Designer/Specialist</li>
+                    <li>• Mechanical Design Engineer</li>
+                    <li>• R&D Engineer</li>
+                    <li>• Design Consultant</li>
+                    <li>• Senior CAD Engineer</li>
+                  </ul>
+                </div>
+                <div className="bg-white/10 p-6 rounded-xl">
+                  <h3 className="text-xl font-semibold mb-4">Mumbai Industry Sectors</h3>
+                  <ul className="space-y-2 text-blue-100">
+                    <li>• Automotive & Auto Components</li>
+                    <li>• Aerospace & Defense</li>
+                    <li>• Consumer Electronics</li>
+                    <li>• Medical Devices</li>
+                    <li>• Pharmaceuticals Equipment</li>
+                    <li>• Industrial Machinery</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-gradient-to-br from-gray-100 via-blue-50 to-slate-100 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-16 left-16 w-40 h-40 border-4 border-blue-600 rounded-lg rotate-12 transform"></div>
+            <div className="absolute bottom-16 right-16 w-32 h-32 border-3 border-gray-600 rounded-lg -rotate-12 transform"></div>
+            <div className="absolute top-1/3 right-1/4 w-20 h-20 border-2 border-blue-400 rounded-full"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-16 h-16 border-2 border-gray-400 rounded-lg rotate-45"></div>
+          </div>
+
+          <div className="container mx-auto px-6 relative">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-3 h-10 bg-blue-600 mr-4 transform rotate-12"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="w-3 h-10 bg-gray-600 ml-4 transform -rotate-12"></div>
+                </div>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Get detailed answers about our <span className="font-semibold text-blue-700">SolidWorks Professional Course in Mumbai</span> and build your CAD design career
+                </p>
+              </div>
+
+              <div className="grid gap-6">
+                {[
+                  {
+                    question: "What is the best SolidWorks Professional Course in Mumbai?",
+                    answer: "Trinkets Institute offers the best SolidWorks Professional Course in Mumbai with comprehensive training in 3D CAD modeling, CSWA/CSWP certification preparation, advanced simulation, surface modeling, and guaranteed job placement assistance in Mumbai's top product design companies."
+                  },
+                  {
+                    question: "What is the duration of SolidWorks Professional Course in Mumbai?",
+                    answer: "Our SolidWorks Professional Course in Mumbai spans 5 months (160 hours) with flexible timing options including weekday sessions (Mon-Fri), weekend intensives (Sat-Sun), and fast-track programs designed for working professionals in Mumbai."
+                  },
+                  {
+                    question: "Do you provide CSWA and CSWP certification preparation in Mumbai?",
+                    answer: "Yes, our SolidWorks Professional Course in Mumbai includes comprehensive CSWA (Certified SolidWorks Associate) and CSWP (Certified SolidWorks Professional) certification preparation with dedicated modules, practice tests, mock exams, and exam strategies."
+                  },
+                  {
+                    question: "What career opportunities are available after SolidWorks Professional Course in Mumbai?",
+                    answer: "After completing our SolidWorks Professional Course in Mumbai, you can work as Product Design Engineer, CAD Designer, Mechanical Design Engineer, R&D Engineer, Design Consultant, or Senior CAD Specialist in Mumbai's automotive, aerospace, consumer goods, and manufacturing industries."
+                  },
+                  {
+                    question: "What is the job placement rate for SolidWorks Professional Course in Mumbai?",
+                    answer: "Our SolidWorks Professional Course in Mumbai achieves 98% placement rate with our network of 500+ hiring partners including Tata Motors, Mahindra Group, L&T Technology Services, Bajaj Auto, and leading product design companies across Mumbai and Maharashtra."
+                  },
+                  {
+                    question: "Which software modules are covered in SolidWorks Professional Course in Mumbai?",
+                    answer: "Our SolidWorks Professional Course in Mumbai covers SolidWorks Premium (latest version), SolidWorks Simulation, Motion Analysis, Sheet Metal Design, Surface Modeling, Weldments, PDM, and extensive CSWA/CSWP certification preparation modules."
+                  }
+                ].map((faq, index) => (
+                  <div key={index} className="group">
+                    <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/60 hover:border-blue-200 transform hover:-translate-y-2 hover:scale-[1.02]">
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-blue-600 to-gray-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <span className="text-white font-bold">Q</span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                            {faq.question}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-12 grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🏆 Mumbai Leader</h4>
+                  <p className="text-blue-100">
+                    Mumbai&apos;s premier SolidWorks training institute with certified instructors and industry partnerships
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🎯 Industry Focus</h4>
+                  <p className="text-gray-100">
+                    Real-world projects from Mumbai&apos;s automotive, aerospace, and product design companies
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                  <h4 className="text-xl font-semibold mb-3">🚀 Career Growth</h4>
+                  <p className="text-purple-100">
+                    CSWA/CSWP certification pathway with continuous learning and advanced specialization programs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Start Your SolidWorks Professional Course in Mumbai?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Join thousands of successful CAD designers who have launched their careers with our expert SolidWorks training
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <div className="flex items-center bg-white/10 px-6 py-3 rounded-lg">
+                  <Phone className="w-5 h-5 mr-3" />
+                  <span>+91-9876543210</span>
+                </div>
+                <div className="flex items-center bg-white/10 px-6 py-3 rounded-lg">
+                  <Mail className="w-5 h-5 mr-3" />
+                  <span>info@trinketsinstitute.com</span>
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Enroll Today
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="border border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Learn About Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }
