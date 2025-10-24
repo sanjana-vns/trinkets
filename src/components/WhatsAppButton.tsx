@@ -5,7 +5,7 @@ import { MessageCircle, X } from 'lucide-react'
 interface WhatsAppButtonProps {
   phoneNumber?: string
   message?: string
-  position?: 'bottom-right' | 'bottom-left'
+  position?: 'bottom-right' | 'bottom-left' | 'bottom-center'
   size?: 'small' | 'medium' | 'large'
 }
 
@@ -65,8 +65,9 @@ const WhatsAppButton = ({
   }
 
   const positionClasses = {
-    'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6'
+    'bottom-right': 'bottom-20 right-6', // Moved higher to avoid reload button
+    'bottom-left': 'bottom-20 left-6',   // Moved higher to avoid reload button  
+    'bottom-center': 'bottom-20 left-1/2 transform -translate-x-1/2'
   }
 
   const sizeClasses = {

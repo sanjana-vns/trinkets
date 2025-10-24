@@ -299,11 +299,11 @@ export default function RootLayout({
         <Map />
         <Footer />
         
-        {/* WhatsApp Button - appears on all 56 pages */}
+        {/* WhatsApp Button - positioned to avoid reload button */}
         <WhatsAppButton 
           phoneNumber="+919820924788"
           message="Hi! I'm interested in engineering courses at Trinkets Institute Mumbai. Please provide course details, fees, and admission process."
-          position="bottom-right"
+          position="bottom-left"
           size="medium"
         />
       </body>
