@@ -10,15 +10,6 @@
       "maxDuration": 30
     }
   },
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next",
-      "config": {
-        "zeroConfig": true
-      }
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
