@@ -285,7 +285,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <Building className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Structural Engineering Focus</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Structural Engineering Focus</h3>
                   <p className="text-gray-600">
                     Master steel and concrete structure modeling, design principles, and industry standards 
                     with our specialized structural engineering approach.
@@ -296,7 +296,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Expert Instructors</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Expert Instructors</h3>
                   <p className="text-gray-600">
                     Learn from certified Tekla professionals with 15+ years of experience in major 
                     infrastructure and construction projects across Mumbai.
@@ -307,7 +307,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <Monitor className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">BIM Integration</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">BIM Integration</h3>
                   <p className="text-gray-600">
                     Learn advanced BIM workflows, clash detection, and collaborative design processes 
                     essential for modern construction projects.
@@ -318,7 +318,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <Award className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Industry Certification</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Industry Certification</h3>
                   <p className="text-gray-600">
                     Receive recognized Tekla certification that validates your structural engineering 
                     skills and enhances your career prospects in Mumbai&apos;s construction industry.
@@ -329,7 +329,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
                     <Briefcase className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Job Placement</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Job Placement</h3>
                   <p className="text-gray-600">
                     100% job placement assistance with our network of 300+ construction and engineering 
                     companies across Mumbai and Maharashtra region.
@@ -340,7 +340,7 @@ export default function TeklaCoursePage() {
                   <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Live Projects</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Live Projects</h3>
                   <p className="text-gray-600">
                     Work on real Mumbai infrastructure projects including bridges, high-rises, and 
                     industrial structures to build practical experience.
