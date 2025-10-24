@@ -2,39 +2,58 @@ import { Metadata } from "next"
 import Link from "next/link"
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
-import LazySection from '@/components/LazySection'
-import ErrorBoundary from '@/components/ErrorBoundary'
-import ReloadButton from '@/components/ReloadButton'
 
-// Ultra-lightweight mobile hero for instant loading
+// Lightweight loading fallbacks
+const LoadingHero = () => (
+  <section className="min-h-[60vh] bg-gradient-to-br from-slate-900 to-blue-900 flex items-center justify-center">
+    <div className="text-center text-white space-y-4 animate-pulse">
+      <div className="w-64 h-8 bg-white/20 rounded mx-auto"></div>
+      <div className="w-48 h-6 bg-white/10 rounded mx-auto"></div>
+      <div className="w-32 h-12 bg-blue-600/50 rounded mx-auto"></div>
+    </div>
+  </section>
+)
+
+const LoadingSection = ({ height = "h-64" }: { height?: string }) => (
+  <div className={`${height} bg-gray-50 animate-pulse flex items-center justify-center`}>
+    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+)
+
+// Optimized dynamic imports with better loading states
 const MobilePlacementHero = dynamic(() => import('@/components/placement/MobilePlacementHero'), {
   ssr: false,
+  loading: LoadingHero
 })
 
-// Full hero for desktop  
 const PlacementHero = dynamic(() => import('@/components/placement/PlacementHero'), {
   ssr: false,
+  loading: LoadingHero
 })
 
-// Other components load with lazy intersection observer
 const PlacementStats = dynamic(() => import('@/components/placement/PlacementStats'), {
   ssr: false,
+  loading: () => <LoadingSection height="h-32" />
 })
 
 const PlacementProcess = dynamic(() => import('@/components/placement/PlacementProcess'), {
   ssr: false,
+  loading: () => <LoadingSection height="h-96" />
 })
 
 const PlacementSuccess = dynamic(() => import('@/components/placement/PlacementSuccess'), {
   ssr: false,
+  loading: () => <LoadingSection height="h-[600px]" />
 })
 
 const PlacementPartners = dynamic(() => import('@/components/placement/PlacementPartners'), {
   ssr: false,
+  loading: () => <LoadingSection height="h-64" />
 })
 
 const PlacementTestimonials = dynamic(() => import('@/components/placement/PlacementTestimonials'), {
   ssr: false,
+  loading: () => <LoadingSection height="h-96" />
 })
 
 export const metadata: Metadata = {
@@ -231,43 +250,41 @@ export default function PlacementsPage() {
         {/* SEO H1 for Placements page */}
         <h1 className="sr-only">Engineering Placements | 100% Job Placement Assistance | Trinkets Institute Mumbai</h1>
         
-        <ErrorBoundary>
-          <Suspense fallback={<div className="h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 animate-pulse" />}>
-            {/* Mobile-first hero for performance */}
-            <div className="block md:hidden">
-              <section aria-label="Mobile placement hero">
-                <MobilePlacementHero />
-              </section>
-            </div>
-            
-            {/* Desktop hero */}
-            <div className="hidden md:block">
-              <section aria-label="Desktop placement hero">
-                <PlacementHero />
-              </section>
-            </div>
-          </Suspense>
+        {/* Hero Section - Mobile Optimized */}
+        <Suspense fallback={<LoadingHero />}>
+          <div className="block md:hidden">
+            <MobilePlacementHero />
+          </div>
+          
+          <div className="hidden md:block">
+            <PlacementHero />
+          </div>
+        </Suspense>
 
-          <section aria-label="Placement statistics">
-            <PlacementStats />
-          </section>
+        {/* Stats Section */}
+        <Suspense fallback={<LoadingSection height="h-32" />}>
+          <PlacementStats />
+        </Suspense>
 
-          <section aria-label="Placement process">
-            <PlacementProcess />
-          </section>
+        {/* Process Section */}
+        <Suspense fallback={<LoadingSection height="h-96" />}>
+          <PlacementProcess />
+        </Suspense>
 
-          <section aria-label="Success stories">
-            <PlacementSuccess />
-          </section>
+        {/* Success Stories */}
+        <Suspense fallback={<LoadingSection height="h-[600px]" />}>
+          <PlacementSuccess />
+        </Suspense>
 
-          <section aria-label="Industry partners">
-            <PlacementPartners />
-          </section>
+        {/* Partners */}
+        <Suspense fallback={<LoadingSection height="h-64" />}>
+          <PlacementPartners />
+        </Suspense>
 
-          <section aria-label="Student testimonials">
-            <PlacementTestimonials />
-          </section>
-        </ErrorBoundary>
+        {/* Testimonials */}
+        <Suspense fallback={<LoadingSection height="h-96" />}>
+          <PlacementTestimonials />
+        </Suspense>
       </main>
     </>
   )

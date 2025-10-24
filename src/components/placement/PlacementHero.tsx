@@ -1,288 +1,138 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { TrendingUp, Users, Award, Building, ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
 const PlacementHero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
 
   const highlights = [
     {
-      icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
+      icon: <TrendingUp className="w-8 md:w-12 h-8 md:h-12 text-blue-400" />,
       number: "98%",
       label: "Placement Success Rate",
       description: "Guaranteed placement assistance"
     },
     {
-      icon: <Users className="w-12 h-12 text-indigo-400" />,
+      icon: <Users className="w-8 md:w-12 h-8 md:h-12 text-indigo-400" />,
       number: "5000+",
       label: "Students Placed",
       description: "Across top engineering companies"
     },
     {
-      icon: <Building className="w-12 h-12 text-purple-400" />,
+      icon: <Building className="w-8 md:w-12 h-8 md:h-12 text-purple-400" />,
       number: "500+",
       label: "Hiring Partners",
       description: "Leading multinational companies"
     },
     {
-      icon: <Award className="w-12 h-12 text-cyan-400" />,
+      icon: <Award className="w-8 md:w-12 h-8 md:h-12 text-cyan-400" />,
       number: "12+ LPA",
       label: "Average Package",
       description: "Competitive salary packages"
     }
   ]
 
-  const careerPaths = [
-    {
-      title: "Mechanical Engineering",
-      roles: ["Design Engineer", "Project Engineer", "Production Engineer"],
-      companies: ["Tata Motors", "Mahindra", "L&T", "Thermax"]
-    },
-    {
-      title: "Electrical Engineering", 
-      roles: ["Control Engineer", "Power Systems Engineer", "Automation Engineer"],
-      companies: ["Siemens", "ABB", "Schneider Electric", "GE"]
-    },
-    {
-      title: "Civil Engineering",
-      roles: ["Structural Engineer", "Construction Manager", "Site Engineer"],
-      companies: ["L&T Construction", "Shapoorji Pallonji", "DLF", "Godrej"]
-    },
-    {
-      title: "Petrochemical Engineering",
-      roles: ["Process Engineer", "Plant Engineer", "Safety Engineer"],
-      companies: ["Reliance", "IOCL", "ONGC", "Chevron"]
-    }
-  ]
-
   useEffect(() => {
     setIsVisible(true)
-    
-    // Simplified auto-sliding - no mobile/motion detection needed
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % careerPaths.length)
-    }, 6000) // Longer interval for better performance
-    return () => clearInterval(interval)
-  }, [careerPaths.length])
+  }, [])
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Simplified Background Elements - Single layer for better performance */}
+    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+      {/* Simplified Background */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-8 lg:py-16">
+      <div className="relative container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
+          <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30"
-              >
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                 <span className="text-blue-100 text-sm font-medium">100% Placement Assistance Guarantee</span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-7xl font-bold leading-tight"
-              >
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-white">Launch Your</span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Engineering Career
                 </span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-xl text-gray-300 leading-relaxed max-w-2xl"
-              >
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
                 Transform your engineering knowledge into a successful career with our comprehensive placement assistance. 
                 Join thousands of engineers who have secured their dream jobs through our proven placement methodology.
-              </motion.p>
+              </p>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-4"
-            >
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/contact"
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 text-center"
               >
-                <span className="flex items-center">
+                <span className="flex items-center justify-center">
                   Get Placement Assistance
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
               <Link 
                 href="/testimonials"
-                className="px-8 py-4 border-2 border-blue-400/50 rounded-xl font-semibold text-blue-100 hover:bg-blue-500/10 transition-all duration-300"
+                className="px-6 md:px-8 py-3 md:py-4 border-2 border-blue-400/50 rounded-xl font-semibold text-blue-100 hover:bg-blue-500/10 transition-all duration-300 text-center"
               >
                 View Success Stories
               </Link>
-            </motion.div>
-
-            {/* Additional Quick Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap gap-6 text-sm"
-            >
-              <Link href="/courses" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
-                📚 View All Courses
-              </Link>
-              <Link href="/about" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
-                🏢 About Institute
-              </Link>
-              <Link href="/services" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
-                ⚙️ Our Services
-              </Link>
-              <Link href="/corporate-training" className="text-blue-300 hover:text-blue-100 transition-colors underline-offset-4 hover:underline">
-                🎯 Corporate Training
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Content - Career Paths Carousel */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Career Opportunities</h3>
-              
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="space-y-6"
-                >
-                  <div className="text-center">
-                    <h4 className="text-xl font-semibold text-blue-300 mb-4">
-                      {careerPaths[currentSlide].title}
-                    </h4>
-                    
-                    <div className="space-y-3 mb-6">
-                      <h5 className="text-white font-medium">Available Roles:</h5>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {careerPaths[currentSlide].roles.map((role, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-blue-500/20 rounded-full text-sm text-blue-200 border border-blue-400/30"
-                          >
-                            {role}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <h5 className="text-white font-medium">Hiring Partners:</h5>
-                      <div className="grid grid-cols-2 gap-2">
-                        {careerPaths[currentSlide].companies.map((company, index) => (
-                          <div
-                            key={index}
-                            className="p-3 bg-white/5 rounded-lg border border-white/10 text-gray-300 text-sm"
-                          >
-                            {company}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Slide Indicators */}
-              <div className="flex justify-center space-x-2 mt-6">
-                {careerPaths.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? 'bg-blue-400 scale-110' : 'bg-white/30'
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-20"
-        >
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {highlights.map((item, index) => (
-              <motion.div
+          {/* Right Content - Highlights Grid */}
+          <div className={`grid grid-cols-2 gap-4 md:gap-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            {highlights.map((highlight, index) => (
+              <div 
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.05 }}
-                className="group p-6 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300"
+                className="group p-4 md:p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="p-3 bg-white/10 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                    {item.icon}
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    {highlight.icon}
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white mb-1">{item.number}</div>
-                    <div className="text-blue-300 font-semibold mb-1">{item.label}</div>
-                    <div className="text-gray-400 text-sm">{item.description}</div>
+                  <div className="space-y-1">
+                    <div className="text-2xl md:text-3xl font-bold text-white">{highlight.number}</div>
+                    <div className="text-sm md:text-base font-semibold text-blue-200">{highlight.label}</div>
+                    <div className="text-xs md:text-sm text-gray-400 hidden md:block">{highlight.description}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
 
-      {/* Simplified Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="flex flex-col items-center space-y-2">
-          <span className="text-white/60 text-sm">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
+        {/* Bottom Stats */}
+        <div className={`mt-12 lg:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="text-center">
+              <div className="text-lg md:text-2xl font-bold text-white">15+</div>
+              <div className="text-xs md:text-sm text-gray-400">Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg md:text-2xl font-bold text-white">24/7</div>
+              <div className="text-xs md:text-sm text-gray-400">Career Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg md:text-2xl font-bold text-white">₹6-20L</div>
+              <div className="text-xs md:text-sm text-gray-400">Salary Range</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg md:text-2xl font-bold text-white">100%</div>
+              <div className="text-xs md:text-sm text-gray-400">Support Rate</div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
