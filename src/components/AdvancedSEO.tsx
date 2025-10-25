@@ -101,8 +101,8 @@ const AdvancedSEO: React.FC = () => {
       "name": "Trinkets Institute",
       "value": "PIPING-ENG-MUM-2024"
     },
-    "datePosted": "2024-01-01",
-    "validThrough": "2024-12-31",
+    "datePosted": "2024-01-01T00:00:00+05:30",
+    "validThrough": "2024-12-31T23:59:59+05:30",
     "employmentType": "FULL_TIME",
     "hiringOrganization": {
       "@type": "Organization",
@@ -144,7 +144,7 @@ const AdvancedSEO: React.FC = () => {
     "name": "Trinkets Institute Piping Course Success Stories",
     "description": "Student testimonials and success stories from our piping design course graduates",
     "thumbnailUrl": "https://trinketsinstitute.com/images/video-thumbnail.jpg",
-    "uploadDate": "2024-01-01",
+    "uploadDate": "2024-01-01T00:00:00+05:30",
     "duration": "PT5M",
     "contentUrl": "https://trinketsinstitute.com/videos/success-stories.mp4",
     "embedUrl": "https://trinketsinstitute.com/embed/success-stories",
