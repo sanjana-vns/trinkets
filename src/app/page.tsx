@@ -65,13 +65,19 @@ export default function Home() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://trinketsinstitute.com"
+                "item": {
+                  "@type": "Thing",
+                  "@id": "https://trinketsinstitute.com"
+                }
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Piping Course In Mumbai",
-                "item": "https://trinketsinstitute.com/courses/piping-design-course-mumbai"
+                "item": {
+                  "@type": "Thing",
+                  "@id": "https://trinketsinstitute.com/courses/piping-design-course-mumbai"
+                }
               }
             ]
           })

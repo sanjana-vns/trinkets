@@ -208,7 +208,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "@type": "ListItem",
             "position": index + 1,
             "name": item.name,
-            "item": item.url
+            "item": {
+              "@type": "Thing",
+              "@id": item.url
+            }
           }))
         }
 

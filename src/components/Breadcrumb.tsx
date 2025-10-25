@@ -24,13 +24,19 @@ const Breadcrumb = ({ items, className = '' }: BreadcrumbProps) => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://trinketsinstitute.com"
+        "item": {
+          "@type": "Thing",
+          "@id": "https://trinketsinstitute.com"
+        }
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.label,
-        "item": item.href ? `https://trinketsinstitute.com${item.href}` : `https://trinketsinstitute.com`
+        "item": {
+          "@type": "Thing",
+          "@id": item.href ? `https://trinketsinstitute.com${item.href}` : `https://trinketsinstitute.com`
+        }
       }))
     ]
   }
