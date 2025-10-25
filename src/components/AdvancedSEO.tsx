@@ -113,9 +113,14 @@ const AdvancedSEO: React.FC = () => {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "823, Ecstasy Business Park, City of Joy, JSD Road, Mulund West",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
+        "postalCode": "400080",
+        "addressCountry": {
+          "@type": "Country",
+          "name": "IN"
+        }
       }
     },
     "baseSalary": {
