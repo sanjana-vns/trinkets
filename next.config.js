@@ -24,14 +24,7 @@ const nextConfig = {
   // Enhanced experimental features for faster builds
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    // Remove turbo config to fix deployment issues
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -96,29 +89,17 @@ const nextConfig = {
       permanent: true,
     },
   ],
-  // Webpack optimizations
+  // Simplified webpack optimizations for faster deployment
   webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
+    // Only apply optimizations in production
     if (!dev && !isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        // Bundle vendor libraries separately
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-          priority: 10,
-        },
-        // Bundle common components
-        common: {
-          name: 'common',
-          minChunks: 2,
-          priority: 5,
-          reuseExistingChunk: true,
-        },
+      // Simple vendor chunk splitting
+      config.optimization.splitChunks.cacheGroups.vendor = {
+        test: /[\\/]node_modules[\\/]/,
+        name: 'vendors',
+        chunks: 'all',
       }
     }
-
     return config
   },
 }
