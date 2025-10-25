@@ -6,22 +6,36 @@ Allow: /courses/piping-design-course-mumbai
 Allow: /courses/sp3d-piping-design-training
 Allow: /courses/e3d-piping
 Allow: /courses/piping-design-engineering
+Allow: /courses/smart-plant-3d
+Allow: /courses/mep-engineering
 Allow: /about
 Allow: /courses
 Allow: /placements
 Allow: /gallery
 Allow: /testimonials
 Allow: /contact
+Allow: /services
+Allow: /privacy-policy
+Allow: /terms-of-service
 
-# Block system files and API routes
+# Allow all Next.js static assets for proper page rendering
+Allow: /_next/static/
+Allow: /_next/image
+
+# Block only development and API routes
 Disallow: /api/
-Disallow: /_next/
-Disallow: /*.json$
-Disallow: /*?*
+Disallow: /_next/webpack-hmr
+Disallow: /_next/server/
 
-# Allow search engines to access images
+# Allow search engines to access all public assets
 Allow: /images/
 Allow: /icons/
+Allow: /manifest.json
+Allow: /sw.js
+
+# Block query parameters and JSON files
+Disallow: /*?*
+Disallow: /*.json$
 
 # Sitemap location
 Sitemap: https://trinketsinstitute.com/sitemap.xml

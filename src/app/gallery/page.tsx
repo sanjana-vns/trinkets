@@ -4,7 +4,7 @@ import AwardsSection from '@/components/gallery/AwardsSection'
 import CertificationsSection from '@/components/gallery/CertificationsSection'
 
 export const metadata: Metadata = {
-  title: 'Gallery & Awards | Engineering Excellence Recognition | Trinkets Institute Mumbai',
+  title: 'Gallery & Awards | Trinkets Institute Mumbai',
   description: 'Explore Trinkets Institute Mumbai gallery showcasing engineering projects, student achievements, industry awards, certifications. Witness piping design, MEP, HVAC, structural engineering excellence. 5000+ success stories documented.',
   keywords: [
     'trinkets institute gallery mumbai',

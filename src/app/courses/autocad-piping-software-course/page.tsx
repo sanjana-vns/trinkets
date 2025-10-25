@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Settings, Layers, Workflow, Target, Cpu, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AutoCAD Piping Software Course in Mumbai | Best Piping Design Training | Trinkets Institute',
+  title: 'AutoCAD Piping Course Mumbai | Piping Design Training',
   description: 'Master AutoCAD Piping with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier piping design institute.',
   keywords: [
     'AutoCAD Piping Software Course in Mumbai',

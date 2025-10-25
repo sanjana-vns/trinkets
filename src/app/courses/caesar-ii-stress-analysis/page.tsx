@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'CAESAR II Stress Analysis Course in Mumbai | Best Piping Stress Analysis Training Institute',
+  title: 'CAESAR II Stress Analysis Course Mumbai | Piping Training',
   description: 'Join the best CAESAR II stress analysis course in Mumbai at Trinkets Institute. Master pipe stress analysis, thermal analysis, ASME codes with hands-on training & 100% placement assistance in Mumbai industries.',
   keywords: [
     'CAESAR II stress analysis course in Mumbai',

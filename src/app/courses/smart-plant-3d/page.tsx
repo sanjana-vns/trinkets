@@ -3,7 +3,7 @@ import Link from 'next/link'
 import RelatedCourses from '@/components/RelatedCourses'
 
 export const metadata: Metadata = {
-  title: 'Smart Plant 3D Course in Mumbai | #1 SP3D Training Institute | 100% Placement | Trinkets Institute',
+  title: 'Smart Plant 3D Course Mumbai | SP3D Training',
   description: 'Top-rated Smart Plant 3D course in Mumbai at Trinkets Institute. Master AVEVA SP3D 3D plant design, piping layout, equipment modeling. 100% placement assistance in oil & gas, petrochemical industries. Expert-led training with real projects.',
   keywords: [
     'smart plant 3d course in mumbai',
@@ -144,11 +144,12 @@ export default function SmartPlant3DCoursePage() {
       "@type": "Offer",
       "name": "Smart Plant 3D Course in Mumbai",
       "category": "Professional Engineering Training",
+      "price": "75000",
+      "priceCurrency": "INR",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01",
       "validThrough": "2025-12-31",
       "url": "https://trinketsinstitute.com/courses/smart-plant-3d",
-      "priceCurrency": "INR",
       "eligibilityToWorkRequirement": "Engineering Graduate or Diploma"
     },
     "courseMode": ["classroom", "online", "hybrid"],
@@ -202,22 +203,34 @@ export default function SmartPlant3DCoursePage() {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Course",
+        "name": "Smart Plant 3D Course"
+      },
       "ratingValue": "4.8",
       "reviewCount": "150",
-      "bestRating": "5"
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "review": [
       {
         "@type": "Review",
+        "itemReviewed": {
+          "@type": "Course",
+          "name": "Smart Plant 3D Course"
+        },
         "author": {
           "@type": "Person",
           "name": "Rahul Sharma"
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": "5"
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
         },
-        "reviewBody": "Best Smart Plant 3D course in Mumbai. Got placed at L&T with excellent package."
+        "reviewBody": "Best Smart Plant 3D course in Mumbai. Got placed at L&T with excellent package.",
+        "datePublished": "2024-02-10"
       }
     ],
     "applicationCategory": "Engineering Training",

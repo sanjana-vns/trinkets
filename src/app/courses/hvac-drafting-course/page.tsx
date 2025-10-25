@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Wind, Thermometer, Building, Gauge, Fan, Snowflake } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'HVAC Drafting Course in Mumbai | Best HVAC Design Training | Trinkets Institute',
+  title: 'HVAC Drafting Course Mumbai | HVAC Design Training',
   description: 'Master HVAC Drafting with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier HVAC engineering institute.',
   keywords: [
     'HVAC Drafting Course in Mumbai',

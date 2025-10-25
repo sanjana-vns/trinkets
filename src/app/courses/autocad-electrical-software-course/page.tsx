@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Zap, Battery, Cpu, Power, Cable, CircuitBoard } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AutoCAD Electrical Software Course in Mumbai | Best Electrical Design Training | Trinkets Institute',
+  title: 'AutoCAD Electrical Course Mumbai | Electrical Design Training',
   description: 'Master AutoCAD Electrical with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier electrical engineering institute.',
   keywords: [
     'AutoCAD Electrical Software Course in Mumbai',

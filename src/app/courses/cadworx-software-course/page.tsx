@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Settings, Layers, Zap, Building, Gauge, Wrench } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cadworx Software Course in Mumbai | Best Piping Design Training | Trinkets Institute',
+  title: 'Cadworx Software Course Mumbai | Piping Design Training',
   description: 'Master Cadworx with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier piping engineering institute.',
   keywords: [
     'Cadworx Software Course in Mumbai',

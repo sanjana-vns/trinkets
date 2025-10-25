@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Building, Zap, Target, Cpu, Trophy, Settings, Globe, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'SolidWorks Professional Course in Mumbai | Best CSWA CSWP Training Institute | Trinkets Institute',
+  title: 'SolidWorks Professional Course Mumbai | CSWA CSWP Training',
   description: 'Leading SolidWorks Professional Course in Mumbai with CSWA/CSWP certification, 3D CAD modeling, simulation, PDM training. 100% job placement in Mumbai\'s top product design companies. Expert faculty, hands-on projects.',
   keywords: [
     'SolidWorks Professional Course in Mumbai',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Building2, Route, Mountain, Compass, Calculator, Ruler } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AutoCAD Civil Software Course in Mumbai | Best Civil Engineering Training | Trinkets Institute',
+  title: 'AutoCAD Civil Course Mumbai | Civil Engineering Training',
   description: 'Master AutoCAD Civil 3D with our comprehensive course in Mumbai. Industry-expert training, hands-on projects, job placement assistance. Join Mumbai\'s premier civil engineering institute.',
   keywords: [
     'AutoCAD Civil Software Course in Mumbai',

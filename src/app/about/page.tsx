@@ -8,7 +8,7 @@ import AboutAchievements from '@/components/about/AboutAchievements'
 import AboutTestimonials from '@/components/about/AboutTestimonials'
 
 export const metadata: Metadata = {
-  title: 'About Trinkets Institute | Best Engineering Training Institute Mumbai | Piping Design Education',
+  title: 'About Trinkets Institute | Engineering Training Mumbai',
   description: 'Leading engineering education institute in Mumbai since 2015. Trinkets Institute transforms students into industry professionals with expert piping design, MEP, HVAC, structural engineering training. 100% placement assistance, 5000+ successful graduates.',
   keywords: [
     'about trinkets institute mumbai',

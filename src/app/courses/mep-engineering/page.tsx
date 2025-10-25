@@ -4,7 +4,7 @@ import RelatedCourses from '@/components/RelatedCourses'
 import LocationSection from '@/components/LocationSection'
 
 export const metadata: Metadata = {
-  title: 'MEP Engineering Course in Mumbai | #1 MEP Training Institute | 100% Placement | Trinkets Institute',
+  title: 'MEP Engineering Course Mumbai | Best MEP Training',
   description: 'Top-rated MEP Engineering course in Mumbai at Trinkets Institute. Master Mechanical, Electrical & Plumbing design with AutoCAD MEP, Revit MEP, HAP, TRACE 700. 100% placement assistance in MEP consultancy, construction & building services.',
   keywords: [
     'mep engineering course in mumbai',
@@ -140,11 +140,12 @@ export default function MEPEngineeringCoursePage() {
       "@type": "Offer",
       "name": "MEP Engineering Course in Mumbai",
       "category": "Professional MEP Engineering Training",
+      "price": "85000",
+      "priceCurrency": "INR",
       "availability": "https://schema.org/InStock",
       "validFrom": "2024-01-01",
       "validThrough": "2025-12-31",
       "url": "https://trinketsinstitute.com/courses/mep-engineering",
-      "priceCurrency": "INR",
       "eligibilityToWorkRequirement": "Engineering Graduate or Diploma"
     },
     "courseMode": ["classroom", "online", "hybrid"],
@@ -204,22 +205,34 @@ export default function MEPEngineeringCoursePage() {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Course",
+        "name": "MEP Engineering Course"
+      },
       "ratingValue": "4.9",
       "reviewCount": "200",
-      "bestRating": "5"
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "review": [
       {
         "@type": "Review",
+        "itemReviewed": {
+          "@type": "Course",
+          "name": "MEP Engineering Course"
+        },
         "author": {
           "@type": "Person",
           "name": "Priya Sharma"
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": "5"
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
         },
-        "reviewBody": "Best MEP Engineering course in Mumbai. Got placed at L&T with excellent package through their placement assistance."
+        "reviewBody": "Best MEP Engineering course in Mumbai. Got placed at L&T with excellent package through their placement assistance.",
+        "datePublished": "2024-02-15"
       }
     ],
     "applicationCategory": "MEP Engineering Training",

@@ -6,7 +6,7 @@ import LocationMap from '@/components/contact/LocationMap'
 import OfficeLocations from '@/components/contact/OfficeLocations'
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get in Touch with Trinkets Institute | Engineering Training Institute Contact',
+  title: 'Contact Trinkets Institute | Engineering Training Mumbai',
   description: 'Contact Trinkets Institute for engineering training inquiries. Visit our Mumbai, Chennai, and Ludhiana offices. Get expert guidance for piping design, structural engineering, and technical courses. Call +91 9820 924 788 or email info@trinketsinstitute.com',
   keywords: [
     'contact trinkets institute',

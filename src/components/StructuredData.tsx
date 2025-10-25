@@ -49,6 +49,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "numberOfEmployees": "50-100",
           "aggregateRating": {
             "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "EducationalOrganization",
+              "name": "Trinkets Institute of Technology"
+            },
             "ratingValue": "4.8",
             "reviewCount": "500",
             "bestRating": "5",
@@ -93,19 +97,27 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         return {
           "@context": baseContext,
           "@type": "Course",
-          "name": data.name,
-          "description": data.description,
+          "name": data.name || "Engineering Course",
+          "description": data.description || "Professional engineering training course",
           "provider": {
             "@type": "EducationalOrganization",
             "name": "Trinkets Institute of Technology",
-            "url": "https://trinketsinstitute.com"
+            "url": "https://trinketsinstitute.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "823, Ecstasy Business Park, City of Joy, JSD Road",
+              "addressLocality": "Mulund West",
+              "addressRegion": "Mumbai",
+              "postalCode": "400080",
+              "addressCountry": "IN"
+            }
           },
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "courseMode": ["onsite", "online"],
             "duration": data.duration || "P3M",
-            "startDate": data.startDate,
-            "endDate": data.endDate,
+            "startDate": data.startDate || "2024-11-01",
+            "endDate": data.endDate || "2025-02-01",
             "location": {
               "@type": "Place",
               "name": "Trinkets Institute",
@@ -117,23 +129,33 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
                 "postalCode": "400080",
                 "addressCountry": "IN"
               }
+            },
+            "instructor": {
+              "@type": "Person",
+              "name": "Industry Expert Faculty"
             }
           },
           "offers": {
             "@type": "Offer",
-            "price": data.price,
+            "price": data.price || "25000",
             "priceCurrency": "INR",
             "availability": "https://schema.org/InStock",
-            "category": "Education"
+            "category": "Education",
+            "url": "https://trinketsinstitute.com/contact"
           },
           "coursePrerequisites": data.prerequisites || "Basic Engineering Knowledge",
           "educationalCredentialAwarded": data.certification || "Professional Certificate",
           "timeRequired": data.duration || "P3M",
           "aggregateRating": {
             "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "Course",
+              "name": data.name || "Engineering Course"
+            },
             "ratingValue": data.rating || "4.7",
             "reviewCount": data.reviewCount || "150",
-            "bestRating": "5"
+            "bestRating": "5",
+            "worstRating": "1"
           }
         }
 
@@ -161,9 +183,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           },
           "aggregateRating": {
             "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "Service",
+              "name": data.name || "Engineering Service"
+            },
             "ratingValue": "4.8",
             "reviewCount": "200",
-            "bestRating": "5"
+            "bestRating": "5",
+            "worstRating": "1"
           }
         }
 
@@ -195,8 +222,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "priceRange": "₹₹-₹₹₹",
           "aggregateRating": {
             "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "LocalBusiness",
+              "name": "Trinkets Institute of Technology"
+            },
             "ratingValue": "4.8",
-            "reviewCount": "500"
+            "reviewCount": "500",
+            "bestRating": "5",
+            "worstRating": "1"
           }
         }
 

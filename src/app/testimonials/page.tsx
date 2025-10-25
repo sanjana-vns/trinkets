@@ -537,23 +537,34 @@ export default function TestimonialsPage() {
     "description": "Leading engineering education institute with outstanding student testimonials and career transformation success stories.",
     "aggregateRating": {
       "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "EducationalOrganization",
+        "name": "Trinkets Institute"
+      },
       "ratingValue": "4.9",
       "reviewCount": "500",
-      "bestRating": "5"
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "review": [
       {
         "@type": "Review",
+        "itemReviewed": {
+          "@type": "EducationalOrganization",
+          "name": "Trinkets Institute"
+        },
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
-          "bestRating": "5"
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "author": {
           "@type": "Person",
           "name": "Rajesh Kumar"
         },
-        "reviewBody": "Trinkets Institute transformed my engineering career. The hands-on training and industry exposure helped me secure a position at a leading MNC with 150% salary increment."
+        "reviewBody": "Trinkets Institute transformed my engineering career. The hands-on training and industry exposure helped me secure a position at a leading MNC with 150% salary increment.",
+        "datePublished": "2024-01-15"
       }
     ]
   }

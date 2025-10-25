@@ -8,7 +8,7 @@ import CourseTestimonials from '@/components/courses/CourseTestimonials'
 import CourseEnrollment from '@/components/courses/CourseEnrollment'
 
 export const metadata: Metadata = {
-  title: 'Engineering Courses & Professional Training | Trinkets Institute Mumbai',
+  title: 'Engineering Courses Mumbai | Trinkets Institute',
   description: 'Master engineering design with industry-leading courses in Piping, MEP, HVAC, Structural, and Software training. Expert-led programs with 100% placement assistance at Trinkets Institute Mumbai.',
   keywords: [
     'engineering courses Mumbai',

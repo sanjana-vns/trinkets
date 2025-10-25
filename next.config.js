@@ -88,6 +88,22 @@ const nextConfig = {
       destination: '/services/:path*',
       permanent: true,
     },
+    // Fix 404 errors - redirects for common URL variations
+    {
+      source: '/courses/pdms-e3d-training',
+      destination: '/courses/e3d-piping',
+      permanent: true,
+    },
+    {
+      source: '/services/hvac-system-design-mumbai',
+      destination: '/services/hvac-system-design-services-mumbai',
+      permanent: true,
+    },
+    {
+      source: '/sitemap',
+      destination: '/sitemap.xml',
+      permanent: false,
+    },
   ],
   // Simplified webpack optimizations for faster deployment
   webpack: (config, { dev, isServer }) => {

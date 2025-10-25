@@ -34,7 +34,7 @@ const ServiceContact = dynamic(() => import('@/components/services/ServiceContac
 })
 
 export const metadata: Metadata = {
-  title: 'Engineering Services Mumbai | Professional Piping, MEP, HVAC & Structural Engineering Solutions | Trinkets Institute',
+  title: 'Engineering Services Mumbai | Piping MEP HVAC Structural',
   description: 'Premier Engineering Services in Mumbai. Expert Piping Design, MEP Engineering, HVAC Systems, Structural Analysis, CAESAR II, SP3D, STAAD Pro consulting. 15+ years experience, 500+ projects delivered.',
   keywords: [
     'Engineering Services Mumbai',

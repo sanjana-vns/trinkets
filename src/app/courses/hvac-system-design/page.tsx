@@ -4,7 +4,7 @@ import RelatedCourses from '@/components/RelatedCourses'
 import LocationSection from '@/components/LocationSection'
 
 export const metadata: Metadata = {
-  title: 'HVAC System Design Course in Mumbai | Best HVAC Training Institute | 100% Placement',
+  title: 'HVAC System Design Course Mumbai | HVAC Training',
   description: 'Master HVAC System Design course in Mumbai at Trinkets Institute. Learn AutoCAD MEP, Revit MEP, HAP, TRACE 700 with expert trainers. Real project training, 100% placement assistance in HVAC & MEP industry.',
   keywords: [
     'hvac system design course in mumbai',
@@ -128,6 +128,7 @@ export default function HVACSystemDesignCoursePage() {
         "offers": {
           "@type": "Offer",
           "category": "HVAC Engineering Training",
+          "price": "65000",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
           "validFrom": "2024-01-01",

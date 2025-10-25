@@ -19,8 +19,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Piping Course In Mumbai | Best Piping Design Training Institute | Trinkets Institute',
-    template: '%s | Trinkets Institute - Professional Engineering Training'
+    default: 'Best Piping Course in Mumbai | Trinkets Institute',
+    template: '%s | Trinkets Institute'
   },
   description: 'Leading Piping Course In Mumbai at Trinkets Institute. Learn piping design, PDMS, SP3D, E3D, CAESAR II with 100% placement assistance. Best piping training institute in Mumbai with industry expert faculty.',
   keywords: [
@@ -236,10 +236,13 @@ export default function RootLayout({
             name: "Piping Course In Mumbai - Comprehensive Piping Design Training",
             description: "Best Piping Course In Mumbai at Trinkets Institute. Learn PDMS, SP3D, E3D, AutoCAD Plant 3D, CAESAR II, piping stress analysis with 100% placement assistance.",
             duration: "P6M",
-            price: "Contact for pricing",
+            price: "50000",
             rating: "4.9",
             reviewCount: "1200",
-            certification: "Professional Piping Design Certificate"
+            certification: "Professional Piping Design Certificate",
+            startDate: "2024-11-01",
+            endDate: "2025-05-01",
+            prerequisites: "Basic Engineering Knowledge"
           }} 
         />
         <StructuredData 
