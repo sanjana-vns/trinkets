@@ -193,10 +193,17 @@ export default function RootLayout({
         <meta name="target" content="all" />
         <meta name="audience" content="all" />
         <meta name="rating" content="general" />
+        
+        {/* Favicons - Multiple formats for better browser support */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon-16x16.svg" sizes="16x16" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-48x48.svg" sizes="48x48" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.svg" />
+        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.svg" />
+        <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         {/* Critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{

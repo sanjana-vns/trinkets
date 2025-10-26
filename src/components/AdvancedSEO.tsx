@@ -144,7 +144,7 @@ const AdvancedSEO: React.FC = () => {
     "name": "Trinkets Institute Piping Course Success Stories",
     "description": "Student testimonials and success stories from our piping design course graduates",
     "thumbnailUrl": "https://trinketsinstitute.com/images/video-thumbnail.jpg",
-    "uploadDate": "2024-01-01T00:00:00+05:30",
+    "uploadDate": "2024-01-01T00:00:00.000Z",
     "duration": "PT5M",
     "contentUrl": "https://trinketsinstitute.com/videos/success-stories.mp4",
     "embedUrl": "https://trinketsinstitute.com/embed/success-stories",
