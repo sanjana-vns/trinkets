@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Building2, Route, Mountain, Compass, Calculator, Ruler } from 'lucide-react';
+import FAQSectionTemplate from '../../../components/FAQSectionTemplate';
 
 export const metadata: Metadata = {
   title: 'AutoCAD Civil Course Mumbai | Civil Engineering Training',
@@ -616,69 +617,38 @@ export default function AutoCADCivilCoursePage() {
           </div>
         </section>
 
-        {/* Creative FAQ Section with Civil Engineering Theme */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Frequently Asked Questions
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Common Questions About Our
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600"> AutoCAD Civil Course</span>
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What is AutoCAD Civil Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Our AutoCAD Civil Software Course in Mumbai is a comprehensive training program covering AutoCAD Civil 3D, 
-                    road design, land development, survey data processing, and infrastructure modeling for civil engineering 
-                    professionals. The course includes hands-on projects based on Mumbai&apos;s infrastructure development needs.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What is the duration of AutoCAD Civil Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    The AutoCAD Civil Software Course in Mumbai has a duration of 3 months with flexible timing options. 
-                    We offer weekday, weekend, and evening batches to accommodate working professionals and students 
-                    in Mumbai&apos;s civil engineering sector.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Do you provide job placement after AutoCAD Civil Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Yes, we provide 100% job placement assistance after completion of our AutoCAD Civil Software Course in Mumbai. 
-                    Our dedicated placement team works with our network of 250+ engineering companies including major construction, 
-                    infrastructure, and consulting firms across Mumbai and Maharashtra.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What are the career opportunities after AutoCAD Civil Software Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    After completing our AutoCAD Civil Software Course in Mumbai, you can work as Civil Designer, 
-                    Highway Engineer, Land Development Specialist, Survey Engineer, Infrastructure Planner, or Project Engineer 
-                    in construction, consulting, and government sectors across Mumbai&apos;s thriving infrastructure industry.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FAQSectionTemplate
+          title="AutoCAD Civil Course in Mumbai"
+          subtitle="Common Questions About Our Training"
+          description="Get answers to the most frequently asked questions about our AutoCAD Civil Software Course in Mumbai. Learn about training duration, placement assistance, and career opportunities."
+          faqs={[
+            {
+              question: "What is AutoCAD Civil Software Course in Mumbai?",
+              answer: "Our AutoCAD Civil Software Course in Mumbai is a comprehensive training program covering AutoCAD Civil 3D, road design, land development, survey data processing, and infrastructure modeling for civil engineering professionals. The course includes hands-on projects based on Mumbai's infrastructure development needs."
+            },
+            {
+              question: "What is the duration of AutoCAD Civil Software Course in Mumbai?",
+              answer: "The AutoCAD Civil Software Course in Mumbai has a duration of 3 months with flexible timing options. We offer weekday, weekend, and evening batches to accommodate working professionals and students in Mumbai's civil engineering sector."
+            },
+            {
+              question: "Do you provide job placement after AutoCAD Civil Software Course in Mumbai?",
+              answer: "Yes, we provide 100% job placement assistance after completion of our AutoCAD Civil Software Course in Mumbai. Our dedicated placement team works with our network of 250+ engineering companies including major construction, infrastructure, and consulting firms across Mumbai and Maharashtra."
+            },
+            {
+              question: "What are the career opportunities after AutoCAD Civil Software Course in Mumbai?",
+              answer: "After completing our AutoCAD Civil Software Course in Mumbai, you can work as Civil Designer, Highway Engineer, Land Development Specialist, Survey Engineer, Infrastructure Planner, or Project Engineer in construction, consulting, and government sectors across Mumbai's thriving infrastructure industry."
+            },
+            {
+              question: "What software tools are covered in AutoCAD Civil Course in Mumbai?",
+              answer: "Our AutoCAD Civil Course in Mumbai covers AutoCAD Civil 3D, road design tools, land development utilities, survey data processing, grading objects, pipe networks, and quantity takeoffs. You'll gain practical experience with real Mumbai infrastructure projects."
+            },
+            {
+              question: "Is prior CAD experience required for AutoCAD Civil Course in Mumbai?",
+              answer: "No prior CAD experience is required for our AutoCAD Civil Course in Mumbai. We start with fundamentals and progress to advanced topics. Our experienced instructors provide personalized attention to ensure every student succeeds, regardless of their background."
+            }
+          ]}
+          phoneNumber="+91-9820924788"
+        />
 
         {/* Creative Contact CTA with Civil Engineering Theme */}
         <section className="py-20 bg-gradient-to-br from-orange-900 via-amber-800 to-yellow-900 text-white relative overflow-hidden">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import FAQSectionTemplate from '../../../components/FAQSectionTemplate'
 
 export const metadata: Metadata = {
   title: 'Piping Design Course in Mumbai | Best Piping Design Training Institute | Trinkets Institute',
@@ -502,49 +503,38 @@ export default function PipingDesignCourseMumbai() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                Frequently Asked
-                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Questions
-                </span>
-              </h2>
-            </div>
-
-            <div className="space-y-6">
-              {[
-                {
-                  question: "What is the duration of the piping design course in Mumbai?",
-                  answer: "Our comprehensive piping design course in Mumbai is a 16-week intensive program covering PDMS, E3D, AutoCAD Plant 3D, P&ID development, and stress analysis with hands-on project work."
-                },
-                {
-                  question: "Which software tools are covered in the piping design training?",
-                  answer: "The course covers industry-standard software including PDMS, E3D, AutoCAD Plant 3D, CAESAR II for stress analysis, SmartPlant 3D, and Navisworks for design review and clash detection."
-                },
-                {
-                  question: "Do you provide placement assistance after the piping design course?",
-                  answer: "Yes, we provide 100% placement support with our dedicated placement cell. We have partnerships with 500+ companies in Mumbai and across India for piping design engineer positions."
-                },
-                {
-                  question: "What are the career opportunities after completing piping design course in Mumbai?",
-                  answer: "Graduates can work as Piping Design Engineers, Process Piping Designers, Plant Design Engineers, CAD Piping Designers, Senior Piping Engineers, and Project Engineers with packages ranging from 3-15 LPA."
-                },
-                {
-                  question: "Is the piping design course suitable for fresh graduates?",
-                  answer: "Yes, our piping design course in Mumbai is designed for both fresh graduates and working professionals. We provide comprehensive training from basics to advanced levels with practical exposure."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FAQSectionTemplate
+          title="Piping Design Course in Mumbai"
+          subtitle="Everything You Need to Know"
+          description="Get answers to the most frequently asked questions about our comprehensive Piping Design Course in Mumbai. Learn about training duration, placement assistance, and career opportunities."
+          faqs={[
+            {
+              question: "What is the duration of the piping design course in Mumbai?",
+              answer: "Our comprehensive piping design course in Mumbai is a 16-week intensive program covering PDMS, E3D, AutoCAD Plant 3D, P&ID development, and stress analysis with hands-on project work."
+            },
+            {
+              question: "Which software tools are covered in the piping design training?",
+              answer: "The course covers industry-standard software including PDMS, E3D, AutoCAD Plant 3D, CAESAR II for stress analysis, SmartPlant 3D, and Navisworks for design review and clash detection."
+            },
+            {
+              question: "Do you provide placement assistance after the piping design course?",
+              answer: "Yes, we provide 100% placement support with our dedicated placement cell. We have partnerships with 500+ companies in Mumbai and across India for piping design engineer positions."
+            },
+            {
+              question: "What are the career opportunities after completing piping design course in Mumbai?",
+              answer: "Graduates can work as Piping Design Engineers, Process Piping Designers, Plant Design Engineers, CAD Piping Designers, Senior Piping Engineers, and Project Engineers with packages ranging from 3-15 LPA."
+            },
+            {
+              question: "Is the piping design course suitable for fresh graduates?",
+              answer: "Yes, our piping design course in Mumbai is designed for both fresh graduates and working professionals. We provide comprehensive training from basics to advanced levels with practical exposure."
+            },
+            {
+              question: "What projects will I work on during the piping design training?",
+              answer: "You'll work on real industry projects including oil & gas facilities, petrochemical plants, power plants, and pharmaceutical facilities. Projects include complete piping layout, equipment modeling, and isometric drawings."
+            }
+          ]}
+          phoneNumber="+91-9820924788"
+        />
 
         {/* CTA Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">

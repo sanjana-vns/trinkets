@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Clock, Users, Award, MapPin, Phone, Mail, CheckCircle, BookOpen, Monitor, Briefcase, Wind, Thermometer, Building, Gauge, Fan, Snowflake } from 'lucide-react';
+import FAQSectionTemplate from '../../../components/FAQSectionTemplate';
 
 export const metadata: Metadata = {
   title: 'HVAC Drafting Course Mumbai | HVAC Design Training',
@@ -621,69 +622,38 @@ export default function HVACDraftingCoursePage() {
           </div>
         </section>
 
-        {/* Creative FAQ Section with HVAC Theme */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center bg-gradient-to-r from-emerald-100 to-cyan-100 text-emerald-800 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Frequently Asked Questions
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Common Questions About Our
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-600"> HVAC Drafting Course</span>
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What is HVAC Drafting Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Our HVAC Drafting Course in Mumbai is a comprehensive training program covering HVAC system design, 
-                    ductwork layout, load calculations, and building automation using industry-standard software and Mumbai building codes. 
-                    The course includes hands-on projects based on Mumbai&apos;s construction and MEP industry requirements.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What is the duration of HVAC Drafting Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    The HVAC Drafting Course in Mumbai has a duration of 3 months with flexible timing options. 
-                    We offer weekday, weekend, and evening batches to accommodate working professionals and students 
-                    in Mumbai&apos;s construction and building services sectors.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Do you provide job placement after HVAC Drafting Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Yes, we provide 100% job placement assistance after completion of our HVAC Drafting Course in Mumbai. 
-                    Our dedicated placement team works with our network of 220+ MEP consultants, construction companies, 
-                    and building services firms including major developers across Mumbai and Maharashtra.
-                  </p>
-                </div>
-
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    What are the career opportunities after HVAC Drafting Course in Mumbai?
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    After completing our HVAC Drafting Course in Mumbai, you can work as HVAC Designer, 
-                    MEP Draftsman, Building Services Engineer, HVAC Project Coordinator, or Energy Analyst in construction, 
-                    consulting, and building services industries across Mumbai&apos;s thriving real estate and infrastructure sector.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FAQSectionTemplate
+          title="HVAC Drafting Course in Mumbai"
+          subtitle="Common Questions About Our Training"
+          description="Get answers to the most frequently asked questions about our HVAC Drafting Course in Mumbai. Learn about training duration, placement assistance, and career opportunities."
+          faqs={[
+            {
+              question: "What is HVAC Drafting Course in Mumbai?",
+              answer: "Our HVAC Drafting Course in Mumbai is a comprehensive training program covering HVAC system design, ductwork layout, load calculations, and building automation using industry-standard software and Mumbai building codes. The course includes hands-on projects based on Mumbai's construction and MEP industry requirements."
+            },
+            {
+              question: "What is the duration of HVAC Drafting Course in Mumbai?",
+              answer: "The HVAC Drafting Course in Mumbai has a duration of 3 months with flexible timing options. We offer weekday, weekend, and evening batches to accommodate working professionals and students in Mumbai's construction and building services sectors."
+            },
+            {
+              question: "Do you provide job placement after HVAC Drafting Course in Mumbai?",
+              answer: "Yes, we provide 100% job placement assistance after completion of our HVAC Drafting Course in Mumbai. Our dedicated placement team works with our network of 220+ MEP consultants, construction companies, and building services firms including major developers across Mumbai and Maharashtra."
+            },
+            {
+              question: "What are the career opportunities after HVAC Drafting Course in Mumbai?",
+              answer: "After completing our HVAC Drafting Course in Mumbai, you can work as HVAC Designer, MEP Draftsman, Building Services Engineer, HVAC Project Coordinator, or Energy Analyst in construction, consulting, and building services industries across Mumbai's thriving real estate and infrastructure sector."
+            },
+            {
+              question: "What software tools are covered in HVAC Drafting Course in Mumbai?",
+              answer: "Our HVAC Drafting Course in Mumbai covers AutoCAD MEP, Revit MEP, HAP (Hourly Analysis Program), Carrier HAP, Trane TRACE, and ductwork design software. You'll gain practical experience with load calculations and system sizing for Mumbai's climate conditions."
+            },
+            {
+              question: "Is prior HVAC experience required for this course in Mumbai?",
+              answer: "No prior HVAC experience is required for our HVAC Drafting Course in Mumbai. We start with HVAC fundamentals and progress to advanced system design. Our experienced instructors provide personalized attention to ensure every student masters the concepts and practical applications."
+            }
+          ]}
+          phoneNumber="+91-9820924788"
+        />
 
         {/* Creative Contact CTA with HVAC Theme */}
         <section className="py-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
