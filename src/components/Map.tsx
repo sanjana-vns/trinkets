@@ -63,7 +63,6 @@ const Map = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
                     <p className="text-gray-600">+91 9820 924 788</p>
-                    <p className="text-gray-600">+91 98765 43211</p>
                   </div>
                 </div>
 
