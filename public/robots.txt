@@ -33,8 +33,7 @@ Allow: /icons/
 Allow: /manifest.json
 Allow: /sw.js
 
-# Block query parameters and JSON files
-Disallow: /*?*
+# Block JSON files only (removed problematic query parameter wildcard)
 Disallow: /*.json$
 
 # Sitemap location
