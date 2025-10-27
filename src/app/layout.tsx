@@ -194,35 +194,30 @@ export default function RootLayout({
         <meta name="audience" content="all" />
         <meta name="rating" content="general" />
         
-        {/* Favicons - Multiple formats for better browser support */}
+        {/* Optimized Favicons */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon-16x16.svg" sizes="16x16" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-48x48.svg" sizes="48x48" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.svg" />
-        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.svg" />
-        <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         {/* Critical CSS for above-the-fold content */}
         <style dangerouslySetInnerHTML={{
           __html: `
             /* Inline critical CSS for fastest loading */
+            *{box-sizing:border-box}
+            body{margin:0;font-family:Inter,system-ui,arial;line-height:1.6;color:#374151;background:#fff}
             .navigation-critical{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;box-shadow:0 1px 3px 0 rgba(0,0,0,0.1)}
             .nav-container{max-width:80rem;margin:0 auto;padding:0 1rem}
             .nav-content{display:flex;justify-content:space-between;align-items:center;height:5rem}
             .hero-critical{min-height:100vh;background:linear-gradient(135deg,#3b82f6 0%,#f97316 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
             .hero-container{max-width:80rem;margin:0 auto;padding:0 1rem;text-align:center;color:white;position:relative;z-index:10}
             .hero-title{font-size:3rem;font-weight:800;line-height:1.1;margin-bottom:1.5rem}
+            .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
             @media(max-width:640px){.hero-title{font-size:2rem}}
           `
         }} />
         {/* Preload critical resources */}
-        <link rel="preload" href="/images/trinketlogo.jpg" as="image" />
-        <link rel="preload" href="/images/engineer.jpg" as="image" />
         <link rel="preload" href="/images/bg1.jpg" as="image" />
-        <link rel="preload" href="/icons/icon-192x192.svg" as="image" />
+        <link rel="preload" href="/images/trinketlogo.jpg" as="image" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <ServiceWorkerRegistration />
