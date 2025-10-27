@@ -115,7 +115,7 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
             "postalCode": "400069",
             "addressCountry": "IN"
           },
-          "telephone": "+91-9876543210",
+          "telephone": "+91-9820924788",
           "url": "https://trinketsinstitute.com"
         },
         "locationCreated": {
@@ -221,7 +221,7 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
           "latitude": "19.1136",
           "longitude": "72.8697"
         },
-        "telephone": "+91-9876543210",
+        "telephone": "+91-9820924788",
         "email": "info@trinketsinstitute.com",
         "url": "https://trinketsinstitute.com",
         "openingHours": "Mo-Sa 09:00-18:00",
@@ -630,7 +630,7 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-xl backdrop-blur-sm border border-white/20">
                   <Phone className="w-5 h-5 mr-3" />
-                  <span>+91-9876543210</span>
+                  <span>+91-9820924788</span>
                 </div>
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-xl backdrop-blur-sm border border-white/20">
                   <Mail className="w-5 h-5 mr-3" />

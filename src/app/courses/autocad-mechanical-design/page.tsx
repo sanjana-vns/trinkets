@@ -117,7 +117,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91-9876543210",
+            "telephone": "+91-9820924788",
             "contactType": "customer service",
             "availableLanguage": ["English", "Hindi", "Marathi"]
           }
@@ -184,7 +184,7 @@ export default function AutoCADMechanicalDesignCoursePage() {
         "name": "Trinkets Institute - AutoCAD Training Mumbai",
         "description": "Leading AutoCAD Design training institute in Mumbai offering comprehensive courses in 2D/3D AutoCAD, Inventor, and SolidWorks.",
         "url": "https://trinketsinstitute.com/courses/autocad-mechanical-design",
-        "telephone": "+91-9876543210",
+        "telephone": "+91-9820924788",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "AutoCAD Training Center",

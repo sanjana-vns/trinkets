@@ -88,7 +88,7 @@ const CorporateContact = () => {
   const contactInfo = [
     {
       type: "Phone",
-      value: "+91 98765 43210",
+      value: "+91 9820 924 788",
       icon: "📞",
       description: "Direct line to our corporate team"
     },
@@ -100,7 +100,7 @@ const CorporateContact = () => {
     },
     {
       type: "WhatsApp",
-      value: "+91 98765 43210",
+      value: "+91 9820 924 788",
       icon: "💬",
       description: "Quick responses for urgent queries"
     },

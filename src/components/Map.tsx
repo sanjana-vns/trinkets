@@ -62,7 +62,7 @@ const Map = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 9820 924 788</p>
                     <p className="text-gray-600">+91 98765 43211</p>
                   </div>
                 </div>
@@ -198,10 +198,10 @@ const Map = () => {
                 Schedule a Visit
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919820924788"
                 className="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Call Now: +91 98765 43210
+                Call Now: +91 9820 924 788
               </a>
             </div>
           </div>

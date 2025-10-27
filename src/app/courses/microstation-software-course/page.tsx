@@ -134,7 +134,7 @@ const jsonLd = {
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+91-9876543210',
+        telephone: '+91-9820924788',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi', 'Marathi']
@@ -841,7 +841,7 @@ export default function MicroStationCoursePage() {
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-lg">
                   <Phone className="w-5 h-5 mr-3" />
-                  <span>+91-9876543210</span>
+                  <span>+91-9820924788</span>
                 </div>
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-lg">
                   <Mail className="w-5 h-5 mr-3" />

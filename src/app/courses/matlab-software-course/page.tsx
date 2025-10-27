@@ -133,7 +133,7 @@ const jsonLd = {
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+91-9876543210',
+        telephone: '+91-9820924788',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi', 'Marathi']
@@ -717,7 +717,7 @@ export default function MATLABCoursePage() {
               <div className="grid md:grid-cols-2 gap-4 mb-10 max-w-lg mx-auto">
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl">
                   <Phone className="w-5 h-5 mr-3 text-blue-300" />
-                  <span className="font-medium">+91-9876543210</span>
+                  <span className="font-medium">+91-9820924788</span>
                 </div>
                 <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl">
                   <Mail className="w-5 h-5 mr-3 text-orange-300" />

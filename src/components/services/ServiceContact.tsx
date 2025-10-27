@@ -133,7 +133,7 @@ const ServiceContact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-300"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9820 924 788"
                     />
                   </div>
                   <div>

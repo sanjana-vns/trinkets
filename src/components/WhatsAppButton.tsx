@@ -10,7 +10,7 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton = ({ 
-  phoneNumber = '+919876543210', // Replace with actual business number
+  phoneNumber = '+919820924788', // Replace with actual business number
   message = 'Hi! I am interested in engineering courses at Trinkets Institute. Please provide more information.',
   position = 'bottom-right',
   size = 'medium'

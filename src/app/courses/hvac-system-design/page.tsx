@@ -120,7 +120,7 @@ export default function HVACSystemDesignCoursePage() {
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91-9876543210",
+            "telephone": "+91-9820924788",
             "contactType": "customer service",
             "availableLanguage": ["English", "Hindi", "Marathi"]
           }
@@ -191,7 +191,7 @@ export default function HVACSystemDesignCoursePage() {
         "name": "Trinkets Institute - HVAC Training Mumbai",
         "description": "Leading HVAC System Design training institute in Mumbai offering comprehensive courses in AutoCAD MEP, Revit MEP, HAP, and TRACE 700.",
         "url": "https://trinketsinstitute.com/courses/hvac-system-design",
-        "telephone": "+91-9876543210",
+        "telephone": "+91-9820924788",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "HVAC Training Center",

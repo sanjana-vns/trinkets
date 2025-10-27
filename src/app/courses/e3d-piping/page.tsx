@@ -113,7 +113,7 @@ export default function E3DPipingCoursePage() {
         "addressCountry": "IN"
       },
       "url": "https://trinketsinstitute.com",
-      "telephone": "+91-9876543210"
+      "telephone": "+91-9820924788"
     },
     "offers": {
       "@type": "Offer",
@@ -605,7 +605,7 @@ export default function E3DPipingCoursePage() {
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-xl backdrop-blur-sm border border-white/20">
                   <Phone className="w-5 h-5 mr-3" />
-                  <span>+91-9876543210</span>
+                  <span>+91-9820924788</span>
                 </div>
                 <div className="flex items-center bg-white/10 px-6 py-3 rounded-xl backdrop-blur-sm border border-white/20">
                   <Mail className="w-5 h-5 mr-3" />

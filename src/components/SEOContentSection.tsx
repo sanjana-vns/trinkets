@@ -619,7 +619,7 @@ export default function SEOContentSection() {
               icon: Phone,
               gradient: 'from-green-500 to-emerald-500',
               bgColor: 'from-green-50 to-emerald-50',
-              detail: '+91 98765 43210',
+              detail: '+91 9820 924 788',
               feature: 'Instant Response Guaranteed'
             },
             {
