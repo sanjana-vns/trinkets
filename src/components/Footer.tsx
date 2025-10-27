@@ -299,7 +299,7 @@ const Footer = memo(() => {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-xs sm:text-sm text-center">
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link>
               <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors duration-300">Sitemap</Link>
+              <Link href="/sitemap.xml" className="text-gray-400 hover:text-white transition-colors duration-300">Sitemap</Link>
             </div>
           </div>
         </div>

@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description: 'Master CAESAR II Course in Mumbai with comprehensive pipe stress analysis training. Learn piping design, stress analysis software, flexibility analysis, and pressure vessel design with hands-on training at leading institute in Mumbai.',
   keywords: 'CAESAR II course Mumbai, pipe stress analysis training Mumbai, piping design course, stress analysis software training, CAESAR II training institute Mumbai, piping engineering course, pipe stress analysis Mumbai, CAESAR II certification Mumbai, piping stress analysis course, mechanical engineering course Mumbai, oil gas piping course, petrochemical piping training, power plant piping design, industrial piping course Mumbai, AutoPIPE alternative, piping flexibility analysis, pressure vessel design course, ASME piping codes training',
   openGraph: {
-    title: 'CAESAR II Course in Mumbai | Pipe Stress Analysis Training Institute',
-    description: 'Professional CAESAR II Course in Mumbai for pipe stress analysis training. Learn piping design, stress analysis software, and flexibility analysis with industry experts.',
+    title: 'CAESAR II Course in Mumbai | Pipe Stress Analysis Training',
+    description: 'Master CAESAR II software for pipe stress analysis and design in Mumbai. Advanced piping engineering training with expert guidance.',
     type: 'website',
-    url: 'https://trinkets.com/courses/caesar-ii',
+    url: 'https://trinketsinstitute.com/courses/caesar-ii',
     images: [
       {
-        url: 'https://trinkets.com/images/caesar-ii-course-mumbai.jpg',
+        url: 'https://trinketsinstitute.com/images/caesar-ii-course-mumbai.jpg',
         width: 1200,
         height: 630,
         alt: 'CAESAR II Course in Mumbai - Pipe Stress Analysis Training',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://trinkets.com/courses/caesar-ii',
+    canonical: 'https://trinketsinstitute.com/courses/caesar-ii',
   },
   robots: {
     index: true,

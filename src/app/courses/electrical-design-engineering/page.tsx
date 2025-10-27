@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: 'Electrical Design Engineering Course in Mumbai | Professional Training Institute',
     description: 'Master Electrical Design Engineering Course in Mumbai with AutoCAD Electrical, ETAP, EPLAN training. Professional certification for electrical system design with hands-on training and 100% placement support.',
     type: 'website',
-    url: 'https://trinkets.com/courses/electrical-design-engineering',
+    url: 'https://trinketsinstitute.com/courses/electrical-design-engineering',
     images: [
       {
-        url: 'https://trinkets.com/images/electrical-design-course-mumbai.jpg',
+        url: 'https://trinketsinstitute.com/images/electrical-design-course-mumbai.jpg',
         width: 1200,
         height: 630,
         alt: 'Electrical Design Engineering Course in Mumbai - Professional Training',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://trinkets.com/courses/electrical-design-engineering',
+    canonical: 'https://trinketsinstitute.com/courses/electrical-design-engineering',
   },
   robots: {
     index: true,

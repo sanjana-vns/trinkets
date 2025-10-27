@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: 'SP3D Piping Design Training in Mumbai | Professional Piping Course Institute',
     description: 'Master SP3D Piping Design Training in Mumbai with SmartPlant 3D software. Professional certification for piping design and 3D modeling with industry expert training and placement support.',
     type: 'website',
-    url: 'https://trinkets.com/courses/sp3d-piping-design-training',
+    url: 'https://trinketsinstitute.com/courses/sp3d-piping-design-training',
     images: [
       {
-        url: 'https://trinkets.com/images/sp3d-piping-design-course-mumbai.jpg',
+        url: 'https://trinketsinstitute.com/images/sp3d-piping-design-course-mumbai.jpg',
         width: 1200,
         height: 630,
         alt: 'SP3D Piping Design Training in Mumbai - Professional Course',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://trinkets.com/courses/sp3d-piping-design-training',
+    canonical: 'https://trinketsinstitute.com/courses/sp3d-piping-design-training',
   },
   robots: {
     index: true,

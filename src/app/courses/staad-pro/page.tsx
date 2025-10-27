@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'STAAD Pro Course in Mumbai | Structural Analysis & Design Training',
     description: 'Master STAAD Pro structural analysis and design software in Mumbai. Industry-focused training for building modeling, bridge design, and structural engineering.',
     type: 'website',
-    url: 'https://trinkets.com/courses/staad-pro',
+    url: 'https://trinketsinstitute.com/courses/staad-pro',
   },
 }
 

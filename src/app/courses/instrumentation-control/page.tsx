@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: 'Instrumentation and Control Course in Mumbai | Professional Training Institute',
     description: 'Master Instrumentation and Control Course in Mumbai with PLC programming, SCADA, DCS, HMI training. Professional certification for process automation and control systems with industry expert training.',
     type: 'website',
-    url: 'https://trinkets.com/courses/instrumentation-control',
+    url: 'https://trinketsinstitute.com/courses/instrumentation-control',
     images: [
       {
-        url: 'https://trinkets.com/images/instrumentation-control-course-mumbai.jpg',
+        url: 'https://trinketsinstitute.com/images/instrumentation-control-course-mumbai.jpg',
         width: 1200,
         height: 630,
         alt: 'Instrumentation and Control Course in Mumbai - Professional Training',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://trinkets.com/courses/instrumentation-control',
+    canonical: 'https://trinketsinstitute.com/courses/instrumentation-control',
   },
   robots: {
     index: true,

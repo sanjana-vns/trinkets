@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'ETABS Course in Mumbai | Advanced Structural Engineering Software Training',
     description: 'Master ETABS software for multi-story building analysis and design in Mumbai. Advanced structural engineering training with expert guidance.',
     type: 'website',
-    url: 'https://trinkets.com/courses/etabs',
+    url: 'https://trinketsinstitute.com/courses/etabs',
   },
 }
 
