@@ -222,12 +222,17 @@ const Hero = () => {
                 
                 {/* Quick Actions */}
                 <div className="space-y-3">
-                  <button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-3 rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-200 flex items-center justify-center gap-2">
+                  <a 
+                    href="https://wa.me/919820924788?text=Hi!%20I'm%20interested%20in%20engineering%20courses%20at%20Trinkets%20Institute%20Mumbai.%20I%20would%20like%20to%20get%20free%20counseling%20about%20course%20details,%20fees,%20and%20admission%20process."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full bg-gradient-to-r ${slides[currentSlide].accentColor} text-white px-4 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105`}
+                  >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    Get Free Counseling
-                  </button>
+                    Get Free Counselling
+                  </a>
                   <div className="text-center">
                     <p className="text-gray-400 text-xs mb-2">✓ Free Career Consultation ✓ Course Recommendations ✓ Placement Guidance</p>
                   </div>
