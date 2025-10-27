@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://trinketsinstitute.com/courses/staad-pro',
   },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/courses/staad-pro',
+    languages: {
+      'en': 'https://trinketsinstitute.com/courses/staad-pro',
+    }
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 }
 
 // Performance-optimized animations

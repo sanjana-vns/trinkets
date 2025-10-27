@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://trinketsinstitute.com/courses/etabs',
   },
+  alternates: {
+    canonical: 'https://trinketsinstitute.com/courses/etabs',
+    languages: {
+      'en': 'https://trinketsinstitute.com/courses/etabs',
+    }
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 }
 
 // Performance-optimized animations
