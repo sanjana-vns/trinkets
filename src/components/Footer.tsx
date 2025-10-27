@@ -292,7 +292,14 @@ const Footer = memo(() => {
               </p>
               <div className="hidden sm:block w-px h-4 bg-gray-600"></div>
               <p className="text-gray-500 text-xs">
-                🏆 ISO Certified Training Institute
+                🏆 <a 
+                  href="https://mydigitalcrown.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors duration-300"
+                >
+                  Digital Marketing Company In Mumbai
+                </a>
               </p>
             </div>
             
