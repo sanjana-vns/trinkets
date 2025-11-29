@@ -136,7 +136,13 @@ const Hero = () => {
               </p>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    14+
+                  </div>
+                  <div className="text-gray-300 text-sm">Years Experience</div>
+                </div>
                 <div className="text-center lg:text-left">
                   <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
                     40+
@@ -160,6 +166,12 @@ const Hero = () => {
                     30+
                   </div>
                   <div className="text-gray-300 text-sm">Teachers</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    9+
+                  </div>
+                  <div className="text-gray-300 text-sm">Awards</div>
                 </div>
               </div>
               
