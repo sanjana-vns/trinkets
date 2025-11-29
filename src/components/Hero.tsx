@@ -138,37 +138,37 @@ const Hero = () => {
               {/* Stats - improved typography & spacing for UX */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>14+</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>14+</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Years Experience</div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>40+</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>40+</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Courses</div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>20K+</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>20K+</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Trained Students</div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>80%</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>80%</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Placed Students</div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>30+</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>30+</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Teachers</div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className={`text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>9+</div>
+                  <div className={`text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>9+</div>
                   <div className={`h-0.5 w-10 rounded mt-2 bg-gradient-to-r ${slides[currentSlide].accentColor}`} />
                   <div className="text-gray-300 text-sm mt-3 text-center">Awards</div>
                 </div>
