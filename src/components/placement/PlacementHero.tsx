@@ -9,27 +9,39 @@ const PlacementHero = () => {
   const highlights = [
     {
       icon: <TrendingUp className="w-8 md:w-12 h-8 md:h-12 text-blue-400" />,
-      number: "98%",
-      label: "Placement Success Rate",
-      description: "Guaranteed placement assistance"
+      number: "14+",
+      label: "Years Experience",
+      description: "Proven industry expertise"
     },
     {
-      icon: <Users className="w-8 md:w-12 h-8 md:h-12 text-indigo-400" />,
-      number: "5000+",
-      label: "Students Placed",
-      description: "Across top engineering companies"
+      icon: <Building className="w-8 md:w-12 h-8 md:h-12 text-indigo-400" />,
+      number: "40+",
+      label: "Courses",
+      description: "Wide range of engineering programs"
     },
     {
-      icon: <Building className="w-8 md:w-12 h-8 md:h-12 text-purple-400" />,
-      number: "500+",
-      label: "Hiring Partners",
-      description: "Leading multinational companies"
+      icon: <Users className="w-8 md:w-12 h-8 md:h-12 text-purple-400" />,
+      number: "20K+",
+      label: "Trained Students",
+      description: "Thousands trained across disciplines"
     },
     {
-      icon: <Award className="w-8 md:w-12 h-8 md:h-12 text-cyan-400" />,
-      number: "12+ LPA",
-      label: "Average Package",
-      description: "Competitive salary packages"
+      icon: <CheckCircle className="w-8 md:w-12 h-8 md:h-12 text-cyan-400" />,
+      number: "80%",
+      label: "Placed Students",
+      description: "High placement percentage"
+    },
+    {
+      icon: <Award className="w-8 md:w-12 h-8 md:h-12 text-yellow-400" />,
+      number: "30+",
+      label: "Teachers",
+      description: "Experienced industry trainers"
+    },
+    {
+      icon: <Award className="w-8 md:w-12 h-8 md:h-12 text-pink-400" />,
+      number: "9+",
+      label: "Awards",
+      description: "Recognitions & accolades"
     }
   ]
 
