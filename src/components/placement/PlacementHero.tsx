@@ -123,24 +123,27 @@ const PlacementHero = () => {
           </div>
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Stats - rounded stat cards matching design */}
         <div className={`mt-12 lg:mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            <div className="text-center">
-              <div className="text-lg md:text-2xl font-bold text-white">15+</div>
-              <div className="text-xs md:text-sm text-gray-400">Years Experience</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="bg-gradient-to-br from-blue-600/10 to-indigo-600/10 backdrop-blur-sm rounded-2xl p-4 md:p-5 border border-white/10 text-center">
+              <div className="text-2xl md:text-3xl font-bold text-blue-400">10K+</div>
+              <div className="text-xs md:text-sm text-gray-300 mt-1">Students Trained</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg md:text-2xl font-bold text-white">24/7</div>
-              <div className="text-xs md:text-sm text-gray-400">Career Support</div>
+
+            <div className="bg-gradient-to-br from-green-600/10 to-teal-600/10 backdrop-blur-sm rounded-2xl p-4 md:p-5 border border-white/10 text-center">
+              <div className="text-2xl md:text-3xl font-bold text-green-400">95%</div>
+              <div className="text-xs md:text-sm text-gray-300 mt-1">Placement Rate</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg md:text-2xl font-bold text-white">₹6-20L</div>
-              <div className="text-xs md:text-sm text-gray-400">Salary Range</div>
+
+            <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-4 md:p-5 border border-white/10 text-center">
+              <div className="text-2xl md:text-3xl font-bold text-purple-400">15+</div>
+              <div className="text-xs md:text-sm text-gray-300 mt-1">Course Programs</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg md:text-2xl font-bold text-white">100%</div>
-              <div className="text-xs md:text-sm text-gray-400">Support Rate</div>
+
+            <div className="bg-gradient-to-br from-orange-600/10 to-red-600/10 backdrop-blur-sm rounded-2xl p-4 md:p-5 border border-white/10 text-center">
+              <div className="text-2xl md:text-3xl font-bold text-orange-400">12+</div>
+              <div className="text-xs md:text-sm text-gray-300 mt-1">Years Experience</div>
             </div>
           </div>
         </div>
