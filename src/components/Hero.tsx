@@ -136,24 +136,30 @@ const Hero = () => {
               </p>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
                 <div className="text-center lg:text-left">
                   <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
-                    5000+
+                    40+
                   </div>
-                  <div className="text-gray-300 text-sm">Students</div>
+                  <div className="text-gray-300 text-sm">Courses</div>
                 </div>
                 <div className="text-center lg:text-left">
                   <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
-                    98%
+                    20K+
                   </div>
-                  <div className="text-gray-300 text-sm">Placement</div>
+                  <div className="text-gray-300 text-sm">Trained Students</div>
                 </div>
                 <div className="text-center lg:text-left">
                   <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
-                    500+
+                    80%
                   </div>
-                  <div className="text-gray-300 text-sm">Partners</div>
+                  <div className="text-gray-300 text-sm">Placed Students</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${slides[currentSlide].accentColor} bg-clip-text text-transparent`}>
+                    30+
+                  </div>
+                  <div className="text-gray-300 text-sm">Teachers</div>
                 </div>
               </div>
               
