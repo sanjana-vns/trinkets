@@ -73,7 +73,7 @@ const Footer = memo(() => {
                       </div>
                       <div className="text-center sm:text-left">
                         <p className="text-sm text-gray-400">Call Us</p>
-                        <p className="text-white font-medium text-sm sm:text-base">+91 9820 924 788</p>
+                        <a href="tel:+919820924788" className="text-white font-medium text-sm sm:text-base">+91 9820 924 788</a>
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@ const Footer = memo(() => {
                       </div>
                       <div className="text-center sm:text-left">
                         <p className="text-sm text-gray-400">Email</p>
-                        <p className="text-white font-medium text-sm sm:text-base break-all">info@titindia.com</p>
+                        <a href="mailto:info@titindia.com" className="text-white font-medium text-sm sm:text-base break-all">info@titindia.com</a>
                       </div>
                     </div>
                   </div>
