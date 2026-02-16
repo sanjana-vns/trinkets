@@ -43,10 +43,10 @@ const PlacementSection = () => {
   ]
 
   const stats = [
-    { number: "98%", label: "Piping Job Placement", icon: "🎯" },
-    { number: "250+", label: "Piping Companies", icon: "🏢" },
-    { number: "8.5L", label: "Highest Piping Package", icon: "💰" },
-    { number: "24/7", label: "Piping Career Support", icon: "📞" }
+    { number: "80%", label: "Placed Students", icon: "🎯" },
+    { number: "40+", label: "Courses", icon: "🏢" },
+    { number: "20K+", label: "Trained Students", icon: "💰" },
+    { number: "14+", label: "Years Experience", icon: "📞" }
   ]
 
   useEffect(() => {

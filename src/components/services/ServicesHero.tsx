@@ -49,10 +49,10 @@ const ServicesHero = () => {
   ]
 
   const stats = [
-    { number: "500+", label: "Projects Completed", icon: "🎯" },
-    { number: "50+", label: "Industry Clients", icon: "🏢" },
-    { number: "98%", label: "Client Satisfaction", icon: "⭐" },
-    { number: "15+", label: "Years Experience", icon: "📈" }
+    { number: "14+", label: "Years Experience", icon: "🎯" },
+    { number: "40+", label: "Courses", icon: "🏢" },
+    { number: "20K+", label: "Trained Students", icon: "⭐" },
+    { number: "80%", label: "Placed Students", icon: "📈" }
   ]
 
   useEffect(() => {

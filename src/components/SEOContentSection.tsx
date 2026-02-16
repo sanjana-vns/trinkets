@@ -105,10 +105,10 @@ export default function SEOContentSection() {
           {/* Animated Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              { number: '5000+', label: 'Success Stories', icon: GraduationCap, color: 'text-blue-600' },
-              { number: '95%', label: 'Dream Jobs', icon: Briefcase, color: 'text-green-600' },
-              { number: '25+', label: 'Expert Courses', icon: BookOpen, color: 'text-purple-600' },
-              { number: '₹8.5L', label: 'Avg Package', icon: Trophy, color: 'text-yellow-600' }
+              { number: '14+', label: 'Years Experience', icon: GraduationCap, color: 'text-blue-600' },
+              { number: '40+', label: 'Courses', icon: Briefcase, color: 'text-green-600' },
+              { number: '20K+', label: 'Trained Students', icon: BookOpen, color: 'text-purple-600' },
+              { number: '80%', label: 'Placed Students', icon: Trophy, color: 'text-yellow-600' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -717,10 +717,10 @@ export default function SEOContentSection() {
             {/* Interactive Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
               {[
-                { number: '5000+', label: 'Engineers Trained', icon: Users },
-                { number: '95%', label: 'Placement Success', icon: Trophy },
-                { number: '₹8.5L', label: 'Average Package', icon: TrendingUp },
-                { number: '500+', label: 'Hiring Partners', icon: Building }
+                { number: '14+', label: 'Years Experience', icon: Users },
+                { number: '40+', label: 'Courses', icon: Trophy },
+                { number: '20K+', label: 'Trained Students', icon: TrendingUp },
+                { number: '80%', label: 'Placed Students', icon: Building }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
