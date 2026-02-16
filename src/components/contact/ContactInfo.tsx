@@ -83,10 +83,10 @@ export default function ContactInfo() {
   ];
 
   const stats = [
-    { number: "15+", label: "Years Experience", icon: Building2 },
-    { number: "5000+", label: "Students Trained", icon: Users },
-    { number: "3", label: "Office Locations", icon: MapPin },
-    { number: "96%", label: "Placement Rate", icon: Navigation }
+    { number: "14+", label: "Years Experience", icon: Building2 },
+    { number: "20K+", label: "Students Trained", icon: Users },
+    { number: "40+", label: "Courses Offered", icon: MapPin },
+    { number: "80%", label: "Placement Rate", icon: Navigation }
   ];
 
   return (
