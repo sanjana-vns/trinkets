@@ -610,37 +610,48 @@ export default function MEPEngineeringCoursePage() {
               Our Success Metrics
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  ⏳
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">14+</div>
+                <div className="text-gray-300">Years Experience</div>
+              </div>
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  📚
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-orange-400">40+</div>
+                <div className="text-gray-300">Courses Offered</div>
+              </div>
               <div className="text-center group hover:scale-110 transition-transform duration-300">
                 <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
-                  👥
+                  👨‍🎓
                 </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-green-400">500+</div>
-                <div className="text-gray-300">Students Trained</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-green-400">20K+</div>
+                <div className="text-gray-300">Trained Students</div>
               </div>
-              
-              <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
-                  🎯
-                </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-blue-400">95%</div>
-                <div className="text-gray-300">Placement Rate</div>
-              </div>
-              
               <div className="text-center group hover:scale-110 transition-transform duration-300">
                 <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
-                  💰
+                  🎯
                 </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-purple-400">₹15L</div>
-                <div className="text-gray-300">Highest Package</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-purple-400">80%</div>
+                <div className="text-gray-300">Placed Students</div>
               </div>
-              
               <div className="text-center group hover:scale-110 transition-transform duration-300">
-                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
-                  🏢
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  👨‍🏫
                 </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2 text-orange-400">50+</div>
-                <div className="text-gray-300">Partner Companies</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-teal-400">30+</div>
+                <div className="text-gray-300">Expert Teachers</div>
+              </div>
+              <div className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                  🏅
+                </div>
+                <div className="text-3xl md:text-4xl font-bold mb-2 text-yellow-400">9+</div>
+                <div className="text-gray-300">Awards & Recognition</div>
               </div>
             </div>
           </div>
