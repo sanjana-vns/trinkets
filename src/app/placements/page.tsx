@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { TrendingUp, Users, Award, Building, ArrowRight, CheckCircle, Star, Quote, Briefcase, Clock, Target, Globe } from 'lucide-react'
+import PlacementHero from '@/components/placement/PlacementHero'
 
 export const metadata: Metadata = {
   title: "Placement Assistance - 100% Job Guarantee | Trinkets Institute Mumbai",
@@ -64,82 +65,7 @@ export const metadata: Metadata = {
   }
 }
 
-// Lightweight Hero Section - Instant Loading
-const PlacementHero = () => (
-  <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-    {/* Background Pattern */}
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute top-20 left-10 w-32 h-32 border border-blue-400 rounded-full"></div>
-      <div className="absolute bottom-20 right-10 w-48 h-48 border border-purple-400 rounded-full"></div>
-      <div className="absolute top-1/2 left-1/3 w-24 h-24 border border-indigo-400 rounded-full"></div>
-    </div>
-    
-    <div className="container mx-auto px-4 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 backdrop-blur-sm">
-            <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-            <span className="text-blue-100 text-sm font-medium">100% Placement Assistance Guarantee</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            <span className="text-white">Launch Your</span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Engineering Career
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-            Transform your engineering knowledge into a successful career with our comprehensive placement assistance. 
-            Join 5000+ engineers who have secured their dream jobs with top companies.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              href="/contact" 
-              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white text-center transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg hover:shadow-blue-500/25"
-            >
-              <span className="flex items-center justify-center">
-                Get Placement Assistance
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-            <Link 
-              href="/testimonials" 
-              className="px-8 py-4 border-2 border-blue-400/50 rounded-xl font-semibold text-blue-100 text-center transition-all duration-300 hover:bg-blue-500/10 hover:border-blue-400"
-            >
-              View Success Stories
-            </Link>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-2 gap-6">
-          <div className="group p-6 bg-white/5 rounded-2xl border border-white/10 text-center backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-            <TrendingUp className="w-10 h-10 text-blue-400 mx-auto mb-4 transition-transform group-hover:scale-110" />
-            <div className="text-3xl font-bold text-white mb-2">98%</div>
-            <div className="text-sm text-blue-200">Success Rate</div>
-          </div>
-          <div className="group p-6 bg-white/5 rounded-2xl border border-white/10 text-center backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-            <Users className="w-10 h-10 text-indigo-400 mx-auto mb-4 transition-transform group-hover:scale-110" />
-            <div className="text-3xl font-bold text-white mb-2">5000+</div>
-            <div className="text-sm text-blue-200">Students Placed</div>
-          </div>
-          <div className="group p-6 bg-white/5 rounded-2xl border border-white/10 text-center backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-            <Building className="w-10 h-10 text-purple-400 mx-auto mb-4 transition-transform group-hover:scale-110" />
-            <div className="text-3xl font-bold text-white mb-2">500+</div>
-            <div className="text-sm text-blue-200">Hiring Partners</div>
-          </div>
-          <div className="group p-6 bg-white/5 rounded-2xl border border-white/10 text-center backdrop-blur-sm transition-all duration-300 hover:bg-white/10">
-            <Award className="w-10 h-10 text-cyan-400 mx-auto mb-4 transition-transform group-hover:scale-110" />
-            <div className="text-3xl font-bold text-white mb-2">₹12+ LPA</div>
-            <div className="text-sm text-blue-200">Average Package</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-)
+// Use shared component-level PlacementHero for consistency
 
 // Quick Stats Section
 const PlacementStats = () => (

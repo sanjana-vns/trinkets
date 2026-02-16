@@ -1,4 +1,6 @@
 'use client'
+export default PlacementHero
+'use client'
 import { useState, useEffect } from 'react'
 import { TrendingUp, Users, Award, Building, ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
