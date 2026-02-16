@@ -7,12 +7,12 @@ const StatsSection = () => {
   const [animatedNumbers, setAnimatedNumbers] = useState<Record<string, number>>({})
 
   const stats = useMemo(() => [
-    { number: "5000+", label: "Trained Students", icon: "👨‍🎓", color: "from-blue-400 to-cyan-500" },
-    { number: "98%", label: "Placement Rate", icon: "🎯", color: "from-green-400 to-teal-500" },
-    { number: "14+", label: "Years Experience", icon: "🏆", color: "from-yellow-400 to-orange-500" },
-    { number: "40+", label: "Courses Offered", icon: "📚", color: "from-purple-400 to-pink-500" },
-    { number: "500+", label: "Industry Partners", icon: "🤝", color: "from-indigo-400 to-blue-500" },
-    { number: "30+", label: "Expert Teachers", icon: "👨‍🏫", color: "from-red-400 to-rose-500" }
+    { number: "14+", label: "Years Experience", icon: "🏆", color: "from-blue-400 to-cyan-500" },
+    { number: "40+", label: "Courses", icon: "📚", color: "from-green-400 to-teal-500" },
+    { number: "20K+", label: "Trained Students", icon: "👨‍🎓", color: "from-yellow-400 to-orange-500" },
+    { number: "80%", label: "Placed Students", icon: "🎯", color: "from-purple-400 to-pink-500" },
+    { number: "30+", label: "Teachers", icon: "👨‍🏫", color: "from-indigo-400 to-blue-500" },
+    { number: "9+", label: "Awards", icon: "🏅", color: "from-red-400 to-rose-500" }
   ], [])
 
   useEffect(() => {

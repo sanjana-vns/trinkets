@@ -107,10 +107,10 @@ const TestimonialsHero = () => {
   ]
 
   const quickStats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, number: "5,000+", label: "Success Stories", description: "Career transformations" },
-    { icon: <Star className="w-8 h-8 text-yellow-500" />, number: "4.9/5", label: "Student Rating", description: "Consistent excellence" },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, number: "165%", label: "Avg Salary Increase", description: "Post-training growth" },
-    { icon: <Award className="w-8 h-8 text-purple-500" />, number: "98%", label: "Placement Rate", description: "Industry placement success" }
+    { icon: <Users className="w-8 h-8 text-blue-500" />, number: "14+", label: "Years Experience", description: "Industry expertise" },
+    { icon: <Star className="w-8 h-8 text-yellow-500" />, number: "40+", label: "Courses", description: "Diverse programs" },
+    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, number: "20K+", label: "Trained Students", description: "Career transformations" },
+    { icon: <Award className="w-8 h-8 text-purple-500" />, number: "80%", label: "Placed Students", description: "Placement success" }
   ]
 
   useEffect(() => {

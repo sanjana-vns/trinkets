@@ -17,56 +17,56 @@ const SuccessStats = () => {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      number: 5000,
+      icon: <Award className="w-8 h-8 text-blue-500" />,
+      number: 14,
       suffix: '+',
-      label: 'Students Placed',
-      description: 'Successful career transformations',
+      label: 'Years Experience',
+      description: 'Industry expertise and proven track record',
       color: 'blue',
+      trend: 'Since establishment'
+    },
+    {
+      icon: <Building2 className="w-8 h-8 text-green-500" />,
+      number: 40,
+      suffix: '+',
+      label: 'Courses Offered',
+      description: 'Engineering programs and specializations',
+      color: 'green',
+      trend: 'All specialties'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      number: 20,
+      suffix: 'K+',
+      label: 'Trained Students',
+      description: 'Successful career transformations',
+      color: 'purple',
       trend: '+15% this year'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      number: 8.5,
-      suffix: ' LPA',
-      label: 'Average Salary',
-      description: 'Starting package after training',
-      color: 'green',
-      trend: '+22% increase'
-    },
-    {
-      icon: <Building2 className="w-8 h-8 text-purple-500" />,
-      number: 500,
-      suffix: '+',
-      label: 'Partner Companies',
-      description: 'Industry hiring partners',
-      color: 'purple',
-      trend: 'Top MNCs included'
-    },
-    {
       icon: <Target className="w-8 h-8 text-orange-500" />,
-      number: 96,
+      number: 80,
       suffix: '%',
-      label: 'Placement Rate',
-      description: 'Students placed within 6 months',
+      label: 'Placed Students',
+      description: 'Career success rate within 6 months',
       color: 'orange',
       trend: 'Industry leading'
     },
     {
-      icon: <Award className="w-8 h-8 text-yellow-500" />,
-      number: 15,
+      icon: <TrendingUp className="w-8 h-8 text-yellow-500" />,
+      number: 30,
       suffix: '+',
-      label: 'Years Experience',
-      description: 'Training industry professionals',
+      label: 'Expert Teachers',
+      description: 'Experienced industry professionals',
       color: 'yellow',
       trend: 'Proven expertise'
     },
     {
       icon: <Star className="w-8 h-8 text-pink-500" />,
-      number: 4.9,
-      suffix: '/5',
-      label: 'Student Rating',
-      description: 'Average satisfaction score',
+      number: 9,
+      suffix: '+',
+      label: 'Awards & Recognition',
+      description: 'Industry accolades and achievements',
       color: 'pink',
       trend: '2000+ reviews'
     }
@@ -116,12 +116,12 @@ const SuccessStats = () => {
     const stepDuration = duration / steps
 
     const countersData = [
-      { key: 'studentsPlaced', target: 5000 },
-      { key: 'averageSalary', target: 8.5 },
-      { key: 'companies', target: 500 },
-      { key: 'placementRate', target: 96 },
-      { key: 'experience', target: 15 },
-      { key: 'satisfaction', target: 4.9 }
+      { key: 'studentsPlaced', target: 14 },
+      { key: 'averageSalary', target: 40 },
+      { key: 'companies', target: 20 },
+      { key: 'placementRate', target: 80 },
+      { key: 'experience', target: 30 },
+      { key: 'satisfaction', target: 9 }
     ]
 
     countersData.forEach(({ key, target }) => {
