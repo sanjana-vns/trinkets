@@ -249,8 +249,8 @@ export default function PipingDesignCourseMumbai() {
               </h1>
               
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-                Master the art of <strong>Piping Design Course in Mumbai</strong> with hands-on training on PDMS, E3D, AutoCAD Plant 3D, 
-                and stress analysis. Join Mumbai&apos;s leading piping design training institute with 100% placement support and industry-expert faculty.
+                Piping Engineering is a specialized field of Mechanical Engineering focused on designing safe, efficient piping systems for industrial facilities. 
+                Learn advanced piping design, PDMS, E3D, AutoCAD Plant 3D, and stress analysis with industry-expert faculty at Mumbai&apos;s premier training institute.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

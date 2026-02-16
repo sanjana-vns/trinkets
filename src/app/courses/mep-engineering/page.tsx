@@ -374,9 +374,9 @@ export default function MEPEngineeringCoursePage() {
                 <span className="text-gray-800">Mechanical, Electrical & Plumbing Design Training</span>
               </h2>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                Master MEP Engineering with our comprehensive course in Mumbai. Learn mechanical, electrical, and plumbing design 
-                using industry-standard software like AutoCAD MEP, Revit MEP, and HAP. Join Mumbai&apos;s leading MEP engineering 
-                training institute for 100% placement assistance.
+                MEP Engineering involves designing and maintaining mechanical, electrical, and plumbing systems to ensure efficiency and safety in buildings.
+                Learn advanced MEP design, AutoCAD MEP, Revit MEP, HAP, and TRACE 700 with industry-expert faculty at Mumbai&apos;s premier MEP training institute. 
+                Get 100% placement assistance in top MEP consultancy and construction companies.
               </p>
             </div>
             
