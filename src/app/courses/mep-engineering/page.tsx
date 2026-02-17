@@ -382,50 +382,12 @@ export default function MEPEngineeringCoursePage() {
               <div className="space-y-8 animate-slideUp">
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-200 hover:shadow-xl transition-all duration-300">
                   <h3 className="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
-                    <span className="text-2xl md:text-3xl mr-3">🎯</span>
-                    Why Choose Our MEP Engineering Course in Mumbai?
+                    Why Choose an MEP Engineering Course in Mumbai?
                   </h3>
-                  
-                  <div className="space-y-4">
-                    {[
-                      "Comprehensive MEP systems training covering HVAC, electrical, and plumbing design",
-                      "Master AutoCAD MEP, Revit MEP, HAP, TRACE 700, and DPR software",
-                      "Real Mumbai construction project training with site visits",
-                      "100% placement assistance in top MEP engineering companies in Mumbai",
-                      "Expert faculty with 15+ years MEP industry experience",
-                      "Live MEP project exposure and practical training sessions"
-                    ].map((feature, index) => (
-                      <div key={index} className="flex items-start space-x-3 group hover:scale-105 transition-transform duration-300">
-                        <div className="w-8 h-8 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform">
-                          <span className="text-white font-bold text-sm">✓</span>
-                        </div>
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200">
-                  <h4 className="font-bold text-blue-800 mb-6 text-xl flex items-center">
-                    <span className="text-2xl mr-3">🌆</span>
-                    Mumbai MEP Industry Advantage
-                  </h4>
-                  <div className="space-y-3">
-                    {[
-                      "Gateway to India's largest construction market",
-                      "Home to major MEP consultancy firms",
-                      "Proximity to infrastructure development projects",
-                      "Access to multinational engineering companies",
-                      "Hub for green building and sustainable design"
-                    ].map((advantage, index) => (
-                      <div key={index} className="flex items-center space-x-3 group hover:translate-x-2 transition-transform">
-                        <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-180 transition-transform duration-300">
-                          <span className="text-white font-bold text-xs">★</span>
-                        </div>
-                        <span className="text-gray-700 text-sm">{advantage}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Powering Modern Buildings</h4>
+                  <p className="text-gray-700 mb-6">MEP engineering encompasses the design and integration of HVAC, electrical, and plumbing systems, ensuring buildings are functional, safe, and energy-efficient. Mumbai’s skyline, with projects like high-rises, metro systems, and commercial complexes, relies on skilled MEP engineers. TIT’s <b>MEP Engineering Course in Mumbai</b> trains you to create efficient, code-compliant designs using industry-standard tools, positioning you as a top candidate for firms like Voltas, Blue Star, and L&T Construction.</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Mumbai’s Construction Advantage</h4>
+                  <p className="text-gray-700">Mumbai’s role as a construction and engineering epicenter makes it perfect for an <b>MEP Engineering Course in Mumbai</b>. TIT’s Mulund campus connects you to this vibrant ecosystem, offering hands-on exposure and access to high-demand job markets. From smart cities to sustainable buildings, Mumbai provides the perfect backdrop for mastering MEP engineering.</p>
                 </div>
               </div>
               
