@@ -322,6 +322,11 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
 
         {/* Mumbai-Focused Course Overview */}
         <section className="container mx-auto px-6 py-20">
+          {/* Structural Engineering Course in Mumbai - Overview (from screenshot) */}
+          <div className="mb-10">
+            <p className="text-gray-900 text-lg mb-4"><strong>Structural Engineering Course in Mumbai</strong> offers students an in-depth understanding of how structures behave under various conditions, providing a strong base in the analysis and design of different types of buildings. The course focuses on key principles such as load distribution, material properties, and maintaining structural integrity, which are crucial in creating safe and efficient structures.</p>
+            <p className="text-gray-900 text-lg">Additionally, the program encourages the use of modern Information Technology tools, including structural analysis software, to support innovative and accurate design processes. By integrating both theory and hands-on practice, the <strong>Structural Engineering Course in Mumbai</strong> ensures that learners are industry-ready, equipped with essential skills to handle real-world engineering challenges confidently.</p>
+          </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-white/20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
