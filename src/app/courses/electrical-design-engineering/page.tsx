@@ -136,13 +136,10 @@ export default function ElectricalDesignEngineeringCoursePage() {
               </div>
               
               <h1 className="text-4xl md:text-7xl font-bold mb-8">
-                <span className="inline-block">Electrical Design</span>{' '}
-                <span className="text-purple-300">Engineering Course</span>{' '}
-                <span className="text-blue-300">in Mumbai</span>
+                Electrical Design Engineering Course in Mumbai
               </h1>
-              
               <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto leading-relaxed">
-                Master electrical system design with AutoCAD Electrical, ETAP, and EPLAN for power distribution, lighting design, and industrial automation in Mumbai
+                Electrical Design Engineering focuses on planning electrical systems for buildings and industries, ensuring power distribution and safety standards.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">

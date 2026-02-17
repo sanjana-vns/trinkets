@@ -282,21 +282,10 @@ export default function HVACSystemDesignCoursePage() {
 
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fadeIn" style={{animationDelay: '0.2s'}}>
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Best HVAC System Design
-                </span>
-                <br />
-                <span className="text-white">Course in Mumbai</span>
-                <br />
-                <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-normal text-blue-200 mt-2 lg:mt-4 block">
-                  Master AutoCAD MEP, Revit MEP, HAP & TRACE 700
-                </span>
+                HVAC Engineering Course in Mumbai
               </h1>
-
-              {/* Description */}
               <p className="text-base lg:text-xl text-blue-100 leading-relaxed max-w-2xl animate-fadeIn" style={{animationDelay: '0.4s'}}>
-                Join Mumbai&apos;s premier HVAC System Design training institute. Learn from industry experts, work on real 
-                projects, and get 100% placement assistance in top HVAC companies across Mumbai&apos;s construction industry.
+                HVAC Engineering designs and optimizes heating, ventilation and air conditioning systems to ensure comfort, air quality and energy efficiency.
               </p>
 
               {/* Key Features */}

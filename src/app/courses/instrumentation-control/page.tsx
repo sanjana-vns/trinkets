@@ -145,14 +145,10 @@ export default function InstrumentationControlCoursePage() {
               </div>
               
               <h1 className="text-4xl md:text-7xl font-bold mb-8 transform hover:scale-105 transition-transform duration-300">
-                <span className="inline-block bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">Instrumentation</span>{' '}
-                <span className="text-white">and</span>{' '}
-                <span className="inline-block bg-gradient-to-r from-red-300 to-orange-300 bg-clip-text text-transparent">Control</span>{' '}
-                <span className="text-orange-200">Course in Mumbai</span>
+                Instrumentation & Control Course in Mumbai
               </h1>
-              
               <p className="text-xl md:text-2xl text-orange-100 mb-10 max-w-4xl mx-auto leading-relaxed">
-                Master process automation with PLC programming, SCADA, DCS, and HMI for industrial control systems and process optimization in Mumbai&apos;s leading industries
+                Instrumentation & Control ensures safe and efficient process automation using sensors, control systems and monitoring technologies across industries.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">

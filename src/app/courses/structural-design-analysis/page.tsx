@@ -263,11 +263,10 @@ export default function StructuralDesignAnalysisCourseMumbaiPage() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent leading-tight">
-                Structural Design and Analysis Course in Mumbai
+                Structural Engineering Course in Mumbai
               </h1>
-              
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
-                Master building design with <span className="font-semibold text-yellow-300">STAAD Pro, ETABS, SAFE & SAP2000</span> - Learn from Mumbai&apos;s infrastructure experts with <span className="font-semibold text-green-300">100% placement guarantee</span>
+                Structural Engineering involves designing safe, stable structures like buildings and bridges. It ensures they withstand loads and environmental forces.
               </p>
 
               {/* Key Features Pills */}

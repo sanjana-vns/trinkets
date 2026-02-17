@@ -304,12 +304,10 @@ export default function MEPEngineeringCoursePage() {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeIn">
-              <span className="block">MEP Engineering Course</span>
-              <span className="block text-yellow-300">in Mumbai</span>
+              MEP Engineering Course in Mumbai
             </h1>
-            
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-indigo-100 max-w-4xl mx-auto animate-slideUp">
-              Master Mechanical, Electrical & Plumbing Design at Mumbai&apos;s Best MEP Training Institute | 100% Placement Assistance
+              MEP Engineering involves designing and maintaining mechanical, electrical, and plumbing systems to ensure efficiency and safety in buildings.
             </p>
             
             {/* Key Highlights */}
