@@ -17,24 +17,24 @@ const AboutUsSection = () => {
           const animateNumbers = () => {
             let yearsCount = 0
             let studentsCount = 0
-            const yearsTarget = 10
-            const studentsTarget = 5000
-            
+            const yearsTarget = 14
+            const studentsTarget = 20000;
             const interval = setInterval(() => {
               if (yearsCount < yearsTarget) {
-                yearsCount++
-                setAnimatedStats(prev => ({ ...prev, years: yearsCount }))
+                yearsCount++;
+                setAnimatedStats(prev => ({ ...prev, years: yearsCount }));
               }
               if (studentsCount < studentsTarget) {
-                studentsCount += 100
-                setAnimatedStats(prev => ({ ...prev, students: studentsCount }))
+                studentsCount += 400; // Faster increment for 20k
+                if (studentsCount > studentsTarget) studentsCount = studentsTarget;
+                setAnimatedStats(prev => ({ ...prev, students: studentsCount }));
               }
               if (yearsCount >= yearsTarget && studentsCount >= studentsTarget) {
-                clearInterval(interval)
+                clearInterval(interval);
               }
-            }, 50)
-          }
-          animateNumbers()
+            }, 50);
+          };
+          animateNumbers();
         }
       },
       { threshold: 0.3 }

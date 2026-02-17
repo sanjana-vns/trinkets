@@ -135,6 +135,17 @@ const Hero = () => {
                 {slides[currentSlide].subtitle}
               </p>
               
+
+              {/* Floating Stat Cards (top right and bottom left) */}
+              <div className="absolute top-0 right-0 m-4 bg-white rounded-xl shadow-lg px-6 py-3 z-10 flex flex-col items-center">
+                <span className="text-3xl font-extrabold text-blue-600">20,000+</span>
+                <span className="text-xs font-semibold text-gray-500 tracking-wide mt-1">STUDENTS TRAINED</span>
+              </div>
+              <div className="absolute bottom-0 left-0 m-4 bg-white rounded-xl shadow-lg px-6 py-3 z-10 flex flex-col items-center">
+                <span className="text-3xl font-extrabold text-blue-600">14+</span>
+                <span className="text-xs font-semibold text-gray-500 tracking-wide mt-1">YEARS EXCELLENCE</span>
+              </div>
+
               {/* Stats - two rows of three rounded stat cards for better visual hierarchy */}
               <div className="space-y-4 mb-8">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
