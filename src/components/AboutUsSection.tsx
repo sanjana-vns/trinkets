@@ -113,13 +113,13 @@ const AboutUsSection = () => {
             {/* Enhanced Description with better typography */}
             <div className="space-y-4 lg:space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg lg:text-xl font-medium text-gray-800 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-600 first-letter:float-left first-letter:mr-2 first-letter:leading-none">
-                Trinkets Institute offers the best Piping Course In Mumbai, standing at the forefront of piping design education 
+                Trinkets Institute offers the best <Link href="https://titindia.com/" className="text-blue-700 hover:text-blue-900 hover:underline font-semibold">Piping Course In Mumbai</Link>, standing at the forefront of piping design education 
                 and bridging the gap between academic learning and industry requirements. With over 
                 a decade of excellence in piping training, we have transformed thousands of students into skilled 
                 piping professionals ready to tackle real-world piping engineering challenges in Mumbai.
               </p>
               <p className="text-base lg:text-lg">
-                Our comprehensive <strong className="text-blue-700">Piping Course In Mumbai</strong> includes <strong className="text-blue-700">PDMS Training</strong>, 
+                Our comprehensive <Link href="https://titindia.com/" className="text-blue-700 hover:text-blue-900 hover:underline font-semibold"><strong>Piping Course In Mumbai</strong></Link> includes <strong className="text-blue-700">PDMS Training</strong>, 
                 <strong className="text-blue-700">SP3D Piping Design</strong>, <strong className="text-blue-700">E3D Training</strong>, and <strong className="text-blue-700">CAESAR II Stress Analysis</strong> programs that are meticulously crafted by piping industry experts to ensure 
                 our piping course graduates possess the practical piping design skills and theoretical knowledge demanded 
                 by Mumbai&apos;s competitive engineering marketplace.
